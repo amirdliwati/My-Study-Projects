@@ -1,0 +1,10 @@
+C:\Documents and Settings\Nadia\Desktop\ADP_S2\New\Client_Server\TheClient\bin\Debug\TheClient.exe
+C:\Documents and Settings\Nadia\Desktop\ADP_S2\New\Client_Server\TheClient\bin\Debug\TheClient.pdb
+C:\Documents and Settings\Nadia\Desktop\ADP_S2\New\Client_Server\TheClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Nadia\Desktop\ADP_S2\New\Client_Server\TheClient\obj\Debug\TheClient.exe
+C:\Documents and Settings\Nadia\Desktop\ADP_S2\New\Client_Server\TheClient\obj\Debug\TheClient.pdb
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheClient\bin\Debug\TheClient.exe
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheClient\bin\Debug\TheClient.pdb
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheClient\obj\Debug\TheClient.exe
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheClient\obj\Debug\TheClient.pdb
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheClient\obj\Debug\TheClient.csprojResolveAssemblyReference.cache

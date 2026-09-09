@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emp_departments>
+
+<emp_department>
+<emp_id>1</emp_id>
+<department>software</department>
+<date>1987</date>
+</emp_department>
+
+<emp_department>
+<emp_id>2</emp_id>
+<department>AI</department>
+<date>1988</date>
+</emp_department>
+
+<emp_department>
+<emp_id>3</emp_id>
+<department>Network</department>
+<date>1988</date>
+</emp_department>
+
+</emp_departments>

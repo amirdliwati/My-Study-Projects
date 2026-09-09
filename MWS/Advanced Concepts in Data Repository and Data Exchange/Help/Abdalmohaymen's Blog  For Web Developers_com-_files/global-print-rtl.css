@@ -1,0 +1,700 @@
+@page  {}
+* {
+	color: black !important; letter-spacing: normal !important; word-spacing: normal !important; box-shadow: none !important; text-shadow: none !important;
+}
+a {
+	text-decoration: underline;
+}
+a:visited {
+	text-decoration: underline;
+}
+.entry-content a[href]::after {
+	content: " (" attr(href) ")";
+}
+.entry a[href]::after {
+	content: " (" attr(href) ")";
+}
+abbr[title]::after {
+	content: " (" attr(title) ")";
+}
+a[href^='javascript:']::after {
+	content: "" !important;
+}
+a[href^='#']::after {
+	content: "" !important;
+}
+[class^='meta'] a::after {
+	content: "" !important;
+}
+[class$='meta'] a::after {
+	content: "" !important;
+}
+.page-link a::after {
+	content: "" !important;
+}
+.postmetadata a::after {
+	content: "" !important;
+}
+.gallery-item a::after {
+	content: "" !important;
+}
+.postinfo a::after {
+	content: "" !important;
+}
+.entry h2 a::after {
+	content: "" !important;
+}
+.entry-taxonomy a::after {
+	content: "" !important;
+}
+.tags a::after {
+	content: "" !important;
+}
+#masthead a::after {
+	content: "" !important;
+}
+pre {
+	page-break-inside: avoid;
+}
+blockquote {
+	page-break-inside: avoid;
+}
+thead {
+	display: table-header-group;
+}
+tr {
+	page-break-inside: avoid;
+}
+img {
+	page-break-inside: avoid;
+}
+img {
+	max-width: 100%;
+}
+p {
+	orphans: 3; widows: 3;
+}
+h2 {
+	orphans: 3; widows: 3;
+}
+h3 {
+	orphans: 3; widows: 3;
+}
+h2 {
+	page-break-after: avoid;
+}
+h3 {
+	page-break-after: avoid;
+}
+body {
+	min-width: 0px !important;
+}
+div {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+section {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+article {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+header {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+hgroup {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+footer {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+h1 {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+h2 {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+h3 {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+h4 {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+h5 {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+h6 {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+p {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+ul {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+ol {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+li {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+dl {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+dt {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+dd {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+blockquote {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+table {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+fieldset {
+	margin: 0px !important; padding: 0px !important; border: 0px currentColor !important; width: auto !important; height: auto !important; float: none !important; position: static !important; min-height: 0px !important; max-height: none !important; min-width: 0px !important; max-width: none !important;
+}
+a {
+	border: 0px currentColor !important; float: none !important; display: inline !important;
+}
+span {
+	border: 0px currentColor !important; float: none !important; display: inline !important;
+}
+time {
+	border: 0px currentColor !important; float: none !important; display: inline !important;
+}
+code {
+	border: 0px currentColor !important; float: none !important; display: inline !important;
+}
+small {
+	border: 0px currentColor !important; float: none !important; display: inline !important;
+}
+img {
+	border-width: 0px !important; padding: 0px !important; border-radius: 0px !important;
+}
+* {
+	line-height: 1.25 !important; font-family: inherit !important; font-size: 100% !important;
+}
+body {
+	font-family: Palatino, "Palatino Linotype", serif !important; font-size: 12pt !important;
+}
+h1 {
+	text-align: right !important; text-transform: none !important; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-style: normal !important; font-variant: normal !important; font-weight: normal !important;
+}
+h2 {
+	text-align: right !important; text-transform: none !important; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-style: normal !important; font-variant: normal !important; font-weight: normal !important;
+}
+h3 {
+	text-align: right !important; text-transform: none !important; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-style: normal !important; font-variant: normal !important; font-weight: normal !important;
+}
+h4 {
+	text-align: right !important; text-transform: none !important; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-style: normal !important; font-variant: normal !important; font-weight: normal !important;
+}
+h5 {
+	text-align: right !important; text-transform: none !important; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-style: normal !important; font-variant: normal !important; font-weight: normal !important;
+}
+h6 {
+	text-align: right !important; text-transform: none !important; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-style: normal !important; font-variant: normal !important; font-weight: normal !important;
+}
+strong {
+	font-weight: bold !important;
+}
+b {
+	font-weight: bold !important;
+}
+th {
+	font-weight: bold !important;
+}
+thead {
+	font-weight: bold !important;
+}
+dt {
+	font-weight: bold !important;
+}
+em {
+	font-style: italic !important;
+}
+i {
+	font-style: italic !important;
+}
+h1 {
+	padding: 1.25em 0px !important; font-size: 2em !important;
+}
+h2 {
+	padding: 1.51em 0px !important; font-size: 1.75em !important;
+}
+h3 {
+	padding: 1.45em 0px !important; font-size: 1.5em !important;
+}
+h4 {
+	padding: 1.25em 0px !important; font-size: 1.33em !important;
+}
+h5 {
+	padding: 1.51em 0px !important; font-size: 1.16em !important;
+}
+h1 + h2 {
+	padding-top: 0px !important;
+}
+h2 + h3 {
+	padding-top: 0px !important;
+}
+h3 + h4 {
+	padding-top: 0px !important;
+}
+h4 + h5 {
+	padding-top: 0px !important;
+}
+h5 + h6 {
+	padding-top: 0px !important;
+}
+p {
+	margin: 0px 0px 1em !important;
+}
+ul {
+	margin: 0px 0px 1em !important;
+}
+ol {
+	margin: 0px 0px 1em !important;
+}
+dl {
+	margin: 0px 0px 1em !important;
+}
+address {
+	margin: 0px 0px 1em !important;
+}
+::first-letter {
+	margin: 0px !important; padding: 0px !important; color: inherit !important; line-height: inherit !important; font-size: inherit !important; float: none !important; display: inline !important; position: static !important;
+}
+::first-line {
+	margin: 0px !important; padding: 0px !important; color: inherit !important; line-height: inherit !important; font-size: inherit !important; float: none !important; display: inline !important; position: static !important;
+}
+.text .content > p:first-child::first-letter {
+	margin: 0px !important; padding: 0px !important; color: inherit !important; line-height: inherit !important; font-size: inherit !important; float: none !important; display: inline !important; position: static !important;
+}
+ol {
+	list-style: decimal !important;
+}
+ul {
+	list-style: circle !important;
+}
+li ol {
+	margin-bottom: 0px !important;
+}
+li ul {
+	margin-bottom: 0px !important;
+}
+blockquote {
+	padding-right: 1.5em !important;
+}
+ul {
+	padding-right: 1.5em !important;
+}
+ol {
+	padding-right: 1.5em !important;
+}
+dd {
+	padding-right: 1.5em !important;
+}
+pre {
+	border: 0px currentColor !important; font-family: Consolas, monospace !important;
+}
+code {
+	border: 0px currentColor !important; font-family: Consolas, monospace !important;
+}
+kbd {
+	border: 0px currentColor !important; font-family: Consolas, monospace !important;
+}
+tt {
+	border: 0px currentColor !important; font-family: Consolas, monospace !important;
+}
+table {
+	border: 1pt solid black !important; border-collapse: collapse !important;
+}
+th {
+	border: 1pt solid black !important; border-collapse: collapse !important;
+}
+td {
+	border: 1pt solid black !important; border-collapse: collapse !important;
+}
+th {
+	padding: 0.25em 0.5em !important;
+}
+td {
+	padding: 0.25em 0.5em !important;
+}
+#footer {
+	padding: 2em 0px 1em !important; text-align: center !important;
+}
+#colophon {
+	padding: 2em 0px 1em !important; text-align: center !important;
+}
+.entry-date {
+	text-align: right !important;
+}
+.post-date {
+	text-align: right !important;
+}
+.date {
+	text-align: right !important;
+}
+.entry-date * {
+	display: inline !important; position: static !important;
+}
+.post-date * {
+	display: inline !important; position: static !important;
+}
+.description {
+	padding: 0px !important; display: block !important;
+}
+.widget {
+	display: none !important;
+}
+aside {
+	display: none !important;
+}
+.widget-area {
+	display: none !important;
+}
+[role='complemantary'] {
+	display: none !important;
+}
+#supplementary {
+	display: none !important;
+}
+.secondary {
+	display: none !important;
+}
+#wpstats {
+	display: none !important;
+}
+#wpadminbar {
+	display: none !important;
+}
+#help {
+	display: none !important;
+}
+#sidebar {
+	display: none !important;
+}
+.sidebar {
+	display: none !important;
+}
+#left_col {
+	display: none !important;
+}
+nav {
+	display: none !important;
+}
+#nav {
+	display: none !important;
+}
+.nav {
+	display: none !important;
+}
+.navigation {
+	display: none !important;
+}
+[role='navigation'] {
+	display: none !important;
+}
+#nav-above {
+	display: none !important;
+}
+#nav-below {
+	display: none !important;
+}
+#nav-post {
+	display: none !important;
+}
+#navigation {
+	display: none !important;
+}
+.navigate-single {
+	display: none !important;
+}
+.pagination {
+	display: none !important;
+}
+#pagesnav {
+	display: none !important;
+}
+#pagetab {
+	display: none !important;
+}
+.nav-entries {
+	display: none !important;
+}
+#navbar {
+	display: none !important;
+}
+#menu {
+	display: none !important;
+}
+.menu {
+	display: none !important;
+}
+.menu-header {
+	display: none !important;
+}
+#menus {
+	display: none !important;
+}
+.main-nav {
+	display: none !important;
+}
+#topmenu {
+	display: none !important;
+}
+#menu-primary {
+	display: none !important;
+}
+.navigation-menu {
+	display: none !important;
+}
+.navigation-single {
+	display: none !important;
+}
+.breadcrumb {
+	display: none !important;
+}
+.breadcrumbs {
+	display: none !important;
+}
+.skip-link {
+	display: none !important;
+}
+#skiptocontent {
+	display: none !important;
+}
+.skip-content {
+	display: none !important;
+}
+.pagenav {
+	display: none !important;
+}
+.page-links {
+	display: none !important;
+}
+.post-navigation {
+	display: none !important;
+}
+.page-link {
+	display: none !important;
+}
+.postpages {
+	display: none !important;
+}
+.post-nav {
+	display: none !important;
+}
+.postnav {
+	display: none !important;
+}
+.sharedaddy {
+	display: none !important;
+}
+.post-edit-link {
+	display: none !important;
+}
+.more-link {
+	display: none !important;
+}
+.screen-reader-text {
+	display: none !important;
+}
+legend {
+	display: none !important;
+}
+img {
+	display: none !important;
+}
+.page-list {
+	display: none !important;
+}
+#tag-cloud {
+	display: none !important;
+}
+#footer #top {
+	display: none !important;
+}
+#left > .subcontainer {
+	display: none !important;
+}
+#mainmenu {
+	display: none !important;
+}
+#wrap > #leftside {
+	display: none !important;
+}
+#wrap > #rightside {
+	display: none !important;
+}
+#topnav {
+	display: none !important;
+}
+#footer > .archives {
+	display: none !important;
+}
+#syndication {
+	display: none !important;
+}
+.primary-links {
+	display: none !important;
+}
+.sideheading {
+	display: none !important;
+}
+.sideheading + #credit {
+	display: none !important;
+}
+.main > br {
+	display: none !important;
+}
+#content_bg #left {
+	display: none !important;
+}
+#skip {
+	display: none !important;
+}
+.secondaryColumn {
+	display: none !important;
+}
+#ancillary > .inside {
+	display: none !important;
+}
+#inner-wrapper .hentry > .post-date {
+	display: none !important;
+}
+#contentdesc {
+	display: none !important;
+}
+#headerbanner > p {
+	display: none !important;
+}
+#footer > .foot1 {
+	display: none !important;
+}
+#footer > .foot2 {
+	display: none !important;
+}
+#footer > .foot3 {
+	display: none !important;
+}
+#credits #creditsright {
+	display: none !important;
+}
+#obar {
+	display: none !important;
+}
+#pagetabs {
+	display: none !important;
+}
+.postwrapper + .title {
+	display: none !important;
+}
+.postwrapper + .title + .post {
+	display: none !important;
+}
+#content-inner + .title {
+	display: none !important;
+}
+#content-inner + .title + .post {
+	display: none !important;
+}
+#rss-feed {
+	display: none !important;
+}
+[href='#nav'] {
+	display: none !important;
+}
+#footer-secondary #sticky-posts {
+	display: none !important;
+}
+.meta > div > h3 {
+	display: none !important;
+}
+#dooncha_sidebar {
+	display: none !important;
+}
+#search_menu {
+	display: none !important;
+}
+#topbanner > div {
+	display: none !important;
+}
+#follow {
+	display: none !important;
+}
+#glass-bottomblock {
+	display: none !important;
+}
+#controls > li {
+	display: none !important;
+}
+#respond {
+	display: none !important;
+}
+form {
+	display: none !important;
+}
+input {
+	display: none !important;
+}
+select {
+	display: none !important;
+}
+textarea {
+	display: none !important;
+}
+body.secondary {
+	display: inherit !important;
+}
+div::before {
+	display: none !important;
+}
+section::before {
+	display: none !important;
+}
+article::before {
+	display: none !important;
+}
+div::after {
+	display: none !important;
+}
+section::after {
+	display: none !important;
+}
+article::after {
+	display: none !important;
+}
+.hentry img {
+	display: inline-block !important; max-width: 100%;
+}
+.hentry .aligncenter {
+	margin: 0px auto 1em !important; text-align: center !important; display: block !important;
+}
+.hentry .alignright {
+	margin: 0px 1em 0.5em 0px !important; float: left !important;
+}
+.hentry .alignleft {
+	margin: 0px 0px 0.5em 1em !important; float: right !important;
+}
+.hentry .alignnone {
+	display: inline-block;
+}
+.gallery-item {
+	margin: 1em 0px 1.5em !important; width: 33% !important; text-align: center !important; float: right !important;
+}
+.hentry .corner {
+	display: none !important;
+}
+.hentry .righth2img {
+	display: none !important;
+}
+.hentry > .category > img {
+	display: none !important;
+}
+.postmeta img {
+	display: none !important;
+}

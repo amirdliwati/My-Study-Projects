@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="yes"?>
+<documents>
+  <document>
+    <ID>9</ID>
+    <name_doc>Android Magazine v 10</name_doc>
+    <info_doc1>Issue 26, Jan 2012</info_doc1>
+    <info_doc2>Monthly Magazine By Google/Android</info_doc2>
+    <name_folder>Customers</name_folder>
+    <date_doc>01-06-2014 00:00:00</date_doc>
+    <path_doc>Android Magazine.pdf</path_doc>
+  </document>
+  <document>
+    <ID>3</ID>
+    <name_doc>Basic Chart</name_doc>
+    <info_doc1>document</info_doc1>
+    <info_doc2>maker</info_doc2>
+    <name_folder>HR</name_folder>
+    <date_doc>27-05-2014 18:12:53</date_doc>
+    <path_doc>7pcs.png</path_doc>
+  </document>
+  <document>
+    <ID>4</ID>
+    <name_doc>11asd ad</name_doc>
+    <info_doc1>asdf asdfa sdf</info_doc1>
+    <info_doc2>asd fads fasd</info_doc2>
+    <name_folder>HR</name_folder>
+    <date_doc>28-05-2014 00:00:00</date_doc>
+    <path_doc>ToolsDemo-master.zip</path_doc>
+  </document>
+  <document>
+    <ID>8</ID>
+    <name_doc>df ad ad</name_doc>
+    <info_doc1>asdf asdfa</info_doc1>
+    <info_doc2>asd fasd</info_doc2>
+    <name_folder/>
+    <date_doc>01-06-2014 00:00:00</date_doc>
+    <path_doc>1506039_750894314922503_415433699_n.jpg</path_doc>
+  </document>
+  <document>
+    <ID>7</ID>
+    <name_doc>qq</name_doc>
+    <info_doc1>asdf asd</info_doc1>
+    <info_doc2>ad ad</info_doc2>
+    <name_folder>333\Foriegn</name_folder>
+    <date_doc>01-06-2014 00:00:00</date_doc>
+    <path_doc>alex-brush.zip</path_doc>
+  </document>
+  <document>
+    <ID>6</ID>
+    <name_doc>asdf</name_doc>
+    <info_doc1>asdfa sdf asdf</info_doc1>
+    <info_doc2>asdfasdf</info_doc2>
+    <name_folder>Customers</name_folder>
+    <date_doc>28-05-2014 00:00:00</date_doc>
+    <path_doc>DP_conditions.pdf</path_doc>
+  </document>
+  <document>
+    <ID>5</ID>
+    <name_doc>cut</name_doc>
+    <info_doc1>lkajd ;lkadj ;</info_doc1>
+    <info_doc2>jk;k</info_doc2>
+    <name_folder>333\Local</name_folder>
+    <date_doc>28-05-2014 00:00:00</date_doc>
+    <path_doc>1476595_633060620065410_1698822693_n.jpg</path_doc>
+  </document>
+</documents>

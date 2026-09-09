@@ -1,0 +1,53 @@
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\bin\Debug\Employee.exe.config
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\bin\Debug\Employee.exe
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\bin\Debug\Employee.pdb
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\bin\Debug\Sedna.Net.dll
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\bin\Debug\Sedna.Net.pdb
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\obj\Debug\Employee.Form1.resources
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\obj\Debug\SednaTest.Login.resources
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\obj\Debug\Employee.Properties.Resources.resources
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\obj\Debug\SednaTest.Uploadtable.resources
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\obj\Debug\Employee.csproj.GenerateResource.Cache
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\obj\Debug\Employee.exe
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\obj\Debug\Employee.pdb
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Employee\Employee\obj\Debug\Employee.csprojResolveAssemblyReference.cache
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Employee.exe.config
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.exe
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.pdb
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Employee.exe
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Employee.pdb
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Sedna.Net.dll
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Sedna.Net.pdb
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.csprojResolveAssemblyReference.cache
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.Form1.resources
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\SednaTest.Login.resources
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.Properties.Resources.resources
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\SednaTest.Uploadtable.resources
+D:\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.csproj.GenerateResource.Cache
+D:\mohamad alhelo\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Employee.exe.config
+D:\mohamad alhelo\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.exe
+D:\mohamad alhelo\SVU-MWS\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.pdb
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Employee.exe.config
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.exe
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.pdb
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Employee.exe
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Employee.pdb
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\bin\Debug\Sedna.Net.pdb
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.csprojResolveAssemblyReference.cache
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.Form1.resources
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\SednaTest.Login.resources
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.Properties.Resources.resources
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\SednaTest.Uploadtable.resources
+D:\MWS2013\Muhammad_Svu\ADE\homework\finle project\Employee\Employee\obj\Debug\Employee.csproj.GenerateResource.Cache
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\bin\Debug\Employee.exe.config
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\obj\Debug\Employee.exe
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\obj\Debug\Employee.pdb
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\bin\Debug\Employee.exe
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\bin\Debug\Employee.pdb
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\bin\Debug\Sedna.Net.pdb
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\obj\Debug\Employee.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\obj\Debug\Employee.Form1.resources
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\obj\Debug\SednaTest.Login.resources
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\obj\Debug\Employee.Properties.Resources.resources
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\obj\Debug\SednaTest.Uploadtable.resources
+C:\Users\pc\Desktop\ADE Final Project\Source Code\Employee\Employee\obj\Debug\Employee.csproj.GenerateResource.Cache

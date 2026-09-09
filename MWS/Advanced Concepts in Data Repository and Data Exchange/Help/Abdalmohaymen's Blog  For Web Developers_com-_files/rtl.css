@@ -1,0 +1,252 @@
+ul li {
+	margin-right: 2.5em; margin-left: auto;
+}
+ol li {
+	margin-right: 2.5em; margin-left: auto;
+}
+blockquote {
+	margin: 1em 0px 1em 25%; padding: 0.6em 2.4em 0.6em 1em;
+}
+div .social-icons {
+	left: 10px; right: auto;
+}
+.social-icons a {
+	margin: 0px 6px 0px 0px; float: left;
+}
+#branding #logo {
+	padding-left: 0.3em; border-left-color: rgb(153, 153, 153); border-right-width: 0px; border-left-width: 1px; border-left-style: solid; float: right;
+}
+#site-description {
+	margin: 0px 1em 0px 0px; padding: 0.6em 0.2em 0px; border-left-color: currentColor; border-left-width: medium; border-left-style: none; float: right;
+}
+#access ul {
+	padding-right: 0px; padding-left: 0px;
+}
+#access li {
+	background: url("images/nav-div.png") no-repeat left top; float: right;
+}
+#access a {
+	margin: 0px 0px 0px 1px;
+}
+#access ul ul {
+	left: auto; right: 0px; float: right;
+}
+#access ul ul ul {
+	left: auto; right: 100%;
+}
+#content .archive-title {
+	background: url("images/post-separator.gif") repeat-x right bottom;
+}
+#content .post .sticky .post-title {
+	background: url("images/post-separator.gif") repeat-x right bottom;
+}
+.post-wrapper {
+	background: url("images/post-separator.gif") repeat-x right bottom;
+}
+.thumbnail-container {
+	float: right;
+}
+.post-info {
+	background: url("images/info-bar-rtl.png") no-repeat left top; margin-right: 11px; margin-left: auto;
+}
+.post-info p.author {
+	padding: 0px 6px 0px 0px; float: right !important;
+}
+.post-date {
+	background: url("images/info-bar-rtl.png") no-repeat right -75px; padding-right: 11px; padding-left: 0px; float: right;
+}
+.post-date p.day {
+	background: url("images/info-bar-rtl.png") no-repeat left -42px; padding: 2px 0px 0px 16px;
+}
+.entry {
+	clear: right;
+}
+.post-meta .post-tags {
+	background: url("images/icons-rtl.png") no-repeat right -50px; padding-right: 24px; padding-left: 0px;
+}
+.post-meta p.comment-link {
+	padding: 0px 0px 0px 12px;
+}
+.post-meta p.comment-link a {
+	background: url("images/icons-rtl.png") no-repeat right top; padding-right: 24px; padding-left: 0px;
+}
+.category-description {
+	background: url("images/post-separator.gif") repeat-x right bottom;
+}
+#author-avatar {
+	margin-right: auto; margin-left: 8px; float: right;
+}
+#author-link {
+	text-align: left;
+}
+.entry table td {
+	text-align: right; border-right-color: currentColor; border-left-color: rgb(255, 255, 255); border-right-width: medium; border-left-width: 1px; border-right-style: none; border-left-style: solid;
+}
+.entry table th {
+	text-align: right; border-right-color: currentColor; border-left-color: rgb(255, 255, 255); border-right-width: medium; border-left-width: 1px; border-right-style: none; border-left-style: solid;
+}
+.entry .gallery .gallery-item {
+	float: right;
+}
+.post-thumbnail {
+	margin-right: auto; margin-left: 10px;
+}
+.alignright {
+	margin-right: auto; margin-left: 8px; float: right;
+}
+.alignleft {
+	margin-right: 8px; margin-left: auto; float: left;
+}
+.aligncenter {
+	margin-right: auto; margin-left: auto;
+}
+.format-quote .entry p {
+	padding-right: 55px; padding-left: 0px;
+}
+.format-quote .entry cite {
+	text-align: left;
+}
+.format-gallery .gallery-thumb {
+	margin-right: auto; margin-left: 20px; float: right;
+}
+.page-link a {
+	margin-right: auto; margin-left: 4px;
+}
+.nav-previous {
+	float: right;
+}
+.previous-image {
+	float: right;
+}
+.nav-previous a {
+	padding: 5px 5px 5px 0px;
+}
+.previous-image a {
+	padding: 5px 5px 5px 0px;
+}
+.nav-next {
+	float: left;
+}
+.next-image {
+	float: left;
+}
+.nav-next a {
+	padding: 0px 10px 0px 5px; text-align: left; float: left;
+}
+.next-image a {
+	padding: 0px 10px 0px 5px; text-align: left; float: left;
+}
+.featured-post .showcase-heading {
+	margin: 1.62em 0px 0px 9%; left: auto; right: 0px;
+}
+.featured-post p {
+	left: auto; right: 0px;
+}
+.widget-area p {
+	margin: 0px 5px 10px 0px;
+}
+.widget-area ul ul {
+	padding-right: 2px; padding-left: 0px;
+}
+.widget-area ul ul li {
+	background: url("images/icons-rtl.png") no-repeat right -573px; padding: 0px 20px 1px 0px !important;
+}
+.widget-area .tagcloud {
+	padding-right: 5px; padding-left: 0px;
+}
+#wp-calendar tfoot #next {
+	text-align: left;
+}
+.widget_authors img {
+	padding-left: 10px; float: right;
+}
+.widget_flickr .flickr-size-small img {
+	margin: 0px 0px 10px -35px;
+}
+.widget_rss .widget-title a {
+	margin-right: 5px;
+}
+.widget-area .sub-menu {
+	margin-right: 1.5em; margin-left: 0px;
+}
+.widget-area .children {
+	margin-right: 1.5em; margin-left: 0px;
+}
+#tab-comments .menu-list li .avatar {
+	padding-left: 8px; margin-right: 8px; margin-left: 0px; float: right;
+}
+#secondary-tabs {
+	background-position: right 34px;
+}
+#secondary-tabs li {
+	float: left;
+}
+#secondary-tabs ul li a {
+	float: right;
+}
+#comments ol {
+	margin-right: 0px; margin-left: auto;
+}
+#comments ul {
+	margin-right: 0.42em; margin-left: auto;
+}
+#comments .comment-head {
+	background-position: right bottom; padding: 15px 90px 0px 0px;
+}
+#comments .avatar {
+	left: auto; right: 8px;
+}
+#comments .comment-body {
+	background: url("images/comment-bg.gif") no-repeat left bottom rgb(246, 246, 246);
+}
+#comments .comment-body p {
+	margin: 0px 35px 15px 0px;
+}
+#trackbacks {
+	margin-right: auto; margin-left: 0px;
+}
+#trackbacks li.pingback {
+	background: url("images/post-separator.gif") repeat-x right bottom;
+}
+.comment-reply-link {
+	margin-right: auto; margin-left: 4px;
+}
+.comment-edit-link {
+	margin-right: auto; margin-left: 4px;
+}
+div.act {
+	left: 10px; right: auto;
+}
+#footer-widget-area .widget-area {
+	margin: 1.5% 0px 0px 1%; padding-right: 15px; padding-left: 0px; float: right;
+}
+#footer-widget-area .widget-title {
+	background: url("images/bg-lightgray.png") no-repeat right top rgb(238, 238, 238);
+}
+#searchform {
+	margin: 0px 4px 0px 8px;
+}
+#searchform #searchfield {
+	background-position: right top; margin-right: 0px; margin-left: 55px;
+}
+#searchform input.searchtext {
+	margin: 9px 34px 0px 0px;
+}
+#searchform input.searchbutton {
+	background-position: left -34px; left: 0px; right: auto;
+}
+#searchform input.searchbutton:hover {
+	background-position: left bottom;
+}
+#ie7 .post-wrapper {
+	overflow: hidden;
+}
+#ie7 #tab-archives .menu-list li a {
+	padding-left: 0px;
+}
+#ie7 #tab-categories .menu-list li a {
+	padding-left: 0px;
+}
+#ie7 .post-meta p.comment-link a {
+	
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emp_salarys>
+
+<emp_salary>
+<emp_id>1</emp_id>
+<value>1000</value>
+<date>2013</date>
+</emp_salary>
+
+</emp_salarys>

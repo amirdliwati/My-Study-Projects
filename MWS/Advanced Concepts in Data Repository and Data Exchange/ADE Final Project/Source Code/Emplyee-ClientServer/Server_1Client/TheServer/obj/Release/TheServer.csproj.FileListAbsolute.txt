@@ -1,0 +1,6 @@
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheServer\bin\Release\TheServer.exe
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheServer\bin\Release\TheServer.pdb
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheServer\bin\Release\Sedna.Net.dll
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheServer\bin\Release\Sedna.Net.pdb
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheServer\obj\Release\TheServer.exe
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheServer\obj\Release\TheServer.pdb

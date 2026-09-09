@@ -1,0 +1,219 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0037)http://www.sedna.org/quick-start.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=10.000" 
+http-equiv="X-UA-Compatible">
+     <TITLE>Sedna Quick Start Guide</TITLE>     
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">     <LINK 
+href="Sedna%20Quick%20Start%20Guide_files/main.css" rel="stylesheet" type="text/css"> 
+  		 
+<STYLE type="text/css">
+		a {
+	     text-decoration: none;
+	     color: #D95032;
+		}
+		a:hover {
+		     text-decoration: underline;
+	    	 color: #D95032;
+		}
+		a:hover.nonlink { 
+			text-decoration: none;
+		}	
+		h1 {
+			color: #D95032;
+			font-weight: bold;
+		}
+		h2 {
+			margin-top: 30px;
+			color: #D95032;
+			font-weight: bold;
+		}
+	</STYLE>
+	 
+<SCRIPT type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-8915622-1']);
+		_gaq.push(['_setDomainName', 'sedna.org']);
+		_gaq.push(['_setAllowHash', false]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 10.00.9200.16540"></HEAD> 
+<BODY>
+<P style="margin-bottom: 15px;">
+<TABLE width="843" align="center" cellspacing="0" cellpadding="0">
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellspacing="0" cellpadding="0">
+        <TBODY>
+        <TR>
+          <TD><A href="http://www.sedna.org/"><IMG width="341" height="125" 
+            title="Back to Sedna home page" style="border: currentColor;" alt="Sedna Logo" 
+            src="Sedna%20Quick%20Start%20Guide_files/3.gif"></A></TD>
+          <TD><IMG width="502" height="125" alt="Background" src="Sedna%20Quick%20Start%20Guide_files/4.jpg"></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE width="843" align="center" class="ver8" border="0" cellspacing="0" 
+cellpadding="0">
+  <TBODY>
+  <TR>
+    <TD height="15">&nbsp;</TD></TR>
+  <TR>
+    <TD><SPAN class="style3"><A class="style3" 
+      href="http://www.sedna.org/">Home</A>  &nbsp;|&nbsp;    <A class="style3" 
+      href="http://www.sedna.org/quick-start.html">Getting Started</A>  
+      &nbsp;|&nbsp;    <A class="style3" href="http://www.sedna.org/documentation.html">Documentation</A> 
+        &nbsp;|&nbsp;     <A class="style3" 
+      href="http://wikixmldb.org/">Demo</A> &nbsp;|&nbsp;     <A class="style3" 
+      href="http://www.sedna.org/download.html">Download</A> &nbsp;|&nbsp;     
+      <A class="style3" 
+      href="http://www.sedna.org/index.html#support">Support</A> &nbsp;  </SPAN> 
+               </TD></TR></TBODY></TABLE>
+<P style="margin-bottom: 20px;">
+<TABLE width="843" align="center" class="ver9" cellspacing="0" 
+  cellpadding="0"><TBODY>
+  <TR>
+    <TD>
+      <H1>Sedna Quick Start</H1>
+      <P>	This guide the fastest way to understand basic facilities of the Sedna 
+      XML Database. It provides a number of easy exampes which can be run     	  
+       	directly in command line and describes how to run examples provided with 
+      Sedna.</P>
+      <P>	In case of differences between the Windows and Unix (Linux, FreeBSD, 
+      MacOS, etc) versions of Sedna they are marked with <CODE>[win:]</CODE> 
+      			and <CODE>[nix:]</CODE> respectively.</P>
+      <P> In this guide <CODE>INSTALL_DIR</CODE> refers to the directory where 
+      Sedna is installed.</P>
+      <P><B>Contents:</B></P>
+      <UL>
+        <LI><A 
+        href="http://www.sedna.org/quick-start.html#downloadinstall">Download 
+        and Install Sedna</A></LI>
+        <LI><A href="http://www.sedna.org/quick-start.html#start">Start and 
+        Shutdown Sedna</A></LI>
+        <LI><A href="http://www.sedna.org/quick-start.html#createdb">Create and 
+        Run a Database</A></LI>
+        <LI><A href="http://www.sedna.org/quick-start.html#query">Run Queries 
+        via Command Line</A></LI>
+        <LI><A href="http://www.sedna.org/quick-start.html#examples">Run Command 
+        Line Examples</A></LI></UL>
+      <P><B>See also:</B></P>
+      <UL>
+        <LI><A 
+        href="http://www.modis.ispras.ru/sedna/progguide/ProgGuide.html">Sedna 
+        Programmer's Guide</A></LI>
+        <LI><A href="http://www.modis.ispras.ru/sedna/c-samples.html">Getting 
+        Started with C API for Sedna</A></LI></UL>
+      <H2><A name="dowloadinstall"></A>Download and Install Sedna</H2>
+      			Download a copy of the prebuilt binaries for your machine, or get a 
+      copy of the sources and compile them yourself 			(<A href="http://www.sedna.org/download.html">download 
+      page</A>). 			 
+      <P>Installing Sedna from binaries is easy, you just need to unzip archive 
+      (on Windows) or run self-extracting script (on Unix). 			For more 
+      information on installation see <A href="http://www.sedna.org/install.html">Sedna 
+      Installation Guide</A> or             <CODE>INSTALL</CODE> file in the 
+      root of your Sedna distribution.		 
+      <H2><A name="start"></A>Start and Shutdown Sedna</H2>
+      <P>To start Sedna server go to <CODE>INSTALL_DIR/bin</CODE> and run:</P>
+      <DIV class="command">se_gov</DIV>
+      <P>To shutdown Sedna server run:</P>
+      <DIV class="command">se_stop</DIV>
+      <H2><A name="createdb"></A>Create and Run a Database</H2>
+      <P>To create a database named <CODE>testdb</CODE>:</P>
+      <DIV class="command">se_cdb testdb</DIV>
+      <P>To run the <CODE>testdb</CODE> database:</P>
+      <DIV class="command">se_sm testdb</DIV>
+      <P>To shutdown the <CODE>testdb</CODE> database:</P>
+      <DIV class="command">se_smsd testdb</DIV>
+      <P>You can find more information on how to configure databases in 			    
+      <A href="http://www.sedna.org/adminguide/AdminGuide.html">Administration 
+      Guide</A>.</P>
+      <H2><A name="query"></A>Run Queries via Command Line</H2>
+      <P>	You can run queries in Sedna either via command line or via Sedna API. 
+      				To get started with writing programs that work with Sedna API, see <A 
+      href="http://www.sedna.org/c-samples.htm">Getting Started With C 
+      API</A>.</P>
+      <P>	To run queries via command line:</P>
+      <DIV class="command">			[win:] se_term -query "let $a:=(3, 1, 7) return 
+      &lt;result&gt;{ max($a) }&lt;/result&gt;" testdb<BR>            [nix:] 
+      se_term -query "let \$a:=(3, 1, 7) return &lt;result&gt;{ max(\$a) 
+      }&lt;/result&gt;" testdb</DIV>
+      <P>or put your XQuery query in a file (for example <CODE>1.xquery</CODE>) 
+      and run:</P>
+      <DIV class="command">se_term -file 1.xquery testdb</DIV>
+      <P><CODE>se_term</CODE> prints result of the query on the screen.          
+        	With <CODE>se_term</CODE> you can also execute queries in interative 
+      mode. Just run:</P>
+      <DIV class="command">se_term testdb</DIV>
+      <P>	and print your queries. Use ampersand and line feed to terminate the 
+      query. (&amp;<I>newline</I> terminates the query).				Read more about 
+      <CODE>se_term</CODE> features in <A href="http://www.sedna.org/adminguide/AdminGuide.html">Administration 
+      Guide</A>.</P>
+      <H2><A name="examples"></A>Run Command Line Examples</H2>
+      <P>	Sedna distribution comes with an example set based on the <A href="http://www.xml-benchmark.org/">XMark 
+      XML benchmark</A>. 			    This set allows you to investigate the features 
+      of Sedna easily. Examples include bulk load of a sample XML document and a 
+      number of sample XQuery queries and updates to this document. 			    Below 
+      we will show how to run one of them.</P>
+      <P> Examples are located in the directory:</P>
+      <DIV class="command">				[win:] INSTALL_DIR\examples\commandline<BR>
+      				[nix:] INSTALL_DIR/examples/commandline		     </DIV>
+      <P>To run the example, type the following commands in the command 
+      prompt:</P>
+      <OL>
+        <LI>Change the current directory to the directory where the example is 
+        located by typing in a command line:     					 
+        <DIV class="command">						[win:] cd 
+        INSTALL_DIR\examples\commandline<BR>						[nix:] cd 
+        INSTALL_DIR/examples/commandline					 </DIV></LI>
+        <LI>Start Sedna by runing the following command:                     
+        <DIV class="command">se_gov</DIV>					If Sedna is started successfully 
+        it prints <CODE>"GOVERNOR has been started in the background 
+        mode"</CODE>.
+        <P></P></LI>
+        <LI>Create a new database auction by running the following command:
+        					 <DIV class="command">se_cdb auction</DIV>					If the database is 
+        created successfully it prints <CODE>"The database 'auction' has been 
+        created successfully"</CODE>.
+        <P></P></LI>
+        <LI>Start the auction database by running the following command:					 
+        <DIV class="command">se_sm auction</DIV>					If the database is started 
+        successfully it prints <CODE>"SM has been started in the background 
+        mode"</CODE>.
+        <P></P></LI>
+        <LI>Load the sample XML document into the auction database by typing the 
+        command:					 
+        <DIV class="command">se_term -file load_data.xquery auction</DIV>					If 
+        the document is loaded successfully it prints <CODE>"Bulk load 
+        succeeded"</CODE>.
+        <P></P></LI>
+        <LI>Now you can execute the sample queries by typing the command:					 
+        <DIV class="command">se_term -file &lt;query_name&gt;.xquery 
+        auction</DIV>										where &lt;query_name&gt;.xquery is the name of a 
+        file with the sample query. 					For instance, to execute 
+        sample01.xquery you should type:					 
+        <DIV class="command">se_term -file sample01.xquery auction</DIV>					It 
+        prints the query result.
+        <P></P></LI>
+        <LI>Stop Sedna by running the following command:								 
+        <DIV class="command">se_stop</DIV>
+        <P></P></LI></OL></TD></TR></TBODY></TABLE>
+<P style="margin-bottom: 15px;">
+<TABLE width="843" align="center" class="ver9" cellspacing="0" 
+  cellpadding="0"><TBODY>
+  <TR>
+    <TD>
+      <DIV id="footer">
+      <DIV id="copyright">© 2003-2012 Institute for System Programming RAS</DIV>
+      <UL>
+        <LI><A href="http://www.sedna.org/">Home</A></LI>
+        <LI><A 
+        href="http://www.sedna.org/documentation.html">Documentation</A></LI>
+        <LI class="last"><A 
+        href="http://www.sedna.org/download.html">Download</A></LI></UL></DIV></TD></TR></TBODY></TABLE>
+<P style="margin-bottom: 15px;"></P></BODY></HTML>

@@ -1,0 +1,57 @@
+a.non-underline {
+	text-decoration: none;
+}
+a.non-underline:hover {
+	text-decoration: none;
+}
+body {
+	margin: 0px; font-family: verdana,arial,helvetica,sans-serif;
+}
+.ver-7 {
+	font-size: 7pt;
+}
+.ver-7rov {
+	text-align: justify; font-size: 7pt;
+}
+.ver8 {
+	font-size: 8pt;
+}
+.ver-8rov {
+	text-align: justify; color: rgb(255, 255, 255); font-size: 8pt;
+}
+.ver9 {
+	font-size: 9pt;
+}
+.ver9-rov {
+	text-align: justify; font-size: 9pt;
+}
+.command {
+	margin: 15px 20px 15px 0px; padding: 2px 40px; font-family: monospace; font-weight: bold; background-color: rgb(234, 232, 233);
+}
+#footer {
+	margin: 5px 0px 0px; padding: 2px 0px 0px; width: 99%; color: rgb(85, 85, 85); clear: both; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid;
+}
+#footer #copyright {
+	margin: 0px 12px; font-size: 85%; float: right;
+}
+#footer ul {
+	list-style: none; margin: 0px; padding: 0px; float: left;
+}
+#page #footer ul {
+	list-style: none;
+}
+#footer li {
+	background: url("../images/sep.png") no-repeat right top; margin: 0px; padding: 0px 8px 0px 6px; font-size: 90%; float: left;
+}
+#footer li.last {
+	
+}
+#footer a {
+	color: rgb(85, 85, 85);
+}
+.style3 {
+	color: rgb(217, 80, 50); font-weight: bold;
+}
+#contents li {
+	background: url("../images/arrow_down.gif") no-repeat left top; list-style: none; padding: 0px 0px 0px 20px; font-size: 90%;
+}

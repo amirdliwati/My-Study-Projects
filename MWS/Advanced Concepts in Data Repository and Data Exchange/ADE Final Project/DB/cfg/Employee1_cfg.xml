@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="yes"?>
+<db>
+   <name>Employee1</name>
+   <bufs_num>1600</bufs_num>
+   <max_log_files>3</max_log_files>
+   <tmp_file_initial_size>100</tmp_file_initial_size>
+   <upd_crt>0.25</upd_crt>
+</db>

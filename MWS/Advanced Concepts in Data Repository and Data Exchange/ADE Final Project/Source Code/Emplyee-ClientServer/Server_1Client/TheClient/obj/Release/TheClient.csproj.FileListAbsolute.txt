@@ -1,0 +1,4 @@
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheClient\bin\Release\TheClient.exe
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheClient\bin\Release\TheClient.pdb
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheClient\obj\Release\TheClient.exe
+C:\Users\GhuM\Documents\Visual Studio 2012\Projects\Emplyee-ClientServer\Server_1Client\TheClient\obj\Release\TheClient.pdb

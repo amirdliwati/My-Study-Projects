@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Departments>
+
+<Department>
+<id>1</id>
+<name>Software</name>
+</Department>
+
+<Department>
+<id>2</id>
+<name>Management</name>
+</Department>
+
+<Department>
+<id>3</id>
+<name>Network</name>
+</Department>
+
+<Department>
+<id>4</id>
+<name>AI</name>
+</Department>
+
+</Departments>
