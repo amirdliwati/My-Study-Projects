@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";>
+<meta name="keywords" content="DeZign for Databases - HTML Report">
+<meta name="author" content="Datanamic - www.datanamic.com">
+<title>DeZign for Databases V4 - HTML Report</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="dezign.css" title="report">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="20" topmargin="10" marginwidth="20" marginheight="10">
+<div class="top">Logical model</div>
+<ul id="menu">
+<li><a href="index.html">Project details</a></li>
+<li><a href="erdiagram.html">ER diagram</a></li>
+<li><a href="entl.html">Entities</a></li>
+<li><a href="attrl.html">Attributes</a></li>
+<li><a href="rell.html">Relationships</a></li>
+<li><a href="doml.html">Domains</a></li>
+<li><a href="viewl.html">Views</a></li>
+<li><a href="procl.html">Procedures</a></li>
+</ul>
+<div class="row">
+<div class="tab"><a href="entl.html">List of entities</a></div>
+<div class="activetab">Entity details</div>
+</div>
+<table width=90% border=0 cellSpacing=0 cellPadding=0 class="chapter">
+<tr>
+<td class="left" valign=top>
+<ul id="objectbrowser">
+<li><a href="#admin">admin</a></li>
+<li><a href="#advertising">advertising</a></li>
+<li><a href="#anser">anser</a></li>
+<li><a href="#clupsubject">clupsubject</a></li>
+<li><a href="#dept">dept</a></li>
+<li><a href="#exam">exam</a></li>
+<li><a href="#examform">examform</a></li>
+<li><a href="#lisson">lisson</a></li>
+<li><a href="#quastion">quastion</a></li>
+<li><a href="#quastion_examform">quastion_examform</a></li>
+<li><a href="#reply">reply</a></li>
+<li><a href="#result">result</a></li>
+<li><a href="#student">student</a></li>
+<li><a href="#subject">subject</a></li>
+<li><a href="#subject_student">subject_student</a></li>
+<li><a href="#teacher">teacher</a></li>
+<li><a href="#teacher_subject">teacher_subject</a></li>
+<li><a href="#writeanser">writeanser</a></li>
+</ul>
+</td>
+<td class="right" valign=top>
+<A NAME="admin"></A>
+<div class="objectname">Entity: admin</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_admin</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#aid">aid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#fname">fname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#lname">lname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#username">username</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#pass">pass</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#sex">sex</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#birthdate">birthdate</A></td><td class="fielddata">DATETIME</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#email">email</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#phon">phon</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">phon</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">aid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">fname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">lname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">username</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">pass</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">sex</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">birthdate</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">email</td></tr>
+<tr><td class="fielddata">PK_admin</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (aid)</td></tr>
+</table>
+<A NAME="advertising"></A>
+<div class="objectname">Entity: advertising</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_advertising</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#adid">adid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#titel">titel</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#text">text</A></td><td class="fielddata">TEXT</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#date">date</A></td><td class="fielddata">DATETIME</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">date</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">adid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">titel</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">text</td></tr>
+<tr><td class="fielddata">PK_advertising</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (adid)</td></tr>
+</table>
+<A NAME="anser"></A>
+<div class="objectname">Entity: anser</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_anser</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#anid">anid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#antext">antext</A></td><td class="fielddata">TEXT</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#true">true</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#qid">qid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">quastion_anser</td><td class="fielddata">Identifying</td><td class="fielddata">quastion</td><td class="fielddata">anser</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">qid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">anid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">antext</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">true</td></tr>
+<tr><td class="fielddata">PK_anser</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (anid, qid)</td></tr>
+<tr><td class="fielddata">quastion_anser</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (qid) REFERENCES quastion(qid)</td></tr>
+</table>
+<A NAME="clupsubject"></A>
+<div class="objectname">Entity: clupsubject</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_clupsubject</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#cbid">cbid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#subtitel">subtitel</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#subtext">subtext</A></td><td class="fielddata">TEXT</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#date">date</A></td><td class="fielddata">DATETIME</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#active">active</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#suid">suid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">clupsubject_reply</td><td class="fielddata">Identifying</td><td class="fielddata">clupsubject</td><td class="fielddata">reply</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">subject_clupsubject</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">clupsubject</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">cbid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">subtitel</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">subtext</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">date</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">active</td></tr>
+<tr><td class="fielddata">DEF_clupsubject_active</td><td class="fielddata">Column Constraint</td><td class="fielddata">Default</td><td class="fielddata">no</td></tr>
+<tr><td class="fielddata">PK_clupsubject</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (cbid, suid)</td></tr>
+<tr><td class="fielddata">subject_clupsubject</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (suid) REFERENCES subject(suid)</td></tr>
+</table>
+<A NAME="dept"></A>
+<div class="objectname">Entity: dept</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_dept</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#did">did</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#dname">dname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">dept_student</td><td class="fielddata">Identifying</td><td class="fielddata">dept</td><td class="fielddata">student</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">dname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">did</td></tr>
+<tr><td class="fielddata">PK_dept</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (did)</td></tr>
+</table>
+<A NAME="exam"></A>
+<div class="objectname">Entity: exam</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_exam</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#exid">exid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#exname">exname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#exdate">exdate</A></td><td class="fielddata">DATETIME</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#exgrade">exgrade</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#suid">suid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">exam_examform</td><td class="fielddata">Identifying</td><td class="fielddata">exam</td><td class="fielddata">examform</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">exam_result</td><td class="fielddata">Non Identifying</td><td class="fielddata">exam</td><td class="fielddata">result</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">exam_writeanser</td><td class="fielddata">Non Identifying</td><td class="fielddata">exam</td><td class="fielddata">writeanser</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">subject_exam</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">exam</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">exid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">exname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">exdate</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">exgrade</td></tr>
+<tr><td class="fielddata">PK_exam</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (exid, suid)</td></tr>
+<tr><td class="fielddata">subject_exam</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (suid) REFERENCES subject(suid)</td></tr>
+</table>
+<A NAME="examform"></A>
+<div class="objectname">Entity: examform</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_examform</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#efid">efid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#formname">formname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#active">active</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#exid">exid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#suid">suid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">examform_quastion_examform</td><td class="fielddata">Identifying</td><td class="fielddata">examform</td><td class="fielddata">quastion_examform</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">exam_examform</td><td class="fielddata">Identifying</td><td class="fielddata">exam</td><td class="fielddata">examform</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">efid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">formname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">active</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">exid</td></tr>
+<tr><td class="fielddata">DEF_examform_active</td><td class="fielddata">Column Constraint</td><td class="fielddata">Default</td><td class="fielddata">no</td></tr>
+<tr><td class="fielddata">exam_examform</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (exid,suid) REFERENCES exam(exid,suid)</td></tr>
+<tr><td class="fielddata">PK_examform</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (efid, exid, suid)</td></tr>
+</table>
+<A NAME="lisson"></A>
+<div class="objectname">Entity: lisson</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_lisson</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#lisid">lisid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#lisnumber">lisnumber</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#lisname">lisname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#lisurl">lisurl</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#suid">suid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">subject_lisson</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">lisson</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">lisid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">lisnumber</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">lisname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">lisurl</td></tr>
+<tr><td class="fielddata">PK_lisson</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (lisid, suid)</td></tr>
+<tr><td class="fielddata">subject_lisson</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (suid) REFERENCES subject(suid)</td></tr>
+</table>
+<A NAME="quastion"></A>
+<div class="objectname">Entity: quastion</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_quastion</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#qid">qid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#qtext">qtext</A></td><td class="fielddata">TEXT</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#qtype">qtype</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#multy">multy</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#qgrade">qgrade</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">quastion_anser</td><td class="fielddata">Identifying</td><td class="fielddata">quastion</td><td class="fielddata">anser</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">quastion_quastion_examform</td><td class="fielddata">Identifying</td><td class="fielddata">quastion</td><td class="fielddata">quastion_examform</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">quastion_writeanser</td><td class="fielddata">Identifying</td><td class="fielddata">quastion</td><td class="fielddata">writeanser</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">qgrade</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">qid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">qtext</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">qtype</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">multy</td></tr>
+<tr><td class="fielddata">PK_quastion</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (qid)</td></tr>
+</table>
+<A NAME="quastion_examform"></A>
+<div class="objectname">Entity: quastion_examform</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_quastion_examform</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#qid">qid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#efid">efid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#exid">exid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#suid">suid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">examform_quastion_examform</td><td class="fielddata">Identifying</td><td class="fielddata">examform</td><td class="fielddata">quastion_examform</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">quastion_quastion_examform</td><td class="fielddata">Identifying</td><td class="fielddata">quastion</td><td class="fielddata">quastion_examform</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">qid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">efid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">exid</td></tr>
+<tr><td class="fielddata">examform_quastion_examform</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (efid,exid,suid) REFERENCES examform(efid,exid,suid)</td></tr>
+<tr><td class="fielddata">PK_quastion_examform</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (qid, efid, exid, suid)</td></tr>
+<tr><td class="fielddata">quastion_quastion_examform</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (qid) REFERENCES quastion(qid)</td></tr>
+</table>
+<A NAME="reply"></A>
+<div class="objectname">Entity: reply</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_reply</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#reid">reid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#retext">retext</A></td><td class="fielddata">TEXT</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#date">date</A></td><td class="fielddata">DATETIME</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#active">active</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#cbid">cbid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#suid">suid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">clupsubject_reply</td><td class="fielddata">Identifying</td><td class="fielddata">clupsubject</td><td class="fielddata">reply</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">reid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">retext</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">date</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">active</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">cbid</td></tr>
+<tr><td class="fielddata">clupsubject_reply</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (cbid,suid) REFERENCES clupsubject(cbid,suid)</td></tr>
+<tr><td class="fielddata">DEF_reply_active</td><td class="fielddata">Column Constraint</td><td class="fielddata">Default</td><td class="fielddata">no</td></tr>
+<tr><td class="fielddata">PK_reply</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (reid, cbid, suid)</td></tr>
+</table>
+<A NAME="result"></A>
+<div class="objectname">Entity: result</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_result</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#reid">reid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#result">result</A></td><td class="fielddata">FLOAT</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#exid">exid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#sid">sid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">exam_result</td><td class="fielddata">Non Identifying</td><td class="fielddata">exam</td><td class="fielddata">result</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">student_result</td><td class="fielddata">Non Identifying</td><td class="fielddata">student</td><td class="fielddata">result</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">sid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">reid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">result</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">exid</td></tr>
+<tr><td class="fielddata">exam_result</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (exid) REFERENCES exam(exid)</td></tr>
+<tr><td class="fielddata">PK_result</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (reid, exid, sid)</td></tr>
+<tr><td class="fielddata">student_result</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (sid) REFERENCES student(sid)</td></tr>
+</table>
+<A NAME="student"></A>
+<div class="objectname">Entity: student</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_student</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#sid">sid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#coid">coid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#fname">fname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#lname">lname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#username">username</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#pass">pass</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#sex">sex</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#birthdate">birthdate</A></td><td class="fielddata">DATETIME</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#email">email</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#phon">phon</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#active">active</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#did">did</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">dept_student</td><td class="fielddata">Identifying</td><td class="fielddata">dept</td><td class="fielddata">student</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">student_result</td><td class="fielddata">Non Identifying</td><td class="fielddata">student</td><td class="fielddata">result</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">student_subject_student</td><td class="fielddata">Identifying</td><td class="fielddata">student</td><td class="fielddata">subject_student</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">student_writeanser</td><td class="fielddata">Non Identifying</td><td class="fielddata">student</td><td class="fielddata">writeanser</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">did</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">sid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">coid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">fname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">lname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">username</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">pass</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">sex</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">birthdate</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">email</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">phon</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">active</td></tr>
+<tr><td class="fielddata">DEF_student_active</td><td class="fielddata">Column Constraint</td><td class="fielddata">Default</td><td class="fielddata">no</td></tr>
+<tr><td class="fielddata">dept_student</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (did) REFERENCES dept(did)</td></tr>
+<tr><td class="fielddata">PK_student</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (sid, did)</td></tr>
+</table>
+<A NAME="subject"></A>
+<div class="objectname">Entity: subject</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_subject</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#suid">suid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#suname">suname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#suyear">suyear</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#active">active</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">subject_clupsubject</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">clupsubject</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">subject_exam</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">exam</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">subject_lisson</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">lisson</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">subject_subject_student</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">subject_student</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">subject_teacher_subject</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">teacher_subject</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">active</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suyear</td></tr>
+<tr><td class="fielddata">DEF_subject_active</td><td class="fielddata">Column Constraint</td><td class="fielddata">Default</td><td class="fielddata">no</td></tr>
+<tr><td class="fielddata">PK_subject</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (suid)</td></tr>
+</table>
+<A NAME="subject_student"></A>
+<div class="objectname">Entity: subject_student</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_subject_student</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#suid">suid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#sid">sid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#did">did</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">student_subject_student</td><td class="fielddata">Identifying</td><td class="fielddata">student</td><td class="fielddata">subject_student</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">subject_subject_student</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">subject_student</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">did</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">sid</td></tr>
+<tr><td class="fielddata">PK_subject_student</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (suid, sid, did)</td></tr>
+<tr><td class="fielddata">student_subject_student</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (sid,did) REFERENCES student(sid,did)</td></tr>
+<tr><td class="fielddata">subject_subject_student</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (suid) REFERENCES subject(suid)</td></tr>
+</table>
+<A NAME="teacher"></A>
+<div class="objectname">Entity: teacher</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_teacher</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#tid">tid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#fname">fname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#lname">lname</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#username">username</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#pass">pass</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#sex">sex</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#birthdate">birthdate</A></td><td class="fielddata">DATETIME</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#email">email</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#phon">phon</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#active">active</A></td><td class="fielddata">VARCHAR</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">teacher_teacher_subject</td><td class="fielddata">Identifying</td><td class="fielddata">teacher</td><td class="fielddata">teacher_subject</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">active</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">tid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">fname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">lname</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">username</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">pass</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">sex</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">birthdate</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">email</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">phon</td></tr>
+<tr><td class="fielddata">DEF_teacher_active</td><td class="fielddata">Column Constraint</td><td class="fielddata">Default</td><td class="fielddata">no</td></tr>
+<tr><td class="fielddata">PK_teacher</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (tid)</td></tr>
+</table>
+<A NAME="teacher_subject"></A>
+<div class="objectname">Entity: teacher_subject</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_teacher_subject</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#tid">tid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#suid">suid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">subject_teacher_subject</td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">teacher_subject</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">teacher_teacher_subject</td><td class="fielddata">Identifying</td><td class="fielddata">teacher</td><td class="fielddata">teacher_subject</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">suid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">tid</td></tr>
+<tr><td class="fielddata">PK_teacher_subject</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (tid, suid)</td></tr>
+<tr><td class="fielddata">subject_teacher_subject</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (suid) REFERENCES subject(suid)</td></tr>
+<tr><td class="fielddata">teacher_teacher_subject</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (tid) REFERENCES teacher(tid)</td></tr>
+</table>
+<A NAME="writeanser"></A>
+<div class="objectname">Entity: writeanser</div>
+<div class="details">Entity details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Primary key constraint name</td><td class="fielddata">PK_writeanser</td></tr>
+</table>
+<div class="details">Attributes:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Key</td><td class="fieldname">Attribute name</td><td class="fieldname">Data type</td><td class="fieldname">Not null</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">PK</td><td class="fielddata"><A HREF="attrd.html#wrid">wrid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"></td><td class="fielddata"><A HREF="attrd.html#anser">anser</A></td><td class="fielddata">TEXT</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#sid">sid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#qid">qid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">PK,FK</td><td class="fielddata"><A HREF="attrd.html#exid">exid</A></td><td class="fielddata">INTEGER</td><td class="fielddata">Yes</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Relationships:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent</td><td class="fieldname">Child</td><td class="fieldname">Cardinality</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata">exam_writeanser</td><td class="fielddata">Non Identifying</td><td class="fielddata">exam</td><td class="fielddata">writeanser</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">quastion_writeanser</td><td class="fielddata">Identifying</td><td class="fielddata">quastion</td><td class="fielddata">writeanser</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata">student_writeanser</td><td class="fielddata">Non Identifying</td><td class="fielddata">student</td><td class="fielddata">writeanser</td><td class="fielddata">Zero Or More</td><td class="fielddata"></td></tr>
+</table>
+<div class="details">Constraints:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Constraint name</td><td class="fieldname">Type</td><td class="fieldname">Level</td><td class="fieldname">Constraint</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">exid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">wrid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">anser</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">sid</td></tr>
+<tr><td class="fielddata"></td><td class="fielddata">Column Constraint</td><td class="fielddata">Not Null</td><td class="fielddata">qid</td></tr>
+<tr><td class="fielddata">exam_writeanser</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (exid) REFERENCES exam(exid)</td></tr>
+<tr><td class="fielddata">PK_writeanser</td><td class="fielddata">Table Constraint</td><td class="fielddata">Primary Key</td><td class="fielddata">PRIMARY KEY (wrid, sid, qid, exid)</td></tr>
+<tr><td class="fielddata">quastion_writeanser</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (qid) REFERENCES quastion(qid)</td></tr>
+<tr><td class="fielddata">student_writeanser</td><td class="fielddata">Table Constraint</td><td class="fielddata">Foreign Key</td><td class="fielddata">FOREIGN KEY (sid) REFERENCES student(sid)</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

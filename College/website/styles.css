@@ -1,0 +1,292 @@
+/*
+Design by Metamorphosis Design
+http://www.metamorphozis.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+*
+{
+margin: 0px;
+padding: 0px;
+}
+
+a{
+	color: #fd6f27;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000000;
+	font-weight:bold;
+}
+
+body{
+	background: url(1.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+	background-color: #000000;
+	font: 14px Arial, Helvetica, sans-serif;
+	color: #464646;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+#content{
+	width: 940px;
+	text-align: left;
+}
+
+#main{
+	width: 932px;
+	margin: 9px;
+	clear:both;
+	background: url(images\header.jpg);
+	background-repeat:repeat-y;
+	background-position:left;
+	
+}
+
+#header{
+	height: 281px;
+	width: 1092px;
+	background: url(images\header.jpg) no-repeat top;		
+}
+
+#logo{
+	height: 309px;
+	text-align: left;
+	padding-left: 100px;
+	padding-top: 150px;
+}
+
+
+#logo a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: 18px;
+	color: #ffffff;
+}
+#logo H2 a{
+	font-size: 16px;
+}
+
+
+#menu{
+	width: 1092px;
+	height: 92px;
+	
+}
+
+#menu ul {
+	list-style: none;
+	padding: 0px;	
+}
+
+#menu li {
+	list-style: none;
+	padding: 0px;	
+	display: inline; 
+	
+}
+
+#menu a {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	float: left;
+	width: 140px;
+	height: 62px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: normal;
+	padding-top: 30px;
+	font-size: 24px;
+}
+
+#menu a:hover{
+	color: #ffffff;
+	background: url(images\header.jpg);
+	background-repeat:repeat-x;
+}
+
+#left{
+	width: 235px;
+}
+
+#left a{
+	color: #cd4a08;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+#left a:hover{
+	color: #000000;
+}
+
+#lefttop{
+	background: url(1.JPG);
+	background-repeat:no-repeat;
+	background-position:top;
+	padding-top: 5px;
+}
+
+#left H3{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 23px;
+	font-weight: normal;
+	color: #ffffff;
+	width: 225px;
+	height: 37px;
+	padding-top: 8px;
+	background: url(1.JPG) no-repeat;
+	margin-left: 5px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#left ul {
+	list-style: none;
+	padding-left: 15px;
+	padding-bottom: 15px;
+}
+
+#left ul li{
+	height: 20px;
+	margin-top: 4px;
+}
+
+#categories ul li{
+	background: url(1.JPG) no-repeat top left;
+	padding-left: 15px;
+	padding-top: 1px;
+}
+
+#categories ul li a{
+	font-weight: bold;
+}
+
+#partners ul li{
+	background: url(1.JPG) no-repeat top left;
+	padding-left: 15px;
+	padding-top: 1px;
+}
+
+#partners ul li a{
+	font-weight: normal;
+}
+
+#right{
+	float: right;
+	width: 678px;
+}
+
+#righttop{
+	background: url(1.JPG);
+	background-repeat:no-repeat;
+	background-position:top;
+	padding-top: 10px;
+}
+
+.text{
+	padding-left: 15px;
+	padding-right: 25px;
+}
+
+#right H4{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 28px;
+	font-weight: normal;
+	color: #fd6f27;
+	height: 38px;
+	padding-top: 5px;
+	padding-left: 18px;
+	margin-bottom: 10px;
+	background: url(1.JPG);
+	background-repeat:no-repeat;
+	background-position:top;
+
+}
+
+#right p {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+#right h2 {
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	color: #196050;
+}
+.date {
+	margin-left: 11px;
+	padding-bottom: 15px;
+	height: 20px;
+}
+
+.dateleft{
+	background:url(1.JPG) no-repeat;
+	padding-left: 20px;
+	height: 16px;
+	margin-top: 4px;
+	width:200px;
+	margin-left: 135px;
+	width: 130px;
+	float:right;
+}
+
+.dateright{
+	margin-top: 2px;
+	margin-left: 15px;
+	background:url(1.JPG) no-repeat left;
+	padding-left: 25px;
+	height: 16px;
+	float: left;
+}
+
+.dateleft a,.dateright a{
+	color: #ff4200;
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight:bold;
+}
+
+
+#mainbot{
+	background: url(1.JPG);
+	background-repeat:no-repeat;
+	background-position:top;
+	background-color: #000000;
+	height: 30px;
+}	
+
+#footer {
+	height: 56px;
+	clear: both;
+	margin: 0 auto;
+	padding-top: 30px;
+	background: url(1.JPG);
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+#footer p {
+	margin: 0;
+	font-size: 10px;
+	text-align: center;
+	color: #ffffff;
+}
+
+#footer a {
+	color: #ffffff;
+}
+IMG.background
+{
+    background-image :url(1.JPG);
+}

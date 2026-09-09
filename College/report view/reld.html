@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";>
+<meta name="keywords" content="DeZign for Databases - HTML Report">
+<meta name="author" content="Datanamic - www.datanamic.com">
+<title>DeZign for Databases V4 - HTML Report</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="dezign.css" title="report">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="20" topmargin="10" marginwidth="20" marginheight="10">
+<div class="top">Logical model</div>
+<ul id="menu">
+<li><a href="index.html">Project details</a></li>
+<li><a href="erdiagram.html">ER diagram</a></li>
+<li><a href="entl.html">Entities</a></li>
+<li><a href="attrl.html">Attributes</a></li>
+<li><a href="rell.html">Relationships</a></li>
+<li><a href="doml.html">Domains</a></li>
+<li><a href="viewl.html">Views</a></li>
+<li><a href="procl.html">Procedures</a></li>
+</ul>
+<div class="row">
+<div class="tab"><a href="rell.html">List of relationships</a></div>
+<div class="activetab">Relationship details</div>
+</div>
+<table width=90% border=0 cellSpacing=0 cellPadding=0 class="chapter">
+<tr>
+<td class="left" valign=top>
+<ul id="objectbrowser">
+<li><a href="#clupsubject_reply">clupsubject_reply</a></li>
+<li><a href="#dept_student">dept_student</a></li>
+<li><a href="#examform_quastion_examform">examform_quastion_examform</a></li>
+<li><a href="#exam_examform">exam_examform</a></li>
+<li><a href="#exam_result">exam_result</a></li>
+<li><a href="#exam_writeanser">exam_writeanser</a></li>
+<li><a href="#quastion_anser">quastion_anser</a></li>
+<li><a href="#quastion_quastion_examform">quastion_quastion_examform</a></li>
+<li><a href="#quastion_writeanser">quastion_writeanser</a></li>
+<li><a href="#student_result">student_result</a></li>
+<li><a href="#student_subject_student">student_subject_student</a></li>
+<li><a href="#student_writeanser">student_writeanser</a></li>
+<li><a href="#subject_clupsubject">subject_clupsubject</a></li>
+<li><a href="#subject_exam">subject_exam</a></li>
+<li><a href="#subject_lisson">subject_lisson</a></li>
+<li><a href="#subject_subject_student">subject_subject_student</a></li>
+<li><a href="#subject_teacher_subject">subject_teacher_subject</a></li>
+<li><a href="#teacher_teacher_subject">teacher_teacher_subject</a></li>
+</ul>
+</td>
+<td class="right" valign=top>
+<A NAME="clupsubject_reply"></A>
+<div class="objectname">Relationship: clupsubject_reply</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">clupsubject (cbid,suid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">reply (cbid,suid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="dept_student"></A>
+<div class="objectname">Relationship: dept_student</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">dept (did)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">student (did)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="examform_quastion_examform"></A>
+<div class="objectname">Relationship: examform_quastion_examform</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">examform (efid,exid,suid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">quastion_examform (efid,exid,suid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="exam_examform"></A>
+<div class="objectname">Relationship: exam_examform</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">exam (exid,suid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">examform (exid,suid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="exam_result"></A>
+<div class="objectname">Relationship: exam_result</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">exam (exid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">result (exid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="exam_writeanser"></A>
+<div class="objectname">Relationship: exam_writeanser</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">exam (exid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">writeanser (exid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="quastion_anser"></A>
+<div class="objectname">Relationship: quastion_anser</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">quastion (qid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">anser (qid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="quastion_quastion_examform"></A>
+<div class="objectname">Relationship: quastion_quastion_examform</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">quastion (qid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">quastion_examform (qid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="quastion_writeanser"></A>
+<div class="objectname">Relationship: quastion_writeanser</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">quastion (qid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">writeanser (qid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="student_result"></A>
+<div class="objectname">Relationship: student_result</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">student (sid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">result (sid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="student_subject_student"></A>
+<div class="objectname">Relationship: student_subject_student</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">student (sid,did)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">subject_student (sid,did)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="student_writeanser"></A>
+<div class="objectname">Relationship: student_writeanser</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Non Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">student (sid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">writeanser (sid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="subject_clupsubject"></A>
+<div class="objectname">Relationship: subject_clupsubject</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">subject (suid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">clupsubject (suid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="subject_exam"></A>
+<div class="objectname">Relationship: subject_exam</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">subject (suid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">exam (suid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="subject_lisson"></A>
+<div class="objectname">Relationship: subject_lisson</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">subject (suid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">lisson (suid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="subject_subject_student"></A>
+<div class="objectname">Relationship: subject_subject_student</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">subject (suid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">subject_student (suid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="subject_teacher_subject"></A>
+<div class="objectname">Relationship: subject_teacher_subject</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">subject (suid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">teacher_subject (suid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+<A NAME="teacher_teacher_subject"></A>
+<div class="objectname">Relationship: teacher_teacher_subject</div>
+<div class="details">Relationship details:</div>
+<table width="100%" border=0 class="detailstable">
+<tr><td width=20% class="fieldname">Description</td><td class="fielddata"></td></tr>
+<tr><td class="fieldname">Type</td><td class="fielddata">Identifying</td></tr>
+<tr><td class="fieldname">Cardinality</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fieldname">Parent</td><td class="fielddata">teacher (tid)</td></tr>
+<tr><td class="fieldname">Child</td><td class="fielddata">teacher_subject (tid)</td></tr>
+<tr><td class="fieldname">Update rule</td><td class="fielddata">None</td></tr>
+<tr><td class="fieldname">Delete rule</td><td class="fielddata">None</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

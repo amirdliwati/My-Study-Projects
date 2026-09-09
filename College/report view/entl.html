@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";>
+<meta name="keywords" content="DeZign for Databases - HTML Report">
+<meta name="author" content="Datanamic - www.datanamic.com">
+<title>DeZign for Databases V4 - HTML Report</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="dezign.css" title="report">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="20" topmargin="10" marginwidth="20" marginheight="10">
+<div class="top">Logical model</div>
+<ul id="menu">
+<li><a href="index.html">Project details</a></li>
+<li><a href="erdiagram.html">ER diagram</a></li>
+<li><a href="entl.html">Entities</a></li>
+<li><a href="attrl.html">Attributes</a></li>
+<li><a href="rell.html">Relationships</a></li>
+<li><a href="doml.html">Domains</a></li>
+<li><a href="viewl.html">Views</a></li>
+<li><a href="procl.html">Procedures</a></li>
+</ul>
+<div class="row">
+<div class="activetab">List of entities</div>
+<div class="tab"><a href="entd.html">Entity details</a></div>
+</div>
+<table width=90% border=0 cellSpacing=0 cellPadding=0 class="chapter">
+<tr>
+<td class="right" valign=top>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Entity name</td><td class="fieldname">Primary key attributes</td><td class="fieldname"># Attributes</td><td class="fieldname">Description</td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#admin">admin</A></td><td class="fielddata">aid</td><td class="fielddata">9</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#advertising">advertising</A></td><td class="fielddata">adid</td><td class="fielddata">4</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#anser">anser</A></td><td class="fielddata">anid, qid</td><td class="fielddata">4</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#clupsubject">clupsubject</A></td><td class="fielddata">cbid, suid</td><td class="fielddata">6</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#dept">dept</A></td><td class="fielddata">did</td><td class="fielddata">2</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#exam">exam</A></td><td class="fielddata">exid, suid</td><td class="fielddata">5</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#examform">examform</A></td><td class="fielddata">efid, exid, suid</td><td class="fielddata">5</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#lisson">lisson</A></td><td class="fielddata">lisid, suid</td><td class="fielddata">5</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#quastion">quastion</A></td><td class="fielddata">qid</td><td class="fielddata">5</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#quastion_examform">quastion_examform</A></td><td class="fielddata">qid, efid, exid, suid</td><td class="fielddata">4</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#reply">reply</A></td><td class="fielddata">reid, cbid, suid</td><td class="fielddata">6</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#result">result</A></td><td class="fielddata">reid, exid, sid</td><td class="fielddata">4</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#student">student</A></td><td class="fielddata">sid, did</td><td class="fielddata">12</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#subject">subject</A></td><td class="fielddata">suid</td><td class="fielddata">4</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#subject_student">subject_student</A></td><td class="fielddata">suid, sid, did</td><td class="fielddata">3</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#teacher">teacher</A></td><td class="fielddata">tid</td><td class="fielddata">10</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#teacher_subject">teacher_subject</A></td><td class="fielddata">tid, suid</td><td class="fielddata">2</td><td class="fielddata"></td></tr>
+<tr><td class="fielddata"><A HREF="entd.html#writeanser">writeanser</A></td><td class="fielddata">wrid, sid, qid, exid</td><td class="fielddata">5</td><td class="fielddata"></td></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

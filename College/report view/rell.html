@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";>
+<meta name="keywords" content="DeZign for Databases - HTML Report">
+<meta name="author" content="Datanamic - www.datanamic.com">
+<title>DeZign for Databases V4 - HTML Report</title>
+<link rel="stylesheet" type="text/css" media="screen,print" href="dezign.css" title="report">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="20" topmargin="10" marginwidth="20" marginheight="10">
+<div class="top">Logical model</div>
+<ul id="menu">
+<li><a href="index.html">Project details</a></li>
+<li><a href="erdiagram.html">ER diagram</a></li>
+<li><a href="entl.html">Entities</a></li>
+<li><a href="attrl.html">Attributes</a></li>
+<li><a href="rell.html">Relationships</a></li>
+<li><a href="doml.html">Domains</a></li>
+<li><a href="viewl.html">Views</a></li>
+<li><a href="procl.html">Procedures</a></li>
+</ul>
+<div class="row">
+<div class="activetab">List of relationships</div>
+<div class="tab"><a href="reld.html">Relationship details</a></div>
+</div>
+<table width=90% border=0 cellSpacing=0 cellPadding=0 class="chapter">
+<tr>
+<td class="right" valign=top>
+<table width="100%" border=0 class="detailstable">
+<tr><td class="fieldname">Relationship name</td><td class="fieldname">Type</td><td class="fieldname">Parent entity</td><td class="fieldname">Child entity</td><td class="fieldname">Cardinality</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#clupsubject_reply">clupsubject_reply</A></td><td class="fielddata">Identifying</td><td class="fielddata">clupsubject</td><td class="fielddata">reply</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#dept_student">dept_student</A></td><td class="fielddata">Identifying</td><td class="fielddata">dept</td><td class="fielddata">student</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#examform_quastion_examform">examform_quastion_examform</A></td><td class="fielddata">Identifying</td><td class="fielddata">examform</td><td class="fielddata">quastion_examform</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#exam_examform">exam_examform</A></td><td class="fielddata">Identifying</td><td class="fielddata">exam</td><td class="fielddata">examform</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#exam_result">exam_result</A></td><td class="fielddata">Non Identifying</td><td class="fielddata">exam</td><td class="fielddata">result</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#exam_writeanser">exam_writeanser</A></td><td class="fielddata">Non Identifying</td><td class="fielddata">exam</td><td class="fielddata">writeanser</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#quastion_anser">quastion_anser</A></td><td class="fielddata">Identifying</td><td class="fielddata">quastion</td><td class="fielddata">anser</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#quastion_quastion_examform">quastion_quastion_examform</A></td><td class="fielddata">Identifying</td><td class="fielddata">quastion</td><td class="fielddata">quastion_examform</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#quastion_writeanser">quastion_writeanser</A></td><td class="fielddata">Identifying</td><td class="fielddata">quastion</td><td class="fielddata">writeanser</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#student_result">student_result</A></td><td class="fielddata">Non Identifying</td><td class="fielddata">student</td><td class="fielddata">result</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#student_subject_student">student_subject_student</A></td><td class="fielddata">Identifying</td><td class="fielddata">student</td><td class="fielddata">subject_student</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#student_writeanser">student_writeanser</A></td><td class="fielddata">Non Identifying</td><td class="fielddata">student</td><td class="fielddata">writeanser</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#subject_clupsubject">subject_clupsubject</A></td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">clupsubject</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#subject_exam">subject_exam</A></td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">exam</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#subject_lisson">subject_lisson</A></td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">lisson</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#subject_subject_student">subject_subject_student</A></td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">subject_student</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#subject_teacher_subject">subject_teacher_subject</A></td><td class="fielddata">Identifying</td><td class="fielddata">subject</td><td class="fielddata">teacher_subject</td><td class="fielddata">Zero Or More</td></tr>
+<tr><td class="fielddata"><A HREF="reld.html#teacher_teacher_subject">teacher_teacher_subject</A></td><td class="fielddata">Identifying</td><td class="fielddata">teacher</td><td class="fielddata">teacher_subject</td><td class="fielddata">Zero Or More</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>
