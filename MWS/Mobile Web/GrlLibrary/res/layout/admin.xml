@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/textView1user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Admin"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/button1admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="AdbookClick"
+        android:text="Add Book" />
+
+    <Button
+        android:id="@+id/button2admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addauthorClick"
+        android:text="Add Author" />
+
+    <Button
+        android:id="@+id/button3admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addpublisherClick"
+        android:text="Add Publisher" />
+
+    <Button
+        android:id="@+id/button4admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="userClick"
+        android:text="Go To Home" />
+
+</TableLayout>

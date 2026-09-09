@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/textView1user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Book"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title :" />
+
+    <EditText
+        android:id="@+id/editText1addbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3sepublisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type :" />
+
+    <EditText
+        android:id="@+id/editText2addbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price :" />
+
+    <EditText
+        android:id="@+id/editText10addbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textViewaddpublisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author :" />
+    
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publisher :" />
+    
+     <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button1addbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Addbook"
+        android:text="Add Book" />
+
+    <TextView
+        android:id="@+id/textViewaddbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button2addbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="adminClick"
+        android:text="Back To Control" />
+
+</TableLayout>

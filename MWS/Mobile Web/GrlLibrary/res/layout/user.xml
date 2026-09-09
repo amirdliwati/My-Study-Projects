@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welocme To Home Page....."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/button1user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="Getallbook"
+        android:text="Display All Books" />
+
+    <Button
+        android:id="@+id/button2user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sebookClick"
+        android:text="Search Book" />
+
+    <Button
+        android:id="@+id/button3user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="seauthor1Click"
+        android:text="Search Author By Name" />
+
+    <Button
+        android:id="@+id/button5user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="sepublisherClick"
+        android:text="Search Publisher" />
+
+    <Button
+        android:id="@+id/button10user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="LoginClick"
+        android:text="Log Out" />
+
+    <TextView
+        android:id="@+id/textView1user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</TableLayout>

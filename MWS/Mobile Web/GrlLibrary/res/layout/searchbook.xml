@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/textView1user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Your Book"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2sebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title Book"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editText1sebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button1sebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="searchbook"
+        android:text="Search" />
+    
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Book "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="fill_parent"
+        android:layout_height="71dp"
+        android:visibility="visible" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Details "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ListView
+        android:id="@+id/listView3"
+        android:layout_width="fill_parent"
+        android:layout_height="39dp"
+        android:layout_weight="0.91"
+        android:visibility="visible" >
+    </ListView>
+
+    <Button
+        android:id="@+id/button10signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="userClick"
+        android:text="Back To Home" />
+
+</TableLayout>

@@ -1,0 +1,14 @@
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\bin\WebGrlLibraryService.dll
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\bin\WebGrlLibraryService.pdb
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\obj\Debug\WebGrlLibraryService.dll
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\obj\Debug\WebGrlLibraryService.pdb
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\obj\Debug\WebGrlLibraryService.csprojResolveAssemblyReference.cache
+C:\Users\Mahmoud\Desktop\WebGrlLibraryService\WebGrlLibraryService\WebGrlLibraryService\bin\WebGrlLibraryService.dll
+C:\Users\Mahmoud\Desktop\WebGrlLibraryService\WebGrlLibraryService\WebGrlLibraryService\bin\WebGrlLibraryService.pdb
+C:\Users\Mahmoud\Desktop\WebGrlLibraryService\WebGrlLibraryService\WebGrlLibraryService\obj\Debug\WebGrlLibraryService.dll
+C:\Users\Mahmoud\Desktop\WebGrlLibraryService\WebGrlLibraryService\WebGrlLibraryService\obj\Debug\WebGrlLibraryService.pdb
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\WebGrlLibraryService\bin\WebGrlLibraryService.dll
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\WebGrlLibraryService\bin\WebGrlLibraryService.pdb
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\WebGrlLibraryService\obj\Debug\WebGrlLibraryService.dll
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\WebGrlLibraryService\obj\Debug\WebGrlLibraryService.pdb
+D:\AMW\GrlLibrary\WebService\WebGrlLibraryService\WebGrlLibraryService\WebGrlLibraryService\obj\Debug\WebGrlLibraryService.csprojResolveAssemblyReference.cache

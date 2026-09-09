@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="ftp://ftp.smarterasp.net/site1/" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="False" userName="mohamedamir-001" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAa3WXrf6sIEOv110ndE7I7QAAAAACAAAAAAAQZgAAAAEAACAAAADoyyUSHQdjyPQnyJR/M0UcvI7zWwvS8DSTCYvVdU8BrwAAAAAOgAAAAAIAACAAAADUBWU0riR0IkdlcbHM35kauYW6/g9MUpdZGdXv8IdjgTAAAACeo1+G1WHV4NjqZQrTaTQhJbc61Rz5Mwk9ASusTZqgTGcxIB37jl+bFruqmBlkU+FAAAAA9JVir5OLA5KYZn2EJ2N1BkaLE20iPMRJq7GEOuSuXfLk59Yoy8OyaTekvthYmZjoYO24/ni2Qg61IIK/bck6Mg==" SelectedForPublish="True">
+    <file relUrl="bin/WebGrlLibraryService.pdb" publishTime="05/17/2015 02:33:09" />
+    <file relUrl="bin/WebGrlLibraryService.dll" publishTime="05/17/2015 02:33:09" />
+    <file relUrl="Service1.asmx" publishTime="05/12/2015 12:07:53" />
+    <file relUrl="Web.config" publishTime="05/17/2015 02:35:11" />
+  </publishProfile>
+</publishData>

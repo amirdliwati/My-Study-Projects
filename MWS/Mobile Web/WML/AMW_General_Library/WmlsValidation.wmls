@@ -1,0 +1,90 @@
+﻿extern function validateSignUp()
+{
+var chkFName =WMLBrowser.getVar("FName");
+var chkLName =WMLBrowser.getVar("LName");
+var chkuserName =WMLBrowser.getVar("userName");
+var chkpassword =WMLBrowser.getVar("password");
+
+if((chkFName =="" )|| (chkLName =="") || (chkuserName =="") || (chkpassword ==""))
+{
+	Dialogs.alert("Please fill the boxes");
+}
+else
+{
+WMLBrowser.go("3-SignUp.aspx");
+}
+}
+
+extern function validateLogin()
+{
+var chkuserName =String.trim(WMLBrowser.getVar("userName"));
+var chkpassword =String.trim(WMLBrowser.getVar("password"));
+
+	if( chkuserName =="" )
+	{
+		WMLBrowser.setVar("usermass", "Please enter your User Name");
+		WMLBrowser.refresh();
+	}
+	if( chkpassword =="")
+	{
+		WMLBrowser.setVar("passmass", "Please enter your Password");
+		WMLBrowser.refresh();
+	}
+}
+
+extern function validAddBook()
+{
+var chkTitle =WMLBrowser.getVar("Title");
+var chkType =WMLBrowser.getVar("Type");
+var chkPrice =WMLBrowser.getVar("Price");
+var chkpubId =WMLBrowser.getVar("pubId");
+var chkAuthorId =WMLBrowser.getVar("AuthorId");
+
+if(( chkTitle =="" )|| ( chkType =="")|| ( chkPrice =="")|| ( chkpubId =="")|| ( chkAuthorId ==""))
+Dialogs.alert("Please fill the boxes");
+}
+
+extern function validAddPublisher()
+{
+var chkPName =WMLBrowser.getVar("PName");
+var chkCity =WMLBrowser.getVar("City");
+
+if(( chkPName =="" )|| ( chkCity ==""))
+Dialogs.alert("Please fill the boxes");
+}
+
+extern function validAddAuthor()
+{
+var chkFname =WMLBrowser.getVar("Fname");
+var chkLname =WMLBrowser.getVar("Lname");
+var chkCountry =WMLBrowser.getVar("Country");
+var chkCity =WMLBrowser.getVar("City");
+var chkAddress =WMLBrowser.getVar("Address");
+
+if(( chkFname =="" )|| ( chkLname =="")|| ( chkCountry =="")|| ( chkCity =="")|| ( chkAddress ==""))
+Dialogs.alert("Please fill the boxes");
+}
+
+extern function validSearch4Book()
+{
+var chkSearch =WMLBrowser.getVar("Title");
+
+if(( chkSearch =="" ))
+Dialogs.alert("Please fill the search box");
+}
+
+extern function validSearch4Publisher()
+{
+var chkSearch =WMLBrowser.getVar("PName");
+
+if(( chkSearch =="" ))
+Dialogs.alert("Please fill the search box");
+}
+
+extern function validSearch4Author()
+{
+var chkSearch =WMLBrowser.getVar("FLname");
+
+if(( chkSearch =="" ))
+Dialogs.alert("Please fill the search box");
+}

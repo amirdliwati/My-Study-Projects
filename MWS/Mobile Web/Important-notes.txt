@@ -1,0 +1,34 @@
+Notes:
+======
+
+To login please type :
+----------------------
+Username : admin
+Password : 123
+
+
+
+
+Web Service link :
+------------------
+http://mohamedamir-001-site1.smarterasp.net/service1.asmx
+
+
+
+
+If we run web service with WML on your pc will be connected automatically with DB on the internet
+
+
+
+
+
+
+Thanks
++++++++
+
+
+
+
+Muhammad Amir Dliwati
+Muhammad Nidal Ramadan
+Muhammad Abbas
