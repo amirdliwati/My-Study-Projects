@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="AIRWeb.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Styles/style.css" rel="stylesheet" type="text/css" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style4
+        {
+            text-align: center;
+        }
+        .style5
+        {
+            font-size: 40pt;
+            font-family: "AR DECODE";
+        }
+        .style6
+        {
+            font-size: x-large;
+        }
+        .style7
+        {
+            font-family: Algerian;
+        }
+        .style8
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="intro">
+    <form id="form1" runat="server">
+    <div style="text-align: center">
+              <br />
+              <br />
+&nbsp;&nbsp;&nbsp;
+              <img src="Images/logo.png" 
+    class="wowload rotateIn"><strong><asp:Label ID="Label1" runat="server" CssClass="style5" 
+                  style="color: #FFFF99" Text="Web Paper Search Engine"></asp:Label>
+              </strong>&nbsp;<br />
+              <br />
+              <br />
+              <br />
+              <span class="style7"><strong>
+              <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="~/Default.aspx" 
+                  CssClass="style6">HOME</asp:LinkButton>
+              <span class="style8">&nbsp;&nbsp; </span>
+              </strong></span><span class="style6"><span class="style7"><strong>
+              <span class="style8">&nbsp;&nbsp; </span>
+              <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="~/Search.aspx">Search</asp:LinkButton>
+              <span class="style8">&nbsp;&nbsp; </span>
+              <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/Indexing.aspx">Index</asp:LinkButton>
+              </strong></span>&nbsp;<br />
+              <br />
+              </span>&nbsp;<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!-- footer -->
+        <div class="footer text-center wowload fadeIn">
+            <div style="text-align: center; color: #FFFFFF;">
+                Aleppo University </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
