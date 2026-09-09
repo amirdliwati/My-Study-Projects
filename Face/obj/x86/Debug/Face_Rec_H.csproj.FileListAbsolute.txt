@@ -1,0 +1,53 @@
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\bin\Debug\FaceRec_MM.exe
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\bin\Debug\FaceRec_MM.pdb
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\bin\Debug\Emgu.CV.xml
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\bin\Debug\Emgu.Util.xml
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\obj\x86\Debug\FaceRec_MM.FrmPrincipal.resources
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\obj\x86\Debug\FaceRec_MM.Properties.Resources.resources
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\obj\x86\Debug\Face_Rec_H.csproj.GenerateResource.Cache
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\obj\x86\Debug\FaceRec_MM.exe
+C:\Users\Fujitsu\Desktop\FaceRecProOV\FaceRecProOV\obj\x86\Debug\FaceRec_MM.pdb
+C:\Users\Admin\Desktop\Face For project 5th year\obj\x86\Debug\FaceRec_MM.exe
+C:\Users\Admin\Desktop\Face For project 5th year\obj\x86\Debug\FaceRec_MM.pdb
+C:\Users\Admin\Desktop\Face For project 5th year\bin\Debug\FaceRec_MM.exe
+C:\Users\Admin\Desktop\Face For project 5th year\bin\Debug\FaceRec_MM.pdb
+C:\Users\Admin\Desktop\Face For project 5th year\bin\Debug\Emgu.CV.xml
+C:\Users\Admin\Desktop\Face For project 5th year\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Admin\Desktop\Face For project 5th year\bin\Debug\Emgu.Util.xml
+C:\Users\Admin\Desktop\Face For project 5th year\obj\x86\Debug\Face_Rec_H.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Face For project 5th year\obj\x86\Debug\FaceRec_MM.FrmPrincipal.resources
+C:\Users\Admin\Desktop\Face For project 5th year\obj\x86\Debug\FaceRec_MM.Properties.Resources.resources
+C:\Users\Admin\Desktop\Face For project 5th year\obj\x86\Debug\Face_Rec_H.csproj.GenerateResource.Cache
+F:\المشروع\Face For project 5th year\obj\x86\Debug\FaceRec_MM.exe
+F:\المشروع\Face For project 5th year\obj\x86\Debug\FaceRec_MM.pdb
+C:\Users\Admin\Documents\التطبيق\Face  recogize\obj\x86\Debug\FaceRec_MM.exe
+C:\Users\Admin\Documents\التطبيق\Face  recogize\obj\x86\Debug\FaceRec_MM.pdb
+C:\Users\Admin\Documents\مشروع التخرج\التطبيق\Face  recogize\obj\x86\Debug\FaceRec_MM.exe
+C:\Users\Admin\Documents\مشروع التخرج\التطبيق\Face  recogize\obj\x86\Debug\FaceRec_MM.pdb
+C:\Users\eng M.M\Desktop\Face  recogize\obj\x86\Debug\FaceRec_MM.exe
+C:\Users\eng M.M\Desktop\Face  recogize\obj\x86\Debug\FaceRec_MM.pdb
+C:\Users\Fateema\Desktop\Face  recogize\obj\x86\Debug\FaceRec_MM.exe
+C:\Users\Fateema\Desktop\Face  recogize\obj\x86\Debug\FaceRec_MM.pdb
+C:\Users\Fateema\Desktop\Face  recogize\bin\Debug\FaceRec_MM.exe
+C:\Users\Fateema\Desktop\Face  recogize\bin\Debug\FaceRec_MM.pdb
+C:\Users\Fateema\Desktop\Face  recogize\bin\Debug\Emgu.CV.xml
+C:\Users\Fateema\Desktop\Face  recogize\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Fateema\Desktop\Face  recogize\bin\Debug\Emgu.Util.xml
+C:\Users\Fateema\Desktop\Face  recogize\obj\x86\Debug\Face_Rec_H.csprojResolveAssemblyReference.cache
+C:\Users\Fateema\Desktop\Face  recogize\obj\x86\Debug\FaceRec_MM.FrmPrincipal.resources
+C:\Users\Fateema\Desktop\Face  recogize\obj\x86\Debug\FaceRec_MM.Properties.Resources.resources
+C:\Users\Fateema\Desktop\Face  recogize\obj\x86\Debug\Face_Rec_H.csproj.GenerateResource.Cache
+C:\Users\Fateema\Desktop\Face _R\obj\x86\Debug\FaceRec_MM.exe
+C:\Users\Fateema\Desktop\Face _R\obj\x86\Debug\FaceRec_MM.pdb
+C:\Users\Fateema\Desktop\Face _R\bin\Debug\FaceRec_MM.exe
+C:\Users\Fateema\Desktop\Face _R\bin\Debug\FaceRec_MM.pdb
+C:\Users\Fateema\Desktop\Face _R\bin\Debug\Emgu.CV.xml
+C:\Users\Fateema\Desktop\Face _R\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Fateema\Desktop\Face _R\bin\Debug\Emgu.Util.xml
+C:\Users\Fateema\Desktop\Face _R\obj\x86\Debug\Face_Rec_H.csprojResolveAssemblyReference.cache
+C:\Users\Fateema\Desktop\Face _R\obj\x86\Debug\FaceRec_MM.FrmPrincipal.resources
+C:\Users\Fateema\Desktop\Face _R\obj\x86\Debug\FaceRec_MM.Properties.Resources.resources
+C:\Users\Fateema\Desktop\Face _R\obj\x86\Debug\Face_Rec_H.csproj.GenerateResource.Cache
+F:\ \Face _RRRR\obj\x86\Debug\FaceRec_MM.exe
+F:\ \Face _RRRR\obj\x86\Debug\FaceRec_MM.pdb
