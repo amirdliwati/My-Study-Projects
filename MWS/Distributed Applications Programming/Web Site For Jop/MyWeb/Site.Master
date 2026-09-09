@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyWeb.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    MY Project ADP f13
+                </h1>
+            </div>
+            <div class="loginDisplay">
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem Text="Display All Job In DB" Value="Display All Job " 
+                            NavigateUrl="~/DisplayAllJob.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="ADD" Value="ADD">
+                            <asp:MenuItem NavigateUrl="~/Add A Job .aspx" Text="Add A Job " 
+                                Value="Add A Job "></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Add A Company.aspx" Text="Add A Company" 
+                                Value="Add A Company"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Add A Diploma.aspx" Text="Add A Diploma" 
+                                Value="Add A Diploma"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Display1.aspx" Text="Displays List Of Jobs " 
+                            Value="Displays The Jobs "></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Display2.aspx" Text="Displays List Of Candidates " 
+                            Value="Displays List Of Candidates "></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

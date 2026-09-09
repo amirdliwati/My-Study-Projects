@@ -1,0 +1,21 @@
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyWeb\bin\MyWeb.dll
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyWeb\bin\MyWeb.pdb
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyWeb\bin\MyLibrary.dll
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyWeb\bin\MyLibrary.pdb
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyWeb\obj\Debug\MyWeb.csprojResolveAssemblyReference.cache
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyWeb\obj\Debug\MyWeb.dll
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyWeb\obj\Debug\MyWeb.pdb
+C:\Users\AMIR\Desktop\Web Site For Jop\MyWeb\bin\MyWeb.dll
+C:\Users\AMIR\Desktop\Web Site For Jop\MyWeb\bin\MyWeb.pdb
+C:\Users\AMIR\Desktop\Web Site For Jop\MyWeb\bin\MyLibrary.dll
+C:\Users\AMIR\Desktop\Web Site For Jop\MyWeb\bin\MyLibrary.pdb
+C:\Users\AMIR\Desktop\Web Site For Jop\MyWeb\obj\Debug\MyWeb.csprojResolveAssemblyReference.cache
+C:\Users\AMIR\Desktop\Web Site For Jop\MyWeb\obj\Debug\MyWeb.dll
+C:\Users\AMIR\Desktop\Web Site For Jop\MyWeb\obj\Debug\MyWeb.pdb
+C:\Web Site For Jop\MyWeb\bin\MyWeb.dll
+C:\Web Site For Jop\MyWeb\bin\MyWeb.pdb
+C:\Web Site For Jop\MyWeb\bin\MyLibrary.dll
+C:\Web Site For Jop\MyWeb\bin\MyLibrary.pdb
+C:\Web Site For Jop\MyWeb\obj\Debug\MyWeb.csprojResolveAssemblyReference.cache
+C:\Web Site For Jop\MyWeb\obj\Debug\MyWeb.dll
+C:\Web Site For Jop\MyWeb\obj\Debug\MyWeb.pdb

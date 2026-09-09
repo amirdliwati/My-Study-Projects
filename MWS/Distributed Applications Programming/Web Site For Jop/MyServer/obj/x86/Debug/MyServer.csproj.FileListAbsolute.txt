@@ -1,0 +1,23 @@
+c:\users\mohamed\documents\visual studio 2010\Projects\Web Site For Jop\MyServer\obj\x86\Debug\MyServer.csprojResolveAssemblyReference.cache
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyServer\bin\Debug\MyServer.exe
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyServer\bin\Debug\MyServer.pdb
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyServer\bin\Debug\MyLibrary.dll
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyServer\bin\Debug\MyLibrary.pdb
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyServer\obj\x86\Debug\MyServer.exe
+C:\Users\MOHAMED\Documents\Visual Studio 2010\Projects\Web Site For Jop\MyServer\obj\x86\Debug\MyServer.pdb
+C:\Users\AMIR\Desktop\Web Site For Jop\MyServer\obj\x86\Debug\MyServer.exe
+C:\Users\AMIR\Desktop\Web Site For Jop\MyServer\bin\Debug\MyServer.exe
+C:\Users\AMIR\Desktop\Web Site For Jop\MyServer\bin\Debug\MyServer.pdb
+C:\Users\AMIR\Desktop\Web Site For Jop\MyServer\bin\Debug\MyLibrary.dll
+C:\Users\AMIR\Desktop\Web Site For Jop\MyServer\bin\Debug\MyLibrary.pdb
+C:\Users\AMIR\Desktop\Web Site For Jop\MyServer\obj\x86\Debug\MyServer.csprojResolveAssemblyReference.cache
+C:\Users\AMIR\Desktop\Web Site For Jop\MyServer\obj\x86\Debug\MyServer.pdb
+C:\Users\AMIR\Desktop\Web Site For Jop\MyServer\bin\Debug\MyServer.exe.config
+C:\Web Site For Jop\MyServer\bin\Debug\MyServer.exe.config
+C:\Web Site For Jop\MyServer\obj\x86\Debug\MyServer.exe
+C:\Web Site For Jop\MyServer\obj\x86\Debug\MyServer.pdb
+C:\Web Site For Jop\MyServer\bin\Debug\MyServer.exe
+C:\Web Site For Jop\MyServer\bin\Debug\MyServer.pdb
+C:\Web Site For Jop\MyServer\bin\Debug\MyLibrary.dll
+C:\Web Site For Jop\MyServer\bin\Debug\MyLibrary.pdb
+C:\Web Site For Jop\MyServer\obj\x86\Debug\MyServer.csprojResolveAssemblyReference.cache

@@ -1,0 +1,8 @@
+c:\users\mohamed\documents\visual studio 2010\Projects\Web Site For Jop\MyLibrary\bin\Debug\MyLibrary.dll
+c:\users\mohamed\documents\visual studio 2010\Projects\Web Site For Jop\MyLibrary\bin\Debug\MyLibrary.pdb
+c:\users\mohamed\documents\visual studio 2010\Projects\Web Site For Jop\MyLibrary\obj\Debug\MyLibrary.dll
+c:\users\mohamed\documents\visual studio 2010\Projects\Web Site For Jop\MyLibrary\obj\Debug\MyLibrary.pdb
+C:\Users\AMIR\Desktop\Web Site For Jop\MyLibrary\bin\Debug\MyLibrary.dll
+C:\Users\AMIR\Desktop\Web Site For Jop\MyLibrary\bin\Debug\MyLibrary.pdb
+C:\Users\AMIR\Desktop\Web Site For Jop\MyLibrary\obj\Debug\MyLibrary.dll
+C:\Users\AMIR\Desktop\Web Site For Jop\MyLibrary\obj\Debug\MyLibrary.pdb
