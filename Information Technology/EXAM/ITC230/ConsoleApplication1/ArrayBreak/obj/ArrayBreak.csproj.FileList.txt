@@ -1,0 +1,5 @@
+bin\Debug\ArrayBreak.exe
+bin\Debug\ArrayBreak.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ArrayBreak.exe
+obj\Debug\ArrayBreak.pdb

@@ -1,0 +1,5 @@
+bin\Debug\array2DZoher.exe
+bin\Debug\array2DZoher.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\array2DZoher.exe
+obj\Debug\array2DZoher.pdb

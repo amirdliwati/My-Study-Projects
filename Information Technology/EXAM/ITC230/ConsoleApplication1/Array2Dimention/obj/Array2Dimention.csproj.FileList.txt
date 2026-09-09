@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\Array2Dimention.exe
+bin\Debug\Array2Dimention.pdb
+obj\Debug\Array2Dimention.exe
+obj\Debug\Array2Dimention.pdb

@@ -1,0 +1,5 @@
+bin\Debug\BIT_ITC230_Ula_22596_C5_Hom2.exe
+bin\Debug\BIT_ITC230_Ula_22596_C5_Hom2.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\BIT_ITC230_Ula_22596_C5_Hom2.exe
+obj\Debug\BIT_ITC230_Ula_22596_C5_Hom2.pdb

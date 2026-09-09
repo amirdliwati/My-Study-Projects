@@ -1,0 +1,5 @@
+bin\Debug\Bubble Sort.exe
+bin\Debug\Bubble Sort.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Bubble Sort.exe
+obj\Debug\Bubble Sort.pdb

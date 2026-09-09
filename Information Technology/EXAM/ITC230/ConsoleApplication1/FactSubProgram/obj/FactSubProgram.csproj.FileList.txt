@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\FactSubProgram.exe
+bin\Debug\FactSubProgram.pdb
+obj\Debug\FactSubProgram.exe
+obj\Debug\FactSubProgram.pdb

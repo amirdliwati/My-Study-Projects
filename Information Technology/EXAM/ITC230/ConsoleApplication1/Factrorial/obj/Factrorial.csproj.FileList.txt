@@ -1,0 +1,5 @@
+bin\Debug\Factrorial.exe
+bin\Debug\Factrorial.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Factrorial.exe
+obj\Debug\Factrorial.pdb

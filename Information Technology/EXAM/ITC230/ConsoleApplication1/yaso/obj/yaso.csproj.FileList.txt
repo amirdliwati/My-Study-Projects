@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\yaso.exe
+bin\Debug\yaso.pdb
+obj\Debug\yaso.exe
+obj\Debug\yaso.pdb

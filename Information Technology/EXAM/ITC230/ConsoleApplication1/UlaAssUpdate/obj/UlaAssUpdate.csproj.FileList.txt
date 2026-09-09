@@ -1,0 +1,5 @@
+bin\Debug\UlaAssUpdate.exe
+bin\Debug\UlaAssUpdate.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\UlaAssUpdate.exe
+obj\Debug\UlaAssUpdate.pdb

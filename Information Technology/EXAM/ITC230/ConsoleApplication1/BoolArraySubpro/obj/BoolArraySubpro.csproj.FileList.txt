@@ -1,0 +1,5 @@
+bin\Debug\BoolArraySubpro.exe
+bin\Debug\BoolArraySubpro.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\BoolArraySubpro.exe
+obj\Debug\BoolArraySubpro.pdb

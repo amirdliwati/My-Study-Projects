@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\Tryarraylengthass.exe
+bin\Debug\Tryarraylengthass.pdb
+obj\Debug\Tryarraylengthass.exe
+obj\Debug\Tryarraylengthass.pdb

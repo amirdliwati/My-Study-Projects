@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\ArrayMonths.exe
+bin\Debug\ArrayMonths.pdb
+obj\Debug\ArrayMonths.exe
+obj\Debug\ArrayMonths.pdb

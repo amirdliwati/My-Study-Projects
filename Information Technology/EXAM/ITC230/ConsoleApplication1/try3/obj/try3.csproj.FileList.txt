@@ -1,0 +1,5 @@
+bin\Debug\try3.exe
+bin\Debug\try3.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\try3.exe
+obj\Debug\try3.pdb

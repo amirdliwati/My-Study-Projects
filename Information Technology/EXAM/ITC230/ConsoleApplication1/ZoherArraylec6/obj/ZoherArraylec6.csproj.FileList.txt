@@ -1,0 +1,5 @@
+bin\Debug\ZoherArraylec6.exe
+bin\Debug\ZoherArraylec6.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ZoherArraylec6.exe
+obj\Debug\ZoherArraylec6.pdb

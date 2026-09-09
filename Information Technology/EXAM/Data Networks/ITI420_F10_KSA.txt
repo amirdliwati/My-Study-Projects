@@ -1,0 +1,31 @@
+----------
+ÇáÇÓÆáÉ ÇáßÊÇÈíÉ
+----------- 
+ãÇĞÇ íÚäí Çä íßæä Úáì äİÓ ÇáÈæÑÊ ÊÈÚ ÇáÓæíÊÔ ÇßÊÑ ãä ãÇß ÇÏÑÓ ¿¿
+æåá ããßä Çä íßæä ÇáÚßÓ ÕÍíÍ ¿¿¿ æáãÇĞÇ ¿¿
+----------
+ÇßÊÈ Úä ããíÒÇÊ Çáİí áÇä
+Vllan ??
+-----------------
+áãÇĞÇ åäÇß åÑãíÉ İí æãÇåí ÇáåÑãíÉ æãÇİÇÆÏÊåÇ
+ÇÔÑÍ Ğáß ¿¿
+---------------
+ãÇ åæ Çá
+Hold down
+ÇÔÑÍ Úäå æÚä ããíÒÇÊå
+----------------------------
+
+ÈÇŞí ÇáÇÓÆáÉ ßÇäÊ Úä :
+
+1- spaning tree
+2- vlan introduce security risk byt better performance (True, false)
+3- Diffrent between rip1 and rip2 is rip2 support more than 1 path(True, false)
+4-Different between distance victor algorithm and link stte
+5-Differemt between interior and exterior routing protocol
+6-ospf using (multi cast or broadcast)
+7-What is LINK stata db ??
+8- Protocol which share attribute of both distance vector and link state is (EIGRP)
+9- Route information mainte ?? (source ip address and destenation mac address)
+10- Switches using mac or ip??
+11-Running the SPF algorithm is not a CPU-intensive activity(True, false)
+12-Distance vector protocols update their routing table faster than link state protocols, Because :(True, false)
