@@ -1,0 +1,36 @@
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\SportLibrary.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\SportLibrary.pdb
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\dotNetRDF.Data.Sql.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\dotNetRDF.Data.Virtuoso.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\dotNetRDF.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\dotNetRDF.Query.FullText.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\HtmlAgilityPack.Silverlight.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\HtmlAgilityPack.WindowsPhone.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\Lucene.Net.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\MySql.Data.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\Newtonsoft.Json.Net35.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\Newtonsoft.Json.Silverlight.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\Newtonsoft.Json.WindowsPhone.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\OpenLink.Data.Virtuoso.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\Telerik.Web.UI.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\dotNetRDF.xml
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\dotNetRDF.Data.Sql.xml
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\dotNetRDF.Data.Virtuoso.xml
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\dotNetRDF.Query.FullText.xml
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\bin\Debug\Telerik.Web.UI.xml
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\obj\Debug\SportLibrary.dll
+C:\Users\Mahmoud\Documents\Visual Studio 2010\Projects\WebMining_Project\SportLibrary\obj\Debug\SportLibrary.pdb
+D:\Syrian Virtual University\AWM\SportLibrary\bin\Debug\SportLibrary.dll
+D:\Syrian Virtual University\AWM\SportLibrary\bin\Debug\SportLibrary.pdb
+D:\Syrian Virtual University\AWM\SportLibrary\obj\Debug\SportLibrary.dll
+D:\Syrian Virtual University\AWM\SportLibrary\obj\Debug\SportLibrary.pdb
+D:\Syrian Virtual University\AWM BAK\AWM 2\SportLibrary\bin\Debug\SportLibrary.dll
+D:\Syrian Virtual University\AWM BAK\AWM 2\SportLibrary\bin\Debug\SportLibrary.pdb
+D:\Syrian Virtual University\AWM BAK\AWM 2\SportLibrary\obj\Debug\SportLibrary.dll
+D:\Syrian Virtual University\AWM BAK\AWM 2\SportLibrary\obj\Debug\SportLibrary.pdb
+C:\Users\Mahmoud\Desktop\MWS_AWM_F14_Mohamed_amir_58826_Mohammad_59088_hasan_58969\MWS_AWM_F14_Mohamed_amir_58826_Mohammad_59088_hasan_58969\SportLibrary\bin\Debug\SportLibrary.dll
+C:\Users\Mahmoud\Desktop\MWS_AWM_F14_Mohamed_amir_58826_Mohammad_59088_hasan_58969\MWS_AWM_F14_Mohamed_amir_58826_Mohammad_59088_hasan_58969\SportLibrary\bin\Debug\SportLibrary.pdb
+C:\Users\Mahmoud\Desktop\MWS_AWM_F14_Mohamed_amir_58826_Mohammad_59088_hasan_58969\MWS_AWM_F14_Mohamed_amir_58826_Mohammad_59088_hasan_58969\SportLibrary\obj\Debug\SportLibrary.dll
+C:\Users\Mahmoud\Desktop\MWS_AWM_F14_Mohamed_amir_58826_Mohammad_59088_hasan_58969\MWS_AWM_F14_Mohamed_amir_58826_Mohammad_59088_hasan_58969\SportLibrary\obj\Debug\SportLibrary.pdb

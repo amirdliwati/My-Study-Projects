@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebMining_Project", "WebMining_Project\", "{84C84B5E-4A83-43DC-95BD-80E5307FB472}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{354F8C3E-9871-47F0-A8F2-F9559E384FAB}|SportLibrary.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/WebMining_Project"
+		Debug.AspNetCompiler.PhysicalPath = "WebMining_Project\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\WebMining_Project\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/WebMining_Project"
+		Release.AspNetCompiler.PhysicalPath = "WebMining_Project\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\WebMining_Project\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "35571"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportLibrary", "SportLibrary\SportLibrary.csproj", "{354F8C3E-9871-47F0-A8F2-F9559E384FAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84C84B5E-4A83-43DC-95BD-80E5307FB472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C84B5E-4A83-43DC-95BD-80E5307FB472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C84B5E-4A83-43DC-95BD-80E5307FB472}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C84B5E-4A83-43DC-95BD-80E5307FB472}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{354F8C3E-9871-47F0-A8F2-F9559E384FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354F8C3E-9871-47F0-A8F2-F9559E384FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354F8C3E-9871-47F0-A8F2-F9559E384FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354F8C3E-9871-47F0-A8F2-F9559E384FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
