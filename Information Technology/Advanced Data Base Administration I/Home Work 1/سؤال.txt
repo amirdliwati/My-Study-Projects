@@ -1,0 +1,6 @@
+
+What kind of authorixation is required
+
+    For SqlPLUS The user SYSTEM is not authorize to shutdown or startup the db, you have to log in using SYS account AS SYSDBA, we'll explain it later in our lessons.
+    For the EM, you should provide him with your OS administrator account (we always log in to OS with some user account!!!, and each OS has administrator account!!, these are facts my dear).
+    If you want to avid the OS user window, you can add your OS user to a group of users in Windows called ORA_DBA, we'll explain this issue later in our lessons.

@@ -1,0 +1,67 @@
+##############################################################################
+# Copyright (c) 1991, 2001, 2002 by Oracle Corporation
+##############################################################################
+ 
+###########################################
+# Cache and I/O
+###########################################
+db_block_size=8192
+ 
+###########################################
+# Cursors and Library Cache
+###########################################
+open_cursors=300
+ 
+###########################################
+# Database Identification
+###########################################
+db_domain=""
+db_name=G01
+ 
+###########################################
+# File Configuration
+###########################################
+control_files=("D:\oracle\app\oradata\G01\control01.ctl", "D:\oracle\app\oradata\G01\control02.ctl", "D:\oracle\app\oradata\G01\control03.ctl")
+db_recovery_file_dest=D:\oracle\app\flash_recovery_area
+db_recovery_file_dest_size=2147483648
+ 
+###########################################
+# Miscellaneous
+###########################################
+compatible=11.1.0.0.0
+diagnostic_dest=D:\oracle\app
+memory_target=419430400
+ 
+###########################################
+# NLS
+###########################################
+nls_language="ARABIC"
+nls_territory="UNITED ARAB EMIRATES"
+ 
+###########################################
+# Optimizer
+###########################################
+star_transformation_enabled=TRUE
+ 
+###########################################
+# Processes and Sessions
+###########################################
+processes=150
+ 
+###########################################
+# Security and Auditing
+###########################################
+audit_file_dest=D:\oracle\app\admin\G01\adump
+audit_trail=db
+remote_login_passwordfile=EXCLUSIVE
+ 
+###########################################
+# Shared Server
+###########################################
+dispatchers="(PROTOCOL=TCP) (SERVICE=G01XDB)"
+ 
+###########################################
+# System Managed Undo and Rollback Segments
+###########################################
+undo_tablespace=UNDOTBS1
+ 
