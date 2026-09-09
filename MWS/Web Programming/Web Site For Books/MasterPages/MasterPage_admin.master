@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_admin.master.cs" Inherits="MasterPages_MasterPage_admin" %>
+
+<%@ Register src="../user_controles/u_login.ascx" tagname="u_login" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1
+        {
+            height: 606px;
+        }
+        .style1
+        {
+            width: 35%;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table align="center" class="style1">
+        <tr>
+            <td colspan="2">
+                <img alt="" src="../Images/Head.jpg" /></td>
+        </tr>
+        <tr>
+            <td align="left">
+                Welcom admin</td>
+            <td rowspan="2" align="left" valign="top">
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p style="height: 221px; width: 639px">
+                &nbsp;&nbsp; &nbsp;</p>
+        
+        </asp:ContentPlaceHolder>
+    
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <asp:TreeView ID="TreeView1" runat="server" 
+                    onselectednodechanged="TreeView1_SelectedNodeChanged">
+                    <Nodes>
+                        <asp:TreeNode Text="Books" Value="Books">
+                            <asp:TreeNode Text="Add Books" Value="Add Books"></asp:TreeNode>
+                            <asp:TreeNode Text="Edit Books" Value="Edit Books"></asp:TreeNode>
+                            <asp:TreeNode Text="Edit Catgories" Value="Edit Catgories"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Author &amp; Publisher" Value="Author &amp; Publisher">
+                            <asp:TreeNode Text="Add Author" Value="Add Author"></asp:TreeNode>
+                            <asp:TreeNode Text="Edit Author" Value="Edit Author"></asp:TreeNode>
+                            <asp:TreeNode Text="Add Publisher" Value="Add Publisher"></asp:TreeNode>
+                            <asp:TreeNode Text="Edit Publiser" Value="Edit Publiser"></asp:TreeNode>
+                            <asp:TreeNode Text="View Author" Value="View Author"></asp:TreeNode>
+                        </asp:TreeNode>
+                        <asp:TreeNode Text="Customer" Value="Customer">
+                            <asp:TreeNode Text="Edit Customer" Value="Edit Customer"></asp:TreeNode>
+                        </asp:TreeNode>
+                    </Nodes>
+                </asp:TreeView>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <img alt="" src="../Images/Head.jpg" /></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
