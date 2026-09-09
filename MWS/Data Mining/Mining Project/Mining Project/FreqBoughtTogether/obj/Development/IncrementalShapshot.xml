@@ -1,0 +1,103 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>FreqBoughtTogether</Database>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>/l6A1F5wLftRnLWIeTEl9ujk2HU=03-07-2014 23:09:58 03-07-2014 22:27:30 </TimeStamp>
+        <ID>
+          <String>AWP_DS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>MYnN0zGCUriRV3P5+kMUJEef9pU=03-07-2014 23:15:15 03-07-2014 23:15:00 </TimeStamp>
+        <ID>
+          <String>BoughtTogether_DSV</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>bPEE6+QsTvO4yw6/Rz4Dn0MX1ps=04-07-2014 00:50:45 04-07-2014 00:49:27 </TimeStamp>
+        <ID>
+          <String>BoughtAlso_DSV</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>uissh78ZvE47UqZwbnj0kV2JjLM=04-07-2014 14:15:10 04-07-2014 14:15:10 </TimeStamp>
+        <ID>
+          <String>ClassifyCustomer_DSV</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>gRJuJXXnlhzFgytJ511UPh6hvnc=04-07-2014 16:44:19 04-07-2014 16:44:19 </TimeStamp>
+        <ID>
+          <String>SalesSeries_DSV</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>EGhmJddHrbE7vzgzgelIlJukW5k=04-07-2014 01:13:42 03-07-2014 23:16:19 </TimeStamp>
+        <ID>
+          <String>BoughtTogether_MS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>lvARDQT/eD5ztqBEkVuNfhSafqo=04-07-2014 01:10:36 04-07-2014 00:52:34 </TimeStamp>
+        <ID>
+          <String>BoughtAlso_MS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>3gQSFnQgQSBLQv0ZLIluEyMmKb4=04-07-2014 14:18:37 04-07-2014 14:18:23 </TimeStamp>
+        <ID>
+          <String>ClassifyCustomer_MS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>vTn7YWGxdIOCjFJ7jIQnbA8/Las=04-07-2014 15:53:15 04-07-2014 15:52:35 </TimeStamp>
+        <ID>
+          <String>CustomerID3_MS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>EioNM9xacdHy8xgIDqIwFehspzU=04-07-2014 16:45:02 04-07-2014 16:45:02 </TimeStamp>
+        <ID>
+          <String>SalesSeries_MS</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>Vih7uFVCicVabb//ikM6JusfNCw=03-07-2014 22:22:48 03-07-2014 22:22:46 </TimeStamp>
+      <ID>
+        <String>FreqBoughtTogether</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2014-07-04T14:06:09.633333Z</LastDeployed>
+</DeploymentSnapshot>

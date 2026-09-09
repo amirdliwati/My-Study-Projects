@@ -1,0 +1,39 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>AWP</Id>
+            <Name>AWP</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaqzRkqk3c0Wzn+kXokfNGgAAAAAIAAAAQQBXAFAAAAAQZgAAAAEAACAAAACjnaWSnxGEh5Oo1YHL6nJytL8ZdqaJ3npDFkQFc6a+fQAAAAAOgAAAAAIAACAAAABouC2IL0UmRqFYIApH7OH1HVvWuAxcCU57cbFwMMS4+xAAAABDITQ/HIwGnloEa+WN8CLPQAAAAKUs0X06bAXeJm0Ig4Q1ExKAxSDfhUMSwhXBrQE/kkSyKpEU0Qyzq8TdSuVC5PVEDpWtI5cDqo3HoGh29QExVD0=</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>AWP_DS</Id>
+            <Name>AWP_DS</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaqzRkqk3c0Wzn+kXokfNGgAAAAAOAAAAQQBXAFAAXwBEAFMAAAAQZgAAAAEAACAAAABrfDIb9puwf23aEsFLkxJZy1e/j4/r0KULax/Iv8I0sAAAAAAOgAAAAAIAACAAAAD2A9GuB3YYq84jOAqNWx50XEXnbarHm1Btf9hTh+tXWRAAAACUeUSVU9PrSEE4VQgdSqxKQAAAAMcq0f+/LdkfIiGCNFp9D05xHeraZiiAaRl+hRATiolHGsHz6nSw3UF0wmSlH6y7Hin/GO3vahsnj10YNS3tk8g=</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>AWP</Id>
+            <Name>AWP</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaqzRkqk3c0Wzn+kXokfNGgAAAAAIAAAAQQBXAFAAAAAQZgAAAAEAACAAAABSXb8pTvTiA1KSFycBWylnfZ4hBekblmCZt8KJ0PssDgAAAAAOgAAAAAIAACAAAADwOZMO2T9P5lv4k0u5+gHaLYJiC2+HW053BHfdVXnX8CAAAAA7WW/aFcG/NCW2O9Y0hOYdxZDSyEgDucDzFYMmDgydoUAAAAChJZb3a5j2T7nzus2BdeJtudsMCVyEzEEJF3dWHIPuqH5sa3rrQnCT4KGSpz2Gz4B4aMyDD5qFnM01c0JWCdsR</Value>
+          </ConfigurationSetting>
+          <ConfigurationSetting>
+            <Id>AWP_DS</Id>
+            <Name>AWP_DS</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaqzRkqk3c0Wzn+kXokfNGgAAAAAOAAAAQQBXAFAAXwBEAFMAAAAQZgAAAAEAACAAAACmP8cQhZp/SiD7KchMRbwPk1gbTVKoW6yK2xQaJCVBjwAAAAAOgAAAAAIAACAAAABlC8voH31KjayhD0HVBrdAU1ZBP9swW/1r+bb5g/TiUSAAAAC90G3ECFFm3jU6ktIc78IjAtfmlUNE9Iz61A0QWYih80AAAABswunawdo162pjtjSmEyICeSaUxtgKEawYtWBUNNoMPnRmAjOmQW2+XXxVTSNmgHUtPTFAojpKaDESBW9icAI7</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>FreqBoughtTogether</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>
