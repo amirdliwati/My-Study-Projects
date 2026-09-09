@@ -1,0 +1,5 @@
+D:\AIR\Help\boolean\bin\Debug\BooleanRetrivalModel.exe
+D:\AIR\Help\boolean\bin\Debug\BooleanRetrivalModel.pdb
+D:\AIR\Help\boolean\obj\x86\Debug\BooleanRetrivalModel.exe
+D:\AIR\Help\boolean\obj\x86\Debug\BooleanRetrivalModel.pdb
+D:\AIR\Help\boolean\obj\x86\Debug\BooleanRetrievalModel.csprojResolveAssemblyReference.cache

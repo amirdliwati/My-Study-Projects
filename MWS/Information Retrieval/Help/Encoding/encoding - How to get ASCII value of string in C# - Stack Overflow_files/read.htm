@@ -1,0 +1,24 @@
+
+<!-- saved from url=(0176)https://stackauth.com/auth/global/read?request=CHmsjRcgm5avw8KFklkb0NEGz7DCFt2wzZQMiCewoPamTZZB7Yuj9N5kJxtkMvfaJ4J0bb7%2Bc1jFOpvpdUB6zw%3D%3D&nonce=zwdhVQAAAADh8T8534cmMw%3D%3D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                  <script>
+                  var data = {"ReadSession":"https://stackauth.com/auth/global/read-session","Request":"CHmsjRcgm5avw8KFklkb0NEGz7DCFt2wzZQMiCewoPamTZZB7Yuj9N5kJxtkMvfaJ4J0bb7+c1jFOpvpdUB6zw==","Nonce":"zwdhVQAAAADh8T8534cmMw==","Referrer":"http://stackoverflow.com/questions/400733/how-to-get-ascii-value-of-string-in-c-sharp","StorageName":"GlobalLogin"};
+
+                  var toMsg = window.parent;
+
+                  var obj = localStorage ? localStorage.getItem(data.StorageName) : null;
+                  if(obj != null) {
+                  var req = new XMLHttpRequest();
+                  req.open('POST', data.ReadSession+'?request='+encodeURIComponent(data.Request)+'&nonce='+encodeURIComponent(data.Nonce)+'&seriesAndToken='+encodeURIComponent(obj), false);
+                  req.send(null);
+                  
+                    if(req.status == 200){
+                      toMsg.postMessage(req.responseText, data.Referrer);
+                    }else{
+                      toMsg.postMessage('No Session', data.Referrer);
+                    }
+                  }else{
+                    toMsg.postMessage('No Local Storage', data.Referrer);
+                  }
+                  </script>
+                  </head><body></body></html>

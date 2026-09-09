@@ -1,0 +1,4 @@
+D:\AIR\Help\VectorModel\VectorModel\bin\Debug\VectorModel.exe
+D:\AIR\Help\VectorModel\VectorModel\bin\Debug\VectorModel.pdb
+D:\AIR\Help\VectorModel\VectorModel\obj\x86\Debug\VectorModel.exe
+D:\AIR\Help\VectorModel\VectorModel\obj\x86\Debug\VectorModel.pdb

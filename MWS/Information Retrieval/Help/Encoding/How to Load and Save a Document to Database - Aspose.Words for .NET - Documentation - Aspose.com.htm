@@ -1,0 +1,1506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0088)http://www.aspose.com/docs/display/wordsnet/How+to++Load+and+Save+a+Document+to+Database -->
+<html style="overflow: hidden;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>How to  Load and Save a Document to Database - Aspose.Words for .NET  - Documentation - Aspose.com</title>
+
+        
+
+                        
+    
+
+            <!-- Deprecated since 3.4. To be removed in a future version of Confluence; use AJS.Confluence.getContextPath() -->
+<meta id="confluence-context-path" name="confluence-context-path" content="/docs">
+<meta name="ajs-context-path" content="/docs">
+<meta name="ajs-build-number" content="2037">
+<meta id="atlassian-token" name="atlassian-token" content="3b5b08b2b4442068503b6aad7896c14ae65cfa0f">
+<meta id="confluence-space-key" name="confluence-space-key" content="wordsnet">
+<meta name="ajs-remote-user" content="">
+<meta name="ajs-static-resource-url-prefix" content="/docs/s/2037/101/_">
+
+<script async="" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/analytics.js"></script><script type="text/javascript">
+    // Deprecated global variables. To be removed in a future version of Confluence.
+    var contextPath = '/docs';
+	
+</script>
+
+
+    
+
+<!-- include system css resources -->
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/batch.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/docs/s/2037/101/1/_/download/superbatch/css/batch.css?ieonly=true" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/batch(1).css" media="print">
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.confluence.plugins.pagetree-pagetree-resources.css" media="all">
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/confluence.web.resources-view-comment.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/docs/s/2037/101/1.0/_/download/batch/confluence.web.resources:view-comment/confluence.web.resources:view-comment.css?ieonly=true" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/confluence.macros.advanced-fancy-box.css" media="all">
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.confluence.plugins.drag-and-drop-support.css" media="all">
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/confluence-forms.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/docs/s/2037/101/1.0/_/download/batch/confluence.web.resources:aui-forms/confluence.web.resources:aui-forms.css?ieonly=true" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.plugins.shortcuts.atlassian-shortcuts-module-shortcuts.css" media="all">
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.confluence.keyboardshortcuts-confluence-keyboard-shortcuts.css" media="all">
+
+<!-- end system css resources -->
+
+    <link rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/combined.css" type="text/css">
+
+    <meta name="confluence-request-time" content="1432417543931">
+
+<meta name="loggedInUsername" content="">
+            <meta name="ajs-keyboardshortcut-hash" content="f73ee16fb2fcc5246112453333c6c113">
+    <!-- Deprecated since 3.4. To be removed in a future version of Confluence; use atl.header -->
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+    
+    <link rel="shortcut icon" href="http://www.aspose.com/docs/favicon.ico">
+    <link rel="icon" type="image/png" href="http://www.aspose.com/docs/s/2037/101/_/images/logo/confluence_16.png">
+
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.aspose.com/docs/opensearch/osd.action" title="Documentation - Aspose.com">
+
+        <!-- include system javascript resources -->
+                        
+    
+    <script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/batch.js"></script>
+<script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.confluence.plugins.pagetree-pagetree-resources.js"></script>
+<script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/confluence.macros.advanced-fancy-box.js"></script>
+<script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/confluence.macros.advanced-thumbnail-images.js"></script>
+<script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.confluence.plugins.drag-and-drop-support.js"></script>
+<script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.confluence.plugins.drag-and-drop-drag-and-drop-for-view-content.js"></script>
+<script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.confluence.plugins.doctheme-splitter.js"></script>
+<script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.plugins.shortcuts.atlassian-shortcuts-module-shortcuts.js"></script>
+<script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/com.atlassian.confluence.keyboardshortcuts-confluence-keyboard-shortcuts.js"></script>
+<script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/legacy.confluence.web.resources-prototype.js"></script>
+
+    
+    <!-- end system javascript resources -->
+    
+<link href="https://plus.google.com/+aspose/" rel="publisher">
+<link type="text/css" rel="stylesheet" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/headerFooter.css">
+<style type="text/css">
+    #footer {
+        bottom: 0 !important;
+    }
+    body
+    {
+        background-image: none !important;
+    }
+    .noprint2
+    {
+         list-style: none outside none;
+    }  
+</style>
+<script type="text/javascript" language="javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/jquery.min.js"></script>
+<script type="text/javascript" language="javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/search.js"></script>
+<script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery('#userControls').load('/Header/logininfo.aspx?ShowBlc=false');
+            
+  var newHref = window.location.href;
+    if (newHref.indexOf("http://docs.aspose.com:8082/docs") > 0) {
+       window.location.href = newHref.replace("http://docs.aspose.com:8082/docs", "http://www.aspose.com/docs");
+}
+
+        });
+
+    </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3109235-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+    
+    <link rel="canonical" href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com.htm">
+    <link rel="shortlink" href="http://www.aspose.com/docs/x/W4FVBw">
+    <meta name="wikilink" content="[wordsnet:How to  Load and Save a Document to Database]">
+
+</head>
+
+<body onload="placeFocus()" id="com-atlassian-confluence" class="theme-documentation " style="overflow: hidden;">
+<div id="full-height-container">
+<div class="siteTop">
+    <div class="siteTop_ContentContainer">
+        <!-- Website logo -->
+        <a href="http://www.aspose.com/" title="Your File Format APIs">
+            <img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/transparent.png" width="175" height="50" alt="Aspose" class="asposelogo"></a>
+        <!-- Website Main menu -->
+        <div id="sitenavPanel">
+            <div class="sitenavPanel_ContentContainer sitenavPanel_menuContainer">
+                <a href="http://www.aspose.com/total-component-suite.aspx">
+                    Products</a>
+                <ul>
+                    <li><a href="http://www.aspose.com/.net/total-component.aspx">
+                        .NET Components</a> </li>
+                    <li><a href="http://www.aspose.com/java/total-component.aspx">
+                        Java Components</a> </li>
+                    <li><a href="http://www.aspose.com/cloud/total-api.aspx">Cloud APIs</a></li>
+<li><a href="http://www.aspose.com/android/total-component.aspx">Android Components</a></li>
+					<li><a href="http://www.aspose.com/sharepoint/total-component.aspx">
+                        SharePoint Components</a> </li>
+                    <li><a href="http://www.aspose.com/reporting-services/total-component.aspx">
+                        SSRS Rendering Extensions</a> </li>
+                    <li><a href="http://www.aspose.com/jasperreports/total-component.aspx">
+                        JasperReports Exporters</a> </li>                    
+                    <li><a href="http://www.aspose.com/total-component-suite.aspx">
+                        Product Family Packs</a> </li>
+                    <li><a href="http://www.aspose.com/free-utilities-and-components.aspx">Free
+                        Utilities &amp; Components</a> </li>
+                    <li class="bottom"></li>
+                </ul>
+            </div>
+           
+            <div class="sitenavPanel_ContentContainer sitenavPanel_menuContainer">
+<a href="http://www.aspose.com/purchase/default.aspx">Purchase</a>
+                    <ul>
+                    <li><a href="http://www.aspose.com/purchase/order-online-step-1-of-8.aspx">Buy Online</a> </li>
+                    <li><a href="http://www.aspose.com/purchase/pricing-info-step-1-of-4.aspx">Pricing Information</a> </li>
+                    <li><a href="http://www.aspose.com/community/getting-started.aspx">Free Trials</a> </li>
+                    <li><a href="http://www.aspose.com/purchase/order-list.aspx">My Orders</a> </li>
+                    <li><a href="http://www.aspose.com/purchase/order-quotes.aspx">My Quotes</a> </li>
+                    <li><a href="http://www.aspose.com/purchase/renew-order.aspx">Renew an Order</a> </li>
+                    <li><a href="http://www.aspose.com/purchase/upgrade-order.aspx">Upgrade an Order</a> </li>
+                    <li><a href="http://www.aspose.com/corporate/purchase/end-user-agreement.aspx">EULA</a> </li>
+                    <li><a href="http://www.aspose.com/purchase/findreseller.aspx">Find a Reseller</a> </li>
+                        <li class="bottom"></li>
+                    </ul>            </div>
+            <div class="sitenavPanel_ContentContainer sitenavPanel_menuContainer">
+                <a href="http://www.aspose.com/support/default.aspx">Support</a>
+               <ul>
+                        <li><a href="http://www.aspose.com/docs/dashboard.action">Docs</a> </li>
+                        <li><a href="http://www.aspose.com/demos/default.aspx">Examples</a> </li>
+                        <li><a href="http://www.aspose.com/community/forums/default.aspx">Forums</a> </li>
+                        <li><a href="http://www.aspose.com/blogs/index.php">Blogs</a> </li>
+                        <li><a href="http://www.aspose.com/community/files/default.aspx">Downloads</a> </li>
+                        <li><a href="http://www.aspose.com/corporate/services/default.aspx">Support Services</a></li>
+                        <li class="bottom"></li>
+                    </ul>
+            </div>
+            <div class="sitenavPanel_ContentContainer sitenavPanel_menuContainer">
+                <a href="http://www.aspose.com/corporate/default.aspx">Corporate</a>
+                <ul>
+                    <li><a href="http://www.aspose.com/corporate/default.aspx">About Us</a> </li>
+                    <li><a href="http://www.aspose.com/corporate/contact/default.aspx">Contact Us</a>
+                    </li>
+                    <li><a href="http://www.aspose.com/corporate/community/default.aspx">Community</a>
+                    </li>
+                    <li><a href="http://www.aspose.com/corporate/customers/default.aspx">Customers</a>
+                    </li>
+                    <li><a href="http://www.aspose.com/corporate/press-center/default.aspx">Press Center</a>
+                    </li>
+                    <li><a href="http://www.aspose.com/corporate/careers/default.aspx">Careers</a> </li>
+                    <li><a href="http://www.aspose.com/corporate/legal/privacy-policy.aspx">Privacy Policy</a>
+                    </li>
+                    <li><a href="http://www.aspose.com/corporate/legal/terms-of-use.aspx">Terms of Use</a>
+                    </li>
+                    <li class="bottom"></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Website User Controls -->
+        <div id="userControls">
+        <!-- User Sign in - Sign up -->               
+        <div class="userControls_ContentContainer loggedout_popup">
+            <a href="http://www.aspose.com/community/login.aspx">
+                <img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/transparent.png" width="29" height="29" alt="user info" class="userInfo"></a>
+            <ul class="userSubmenu">
+                <li><a href="http://www.aspose.com/community/login.aspx">
+                    <img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/transparent.png" width="201" height="27" class="existingUser" alt="sign in existing user"></a></li>
+                <li><a href="http://www.aspose.com/community/user/createuser.aspx">
+                    <img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/transparent.png" width="201" height="27" class="newUser" alt="sign up new user"></a> </li>
+                <li class="bottom"></li>
+            </ul>
+        </div>
+
+
+<!-- User Search -->
+<div class="userControls_ContentContainer userControls_menuContainer">
+	<a href="http://www.aspose.com/docs/display/wordsnet/How+to++Load+and+Save+a+Document+to+Database#">
+		<img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/transparent.png" width="29" height="29" alt="user search" class="userSearch"></a>
+	<ul>
+		<li>
+			<input type="text" title="Search" name="siteSearchTextBox" id="siteSearchTextBox" class="searchBox" value="Search ..." onblur="if (this.value == &#39;&#39;) {this.value = &#39;Search ...&#39;;}" onfocus="if (this.value == &#39;Search ...&#39;) {this.value = &#39;&#39;;}" onkeyup="return searchButtonPressed(event);">
+				<a onclick="return searchButtonClicked();" class="searchArrow">
+					<img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/transparent.png" alt="search" width="28" height="28">
+				</a>
+		</li>
+		<li class="bottom"></li>
+	</ul>
+</div>
+</div>
+    </div>
+</div>
+<div class="clearAll">
+</div>
+
+
+<fieldset class="hidden parameters">
+    <input type="hidden" id="statusDialogHeading" value="What are you working on?">
+    <input type="hidden" id="statusDialogAccessibilityLabel" value="Enter your status (140 character limit)">
+    <input type="hidden" id="statusDialogLatestLabel" value="Last update:">
+    <input type="hidden" id="statusDialogUpdateButtonLabel" value="Update">
+    <input type="hidden" id="statusDialogCancelButtonLabel" value="Cancel">
+</fieldset>
+
+<fieldset class="hidden parameters">
+    <input type="hidden" id="globalSettingsAttachmentMaxSize" value="10485760">
+    <input type="hidden" id="userLocale" value="en_GB">
+    <input type="hidden" id="staticResourceUrlPrefix" value="/docs/s/2037/101/_">
+    <input type="hidden" id="contextPath" value="/docs">
+</fieldset>
+
+    
+<div id="header" class="sectionbottom ">
+        <form id="quick-search" class="quick-search" method="get" action="http://www.aspose.com/docs/dosearchsite.action">
+        <fieldset>
+            <legend>Quick Search</legend>
+            <input class="quick-search-query" id="quick-search-query" type="search" accesskey="q" autocomplete="off" name="queryString" size="25" results="10" placeholder="Search Documentation">
+            <input class="quick-search-submit" id="quick-search-submit" type="submit" value="Search">
+            <div class="aui-dd-parent quick-nav-drop-down"><!-- Quick nav appears here --></div>
+        </fieldset>
+        <fieldset class="hidden parameters">
+            <input type="hidden" id="quickNavEnabled" value="true">
+                    </fieldset>
+    </form>
+    <ul id="header-menu-bar" class="ajs-menu-bar">
+                    
+        
+            <li class="normal ajs-menu-item">
+        <a id="browse-menu-link" class="browse trigger ajs-menu-title" href="http://www.aspose.com/docs/display/wordsnet/How+to++Load+and+Save+a+Document+to+Database#"><span><span>Browse</span></span></a>         <div class="ajs-drop-down assistive" hidden="">
+                        <ul id="browse-menu-link-leading" class="section-leading first">
+                                        <li>
+    
+        
+    
+    <a id="space-pages-link" href="http://www.aspose.com/docs/pages/listpages.action?key=wordsnet" class="" title="Browse pages in the Aspose.Words for .NET  space">
+                   <span>Pages</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-blogposts-link" href="http://www.aspose.com/docs/pages/viewrecentblogposts.action?key=wordsnet" class="" title="Browse blogs in the Aspose.Words for .NET  space">
+                   <span>Blog</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-labels-link" href="http://www.aspose.com/docs/labels/listlabels-heatmap.action?key=wordsnet" class="" title="Browse labels in the Aspose.Words for .NET  space">
+                   <span>Labels</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-attachments-link" href="http://www.aspose.com/docs/spaces/listattachmentsforspace.action?key=wordsnet" class="" title="Browse attachments in the Aspose.Words for .NET  space">
+                   <span>Attachments</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a href="http://www.aspose.com/docs/spaces/space-bookmarks.action?spaceKey=wordsnet" class="" title="Browse bookmarks in the Aspose.Words for .NET  space">
+                   <span>Bookmarks</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-mail-link" href="http://www.aspose.com/docs/spaces/viewmailarchive.action?key=wordsnet" class="" title="Browse mail in the Aspose.Words for .NET  space">
+                   <span>Mail</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="space-advanced-link" href="http://www.aspose.com/docs/spaces/viewspacesummary.action?key=wordsnet" class="" title="Browse additional space functions in the Aspose.Words for .NET  space">
+                   <span>Advanced</span></a>        </li>
+                            </ul>
+                        <ul id="browse-menu-link-global" class="section-global">
+                                        <li>
+    
+        
+    
+    <a id="people-directory-link" href="http://www.aspose.com/docs/peopledirectory.action" class="" title="Browse the Confluence people directory">
+                   <span>People Directory</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="keyboard-shortcuts-link" href="http://www.aspose.com/docs" class="" title="View available keyboard shortcuts">
+                   <span>Keyboard Shortcuts</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="gadget-directory-link" href="http://www.aspose.com/docs" class="user-item administration-link" title="Browse gadgets provided by Confluence">
+                   <span>Confluence Gadgets</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+        
+                                                         <li class="ajs-menu-item normal">
+        
+        
+    
+    <a id="login-link" href="http://www.aspose.com/docs/login.action?os_destination=%2Fdisplay%2Fwordsnet%2FHow%2Bto%2B%2BLoad%2Band%2BSave%2Ba%2BDocument%2Bto%2BDatabase" class="user-item login-link" title="">
+                   <span>Log In</span></a>        </li>
+                                <li class="normal ajs-menu-item">
+            <div id="splitter-button" class="" title="Sidebar"></div>
+        </li>
+
+    </ul>
+    
+    
+    <ol id="breadcrumbs">
+                    
+                        
+        <li class="first">
+                                    <span><a href="http://www.aspose.com/docs/dashboard.action" title="Go to Dashboard">Dashboard</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="http://www.aspose.com/docs/display/wordsnet">Aspose.Words for .NET </a></span>
+                </li>
+                                        <li id="ellipsis" title="    …
+                    Home
+             &gt;         Programmers Guide
+        …
+"><span><strong>…</strong></span></li>
+                                    
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://www.aspose.com/docs/display/wordsnet/Home">Home</a></span>
+                </li>
+                                
+                
+        <li class="hidden-crumb">
+                                    <span><a href="http://www.aspose.com/docs/display/wordsnet/Programmers+Guide">Programmers Guide</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="http://www.aspose.com/docs/display/wordsnet/Loading%2C+Saving+and+Converting">Loading, Saving and Converting</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span>How to  Load and Save a Document to Database</span>
+                </li>
+        </ol>
+
+</div>
+
+    <div id="splitter" style="position: relative; height: 650.34375px;">
+    <div id="splitter-sidebar" style="position: absolute; z-index: 0; left: 0px; width: 350px; height: 650px; overflow: hidden;">
+
+        
+
+                    
+    
+    
+
+<div class="plugin_pagetree" style="margin: 10px 0px 0px;">
+
+                <div id="pagetreesearch">
+            <form method="POST" action="http://www.aspose.com/docs/plugins/pagetreesearch/pagetreesearch.action" name="pagetreesearchform">
+                                    
+                                <input type="hidden" name="spaceKey" value="wordsnet">
+                <input type="text" size="20" name="queryString">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    
+        
+    <ul class="plugin_pagetree_children_list plugin_pagetree_children_list_noleftspace"></ul>
+
+    <fieldset class="hidden">
+        <input type="hidden" name="treeId" value="">
+        <input type="hidden" name="treeRequestId" value="/docs/plugins/pagetree/naturalchildren.action?decorator=none&amp;excerpt=false&amp;sort=position&amp;reverse=false&amp;disableLinks=false">
+        <input type="hidden" name="treePageId" value="123044187">
+
+        <input type="hidden" name="noRoot" value="false">
+        <input type="hidden" name="rootPageId" value="123043842">
+
+        <input type="hidden" name="rootPage" value="">
+        <input type="hidden" name="startDepth" value="0">
+        <input type="hidden" name="spaceKey" value="wordsnet">
+
+        <input type="hidden" name="i18n-pagetree.loading" value="Loading...">
+        <input type="hidden" name="i18n-pagetree.error.permission" value="Unable to load page tree. It seems that you do not have permission to view the root page.">
+        <input type="hidden" name="i18n-pagetree.eeror.general" value="There was a problem retrieving the page tree. Please check the server log file for more information.">
+        <input type="hidden" name="loginUrl" value="/docs/login.action">
+
+                <fieldset class="hidden">
+                                                <input type="hidden" name="ancestorId" value="123044163">
+                                    <input type="hidden" name="ancestorId" value="123044160">
+                                    <input type="hidden" name="ancestorId" value="123043842">
+                                    </fieldset>
+    </fieldset>
+</div>
+
+
+
+            <iframe style="border: 0px none;background: none;width:100%;height:90%;overflow:scroll" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/Default.htm"></iframe></div><div class="vsplitbar" unselectable="on" style="z-index: 10; position: absolute; -webkit-user-select: none; cursor: e-resize; left: 350px; height: 650px; display: none;"><a href="javascript:void(0)" accesskey="L" tabindex="0" title="vsplitbar"></a></div>
+    <div id="splitter-content" style="position: absolute; z-index: 0; left: 350px; width: 1090px; height: 650px;">
+
+                    <script type="text/javascript" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/doc-theme.js"></script>
+    
+            
+    
+<div id="main">
+    
+    
+    <div id="navigation" class="content-navigation view">
+        <fieldset class="hidden parameters">
+            <input type="hidden" id="pageId" value="123044187">
+        </fieldset>
+        <ul class="ajs-menu-bar">
+                                
+                        
+            <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action trigger ajs-menu-title" href="http://www.aspose.com/docs/display/wordsnet/How+to++Load+and+Save+a+Document+to+Database#"><span><span>Tools</span></span></a>         <div class="ajs-drop-down most-right-menu-item assistive" hidden="">
+                        <ul id="action-menu-link-primary" class="section-primary first">
+                                        <li>
+    
+        
+    
+    <a id="view-attachments-link" href="http://www.aspose.com/docs/pages/viewpageattachments.action?pageId=123044187" class="action-view-attachments" accesskey="a" title="View Attachments">
+                   <span><u>A</u>ttachments (2)</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="action-view-history-link" href="http://www.aspose.com/docs/pages/viewpreviousversions.action?pageId=123044187" class="action-view-history" title="">
+                   <span>Page History</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="action-page-permissions-link" href="http://www.aspose.com/docs/pages/viewinfo.action?pageId=123044187" class="action-page-permissions" title="Edit restrictions">
+                   <span>Restrictions</span></a>        </li>
+                            </ul>
+                        <ul id="action-menu-link-secondary" class="section-secondary">
+                                        <li>
+    
+        
+    
+    <a id="view-page-info-link" href="http://www.aspose.com/docs/pages/viewinfo.action?pageId=123044187" class="action-view-info" title="">
+                   <span>Info</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="link-to-page-link" href="http://www.aspose.com/docs/pages/viewinfo.action?pageId=123044187" class="" title="Link to this Page">
+                   <span>Link to this Page…</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="view-in-hierarchy-link" href="http://www.aspose.com/docs/pages/listpages-dirview.action?key=wordsnet&openId=123044187#selectedPageInHierarchy" class="" title="">
+                   <span>View in Hierarchy</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a id="action-view-source-link" href="http://www.aspose.com/docs/pages/viewpagesrc.action?pageId=123044187" class="action-view-source popup-link" title="">
+                   <span>View Wiki Markup</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+    
+    <h1 id="title-heading" class="pagetitle">
+                    <a href="http://www.aspose.com/docs/display/wordsnet"><img class="logo global" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/confluence_48_white.png" alt=""></a>        
+		<span id="title-text">
+					            <a href="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com.htm">How to  Load and Save a Document to Database</a>
+    				</span>
+    </h1>
+
+    
+
+    
+    
+    
+    <div id="content" class="page view">
+    
+
+
+
+<fieldset id="link-to-page-fields" class="hidden parameters">
+    <input type="hidden" id="linkToThisPageHeading" value="Link to this Page">
+    <input type="hidden" id="linkToThisPageLink" value="Link">
+    <input type="hidden" id="linkToThisPageTinyLink" value="Tiny Link">
+    <input type="hidden" id="linkToThisPageWikiMarkup" value="Wiki Markup">
+    <input type="hidden" id="linkToThisPageClose" value="Close">
+</fieldset>
+<fieldset class="hidden parameters">
+    <input type="hidden" title="movePageDialogViewPageTitle" value="Move Page – ‘How to  Load and Save a Document to Database’">
+    <input type="hidden" title="movePageDialogEditPageTitle" value="Set Page Location">
+    <input type="hidden" title="movePageDialogMoveButton" value="Move">
+    <input type="hidden" title="movePageDialogOkButton" value="OK">
+    <input type="hidden" title="movePageDialogCancelButton" value="Cancel">
+    <input type="hidden" title="movePageDialogBrowsePanelTip" value="Click to select the new parent page for this page and its children.">
+    <input type="hidden" title="movePageDialogSearchPanel" value="Search">
+    <input type="hidden" title="movePageDialogHistoryPanel" value="Recently Viewed">
+    <input type="hidden" title="movePageDialogHistoryNoResults" value="There were no recently viewed pages found.">
+    <input type="hidden" title="movePageDialogLocationPanel" value="Known Location">
+    <input type="hidden" title="movePageDialogLocationNotFound" value="The specified page was not found.">
+    <input type="hidden" title="movePageDialogBrowsePanel" value="Browse">
+    <input type="hidden" title="movePageDialogPanelLoadErrorMsg" value="Error reading the panel content from the server.">
+    <input type="hidden" title="movePageDialogPanelLoadErrorTip" value="You could try reloading the page and launching the dialog again.">
+    <input type="hidden" title="movePageDialogPanelLoadErrorStatus" value="HTTP Status">
+    <input type="hidden" title="movePageDialogNoSelectionErrorMsg" value="You must make a selection in the tree before you can move the page.">
+    <input type="hidden" title="movePageDialogSearchError" value="Failed to retrieve search results from the server.">
+    <input type="hidden" title="movePageDialogSearchNoResults" value="There were no pages found containing &lt;b&gt;{0}&lt;/b&gt;.">
+    <input type="hidden" title="movePageDialogSearchResultCount" value="Showing &lt;b&gt;{0}&lt;/b&gt;-&lt;b&gt;{1}&lt;/b&gt; of &lt;b&gt;{2}&lt;/b&gt; pages containing &lt;b&gt;{3}&lt;/b&gt;.">
+    <input type="hidden" title="movePageDialogMoveFailed" value="Move failed. There was a problem contacting the server.">
+    <input type="hidden" title="movePageDialogCannotChangeSpace" value="You cannot move this page to another space because you do not have permission to remove it from this space.">
+    <input type="hidden" title="pageTitle" value="How to  Load and Save a Document to Database">
+    <input type="hidden" title="parentPageTitle" value="Loading, Saving and Converting">
+    <input type="hidden" title="fromPageTitle" value="">
+    <input type="hidden" title="spaceKey" value="wordsnet">
+    <input type="hidden" title="spaceName" value="Aspose.Words for .NET ">
+    <input type="hidden" title="movePageDialogInvalidLocation" value="You cannot move a page to be underneath itself or its children.">
+    <input type="hidden" title="movePageDialogOrderingTitle" value="Page Ordering">
+    <input type="hidden" title="movePageDialogBackButton" value="Back">
+    <input type="hidden" title="movePageDialogMoveAndOrderButton" value="Reorder">
+    <input type="hidden" title="movePageDialogNextButton" value="Move">
+</fieldset>
+
+<script type="text/x-template" title="movePageDialog">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Specify the new parent page for this page and its children by space and title.
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <fieldset>
+            
+
+    <legend class="assistive"><span>Change the Parent Page to a Known Page</span></legend>
+            <div class="row">
+                <label for="new-space">New space:</label>
+                <div class="value new-space-value">
+                    <input id="new-space-key" name="new-space-key" type="hidden" value="wordsnet">
+                                            <span class="space-input">
+                            <input id="new-space" name="new-space" value="Aspose.Words for .NET " disabled="disabled">
+                        </span>
+                        <span class="description warning">You cannot move this page to another space because you do not have permission to remove it from this space.</span>
+                                        <div class="new-space-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+            <div class="row">
+                <label for="new-parent-page">New parent page:</label>
+                <div class="value new-parent-page-value">
+                    <span class="page-input">
+                        <input id="new-parent-page" name="new-parent-page" value="Loading, Saving and Converting">
+                    </span>
+                    <span class="description">Start typing a page title to see a list of suggestions.</span>
+                    <div class="new-parent-page-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="location-info">
+        <div class="row">
+            <label>Current location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="current-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <label>New location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="new-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/x-template" title="movePageErrors">
+    <div id="move-errors" class="hidden warning"></div>
+</script>
+<script type="text/x-template" title="movePageBreadcrumb">
+    <li><a class="{2}" title="{3}" tabindex="-1"><span>{0}</span></a></li>
+</script>
+<script type="text/x-template" title="movePageBreadcrumbLoading">
+    <li class="loading"><span>Loading breadcrumbs&hellip;</span></li>
+</script>
+<script type="text/x-template" title="movePageBreadcrumbError">
+    <li class="warning last"><span>Error retrieving breadcrumbs.</span></li>
+</script>
+<script type="text/x-template" title="movePageNoMatchingPages">
+    <ol><li><span class="warning">No matching pages found.</span></li></ol>
+</script>
+<script type="text/x-template" title="movePageNoMatchingSpaces">
+    <ol><li><span class="warning">No matching spaces found.</span></li></ol>
+</script>
+
+<script type="text/x-template" title="movePageSearchPanel">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Search for and select the new parent page for this page and its children.
+            </div>
+        </div>
+    </div>
+    <div id="move-page-search-container" class="row">
+        <div class="search-form">
+            <fieldset>
+                
+
+    <legend class="assistive"><span>Search for a New Parent Page</span></legend>
+                
+
+    <label  for="move-page-search-query" class="assistive">Search keywords</label>
+                <input class="search-query" id="move-page-search-query">
+                
+
+    <label  for="move-page-search-space" class="assistive">Search in space</label>
+                                    <select id="move-page-search-space" class="search-space" disabled="disabled">
+                        <option value="wordsnet" selected="selected">Aspose.Words for .NET </option>
+                    </select>
+                                <input type="button" value="Search">
+                                    <div class="description warning">You cannot move this page to another space because you do not have permission to remove it from this space.</div>
+                            </fieldset>
+        </div>
+        <div class="search-results">
+        </div>
+    </div>
+</script>
+<script type="text/x-template" title="movePageSearchResultsLoading">
+    <div class="searching">Searching…</div>
+</script>
+
+<script type="text/x-template" title="movePageHistoryPanel">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Select the new parent page for this page and its children from your history.
+            </div>
+        </div>
+    </div>
+    <div id="move-page-search-container" class="row">
+        <div class="search-results">
+        </div>
+    </div>
+</script>
+<script type="text/x-template" title="movePageHistoryLoading">
+    <div class="searching">Loading…</div>
+</script>
+<script type="text/x-template" title="movePageBrowsePanel">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Click to select the new parent page for this page and its children.
+            </div>
+        </div>
+    </div>
+    <div class="tree"></div>
+</script>
+<script type="text/x-template" title="movePagePanelLoading">
+    <span>Loading…</span>
+</script>
+<script type="text/x-template" title="movePageBrowsePanelSpace">
+    <ul><li id='tree-root-node-item' class='root-node-list-item'><a class='root-node' href='#'>{0}</a></li></ul>
+</script>
+<script type="text/x-template" title="orderingPagePanel">
+<div id="orderingPlaceHolder"></div>
+</script>
+<script type="text/x-template" title="reorderCheckbox">
+<span id="reorderRequirement"><input id="reorderCheck" type="checkbox" name="reorderFlag" title="Choose the position of this page within the list of child pages."/><label for="reorderCheck" title="Choose the position of this page within the list of child pages.">Reorder</label></span>
+</script>
+<script type="text/x-template" title="move-help-link">
+    <div class="dialog-help-link">
+            <a href="http://docs.atlassian.com/confluence/docs-34/Moving+a+Page" target="_blank">Help</a>
+    </div>
+</script>
+<script type="text/x-template" title="searchResultsGrid">
+    <table>
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <th class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></th>
+        <td class="search-result-space"><a class="space" href="/docs/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+<!-- Start restrictions section -->
+<fieldset class="hidden parameters i18n">
+        <input type="hidden" title="i18n.page.perms.error.invalid.entity.names" value="Unknown user or group:">
+        <input type="hidden" title="i18n.page.perms.dialog.heading" value="Page Restrictions">
+        <input type="hidden" title="i18n.page.perms.editing.restricted.to" value="Editing restricted to:">
+        <input type="hidden" title="i18n.cancel.name" value="Cancel">
+        <input type="hidden" title="i18n.close.name" value="Close">
+        <input type="hidden" title="i18n.update.name" value="Save">
+</fieldset>
+
+<script type="text/x-template" title="page-permissions-div">
+<div id="page-permissions-div">
+    <div id="page-permissions-editor-form">
+
+                <div id="page-permissions-error-div" class="hidden">
+            <a href="#" id="permissions-error-div-close">Ok</a>
+            <div></div>
+        </div>
+
+                <div id="page-permissions-type-radios" class="page-permissions-label-rows">
+            <div>
+                <input id="restrictViewRadio" type="radio" checked="checked" name="pagePermissionTypeRadio" value="view"/>
+                <label for="restrictViewRadio">Restrict viewing of this page</label>
+                <input id="restrictEditRadio" type="radio" name="pagePermissionTypeRadio" value="edit"/>
+                <label for="restrictEditRadio">Restrict editing of this page</label>
+            </div>
+        </div>
+        <div id="page-permissions-input" class="page-permissions-label-rows">
+            <div class="page-permissions-label">To:</div>
+            <div id="page-permissions-chooser-box">
+                                <span id="page-permissions-choose-user" class="ajs-button">
+                    
+
+
+
+    
+
+
+
+<a href="#" id='userpicker-popup-link-image' onClick="var picker = window.open('/docs/spaces/openuserpicker.action?key=wordsnet&startIndex=0&onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;"><img src="/docs/s/2037/101/_/images/icons/user_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose users" /></a>
+<a href="#" id='userpicker-popup-link-text' onClick="var picker = window.open('/docs/spaces/openuserpicker.action?key=wordsnet&startIndex=0&onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;">Person...</a>
+
+
+                </span>
+                <span id="page-permissions-choose-group" class="ajs-button">
+                    
+
+
+
+    
+
+ 
+
+<a href="#" id='grouppicker-popup-link-image' onClick="var picker = window.open('/docs/spaces/opengrouppicker.action?key=wordsnet&startIndex=0&actionName=dosearchgroups.action&onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;"><img src="/docs/s/2037/101/_/images/icons/group_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose groups" /></a>
+<a href="#" id='grouppicker-popup-link-text' onClick="var picker = window.open('/docs/spaces/opengrouppicker.action?key=wordsnet&startIndex=0&actionName=dosearchgroups.action&onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;">Group...</a>
+
+
+                </span>
+            </div>
+            <div id="page-permissions-input-box">
+                                <span>
+                    <input type="text" id="page-permissions-names-input" class="input-placeholder" value="Enter user or group name" name="permissionNames" size="30" autocomplete="off"/>
+                </span>
+                <input
+    type="hidden"
+                            id="page-permissions-names-hidden"           />                <img height="16px" width="1px" src="/docs/s/2037/101/_/images/border/spacer.gif"/>
+                <input type="button" id="add-typed-names" value="Restrict">
+            </div>
+        </div>
+    </div>
+    <div id="page-permissions-tables">
+        <div id="page-permissions-table-div">
+                        <table id="page-permissions-table" class="page-permissions-table">
+                <tr id="page-permissions-no-views" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No view restrictions are defined for this page</span></td>
+                </tr>
+                <tr id="page-permissions-no-edits" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No edit restrictions are defined for this page</span></td>
+                </tr>
+            </table>
+        </div>
+        <div id="page-inherited-permissions-table-div" class="hidden">
+            <span id="page-inherited-permissions-table-desc">
+                <a class="icon twisty-closed">Show/Hide</a>
+                <a id="toggle-inherited-permissions" title="Click to see inherited restrictions">This page has restricted parent pages. It can only be seen by users who can see those parent pages.</a>
+            </span>
+            <div id="page-inherited-permissions-tables" class="hidden page-inheritance-togglable"></div>
+        </div>
+    </div>
+</div>
+</script>
+
+<script type="text/x-template" title="permissions-row-template">
+    <tr class="permission-row">
+                                
+                <td class="page-permissions-marker-cell" width="20%">
+            <span>Viewing restricted to:</span>
+        </td>
+                <td class="permission-entity" nowrap="true" width="40%">
+            <span class="entity-container">
+                <img class="permission-entity-picture"/>
+                <span class="permission-entity-display-name"></span>
+                <span class="permission-entity-name-wrap">&nbsp;(<span class="permission-entity-name"></span>)</span>
+            </span>
+        </td>
+        <td class="permission-detail-column">
+            <div class="permission-remove-div">
+                <a href="#" class="remove-permission-link">Remove restriction</a>
+            </div>
+        </td>
+    </tr>
+</script>
+<script type="text/x-template" title="permissions-username-no-suggestion-template">
+    <ol>
+        <li><a href="#" class="message"><span>No matches</span></a></li>
+    </ol>
+</script>
+<script type="text/x-template" title="page-inherited-permissions-table-div-template">
+        <div class="page-inherited-permissions-owner-div">
+        <div class="page-inherited-permissions-table-desc">Viewing restrictions apply to “<a></a>”. In order to see “<span></span>”, a user must be in the following list of users and groups:</div>
+        <table class="page-permissions-table"></table>
+    </div>
+</script>
+<script type="text/x-template" title="page-restrictions-help-link">
+    <div class="dialog-help-link">
+            <a href="http://docs.atlassian.com/confluence/docs-34/Page+Restrictions" target="_blank">Help</a>
+    </div>
+</script>
+<!-- End restrictions section -->
+
+<fieldset class="hidden parameters">
+    <input type="hidden" title="spaceKeyEncoded" value="wordsnet">
+    <input type="hidden" title="spaceKeyDecoded" value="wordsnet">
+</fieldset>
+
+
+        
+    
+    
+        <fieldset class="hidden parameters">
+            <input type="hidden" title="parentPageId" value="123044163">
+        </fieldset>
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="http://www.aspose.com/docs/display/wordsnet/How+to++Load+and+Save+a+Document+to+Database#page-metadata-end" class="assistive">Skip to end of metadata</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+                            <li class="page-metadata-item noprint">
+    
+            
+    
+    <a id="content-metadata-page-restrictions" href="http://www.aspose.com/docs/display/wordsnet/How+to++Load+and+Save+a+Document+to+Database#" class="page-metadata-icon page-restrictions hidden" title="Page restrictions apply. Click the lock icon to view or edit the restriction.">
+                   <span>Page restrictions apply</span></a>        </li>
+                            <li class="page-metadata-item noprint">
+    
+        
+    
+    <a id="content-metadata-attachments" href="http://www.aspose.com/docs/pages/viewpageattachments.action?pageId=123044187&metadataLink=true" class="page-metadata-icon action-view-attachments" accesskey="a" title="Attachments: 2">
+                   <span><span class="page-metadata-attachments-text">Attachments:</span><span class="page-metadata-attachments-count">2</span></span></a>        </li>
+                        <li class="page-metadata-modification-info">
+                                    Added by <a href="http://www.aspose.com/docs/display/~hammad.abbasi" class="url fn confluence-userlink userlink-0" data-username="hammad.abbasi" title="" data-user-hover-bound="true">hammad</a>, last edited by <a href="http://www.aspose.com/docs/display/~hammad.abbasi" class="url fn confluence-userlink userlink-0" data-username="hammad.abbasi" title="" data-user-hover-bound="true">hammad</a> on Nov 19, 2014
+                                                                    </li>
+                    </ul>
+          <div id="version-comment" class="noteMacro" style="display: none;">
+      <strong>Comment:</strong>
+      <br>
+  </div>
+    </div>
+
+
+<a href="http://www.aspose.com/docs/display/wordsnet/How+to++Load+and+Save+a+Document+to+Database#page-metadata-start" class="assistive">Go to start of metadata</a>
+<div id="page-metadata-end" class="assistive"></div>
+        
+        <fieldset class="hidden parameters">
+                        <input type="hidden" title="browsePageTreeMode" value="view">
+        </fieldset>
+
+        <div class="wiki-content">
+           <!-- wiki content -->
+            <div class="panelMacro"><table class="infoMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td><td>You can download the complete source code of the DocumentInDB sample <a href="https://github.com/asposewords/Aspose_Words_NET" class="external-link" rel="nofollow">here</a>.</td></tr></tbody></table></div>
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p> <font color="#000000">One of the tasks you may need to perform when working with documents is storing and retrieving Document objects to and from a database. For example, this would be necessary if you were implementing any type of content management system. The storage of all previous versions of documents would be required to be stored in a database system. The ability to store documents in the database is also extremely useful when your application provides a web-based service.<br>
+<br>
+This sample shows how to store a document into a database and then load it back into a</font> <font color="#000000"><b>Document</b></font> <font color="#000000">object for working with. For the sake of simplicity, the name of the file is the key used to store and fetch documents from the database. The database contains two columns. The first column “FileName” is stored as a</font> <font color="#000000"><b>String</b></font> <font color="#000000">and is used to identify the documents. The second column “FileContent” is stored as a</font> <font color="#000000"><b>BLOB</b></font> <font color="#000000">object which stores the document object is byte form.</font> </p>
+</div></div>
+<h4><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Solution</em></font><div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p>We will do the following to store, read and delete a document in the database:</p>
+</div></div></h4>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Steps to Store a Document into the Database:</em></font> <div class="panel" style="border-width: 1px;"><div class="panelContent">
+<ol>
+	<li><font color="#000000">Save the source document into a</font> <font color="#000000"><b>MemoryStream</b></font> <font color="#000000">. This allows us to get the content of the document as an array of bytes.</font></li>
+	<li><font color="#000000">Store the array of bytes into a database field.</font></li>
+</ol>
+</div></div></h5>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Steps to Read a Document from the Database:</em></font> <div class="panel" style="border-width: 1px;"><div class="panelContent">
+<ol>
+	<li><font color="#000000">Select the record that contains the document data as an array of bytes.</font></li>
+	<li><font color="#000000">Load the array of bytes from the data record into a</font> <font color="#000000">MemoryStream</font> <font color="#000000">.</font></li>
+	<li><font color="#000000">Create a</font> <font color="#000000"><b>Document</b></font> <font color="#000000">object that will load the document from the</font> <font color="#000000">memory</font> <font color="#000000">stream.</font></li>
+</ol>
+
+
+<p><font color="#000000">The following Word document is used in this sample:</font>
+<br class="atl-forced-newline">
+<br class="atl-forced-newline">  <span class="image-wrap" style=""><img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/How+to++Load+and+Save+a+Document+to+Database-001.png" style="border: 0px solid black"></span> </p>
+</div></div></h5>
+<h4><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>The Code</em></font><div class="panel" style="border-width: 1px;"><div class="panelContent">
+<ul>
+	<li><font color="#000000">The</font> <font color="#000000"><b>StoreToDatabase</b></font> <font color="#000000">method that stores the</font> <font color="#000000"><b>Document</b></font> <font color="#000000">object into the database.</font></li>
+</ul>
+
+
+<ul>
+	<li><font color="#000000">The</font> <font color="#000000"><b>ReadFromDatabase</b></font> <font color="#000000">method that reads the stored</font> <font color="#000000"><b>Document</b></font> <font color="#000000">object from the database.</font></li>
+</ul>
+
+
+<ul>
+	<li><font color="#000000">The</font> <font color="#000000"><b>DeleteFromDatabase</b></font> <font color="#000000">method that deletes the record containing the specified</font> <font color="#000000"><b>Document</b></font> <font color="#000000">from the database.</font></li>
+</ul>
+</div></div></h4>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Example</em></font> <div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p>  <font color="#000000"><em>Shows how to setup a connection to a database and execute commands.</em></font></p>
+
+<div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>C#</b></div><div class="codeContent panelContent">
+<pre class="code-java"><span class="code-comment">// Create a connection to the database.
+</span>mConnection = <span class="code-keyword">new</span> OleDbConnection(<span class="code-quote">"Provider=Microsoft.Jet.OLEDB.4.0;Data Source="</span> + dbName);
+
+<span class="code-comment">// Open the database connection.
+</span>mConnection.Open();
+ </pre>
+</div></div> <div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>Visual Basic</b></div><div class="codeContent panelContent">
+<pre class="code-java">' Create a connection to the database.
+mConnection = New OleDbConnection(<span class="code-quote">"Provider=Microsoft.Jet.OLEDB.4.0;Data Source="</span> &amp; dbName)
+
+' Open the database connection.
+mConnection.Open()
+ </pre>
+</div></div>
+</div></div></h5>
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p>Firstly, a connection to the database is created. In this sample we are using a Microsoft Access .mdb database to store an Aspose.Words document. A document is loaded into memory and then converted into a byte array using the general method described in the article <span class="error">[here]</span>.</p>
+</div></div>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Storing a Document into the Database</em></font> </h5>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Example</em></font> <div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p>  <font color="#000000"><em>Stores the document to the specified database.</em></font></p>
+
+<div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>C#</b></div><div class="codeContent panelContent">
+<pre class="code-java"><span class="code-keyword">public</span> <span class="code-keyword">static</span> void StoreToDatabase(Document doc)
+{
+    <span class="code-comment">// Save the document to a MemoryStream object.
+</span>    MemoryStream stream = <span class="code-keyword">new</span> MemoryStream();
+    doc.Save(stream, SaveFormat.Doc);
+
+    <span class="code-comment">// Get the filename from the document.
+</span>    string fileName = Path.GetFileName(doc.OriginalFileName);
+
+    <span class="code-comment">// Create the SQL command.
+</span>    string commandString = <span class="code-quote">"INSERT INTO Documents (FileName, FileContent) VALUES('"</span> + fileName + <span class="code-quote">"', @Doc)"</span>;
+    OleDbCommand command = <span class="code-keyword">new</span> OleDbCommand(commandString, mConnection);
+
+    <span class="code-comment">// Add the @Doc parameter.
+</span>    command.Parameters.AddWithValue(<span class="code-quote">"Doc"</span>, stream.ToArray());
+
+    <span class="code-comment">// Write the document to the database.
+</span>    command.ExecuteNonQuery();
+
+}
+ </pre>
+</div></div> <div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>Visual Basic</b></div><div class="codeContent panelContent">
+<pre class="code-java">Public Shared Sub StoreToDatabase(ByVal doc As Document)
+    ' Save the document to a MemoryStream object.
+    Dim stream As New MemoryStream()
+    doc.Save(stream, SaveFormat.Doc)
+
+    ' Get the filename from the document.
+    Dim fileName As <span class="code-object">String</span> = Path.GetFileName(doc.OriginalFileName)
+
+    ' Create the SQL command.
+    Dim commandString As <span class="code-object">String</span> = <span class="code-quote">"INSERT INTO Documents (FileName, FileContent) VALUES('"</span> &amp; fileName &amp; <span class="code-quote">"', @Doc)"</span>
+    Dim command As New OleDbCommand(commandString, mConnection)
+
+    ' Add the @Doc parameter.
+    command.Parameters.AddWithValue(<span class="code-quote">"Doc"</span>, stream.ToArray())
+
+    ' Write the document to the database.
+    command.ExecuteNonQuery()
+
+End Sub
+ </pre>
+</div></div>
+</div></div></h5>
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p> <font color="#000000">The next step is the most important: specify the commandString, which is an SQL expression that will do all the work. To store the Document into the database the “INSERT INTO” command is used and the table specified along with the values of two record fields – FileName and FileContent. To avoid additional parameters, the file name is acquired from the Document object itself. The FileContent field value is assigned the bytes from the memory stream, which contains the binary representation of the stored document. <br>
+<br>
+The remaining line of code executes the command which stores the Aspose.Words document in the database.</font> </p>
+</div></div>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Retrieving a Document from the Database</em></font> </h5>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Example</em></font> <div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p>  <font color="#000000"><em>Retrieves and returns the document from the specified database using the filename as a key to fetch the document.</em></font></p>
+
+<div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>C#</b></div><div class="codeContent panelContent">
+<pre class="code-java"><span class="code-keyword">public</span> <span class="code-keyword">static</span> Document ReadFromDatabase(string fileName, string path)
+{
+    <span class="code-comment">// Create the SQL command.
+</span>    string commandString = <span class="code-quote">"SELECT * FROM Documents WHERE FileName='"</span> + fileName + <span class="code-quote">"'"</span>;
+    OleDbCommand command = <span class="code-keyword">new</span> OleDbCommand(commandString, mConnection);
+
+    <span class="code-comment">// Create the data adapter.
+</span>    OleDbDataAdapter adapter = <span class="code-keyword">new</span> OleDbDataAdapter(command);
+
+    <span class="code-comment">// Fill the results from the database into a DataTable.
+</span>    DataTable dataTable = <span class="code-keyword">new</span> DataTable();
+    adapter.Fill(dataTable);
+
+    <span class="code-comment">// Check there was a matching record found from the database and <span class="code-keyword">throw</span> an exception <span class="code-keyword">if</span> no record was found.
+</span>    <span class="code-keyword">if</span> (dataTable.Rows.Count == 0)
+        <span class="code-keyword">throw</span> <span class="code-keyword">new</span> ArgumentException(string.Format(<span class="code-quote">"Could not find any record matching the document \"</span>{0}\<span class="code-quote">" in the database."</span>, fileName));
+
+    <span class="code-comment">// The document is stored in <span class="code-object">byte</span> form in the FileContent column.
+</span>    <span class="code-comment">// Retrieve these bytes of the first matching record to a <span class="code-keyword">new</span> buffer.
+</span>    <span class="code-object">byte</span>[] buffer = (<span class="code-object">byte</span>[])dataTable.Rows[0][<span class="code-quote">"FileContent"</span>];
+
+    <span class="code-comment">// Wrap the bytes from the buffer into a <span class="code-keyword">new</span> MemoryStream object.
+</span>    MemoryStream newStream = <span class="code-keyword">new</span> MemoryStream(buffer);
+
+    <span class="code-comment">// Read the document from the stream.
+</span>    Document doc = <span class="code-keyword">new</span> Document(newStream);
+
+    <span class="code-comment">// Return the retrieved document.
+</span>    <span class="code-keyword">return</span> doc;
+
+}
+ </pre>
+</div></div> <div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>Visual Basic</b></div><div class="codeContent panelContent">
+<pre class="code-java">Public Shared Function ReadFromDatabase(ByVal fileName As <span class="code-object">String</span>, ByVal path As <span class="code-object">String</span>) As Document
+    ' Create the SQL command.
+    Dim commandString As <span class="code-object">String</span> = <span class="code-quote">"SELECT * FROM Documents WHERE FileName='"</span> &amp; fileName &amp; <span class="code-quote">"'"</span>
+    Dim command As New OleDbCommand(commandString, mConnection)
+
+    ' Create the data adapter.
+    Dim adapter As New OleDbDataAdapter(command)
+
+    ' Fill the results from the database into a DataTable.
+    Dim dataTable As New DataTable()
+    adapter.Fill(dataTable)
+
+    ' Check there was a matching record found from the database and <span class="code-keyword">throw</span> an exception <span class="code-keyword">if</span> no record was found.
+    If dataTable.Rows.Count = 0 Then
+        Throw New ArgumentException(<span class="code-object">String</span>.Format(<span class="code-quote">"Could not find any record matching the document "</span><span class="code-quote">"{0}"</span><span class="code-quote">" in the database."</span>, fileName))
+
+    End If
+
+    ' The document is stored in <span class="code-object">byte</span> form in the FileContent column.
+    ' Retrieve these bytes of the first matching record to a <span class="code-keyword">new</span> buffer.
+    Dim buffer() As <span class="code-object">Byte</span> = CType(dataTable.Rows(0)(<span class="code-quote">"FileContent"</span>), <span class="code-object">Byte</span>())
+
+    ' Wrap the bytes from the buffer into a <span class="code-keyword">new</span> MemoryStream object.
+    Dim newStream As New MemoryStream(buffer)
+
+    ' Read the document from the stream.
+    Dim doc As New Document(newStream)
+
+    ' Return the retrieved document.
+    Return doc
+
+End Function
+ </pre>
+</div></div>
+</div></div></h5>
+<div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p> <font color="#000000">Firstly the SQL command “SELECT * FROM” is used to fetch the appropriate record based off the filename. <br>
+<br>
+The data is then populated from the database into a</font> <font color="#000000"><b>DataTable</b></font> <font color="#000000">object using the database adapter initialized at the start of the application. The populated</font> <font color="#000000"><b>DataTable</b></font> <font color="#000000">object is checked to ensure the requested data has actually been extracted. For the final steps, the process used in storing the document is reversed and the bytes are deserialized to be loaded back into a</font> <font color="#000000"><b>Document</b></font> <font color="#000000">object. The</font> <font color="#000000"><b>Document</b></font> <font color="#000000">object is then returned from the method and saved with the appropriate name to disk.</font> </p>
+</div></div>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Deleting a Document from the Database</em></font> <div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p> <font color="#000000">The final method is</font> <font color="#000000"><b>DeleteFromDatabase</b></font> <font color="#000000">. This is quite straightforward as there are no manipulations with the</font> <font color="#000000"><b>Document</b></font> <font color="#000000">object.</font> </p>
+</div></div></h5>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Example</em></font> <div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p>  <font color="#000000"><em>Delete the document from the database, using filename to fetch the record.</em></font></p>
+
+<div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>C#</b></div><div class="codeContent panelContent">
+<pre class="code-java"><span class="code-keyword">public</span> <span class="code-keyword">static</span> void DeleteFromDatabase(string fileName)
+{
+    <span class="code-comment">// Create the SQL command.
+</span>    string commandString = <span class="code-quote">"DELETE * FROM Documents WHERE FileName='"</span> + fileName + <span class="code-quote">"'"</span>;
+    OleDbCommand command = <span class="code-keyword">new</span> OleDbCommand(commandString, mConnection);
+
+    <span class="code-comment">// Delete the record.
+</span>    command.ExecuteNonQuery();
+
+}
+ </pre>
+</div></div> <div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>Visual Basic</b></div><div class="codeContent panelContent">
+<pre class="code-java">Public Shared Sub DeleteFromDatabase(ByVal fileName As <span class="code-object">String</span>)
+    ' Create the SQL command.
+    Dim commandString As <span class="code-object">String</span> = <span class="code-quote">"DELETE * FROM Documents WHERE FileName='"</span> &amp; fileName &amp; <span class="code-quote">"'"</span>
+    Dim command As New OleDbCommand(commandString, mConnection)
+
+    ' Delete the record.
+    command.ExecuteNonQuery()
+
+End Sub
+ </pre>
+</div></div>
+</div></div></h5>
+<div class="panelMacro"><table class="noteMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/warning.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td><td><font color="#000000">To illustrate all three methods we have called them consecutively:</font></td></tr></tbody></table></div>
+<h5><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>Example</em></font> <div class="panel" style="border-width: 1px;"><div class="panelContent">
+<p>  <font color="#000000"><em>Stores the document to a database, then reads the same document back again, and finally deletes the record containing the document from the database.</em></font></p>
+
+<div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>C#</b></div><div class="codeContent panelContent">
+<pre class="code-java"><span class="code-comment">// Store the document to the database.
+</span>StoreToDatabase(doc);
+<span class="code-comment">// Read the document from the database and store the file to disk.
+</span>Document dbDoc = ReadFromDatabase(fileName, dataDir);
+
+<span class="code-comment">// Save the retrieved document to disk.
+</span>string newFileName = Path.GetFileNameWithoutExtension(fileName) + <span class="code-quote">" from DB"</span> + Path.GetExtension(fileName);
+dbDoc.Save(dataDir + newFileName);
+
+<span class="code-comment">// Delete the document from the database.
+</span>DeleteFromDatabase(fileName);
+
+<span class="code-comment">// Close the connection to the database.
+</span>mConnection.Close();
+ </pre>
+</div></div> <div class="code panel" style="border-width: 1px;"><div class="codeHeader panelHeader" style="border-bottom-width: 1px;"><b>Visual Basic</b></div><div class="codeContent panelContent">
+<pre class="code-java">' Store the document to the database.
+StoreToDatabase(doc)
+' Read the document from the database and store the file to disk.
+Dim dbDoc As Document = ReadFromDatabase(fileName, dataDir)
+
+' Save the retrieved document to disk.
+Dim newFileName As <span class="code-object">String</span> = Path.GetFileNameWithoutExtension(fileName) &amp; <span class="code-quote">" from DB"</span> &amp; Path.GetExtension(fileName)
+dbDoc.Save(dataDir &amp; newFileName)
+
+' Delete the document from the database.
+DeleteFromDatabase(fileName)
+
+' Close the connection to the database.
+mConnection.Close()
+ </pre>
+</div></div>
+</div></div></h5>
+<h4><a name="HowtoLoadandSaveaDocumenttoDatabase-"></a><font color="#000000"><em>End Result</em></font><div class="panelMacro"><table class="tipMacro"><colgroup><col width="24"><col></colgroup><tbody><tr><td valign="top"><img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/check.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td><td>When the code above is executed the following document is stored and then retrieved from the database and will appear in the Data folder:
+
+<p><br class="atl-forced-newline">
+<br class="atl-forced-newline">  <span class="image-wrap" style=""><img src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/How+to++Load+and+Save+a+Document+to+Database-002.png" style="border: 0px solid black"></span></p></td></tr></tbody></table></div></h4>
+        </div>
+
+        <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+         <rdf:Description
+    rdf:about="http://www.aspose.com/docs/display/wordsnet/How+to++Load+and+Save+a+Document+to+Database"
+    dc:identifier="http://www.aspose.com/docs/display/wordsnet/How+to++Load+and+Save+a+Document+to+Database"
+    dc:title="How to  Load and Save a Document to Database"
+    trackback:ping="http://www.aspose.com/docs/rpc/trackback/123044187"/>
+</rdf:RDF>
+-->
+
+            
+    
+
+
+<fieldset class="hidden parameters">
+    <legend>Labels parameters</legend>
+    <input type="hidden" id="editLabel" value="Edit">
+    <input type="hidden" id="addLabel" value="Add Labels">
+    <input type="hidden" id="domainName" value="http://www.aspose.com/docs">
+    <input type="hidden" id="pageId" value="123044187">
+    <input type="hidden" id="spaceKey" value="wordsnet">
+</fieldset>
+
+<div id="labels-section" class="pageSection">
+    <div id="default-labels-header" class="section-header">
+        <h2 id="labels-section-title" class="section-title  hidden ">Labels</h2>
+            </div>
+
+    <div class="labels-editor">
+        <div id="labelsList">
+                    </div>
+
+        <span class="errorMessage error" id="errorSpan"></span>
+        <form method="GET" action="" id="add-labels-form">
+            <div id="labelInputSpan" class="labels-input">
+                <div id="labelOperationErrorContainer" class="hidden">
+                    <span class="error"><span class="errorMessage" id="labelOperationErrorMessage"></span></span>
+                </div>
+
+                <div class="caption">Enter labels to add to this page:</div>
+                <div id="label-input-fields">
+                    <input autocomplete="off" id="labelsString" name="labelsString" value="" size="40">
+                    <input id="add-labels-editor-button" type="submit" class="add-labels" value="Add">
+                    <input id="close-labels-editor-button" type="submit" class="hide-labels-editor" value="Done">
+                </div>
+                <div id="waitImageAndStatus">
+                    <img class="waiting" alt="Please wait" src="./How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com_files/wait.gif">&nbsp;
+                    <span id="labelOperationStatus" class="smalltext"></span>
+                </div>
+                <div id="labelsAutocompleteList" class="aui-dd-parent"></div>
+                <div class="labels-tip">
+                    <div id="suggestedLabelsSpan"></div>
+                    Looking for a label? Just start typing.
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+            
+            
+
+
+
+
+        
+
+     
+   <script>
+   
+   document.domain = "aspose.com";
+      window.onload=testSP;
+		
+		function testSP(){ 
+		 	
+		var href="http://www.aspose.com/community/forums/aspose.total-product-family/442/showforum.aspx";
+		
+		if( Contains("wordsnet")||Contains("wordsjava") ||Contains("wordscloud") ||Contains("wordssharepoint") ||Contains("wordsreportingservices")
+		||Contains("wordsjasperreports") || Contains("wordsandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.words-product-family/75/showforum.aspx";
+		
+		if( Contains("cellsnet")||Contains("cellsjava") ||Contains("cellscloud") ||Contains("cellssharepoint") ||Contains("cellsreportingservices")
+		||Contains("cellsjasperreports") || Contains("cellsandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.cells-product-family/19/showforum.aspx";
+		
+		
+		if( Contains("pdfnet")||Contains("pdfjava") ||Contains("pdfcloud") ||Contains("pdfsharepoint") ||Contains("pdfreportingservices")
+		||Contains("pdfjasperreports") || Contains("pdfandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.pdf-product-family/20/showforum.aspx";
+		
+		if( Contains("slidesnet")||Contains("slidesjava") ||Contains("slidescloud") ||Contains("slidessharepoint") ||Contains("slidesreportingservices")
+		||Contains("slidesjasperreports") || Contains("slidesandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.slides-product-family/109/showforum.aspx";
+		
+			if( Contains("barcodenet")||Contains("barcodejava") ||Contains("barcodecloud") ||Contains("barcodesharepoint") ||Contains("barcodereportingservices")
+		||Contains("barcodejasperreports") || Contains("barcodeandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.barcode-product-family/193/showforum.aspx";
+		
+		if( Contains("ocrnet")||Contains("ocrjava") ||Contains("ocrcloud") ||Contains("ocrsharepoint") ||Contains("ocrreportingservices")
+		||Contains("ocrjasperreports") || Contains("ocrandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.ocr-product-family/493/showforum.aspx";
+		
+		
+		if( Contains("imagingnet")||Contains("imagingjava") ||Contains("imagingcloud") ||Contains("imagingsharepoint") ||Contains("imagingreportingservices")
+		||Contains("imagingjasperreports") || Contains("imagingandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.imaging-product-family/498/showforum.aspx";
+		
+			if( Contains("emailnet")||Contains("emailjava") ||Contains("emailcloud") ||Contains("emailsharepoint") ||Contains("emailreportingservices")
+		||Contains("emailjasperreports") || Contains("emailandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.email-product-family/188/showforum.aspx";
+		
+			if( Contains("tasksnet")||Contains("tasksjava") ||Contains("taskscloud") ||Contains("taskssharepoint") ||Contains("tasksreportingservices")
+		||Contains("tasksjasperreports") || Contains("tasksandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.tasks-product-family/96/showforum.aspx";
+		
+			if( Contains("diagramnet")||Contains("diagramjava") ||Contains("diagramcloud") ||Contains("diagramsharepoint") ||Contains("diagramreportingservices")
+		||Contains("diagramjasperreports") || Contains("diagramandroid")
+		)
+		href="http://www.aspose.com/community/forums/aspose.diagram-product-family/489/showforum.aspx";
+		
+		if(Contains("notenet"))
+		href="http://www.aspose.com/community/forums/aspose.note-product-family/522/showforum.aspx";
+		
+		 var html = "<span>The queries related to this topic can be asked in </span><a href='"+href+"'>"+""+" support forum.</a>"
+		 document.getElementById('pagetreesearch').childNodes[1].elements['ancestorId'].remove();
+		 document.getElementById("quick-search-query").placeholder="Search Documentation";
+		
+		 document.getElementById("customComments").innerHTML =html;
+		
+		 
+		 
+		LoadNewTreeView();
+ 
+  var jsElm = document.createElement("script");
+  
+    jsElm.type = "application/javascript";
+   
+    jsElm.src = "http://docs.aspose.com/CustomTreeView/TreeViewCore.js";
+   
+  //  document.body.appendChild(jsElm);
+	
+		}
+
+	 function Contains(word)
+	 {
+	 return (window.location.href.indexOf(word) > -1)
+	 }
+	 function LoadNewTreeView()
+	 {
+	  var pathArray = window.location.pathname.split( '/' );
+		 
+		 var $j = jQuery.noConflict();
+		$j(".plugin_pagetree ul:nth-child(2)").html("");
+		
+		var pageName= document.URL.split('/')[6];
+		console.log(pageName);
+		
+		 
+		//$j(".plugin_pagetree").parent().append("<iframe   style='border: 0px none;  width: 100%; overflow: scroll;background: none;min-height: 490px;  max-height: 700px;'   src='http://docs.aspose.com/CustomTreeView/Default.aspx?SpaceKey="+pathArray[3]+"'></iframe>"); 
+		$j(".plugin_pagetree").parent().append("<iframe   style='border: 0px none;background: none;width:100%;height:90%;overflow:scroll'   src='http://docs.aspose.com/CustomTreeView/Default.aspx?SpaceKey="+pathArray[3]+"&PageName="+pageName+"'></iframe>"); 
+		//$j(".plugin_pagetree").parent().append("<iframe   style='border: 0px none;background: none;width:100%;height:90%;overflow:scroll'   src='http://docs.aspose.com/CustomTreeView/Default.aspx?SpaceKey="+pathArray[3]+"'></iframe>"); 
+  
+     //  $j("#splitter-sidebar").attr("id","splitter-treeview");
+	    var $j = jQuery.noConflict(); $j("#splitter-treeview").css({ "background-color": "#F0F0F0","position":"absolute","overflow":"hidden","width":"500px","height":"auto","left":"0px"}); 
+       $j("#splitter-sidebar").css('position','absolute');
+	   $j("#splitter-sidebar").css('backgrond-color','#F0F0F0');
+	    $j("#splitter-sidebar").css('overflow','hidden');
+		 $j("#splitter-sidebar").css('width','350px');
+		 $j("#splitter-sidebar").css('height','100%');
+		 $j("#splitter-sidebar").css('left','0px');
+		 $j(".plugin_pagetree").css({"margin":"10px 0 0 0px"});
+		$j(".vsplitbar").css({ "display":"none" });;
+	 }
+
+      
+        
+    </script>
+ <style>
+ #customComments{
+ margin-top: 20px;
+ background-color: #F0F0F0;
+ border-color: #BBB;
+ border-radius: 5px;
+ padding: 10px;
+ border: 1px solid #BBB;
+}
+ </style>
+
+	<div id="customComments" style=""><span>The queries related to this topic can be asked in </span><a href="http://www.aspose.com/community/forums/aspose.words-product-family/75/showforum.aspx"> support forum.</a></div>
+
+            
+</div>
+
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+<fieldset class="hidden parameters">
+        <input type="hidden" title="i18n.done.name" value="Done">
+        <input type="hidden" title="i18n.manage.watchers.dialog.title" value="Manage Watchers">
+        <input type="hidden" title="i18n.manage.watchers.unable.to.remove.error" value="Failed to remove watcher. Refresh page to see latest status.">
+        <input type="hidden" title="i18n.manage.watchers.status.adding.watcher" value="Adding watcher&amp;hellip;">
+</fieldset>
+<script type="text/x-template" title="manage-watchers-dialog">
+<div class="dialog-content">
+    <div class="column page-watchers">
+        <h3>Watching this page</h3>
+        <p class="description">These people are notified when the page is changed. You can add or remove people from this list.</p>
+        <form action="/docs/json/addwatch.action" method="POST">
+                <input type="hidden" name="atl_token" value="3b5b08b2b4442068503b6aad7896c14ae65cfa0f">
+            <input type="hidden" name="pageId" value="123044187"/>
+            <input type="hidden" id="add-watcher-username" name="username" value=""/>
+            <label for="add-watcher-user">User</label>
+            <input id="add-watcher-user" name="userFullName" type="search" class="autocomplete-user"
+               value="" placeholder="Full name or username" autocomplete="off"
+               data-max="10" data-target="#add-watcher-username" data-dropdown-target="#add-watcher-dropdown"
+               data-template="{title}" data-none-message="No matching users found.">
+            <input id="add-watcher-submit" type="submit" name="add" value="Add">
+            <div id="add-watcher-dropdown" class="aui-dd-parent autocomplete"></div>
+            <div class="status hidden"></div>
+        </form>
+        <ul class="user-list">
+            <li class="loading">Loading&hellip;</li>
+            <li class="no-users hidden">No page watchers</li>
+        </ul>
+    </div>
+    <div class="column space-watchers">
+        <h3>Watching this space</h3>
+        <p class="description">These people are notified when any content in the space is changed. You cannot modify this list.</p>
+        <ul class="user-list">
+            <li class="loading">Loading&hellip;</li>
+            <li class="no-users hidden">No space watchers</li>
+        </ul>
+    </div>
+</div>
+</script>
+<script type="text/x-template" title="manage-watchers-user">
+    <li class="watch-user">
+        <img class="profile-picture confluence-userlink" src="{iconUrl}" data-username="{username}">
+        <a class="confluence-userlink" href="{url}" data-username="{username}">{fullName} <span class="username">({username})</span></a>
+        <span class="remove-watch" title="Remove"
+            data-username="{username}">Remove</span>
+    </li>
+</script>
+<script type="text/x-template" title="manage-watchers-help-link">
+    <div class="dialog-help-link">
+            <a href="http://docs.atlassian.com/confluence/docs-34/Managing+Watchers" target="_blank">Help</a>
+    </div>
+</script>
+    <br class="clear">
+</div>
+  
+    </div>
+</div>
+
+<div id="footer">
+	<ul id="poweredby">
+		<li class="noprint">© Aspose 2002-2014. All Rights Reserved.</li>
+	</ul>
+</div>
+    <!-- include system javascript resources -->
+                        
+    
+    
+    
+    <!-- end system javascript resources -->
+</div>
+
+
+<div id="content-hover-0" class="ajs-content-hover"><div class="contents" style="width: 300px;"></div></div><div class="aui-popup aui-dialog" id="link-page-popup" disabled="" style="margin-top: -105px; margin-left: -300px; width: 600px; height: 210px; background-color: rgb(255, 255, 255); z-index: 3002; display: none; background-position: initial initial; background-repeat: initial initial;"><div class="dialog-components"><h2 class="dialog-title">Link to this Page</h2><ul class="dialog-page-menu" style="height: 114px; display: none;"><li class="page-menu-item selected"><button class="item-button">Link to this Page</button></li></ul><div class="dialog-page-body"><div class="dialog-panel-body" style="height: 104px;"><form id="link-page-popup-form" class="aui"><fieldset><div class="field-group"><label for="link-popup-field-link">Link:</label><input id="link-popup-field-link" readonly="readonly" value="" '="" class="text" type="text"></div><div class="field-group"><label for="link-popup-field-tiny-link">Tiny Link:</label><input id="link-popup-field-tiny-link" readonly="readonly" value="" '="" class="text" type="text"></div><div class="field-group"><label for="link-popup-field-wiki-markup">Wiki Markup:</label><input id="link-popup-field-wiki-markup" readonly="readonly" value="" '="" class="text" type="text"></div></fieldset></form></div></div><div class="dialog-button-panel"><button class="button-panel-button link-page-close-button">Close</button></div></div></div><div id="content-hover-shadow" style="display: none;"><div class="tl"></div><div class="tr"></div><div class="l"></div><div class="r"></div><div class="bl"></div><div class="br"></div><div class="b"></div></div><div id="fancy_overlay"></div><div id="fancy_wrap"><div class="fancy_loading" id="fancy_loading"><div></div></div><div id="fancy_outer"><div id="fancy_inner"><div id="fancy_close"></div><div id="fancy_bg"><div class="fancy_bg fancy_bg_n"></div><div class="fancy_bg fancy_bg_ne"></div><div class="fancy_bg fancy_bg_e"></div><div class="fancy_bg fancy_bg_se"></div><div class="fancy_bg fancy_bg_s"></div><div class="fancy_bg fancy_bg_sw"></div><div class="fancy_bg fancy_bg_w"></div><div class="fancy_bg fancy_bg_nw"></div></div><a href="javascript:;" id="fancy_left"><span class="fancy_ico" id="fancy_left_ico"></span></a><a href="javascript:;" id="fancy_right"><span class="fancy_ico" id="fancy_right_ico"></span></a><div id="fancy_content"></div><div id="fancy_title"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="fancy_title" id="fancy_title_left"></td><td class="fancy_title" id="fancy_title_main"><div></div></td><td class="fancy_title" id="fancy_title_right"></td></tr></tbody></table></div></div></div></div></body></html>

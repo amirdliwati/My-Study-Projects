@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!-- saved from url=(0122)http://docs.aspose.com/CustomTreeView/Default.aspx?SpaceKey=wordsnet&PageName=How+to++Load+and+Save+a+Document+to+Database -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title id="Description"> CustomTreeView POC</title>
+    
+<script src="jquery.min(1).js"></script> 
+     <style>
+html, body {
+	margin: 0;
+	padding: 0;
+}
+.pagetree-sidepanel ul {
+	list-style-type: none;
+	font-family: Arial, Helvetica, Tahoma;
+}
+.pagetree-sidepanel ul li {
+	margin: 2px 0 0px;
+	white-space:nowrap;
+	float: left;
+	width: 100%;
+
+}
+ 
+
+.pagetree-sidepanel ul li a {color: #4C4C4C;
+    color: #4C4C4C;
+  font-size: 9pt;
+  text-decoration: none;
+  padding-left: 0;
+  white-space: pre-line;
+  text-transform: capitalize;
+  width: 82%;
+  float: left;
+  line-height: 18px;
+    word-wrap: break-word;
+}
+.pagetree-sidepanel ul li a:hover {
+	text-decoration: underline
+}
+
+
+.parent-pagetree {
+	 color: #4C4C4C;
+  font-size: 9pt;
+  text-decoration: none;
+  padding-left: 20px;
+  margin-top: 0;
+  list-style: none;
+}
+.childtoggle {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	text-align: left;
+	text-indent: -9999em;
+}
+.toggle_container {
+	float: left;
+	width: 15px;
+}
+.childtoggle.minusicon {
+	background: transparent url(img/tree_minus.gif) no-repeat scroll 0 3px;
+}
+.childtoggle.plusicon {
+	background: transparent url(img/tree_plus.gif) no-repeat scroll 0 3px;
+}
+.childtoggle.boxicon {
+	background: transparent url(img/tree_square.gif) no-repeat scroll 0 3px;
+}
+.loading {
+	clear: both;
+	width: 100%;
+	float: left
+}
+
+#splitter-treeview{ 
+z-index: 0;
+position: absolute;
+background-color: #F0F0F0;
+overflow: hidden;
+width: 500px;
+height: auto;
+left: 0px;
+}
+
+
+</style>
+    <script type="text/javascript">
+        function ExpandNode(val) {
+         
+            if ($(val).hasClass("plusicon")) {
+
+             
+                $(val).removeClass("plusicon");
+                $(val).addClass("minusicon");
+                $(val).parent().parent().append("<span class='loading'><img src='img/loading.gif'></span>");
+                var id = $(val).data("field");
+             
+                var path = document.URL.split('=');
+    var spaceKey=path[1].split('&')[0];
+                $.ajax({
+                    type: "POST",
+                    url: "Default.aspx/GetTreeViewChild",
+
+                    data: JSON.stringify({ ContentID: id, Key:spaceKey}),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        cars = response.d;
+                        OnSuccessChild(cars);
+                    }
+
+                });
+            }
+            else {
+
+                $(val).removeClass("minusicon");
+                $(val).addClass("plusicon");
+                $(val).parent().parent().find(".loading").remove();
+                $(val).parent().parent().find(".parent-pagetree").remove();
+
+            }
+        }
+
+        function ExpandNode2(val) {
+
+            if ($(val).hasClass("plusicon")) {
+
+
+                $(val).removeClass("plusicon");
+                $(val).addClass("minusicon");
+                $(val).parent().parent().append("<span class='loading'><img src='img/loading.gif'></span>");
+                var id = $(val).data("field");
+
+                var path = document.URL.split('=');
+  var spaceKey=path[1].split('&')[0];
+                $.ajax({
+                    type: "POST",
+                    url: "Default.aspx/GetTreeViewChild",
+
+                    data: JSON.stringify({ ContentID: id, Key: spaceKey }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        cars = response.d;
+                        OnSuccessChild2(cars);
+                    }
+
+                });
+            }
+            else {
+
+                $(val).removeClass("minusicon");
+                $(val).addClass("plusicon");
+                $(val).parent().parent().find(".loading").remove();
+                $(val).parent().parent().find(".parent-pagetree").remove();
+
+            }
+        }
+
+
+        function OnSuccessChild(cars) {
+
+            var html = '<ul class="parent-pagetree">';
+            var parentID = 0;
+            for (i = 0; i < cars.length; i++) {
+
+                var item = cars[i];
+                var parentid = item["ParentID"];
+                var label = item["Title"];
+
+                var id = item["ID"];
+                var href = item["URL"];
+                var hasChild = item["HasChild"];
+                parentID = item["ParentID"]
+
+                html += '<li class="parent-container" id="pc_' + id + '">';
+                html += '<span class="toggle_container">';
+
+                if (hasChild)
+                    html += '<a id="btnExpand_' + id + '" data-field=' + id + ' onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span>';
+                else
+                    html += '<a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span>';
+
+
+                html += '<a target="_parent"  href="' + href + '">' + label + '</a>';
+
+            }
+         //   var id = localStorage.getItem("ExpandID");
+          //  alert(parentID)
+
+            $("#pc_" + parentID).append(html);
+
+            $("#btnExpand_" + parentID).parent().parent().find(".loading").remove();
+
+
+        }
+        function OnSuccessChild2(cars) {
+
+            var html = '<ul class="parent-pagetree">';
+            var parentID = 0;
+            for (i = 0; i < cars.length; i++) {
+
+                var item = cars[i];
+                var parentid = item["ParentID"];
+                var label = item["Title"];
+
+                var id = item["ID"];
+                var href = item["URL"];
+                var hasChild = item["HasChild"];
+                parentID = item["ParentID"]
+
+                html += '<li class="parent-container" id="pc_' + id + '">';
+                html += '<span class="toggle_container">';
+
+                if (hasChild)
+                    html += '<a id="btnExpand_' + id + '" data-field=' + id + ' onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span>';
+                else
+                    html += '<a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span>';
+
+
+                html += '<a target="_parent"  href="' + href + '">' + label + '</a>';
+
+            }
+         
+
+            $("#pc_" + parentID).append(html);
+
+            $("#btnExpand_" + parentID).parent().parent().find(".loading").remove();
+
+            var cars =localStorage.getItem("LIST");
+            var size= cars.split(',');
+            
+            var first = size[0];
+            size.splice(0,1);
+          
+            localStorage.setItem("LIST", size);
+           
+            if(size.length==0)
+          {
+       
+       
+$("#pc_"+first+" :eq(2)").css("font-weight","bold");
+          }
+            ExpandNode2($("#btnExpand_" + first));
+
+
+        }
+        function  LoadChild()
+        {
+            var path = document.URL.split('=');
+           var spaceKey=path[1].split('&')[0];
+            
+            $.ajax({
+                type: "POST",
+                url: "Default.aspx/LoadChild",
+
+                data: JSON.stringify({ ContentID: path[2], Key: spaceKey }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    cars = response.d;
+                    var first = cars[0];
+                    
+                   // delete cars[0];
+
+                   cars.splice(0,1);
+            
+                    
+                    
+                    localStorage.setItem("LIST",cars);
+                   ExpandNode2($("#btnExpand_" + first));
+                        
+                    }
+                
+
+            });
+
+        }
+
+
+
+        $(document).ready(function () {
+            var timerStart = Date.now();
+            var path = document.URL.split('=');
+          var spaceKey=path[1].split('&')[0];
+
+
+            var cars = null;
+            $.ajax({
+                type: "POST",
+                url: "Default.aspx/GetTreeViewBySpaceKey",
+                data: JSON.stringify({ ContentID: spaceKey }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    cars = response.d;
+
+                    OnSuccess(cars);
+                },
+
+            });
+            function OnSuccess(cars) {
+
+                var html = '<ul class="parent-pagetree">';
+               
+
+                for (i = 0; i < cars.length; i++) {
+
+                    var item = cars[i];
+                    var parentid = item["ParentID"];
+                    var label = item["Title"];
+
+                    var id = item["ID"];
+                    var href = item["URL"];
+                    var hasChild = item["HasChild"];
+                  
+
+                    html += '<li class="parent-container" id="pc_' + id + '">';
+                    html += '<span class="toggle_container">';
+
+                    if (hasChild)
+                        html += '<a id="btnExpand_' + id + '" data-field=' + id + ' onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span>';
+                    else
+                        html += '<a id="plusminus-icon" class="childtoggle boxicon" href="#"> </a></span>';
+
+
+                    html += '<a target="_parent"  href="' + href + '">' + label + '</a>';
+
+
+
+                }
+
+
+                $("#CustomTreeView").html(html);
+                LoadChild();
+
+
+            }
+
+
+
+
+
+
+        });
+            </script>
+</head>
+<body>
+    <form method="post" action="Default.htm" id="main">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="uO4F0ZH/P3HbD4JDQQ8i6zLy6uoZR/CIswauKtaPY5OC5svbdiBnAg6hO1jmdJsY+qN+1EPUbmWp7MX03SqECXdoO/xBnlcQtHEavITv7jo=">
+</div>
+
+    <div id="content">
+
+
+        
+
+       
+
+        <div>
+            <div id="CustomTreeView" style="overflow-x:hidden" class="pagetree-sidepanel"><ul class="parent-pagetree"><li class="parent-container" id="pc_123043843"><span class="toggle_container"><a id="btnExpand_123043843" data-field="123043843" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Getting+Started">Getting Started</a></li><li class="parent-container" id="pc_123044160"><span class="toggle_container"><a id="btnExpand_123044160" data-field="123044160" onclick="javascript:ExpandNode(this);" class="childtoggle minusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Programmers+Guide">Programmers Guide</a><ul class="parent-pagetree"><li class="parent-container" id="pc_123044161"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/About+this+Programmers+Guide">About this Programmers Guide</a></li><li class="parent-container" id="pc_123044162"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Overview+of+Aspose.Words+in+.NET">Overview of Aspose.Words in .NET</a></li><li class="parent-container" id="pc_123044163"><span class="toggle_container"><a id="btnExpand_123044163" data-field="123044163" onclick="javascript:ExpandNode(this);" class="childtoggle minusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Loading,+Saving+and+Converting">Loading, Saving and Converting</a><ul class="parent-pagetree"><li class="parent-container" id="pc_123044164"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/About+Document+Conversions+in+Aspose.Words">About Document Conversions in Aspose.Words</a></li><li class="parent-container" id="pc_123044165"><span class="toggle_container"><a id="btnExpand_123044165" data-field="123044165" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Load+or+Create+a+Document">Load or Create a Document</a></li><li class="parent-container" id="pc_123044171"><span class="toggle_container"><a id="btnExpand_123044171" data-field="123044171" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Save+a+Document">Save a Document</a></li><li class="parent-container" id="pc_123044177"><span class="toggle_container"><a id="btnExpand_123044177" data-field="123044177" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Working+with+Digital+Signatures">Working with Digital Signatures</a></li><li class="parent-container" id="pc_123044181"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/How+to++Convert+a+Document+to+PDF">How to  Convert a Document to PDF</a></li><li class="parent-container" id="pc_123044182"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/How+to++Convert+a+Document+to+MHTML+and+Email">How to  Convert a Document to MHTML and Email</a></li><li class="parent-container" id="pc_123044183"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/How+to+Convert+an+Image+to+PDF">How to Convert an Image to PDF</a></li><li class="parent-container" id="pc_123044184"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/How+to++Detect+the+File+Format">How to  Detect the File Format</a></li><li class="parent-container" id="pc_123044185"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/How+to++Check+Format+Compatibility">How to  Check Format Compatibility</a></li><li class="parent-container" id="pc_123044186"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/How+to++Convert+a+Document+to+a+Byte+Array">How to  Convert a Document to a Byte Array</a></li><li class="parent-container" id="pc_123044187"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="How to Load and Save a Document to Database - Aspose.Words for .NET - Documentation - Aspose.com.htm" style="font-weight: bold;">How to  Load and Save a Document to Database</a></li><li class="parent-container" id="pc_123044188"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/How+to++Load+Plain+Text+(TXT)+Files">How to  Load Plain Text (TXT) Files</a></li><li class="parent-container" id="pc_123044189"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/How-to+Convert+a+Document+to+EPUB">How-to Convert a Document to EPUB</a></li><li class="parent-container" id="pc_138510431"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Convert+a+Document+to+HTML+with+roundtrip+information">Convert a Document to HTML with roundtrip information</a></li><li class="parent-container" id="pc_138805331"><span class="toggle_container"><a id="plusminus-icon" class="childtoggle boxicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Convert+HTML+to+PDF+Loading+External+Resources">Convert HTML to PDF Loading External Resources</a></li></ul></li><li class="parent-container" id="pc_123044190"><span class="toggle_container"><a id="btnExpand_123044190" data-field="123044190" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Programming+with+Documents">Programming with Documents</a></li><li class="parent-container" id="pc_123044308"><span class="toggle_container"><a id="btnExpand_123044308" data-field="123044308" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Mail+Merge+and+Reporting">Mail Merge and Reporting</a></li><li class="parent-container" id="pc_152731841"><span class="toggle_container"><a id="btnExpand_152731841" data-field="152731841" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/LINQ+Reporting+Engine+Programmers+Guide">LINQ Reporting Engine Programmers Guide</a></li><li class="parent-container" id="pc_123044330"><span class="toggle_container"><a id="btnExpand_123044330" data-field="123044330" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Rendering+and+Printing">Rendering and Printing</a></li><li class="parent-container" id="pc_123044353"><span class="toggle_container"><a id="btnExpand_123044353" data-field="123044353" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Platforms+and+Interoperability">Platforms and Interoperability</a></li><li class="parent-container" id="pc_123044364"><span class="toggle_container"><a id="btnExpand_123044364" data-field="123044364" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Utilize+Aspose.Words+in+other+Programming+Languages">Utilize Aspose.Words in other Programming Languages</a></li><li class="parent-container" id="pc_123044374"><span class="toggle_container"><a id="btnExpand_123044374" data-field="123044374" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Migrating+from+Earlier+Versions+of+Aspose.Words">Migrating from Earlier Versions of Aspose.Words</a></li><li class="parent-container" id="pc_123044404"><span class="toggle_container"><a id="btnExpand_123044404" data-field="123044404" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Migration+from+Microsoft+Office+Automation+to+Aspose">Migration from Microsoft Office Automation to Aspose</a></li></ul></li><li class="parent-container" id="pc_141295839"><span class="toggle_container"><a id="btnExpand_141295839" data-field="141295839" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Aspose.Words+for+.NET+Plugins">Aspose.Words for .NET Plugins</a></li><li class="parent-container" id="pc_141754370"><span class="toggle_container"><a id="btnExpand_141754370" data-field="141754370" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Showcases">Showcases</a></li><li class="parent-container" id="pc_157384712"><span class="toggle_container"><a id="btnExpand_157384712" data-field="157384712" onclick="javascript:ExpandNode(this);" class="childtoggle plusicon" href="javascript:void(0)"> </a></span><a target="_parent" href="http://www.aspose.com/docs/display/wordsnet/Aspose.Words+for+.NET++API+Reference">Aspose.Words for .NET  API Reference</a></li></ul></div>
+        </div>
+       
+       
+    </div>
+        </form>
+
+
+</body></html>

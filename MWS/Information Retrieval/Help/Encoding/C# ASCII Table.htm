@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://www.dotnetperls.com/ascii-table -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body{margin:0 auto;font:18px/28px verdana;min-height:95em;position:relative;width:959px;padding:0 0 159px}#e{top:-9px;padding:3px 3px 12px 6px;position:absolute;text-align:right;right:0;background:#3ad3f8}#e>a{margin:0 9px;color:#000;display:inline}#t{width:9em}#s,#t{margin:9px;border:0;font-size:17px;background:#ebfbfe}p[id]>b,a{display:block}a{margin:-12px 9px 12px;text-decoration:none;color:#06c}:visited{color:#808}#a{margin:9px 308px 12px 6px;line-height:25px;text-align:justify}#a>a{margin:0 0 4px 0;display:inline-block;padding:0 3px}#o{top:92px}#i{top:360px}#i,#o{position:absolute;right:0;height:250px;width:300px}#n,#r{margin:0 0 12px 9px;clear:both}#r{height:140px;width:100%;max-width:730px}body>a,#e>a,#c,#h{font-weight:700}i{font-style:normal}p,img{margin:0 310px 12px 9px}#l{margin:0}a:active{color:red}a:hover{text-decoration:underline}#d,#m{margin-left:39px}pre>i{color:#393}#d>b{color:#f90}img{float:right}pre{font-size:16px;line-height:19px;padding:2px 9px}pre>b{padding:2px 30px;background:#ddd}#c{background:#ffc;outline:#ffc solid 2px}@media(max-width:599px){img{margin:1px;max-width:50%;height:auto}body{width:auto}pre{white-space:pre-wrap}#m,p{margin:0 0 12px 9px!important}#a{margin:100px 0 12px 6px!important}a{margin-top:0}#a>a{margin-bottom:8px;font-size:17px}#e{margin-top:-91px}#n,#o,#r{margin:0 0 12px 9px;clear:both}#o,#r{width:95%}#o{position:static;height:140px;max-width:730px}#i{display:none!important}}</style><title>C# ASCII Table</title><meta content="This C# program generates an ASCII table. It displays all characters in ASCII." name="description"><meta content="width=device-width,initial-scale=1" name="viewport"><link rel="canonical" href="./C# ASCII Table_files/C# ASCII Table.htm"></head><body><p id="a"> <a href="http://www.dotnetperls.com/net" id="c">.NET</a> <a href="http://www.dotnetperls.com/array" id="h">Array</a> <a href="http://www.dotnetperls.com/dictionary" id="h">Dictionary</a> <a href="http://www.dotnetperls.com/list" id="h">List</a> <a href="http://www.dotnetperls.com/string" id="h">String</a> <a href="http://www.dotnetperls.com/2d-array">2D</a> <a href="http://www.dotnetperls.com/async">Async</a> <a href="http://www.dotnetperls.com/datatable">DataTable</a> <a href="http://www.dotnetperls.com/datetime-format">Dates</a> <a href="http://www.dotnetperls.com/datetime">DateTime</a> <a href="http://www.dotnetperls.com/enum">Enum</a> <a href="http://www.dotnetperls.com/file">File</a> <a href="http://www.dotnetperls.com/for">For</a> <a href="http://www.dotnetperls.com/foreach">Foreach</a> <a href="http://www.dotnetperls.com/string-format">Format</a> <a href="http://www.dotnetperls.com/ienumerable">IEnumerable</a> <a href="http://www.dotnetperls.com/if">If</a> <a href="http://www.dotnetperls.com/indexof">IndexOf</a> <a href="http://www.dotnetperls.com/lambda">Lambda</a> <a href="http://www.dotnetperls.com/linq">LINQ</a> <a href="http://www.dotnetperls.com/int-parse">Parse</a> <a href="http://www.dotnetperls.com/path">Path</a> <a href="http://www.dotnetperls.com/process">Process</a> <a href="http://www.dotnetperls.com/property">Property</a> <a href="http://www.dotnetperls.com/regex-match">Regex</a> <a href="http://www.dotnetperls.com/replace">Replace</a> <a href="http://www.dotnetperls.com/sort">Sort</a> <a href="http://www.dotnetperls.com/split">Split</a> <a href="http://www.dotnetperls.com/static">Static</a> <a href="http://www.dotnetperls.com/stringbuilder">StringBuilder</a> <a href="http://www.dotnetperls.com/substring">Substring</a> <a href="http://www.dotnetperls.com/switch">Switch</a> <a href="http://www.dotnetperls.com/tuple">Tuple</a> </p><form action="http://www.google.com/search" id="e"><input name="q" id="t"><input id="s" type="submit" value="Go"><input name="sitesearch" type="hidden" value="dotnetperls.com"><br><a href="http://www.dotnetperls.com/">C#</a>: <a href="http://www.dotnetperls.com/net">.NET</a>: <a href="http://www.dotnetperls.com/char">Char</a></form><a href="http://www.dotnetperls.com/char" id="l"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAABUCAMAAADeZ6kGAAAAMFBMVEX/AP+zs7P///+ZmZnMzMz4U/j8qvx5WXmWR5ZmZmbwCvDWHNa4L7jw7/D+Jf5zc3NCj46cAAAFSklEQVR4Xu3Z2ZLDKAwFUCT2zf7/vx1PWtWhE7ghXqpmUrnPGOlg7BSO4mPRsRvi/0LUUdvn4nT8XJyOn4vT8XNxOn4uTsfPxen4uTgdPxen4+fiKHTjPwJnVTflA3Ff3Bf3xX1xX9wX98V9cdUY0rcQmXrAVc2W63HVEOy1Hbiusc2qyeyC6dtEWuFqpPWqtaZ7Y1VS7RRuq3PvFbTaDnwA9n31Mb80kooAV0nHJlKi6p+K6xrLBI4eG9Z1UGyN4/R49LwKPzwjNIAz+vliIzYJxkmd3ixPkVkRr0JbWzNGgBNaLyS2Gdy4ZZqi4TWh7hhBYxxFkFmcGW60hz7XOBV63SCJDeCqjifgDLgLFXyvgDpsiytFjOO6xhNwcBINbViHNxbEie04DqcCG4jBNowT2/U4en4AfLjFI9yKbBgntnNw0q73gy5bmy8lJyVJKZch0WBbKCXnVAY4sXkvq7gfF4q0m3LpAKvYZOBTcun6VmDzUlH1cGLzIWclSTn89vqbgHBNnSYyTROSYn9l4CIJlac03SCc2RD5oYTc5NQUfYkTGnoY9WZrik3zgnrKz6CsMM70qyUvc07iQlKDWVpcXb3QUMoELosN4sywWohlFteQoW7Vg3F4TaLvtSdFAc6ENF7ANI0b347c4qTYpA7jspCfcSS4ildyFoe2WkBNYh2+zuc+jlhBG8a9lxSb5HndS1xSXRyx4Io6HYdvnVXTKQAHxhMLjtL5OPzUmWVe5/fgiAVXszofh7s0dkfFSZzYBGfVBTi8L6vbsSjzOGLBcU0DR0rpVFxpTy/LfcYSgt8SQkkvFiXM4YgFN7xxOfjo7TLE5bdxucVJVet0bBISvM4vW17iiH9xFS2XqcsAZ4ZrEkKZwLkf2uMZxuNfgyobDeGI7ziXBjZpoo8zbMFvrk8KN2mYF2Vr5yxe4A+5eY2z3OAsejyIHxFZbGzRs6/Bm0FwznFjg4/VHC7lUpxzFeLaNdbMroMz3MeVKCH7EscsNh9C2SIHcL8PJwck/hNVE2pyZeZHnLRmURfkZnD64SSew25ckK+Gf3Euwdkq8/KAk84semNQncDp53NtCvtwIfZx+LWmRdEAzAyOl3ELgtP99/4eXIl9XAa7sve+zIYiDXDlHRw4r76LS3EnbmW3tLG0Aeg4jrI6DVfewYXx30dVS5FjuGqSOg8XRrgEcHKF6fxJaI7hCNgQrnZxfh9OeGRMrYbav4DrIVxRJ+KS37EtYVaIiyucN6idOL0F4OK6Rd9xvRUuJ/xXAHF5D07ihzhJg7MdXL4YF8Dx8VSc65Xx1+JKRxb+FfhyMg68Ua7CpfFe8elMHC/gVNDE53AWzqP2w5k4fJ5rp0z+JFxAi+lPxTk1oQtJWrgGl6/C8cSHXoHk/x/O9nWp+B9ZuDPyMZwH23L6mYvPuDjGOTVKyjmnXvuhlNLpPpdb/AhXtoRu/wXZVAn/5raFtgzm7ePYvvvVWC8KpQium9wH3FYE/pOcGjp8wa9/cE69p9Ns8RDBjeS+r96i1CQOfwVocdLrZPxaD+IiQBzHEf/F8fJOkcpHceVCHPEjjtV8HB/G+XQZjvgZ52Zpi+PjuFiuwhF3cLM6yzyHWxPCmeUaHHEXx26mnuNJ3FoXgDPs9uEKxhF3cdIxjq08iVsrA5zBO8W5EY4cxBGPcHLz8NM2idtsAGdwMTu4NkViiCMGOMizQpvBlcrMadSEwZO40W3NxBBHDHDCsx3f4hz/iV1QHBpi21qdNRzPf1v8YSxjnMRtwF/hYq2rfF7QWi5COy1qVFXC10aWUmRn5x93/+4w1iC97QAAAABJRU5ErkJggg==" width="220" height="84" alt="Char-type" id="ee"></a><p><b>ASCII table.</b> This is a quick reference for ASCII character codes. We use a simple C# program to generate this dynamically. We see the ASCII character codes for the first 128 characters. Please notice the C# code at the bottom that generates this table.</p><br><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACuCAMAAADNsyWCAAAATlBMVEX////3///m///e///v///b3NzM///W///MzMzf8vLW8vLv8vLU1tbO1tbl5eX4+fne5ubQ5eXO8vLm8vLv8/PV9vbV39/j9vbX5ubO9vbBZXBJAAAC7UlEQVR4Xu3a6Y7bMAyFUV+StrNntm7v/6K1WmEwgBDdqSSEGZTffycni4ILI9M8tOvU0G5op6snIRsA+BGywQC4EbJBzPDvhHN/xEAJP9fuPhjOpYETntdlWXoJxEAJqX7C++fxwwwNBN2S5k5/CAsxMIKItZcJFQMhZAHay4SKgROSoJuwEgMjAFN7mZCqGChh6mjOhMLgQRCRjwYHggox3INgW98Lwz0JZoXhzoR8uKUw3JMAFAYHAjVwwmUmvVUJyUQMlDDvSG9ghAkwYugjvGKrQuCGfoIZgAqBGfoJexExQiAG+nU8pc43+6YqAhACMZBDCYjoWknVjBBKgwOBGThBbyKUfBDcwAkTTEjk60gMhJANtfih5AZOoE2EQAyEQBXkB5oaOIFHCMRwBwIxOBAKgwOhMDgQCoMDoTA4EAqDA6EwOBAKQ41wvJCuJSH1vPX0dKm2+2DoGW7HklDEtx/QNeKBTsJBxQxA34LuJKgQAl3QnYSX9JyEQF+CoZOgZsCI+ZqDiX7uRvLLX8KyqnQRkrkkFFUJKyfUDJoJBZp3YIQczEQriZjduIL1aQLMTG5lqSQor+Dt84lghAlb1QmfBcUVtNdd6sAIKTbhy/CpjoRwh5oIQQhCEIJwPY6siTDvBjb7E04AvAlmAHwJYgnhSTirigANJ2K/P4zpW3pwIwSyoPtTMXMlNL4LE0xERyWCJoKZDMrMmgiADQtA017AwGIvBCEINwpCEGJB+xO2nAm2BV9C02o6Xp5Sz2NS1VjQW9q0oM1Ex2UtBMBkXGZfdEFjaLEXhhCCEIQgBOEyD+zyACMezoRY0JlAJgv9K3Z/j7GgvzRBhyB0q/U2uOeCzoaRfeEFjUHFXvh/CEEIQizoWNCxoGNBx4KOBR0LOhZ0EIIQhCAEIQhB8OiRCEF4eQDCkgnzaevs0a9MmACY6rpsrXdsSa36ThBdfZJMAETUAaGqIsgEE68sEbYAcwqpKQW/pvc8n/83jjE8Y8HClNgAAAAASUVORK5CYII=" width="130" height="174" alt="Note" id="et"><p><b>Table.</b> Here are the first 128 characters. Some of the characters are escaped on the ASCII column. Many of the characters are control characters, which are not widely used. They are not easy to display.</p><pre><b>ASCII table</b>
+
+Decimal   ASCII     Hex
+0         control   00
+1         control   01
+2         control   02
+3         control   03
+4         control   04
+5         control   05
+6         control   06
+7         control   07
+8         control   08
+9         \t        09
+10        \n        0A
+11        \v        0B
+12        \f        0C
+13        \r        0D
+14        control   0E
+15        control   0F
+16        control   10
+17        control   11
+18        control   12
+19        control   13
+20        control   14
+21        control   15
+22        control   16
+23        control   17
+24        control   18
+25        control   19
+26        control   1A
+27        control   1B
+28        control   1C
+29        control   1D
+30        control   1E
+31        control   1F
+32        space     20
+33        !         21
+34        "         22
+35        #         23
+36        $         24
+37        %         25
+38        &amp;         26
+39        '         27
+40        (         28
+41        )         29
+42        *         2A
+43        +         2B
+44        ,         2C
+45        -         2D
+46        .         2E
+47        /         2F
+48        0         30
+49        1         31
+50        2         32
+51        3         33
+52        4         34
+53        5         35
+54        6         36
+55        7         37
+56        8         38
+57        9         39
+58        :         3A
+59        ;         3B
+60        &lt;         3C
+61        =         3D
+62        &gt;         3E
+63        ?         3F
+64        @         40
+65        A         41
+66        B         42
+67        C         43
+68        D         44
+69        E         45
+70        F         46
+71        G         47
+72        H         48
+73        I         49
+74        J         4A
+75        K         4B
+76        L         4C
+77        M         4D
+78        N         4E
+79        O         4F
+80        P         50
+81        Q         51
+82        R         52
+83        S         53
+84        T         54
+85        U         55
+86        V         56
+87        W         57
+88        X         58
+89        Y         59
+90        Z         5A
+91        [         5B
+92        \         5C
+93        ]         5D
+94        ^         5E
+95        _         5F
+96        `         60
+97        a         61
+98        b         62
+99        c         63
+100       d         64
+101       e         65
+102       f         66
+103       g         67
+104       h         68
+105       i         69
+106       j         6A
+107       k         6B
+108       l         6C
+109       m         6D
+110       n         6E
+111       o         6F
+112       p         70
+113       q         71
+114       r         72
+115       s         73
+116       t         74
+117       u         75
+118       v         76
+119       w         77
+120       x         78
+121       y         79
+122       z         7A
+123       {         7B
+124       |         7C
+125       }         7D
+126       ~         7E
+127       control   7F</pre><script async="" type="text/javascript" src="./C# ASCII Table_files/ca-pub-4712093147740724.js"></script><script async="" src="./C# ASCII Table_files/adsbygoogle.js"></script><ins id="o" class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-4712093147740724" data-ad-slot="5892535303" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script><ins id="i" class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-4712093147740724" data-ad-slot="2821317707" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script><br><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAC2CAMAAABDLoc2AAAA5FBMVEX/////AP8zZsz/CP9ag9b/Gf//7///M///EP//If86a87/5f//Ov//Kf8/b8//Zv//zP//Wv//Uv//jf//Sv//1f/3+f1DctBJdtFSfdRhiNd2mN3Z4/bs8frx9fxVgNX/9///lP//cv9NetP/pv/P2/Olu+j/3f//vf//Qv9Kd9K1yO3n7fmrwOpiidiBoN+Kp+L/av/K1/L/e//u8vuEo+D/mf/d5vf/w/+iueivw+vj6vh7nN7/qv9uktv/hP+4yu27zO5xlNuNquNqj9rV4PX/t/9ojtmVr+SYsuWdtebF1PEEhp/FAAAEKElEQVR4Xu3cx27rSBCF4VPVzFTMOTjnnNONk+f932dEWdBIsHAXYtXCQH0PQP4gIG/cfbDkYLccxnG4ocb2W4pfOD2583Z2vM30vlx+P8Uaab3oKK+wHmCt4f444ZwS72mEVUE9JhH+Lj4a7e+wiM7JanXDUSaKfD/cTNGPHGVq6YfqLwlnSu1Ox9tMt1NKONMfYqES05RfbiKXSjmiqUIFKwbHPNW+e0Aug7sST50PMNcMiSi6OkBuQdURURhgyYPHzKXLU+TWek2Y2bvFu6Os+g+I2I2JqLbc/VtW/S9EfDtm5v4ImbpzLq5AyGNE5LawsJ8wdwcQstdmTs4wFfhEbhditpxzxRRzo+w93yDmLPsKtwDqRLQ9gZwyEd1jbp+Zf0LQHTM/AygSRQEEHUREIebGzKVbCHppM3tA6pzbhqgqkQswc5oIf2zggjkZ4Y2ImhBVIaJDzHxn5geI+p2Zr7FNFEGYc+4GM5fMJQhLmP/CEVEMYT5RY/FH+xjCOsw/EBIVIaxIVMBMj3kMYV3mXpYdQtbSMz1mD8KyZ36CbMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu27KJq9jjLLigcX4yXjy92FY4vnmsdFq3pHRZtM/dxRRRN5I/mflU9mvuENyKqyB+Efvz/IPRA/iD0HlLnXFn82DkFmBkmzHfyx85bQJHIP9A85N95gaCXEnMPQF34c09qy1cqnoQ/d6s/v1KRFuUvsMQB5oZj5uRE9gLLTuv9PUTRI4Qczq7xrL6nvQch153FNZ6gQUT+/QQS6hERVVeu7zHz8XMLEvZLzPyKd2lIRK6WIrdm1TmioxRLbj1mTvpD5PYyuwr35+JJlYIjoqhaQR6Tw1pEU2ETKwbn2dtKFwPk0brul3iq94CFtOoo4/w43FDRd5RZ81dp+JpwJml3vQ11O/NHXHy4MCiiuPY3crLDIsYffiPBVugop6hwH2Ct1lkv4ZxKvecR1ggev9YK4aYaN4cBfqG190//3NvUj7+vR/g8jDFGeI9DldYeh1vd49AX1GMntcehSnOPQ5XiHoe+xR7Htswex1QYQB/QcM6J7nFUlbv19jhUKe5xqNLb41ClssfhE4VQpbLHUSZyAVTp7XGoUtnjiIhuoKuh9S8WXQWtPQ5VqpsFlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlq1Kb49Dld4ehyq9PQ5Vensc+sfOrz7fsXOEGnscBWjbkt7jqOpfqVDd49D/3L70HoeuxR5HLL3HoS8N3VRVZo9j6iiFrtU9jrLMHkehCVXCexwRZaIylOnvcegLtgoyexyq5Pc4aqt7HP8Bw1toJPCuFTMAAAAASUVORK5CYII=" width="182" height="182" alt="This section provides information" id="es"><p><b>Console program.</b> This program is a console program that uses the PadRight method to pad each column so it appears correctly. It uses a simple for-loop construct to loop through all the ASCII characters. The IsControl and IsWhitespace methods are also used.</p><a href="http://www.dotnetperls.com/padright">PadRight, PadLeft</a><a href="http://www.dotnetperls.com/iscontrol">char.IsControl</a><a href="http://www.dotnetperls.com/char-iswhitespace">char.IsWhiteSpace</a><p id="d"><b>Tip:</b> A char switch has a special performance advantage—more information is available.</p><a href="http://www.dotnetperls.com/switch-char" id="m">Switch Char</a><pre><b>C# program that generates ASCII table</b>
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+	Console.Write("Decimal".PadRight(10));
+	Console.Write("ASCII".PadRight(10));
+	Console.Write("Hex".PadRight(10));
+	Console.WriteLine();
+
+	int min = 0;
+	int max = 128;
+	for (int i = min; i &lt; max; i++)
+	{
+	    <i>// Get ascii character.</i>
+	    char c = (char)i;
+
+	    <i>// Get display string.</i>
+	    string display = string.Empty;
+	    if (char.IsWhiteSpace(c))
+	    {
+		display = c.ToString();
+		switch (c)
+		{
+		    case '\t':
+			display = "\\t";
+			break;
+		    case ' ':
+			display = "space";
+			break;
+		    case '\n':
+			display = "\\n";
+			break;
+		    case '\r':
+			display = "\\r";
+			break;
+		    case '\v':
+			display = "\\v";
+			break;
+		    case '\f':
+			display = "\\f";
+			break;
+		}
+	    }
+	    else if (char.IsControl(c))
+	    {
+		display = "control";
+	    }
+	    else
+	    {
+		display = c.ToString();
+	    }
+	    <i>// Write table row.</i>
+	    Console.Write(i.ToString().PadRight(10));
+	    Console.Write(display.PadRight(10));
+	    Console.Write(i.ToString("X2"));
+	    Console.WriteLine();
+	}
+    }
+}</pre><br><a href="http://www.dotnetperls.com/char" id="l"><img src="data:image/png;base64,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" width="252" height="90" id="ea"></a><p><b>Summary.</b> We saw all the ASCII characters and their decimal representation, using C# code. This is useful for converting between characters—such as between upper and lowercase letters—in an optimized way.</p><ins id="n" class="adsbygoogle" style="display:inline-block;width:200px;height:90px" data-ad-client="ca-pub-4712093147740724" data-ad-slot="2814286994" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:200px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:200px;background-color:transparent"><iframe width="200" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script><ins id="r" class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-4712093147740724" data-ad-slot="5774784105" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:730px;background-color:transparent"><ins id="aswift_3_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:730px;background-color:transparent"><iframe width="730" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script><script>(function(){document.getElementById("ee").src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANwAAABUCAMAAADeZ6kGAAAAMFBMVEX/AP+zs7P///+ZmZnMzMz4U/j8qvx5WXmWR5ZmZmbwCvDWHNa4L7jw7/D+Jf5zc3NCj46cAAAFSklEQVR4Xu3Z2ZLDKAwFUCT2zf7/vx1PWtWhE7ghXqpmUrnPGOlg7BSO4mPRsRvi/0LUUdvn4nT8XJyOn4vT8XNxOn4uTsfPxen4uTgdPxen4+fiKHTjPwJnVTflA3Ff3Bf3xX1xX9wX98V9cdUY0rcQmXrAVc2W63HVEOy1Hbiusc2qyeyC6dtEWuFqpPWqtaZ7Y1VS7RRuq3PvFbTaDnwA9n31Mb80kooAV0nHJlKi6p+K6xrLBI4eG9Z1UGyN4/R49LwKPzwjNIAz+vliIzYJxkmd3ixPkVkRr0JbWzNGgBNaLyS2Gdy4ZZqi4TWh7hhBYxxFkFmcGW60hz7XOBV63SCJDeCqjifgDLgLFXyvgDpsiytFjOO6xhNwcBINbViHNxbEie04DqcCG4jBNowT2/U4en4AfLjFI9yKbBgntnNw0q73gy5bmy8lJyVJKZch0WBbKCXnVAY4sXkvq7gfF4q0m3LpAKvYZOBTcun6VmDzUlH1cGLzIWclSTn89vqbgHBNnSYyTROSYn9l4CIJlac03SCc2RD5oYTc5NQUfYkTGnoY9WZrik3zgnrKz6CsMM70qyUvc07iQlKDWVpcXb3QUMoELosN4sywWohlFteQoW7Vg3F4TaLvtSdFAc6ENF7ANI0b347c4qTYpA7jspCfcSS4ildyFoe2WkBNYh2+zuc+jlhBG8a9lxSb5HndS1xSXRyx4Io6HYdvnVXTKQAHxhMLjtL5OPzUmWVe5/fgiAVXszofh7s0dkfFSZzYBGfVBTi8L6vbsSjzOGLBcU0DR0rpVFxpTy/LfcYSgt8SQkkvFiXM4YgFN7xxOfjo7TLE5bdxucVJVet0bBISvM4vW17iiH9xFS2XqcsAZ4ZrEkKZwLkf2uMZxuNfgyobDeGI7ziXBjZpoo8zbMFvrk8KN2mYF2Vr5yxe4A+5eY2z3OAsejyIHxFZbGzRs6/Bm0FwznFjg4/VHC7lUpxzFeLaNdbMroMz3MeVKCH7EscsNh9C2SIHcL8PJwck/hNVE2pyZeZHnLRmURfkZnD64SSew25ckK+Gf3Euwdkq8/KAk84semNQncDp53NtCvtwIfZx+LWmRdEAzAyOl3ELgtP99/4eXIl9XAa7sve+zIYiDXDlHRw4r76LS3EnbmW3tLG0Aeg4jrI6DVfewYXx30dVS5FjuGqSOg8XRrgEcHKF6fxJaI7hCNgQrnZxfh9OeGRMrYbav4DrIVxRJ+KS37EtYVaIiyucN6idOL0F4OK6Rd9xvRUuJ/xXAHF5D07ihzhJg7MdXL4YF8Dx8VSc65Xx1+JKRxb+FfhyMg68Ua7CpfFe8elMHC/gVNDE53AWzqP2w5k4fJ5rp0z+JFxAi+lPxTk1oQtJWrgGl6/C8cSHXoHk/x/O9nWp+B9ZuDPyMZwH23L6mYvPuDjGOTVKyjmnXvuhlNLpPpdb/AhXtoRu/wXZVAn/5raFtgzm7ePYvvvVWC8KpQium9wH3FYE/pOcGjp8wa9/cE69p9Ns8RDBjeS+r96i1CQOfwVocdLrZPxaD+IiQBzHEf/F8fJOkcpHceVCHPEjjtV8HB/G+XQZjvgZ52Zpi+PjuFiuwhF3cLM6yzyHWxPCmeUaHHEXx26mnuNJ3FoXgDPs9uEKxhF3cdIxjq08iVsrA5zBO8W5EY4cxBGPcHLz8NM2idtsAGdwMTu4NkViiCMGOMizQpvBlcrMadSEwZO40W3NxBBHDHDCsx3f4hz/iV1QHBpi21qdNRzPf1v8YSxjnMRtwF/hYq2rfF7QWi5COy1qVFXC10aWUmRn5x93/+4w1iC97QAAAABJRU5ErkJggg==";})();</script><script>(function(){document.getElementById("et").src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACuCAMAAADNsyWCAAAATlBMVEX////3///m///e///v///b3NzM///W///MzMzf8vLW8vLv8vLU1tbO1tbl5eX4+fne5ubQ5eXO8vLm8vLv8/PV9vbV39/j9vbX5ubO9vbBZXBJAAAC7UlEQVR4Xu3a6Y7bMAyFUV+StrNntm7v/6K1WmEwgBDdqSSEGZTffycni4ILI9M8tOvU0G5op6snIRsA+BGywQC4EbJBzPDvhHN/xEAJP9fuPhjOpYETntdlWXoJxEAJqX7C++fxwwwNBN2S5k5/CAsxMIKItZcJFQMhZAHay4SKgROSoJuwEgMjAFN7mZCqGChh6mjOhMLgQRCRjwYHggox3INgW98Lwz0JZoXhzoR8uKUw3JMAFAYHAjVwwmUmvVUJyUQMlDDvSG9ghAkwYugjvGKrQuCGfoIZgAqBGfoJexExQiAG+nU8pc43+6YqAhACMZBDCYjoWknVjBBKgwOBGThBbyKUfBDcwAkTTEjk60gMhJANtfih5AZOoE2EQAyEQBXkB5oaOIFHCMRwBwIxOBAKgwOhMDgQCoMDoTA4EAqDA6EwOBAKQ41wvJCuJSH1vPX0dKm2+2DoGW7HklDEtx/QNeKBTsJBxQxA34LuJKgQAl3QnYSX9JyEQF+CoZOgZsCI+ZqDiX7uRvLLX8KyqnQRkrkkFFUJKyfUDJoJBZp3YIQczEQriZjduIL1aQLMTG5lqSQor+Dt84lghAlb1QmfBcUVtNdd6sAIKTbhy/CpjoRwh5oIQQhCEIJwPY6siTDvBjb7E04AvAlmAHwJYgnhSTirigANJ2K/P4zpW3pwIwSyoPtTMXMlNL4LE0xERyWCJoKZDMrMmgiADQtA017AwGIvBCEINwpCEGJB+xO2nAm2BV9C02o6Xp5Sz2NS1VjQW9q0oM1Ex2UtBMBkXGZfdEFjaLEXhhCCEIQgBOEyD+zyACMezoRY0JlAJgv9K3Z/j7GgvzRBhyB0q/U2uOeCzoaRfeEFjUHFXvh/CEEIQizoWNCxoGNBx4KOBR0LOhZ0EIIQhCAEIQhB8OiRCEF4eQDCkgnzaevs0a9MmACY6rpsrXdsSa36ThBdfZJMAETUAaGqIsgEE68sEbYAcwqpKQW/pvc8n/83jjE8Y8HClNgAAAAASUVORK5CYII=";})();</script><script>(function(){document.getElementById("es").src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAC2CAMAAABDLoc2AAAA5FBMVEX/////AP8zZsz/CP9ag9b/Gf//7///M///EP//If86a87/5f//Ov//Kf8/b8//Zv//zP//Wv//Uv//jf//Sv//1f/3+f1DctBJdtFSfdRhiNd2mN3Z4/bs8frx9fxVgNX/9///lP//cv9NetP/pv/P2/Olu+j/3f//vf//Qv9Kd9K1yO3n7fmrwOpiidiBoN+Kp+L/av/K1/L/e//u8vuEo+D/mf/d5vf/w/+iueivw+vj6vh7nN7/qv9uktv/hP+4yu27zO5xlNuNquNqj9rV4PX/t/9ojtmVr+SYsuWdtebF1PEEhp/FAAAEKElEQVR4Xu3cx27rSBCF4VPVzFTMOTjnnNONk+f932dEWdBIsHAXYtXCQH0PQP4gIG/cfbDkYLccxnG4ocb2W4pfOD2583Z2vM30vlx+P8Uaab3oKK+wHmCt4f444ZwS72mEVUE9JhH+Lj4a7e+wiM7JanXDUSaKfD/cTNGPHGVq6YfqLwlnSu1Ox9tMt1NKONMfYqES05RfbiKXSjmiqUIFKwbHPNW+e0Aug7sST50PMNcMiSi6OkBuQdURURhgyYPHzKXLU+TWek2Y2bvFu6Os+g+I2I2JqLbc/VtW/S9EfDtm5v4ImbpzLq5AyGNE5LawsJ8wdwcQstdmTs4wFfhEbhditpxzxRRzo+w93yDmLPsKtwDqRLQ9gZwyEd1jbp+Zf0LQHTM/AygSRQEEHUREIebGzKVbCHppM3tA6pzbhqgqkQswc5oIf2zggjkZ4Y2ImhBVIaJDzHxn5geI+p2Zr7FNFEGYc+4GM5fMJQhLmP/CEVEMYT5RY/FH+xjCOsw/EBIVIaxIVMBMj3kMYV3mXpYdQtbSMz1mD8KyZ36CbMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu2bMu27KJq9jjLLigcX4yXjy92FY4vnmsdFq3pHRZtM/dxRRRN5I/mflU9mvuENyKqyB+Efvz/IPRA/iD0HlLnXFn82DkFmBkmzHfyx85bQJHIP9A85N95gaCXEnMPQF34c09qy1cqnoQ/d6s/v1KRFuUvsMQB5oZj5uRE9gLLTuv9PUTRI4Qczq7xrL6nvQch153FNZ6gQUT+/QQS6hERVVeu7zHz8XMLEvZLzPyKd2lIRK6WIrdm1TmioxRLbj1mTvpD5PYyuwr35+JJlYIjoqhaQR6Tw1pEU2ETKwbn2dtKFwPk0brul3iq94CFtOoo4/w43FDRd5RZ81dp+JpwJml3vQ11O/NHXHy4MCiiuPY3crLDIsYffiPBVugop6hwH2Ct1lkv4ZxKvecR1ggev9YK4aYaN4cBfqG190//3NvUj7+vR/g8jDFGeI9DldYeh1vd49AX1GMntcehSnOPQ5XiHoe+xR7Htswex1QYQB/QcM6J7nFUlbv19jhUKe5xqNLb41ClssfhE4VQpbLHUSZyAVTp7XGoUtnjiIhuoKuh9S8WXQWtPQ5VqpsFlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlm3Zlq1Kb49Dld4ehyq9PQ5Vensc+sfOrz7fsXOEGnscBWjbkt7jqOpfqVDd49D/3L70HoeuxR5HLL3HoS8N3VRVZo9j6iiFrtU9jrLMHkehCVXCexwRZaIylOnvcegLtgoyexyq5Pc4aqt7HP8Bw1toJPCuFTMAAAAASUVORK5CYII=";})();</script><script>(function(){document.getElementById("ea").src="data:image/png;base64,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";})();</script></body></html>

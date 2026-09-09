@@ -1,0 +1,4 @@
+D:\AIR\Help\BooleanSearch\bin\Debug\BooleanSearch.exe
+D:\AIR\Help\BooleanSearch\bin\Debug\BooleanSearch.pdb
+D:\AIR\Help\BooleanSearch\obj\Debug\BooleanSearch.exe
+D:\AIR\Help\BooleanSearch\obj\Debug\BooleanSearch.pdb

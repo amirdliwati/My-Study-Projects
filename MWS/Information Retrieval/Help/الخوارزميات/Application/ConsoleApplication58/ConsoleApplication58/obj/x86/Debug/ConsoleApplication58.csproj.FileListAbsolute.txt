@@ -1,0 +1,9 @@
+D:\AIR\Assignment\ConsoleApplication58\ConsoleApplication58\bin\Debug\ConsoleApplication58.exe
+D:\AIR\Assignment\ConsoleApplication58\ConsoleApplication58\bin\Debug\ConsoleApplication58.pdb
+D:\AIR\Assignment\ConsoleApplication58\ConsoleApplication58\obj\x86\Debug\ConsoleApplication58.exe
+D:\AIR\Assignment\ConsoleApplication58\ConsoleApplication58\obj\x86\Debug\ConsoleApplication58.pdb
+D:\AIR\Help\ConsoleApplication58\ConsoleApplication58\obj\x86\Debug\ConsoleApplication58.exe
+D:\AIR\Help\ConsoleApplication58\ConsoleApplication58\obj\x86\Debug\ConsoleApplication58.pdb
+D:\AIR\Help\ConsoleApplication58\ConsoleApplication58\bin\Debug\ConsoleApplication58.exe
+D:\AIR\Help\ConsoleApplication58\ConsoleApplication58\bin\Debug\ConsoleApplication58.pdb
+D:\AIR\Help\ConsoleApplication58\ConsoleApplication58\obj\x86\Debug\ConsoleApplication58.csprojResolveAssemblyReference.cache
