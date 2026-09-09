@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl rsautl -encrypt -inkey c:\sec\RSA_Publickey.pem -pubin -in c:\sec\DES3_key.txt -out c:\sec\Encrypted_RSA_public.txt

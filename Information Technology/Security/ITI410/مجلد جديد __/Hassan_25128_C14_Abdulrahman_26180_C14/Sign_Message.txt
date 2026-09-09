@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl smime -sign -in c:\sec\message_hash.txt -text -out c:\sec\message.sig -signer c:\sec\Signed_C1_CRS.ca -inkey c:\sec\C1.key

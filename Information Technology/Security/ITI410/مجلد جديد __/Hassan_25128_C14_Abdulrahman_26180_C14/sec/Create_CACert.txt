@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl req -config c:\openssl-1.0.1c\ssl -new -key c:\sec\newcerts\ca.key -out c:\sec\newcerts\ca.pem

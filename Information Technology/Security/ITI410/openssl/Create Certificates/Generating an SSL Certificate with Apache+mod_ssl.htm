@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 
+Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0043)http://slacksite.com/apache/certificate.php -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;"><object id="__IDM__" type="application/x-idm-downloader" width="1" height="1" style="visibility: hidden !important; display: block !important; width: 1px !important; height: 1px !important; border-style: none !important; position: absolute !important; top: 0px !important; left: 0px !important;"></object></meta><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Generating an SSL Certificate with Apache+mod_ssl</title>
+
+<meta name="keywords" content="Apache, ssl, ssl certificate, mod_ssl">
+<meta name="description" content="A guide to generating an SSL certificate with Apache+mod_ssl.">
+<!--[if lt IE 7]>
+<script defer type="text/javascript" src="http://slacksite.com/pngfix.js" type="text/css"></script>
+<![endif]-->
+<link rel="stylesheet" href="./Generating an SSL Certificate with Apache+mod_ssl_files/style.css" type="text/css" media="screen">
+<link href="./Generating an SSL Certificate with Apache+mod_ssl_files/print.css" rel="stylesheet" type="text/css" media="print">
+<meta name="verify-v1" content="EUnQP0plB0KvfEGz/0GdOJQeWxSDj12OaYa7CM67hmk=">
+</head>
+<body>
+<div id="logo"><img src="./Generating an SSL Certificate with Apache+mod_ssl_files/logo.png" style="width:400px;height:170px;border:0px none transparent;" alt="Slacksite.com"></div>
+<div id="wrap1">
+<div id="wrap2">
+<div id="header">
+<div id="links">
+<p class="links">
+<a class="links" href="http://slacksite.com/about.php">About Slacksite</a><br>
+<a class="links" href="http://slacksite.com/contact.php">Contact</a><br>
+<a class="links" href="http://slacksite.com/legal.php">Legal Info</a><br>
+<a class="links" href="http://slacksite.com/advertising.php">Advertising</a><br>
+</p>
+</div><!-- close links div -->
+</div><!-- close header div -->
+<div id="wrap3">
+<div id="tagline">
+<p class="tagline">
+Some Witty Tagline Goes Here</p>
+</div><!-- close tagline div -->
+<div id="menu">
+<p class="menu">
+<a class="menu" href="http://slacksite.com/">Home</a><br>
+<a class="menu" href="http://slacksite.com/apache/">Apache Documents</a><br>
+<a class="menu" href="http://slacksite.com/solaris/">Solaris Documents</a><br>
+<a class="menu" href="http://slacksite.com/technotes/">Solaris TechNotes</a><br>
+<a class="menu" href="http://slacksite.com/slackware/">Linux Documents</a><br>
+<a class="menu" href="http://slacksite.com/other/">Other Technical Docs</a><br>
+<a class="menu" href="http://slacksite.com/humour/">Humour</a><br>
+<a class="menu" href="http://slacksite.com/logos.php">Logos</a><br>
+</p>
+<br>
+<p class="menu">Archives</p>
+<ul class="menu">
+<li class="menu"><a class="menu" href="http://slacksite.com/2008/03/">March 2008</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/2008/06/">June 2008</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/2010/02/">February 2010</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/2010/03/">March 2010</a></li>
+</ul>
+<br><p class="menu">Categories</p>
+<ul class="menu">
+<li class="menu"><a class="menu" href="http://slacksite.com/networking/">Networking</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/it-industry/">IT Industry</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/certification/">Certification</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/careers/">Careers</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/linux/">Linux</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/virtualization/">Virtualization</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/travel/">Travel</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/japan/">Japan</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/travel-japan-tokyo/">travel japan tokyo</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/training/">Training</a></li>
+<li class="menu"><a class="menu" href="http://slacksite.com/storage/">Storage</a></li>
+</ul>
+<br>
+<p class="menu">Search</p>
+<form id="searchform" method="get" action="http://slacksite.com/"><div><input type="text" name="s" id="s" size="15"><br><input type="submit" value="Search"></div></form></div><!-- close menu div -->
+<div id="inner-wrap">
+<div id="google-apache">
+<script type="text/javascript"><!--
+google_ad_client = "pub-0008597529619321";
+/* 160x600, created 4/13/08 */
+google_ad_slot = "5406074299";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="./Generating an SSL Certificate with Apache+mod_ssl_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><iframe allowtransparency="true" frameborder="0" height="600" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" scrolling="no" vspace="0" width="160" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div><!-- close google-apache div -->
+<div id="contents">
+
+<h1>Generating an SSL Certificate with Apache+mod_ssl</h1>
+<br>
+<h3>Introduction</h3>
+<p>
+This document is intended to be a quick guide to generating and installing
+an SSL certificate on an Apache web server with the mod_ssl module.  While
+this is not an overly difficult process, it does involve running several
+long commands with numerous options.  This document should be all that you
+need to walk you through the process of generating the certificate and
+installing it in your web server.
+</p>
+
+<p>
+This document does not attempt to discuss compiling or installing 
+Apache and mod_ssl.  For detailed instructions on that topic, please 
+see <a href="http://slacksite.com/apache/webserver.php">"Building Apache with mod_ssl and Other 
+Modules"</a>.  This document also does not attempt to discuss 
+detailed configuration of SSL hosts in Apache.  Details will be 
+provided on setting up a basic SSL virtual host that should work in 
+nearly all standard circumstances.  Ralf Engelschall, the author of 
+mod_ssl, maintains excellent documentation at <a href="http://www.modssl.org/docs">http://www.modssl.org/docs</a>.  
+For information on more advanced configurations or special situations, 
+please refer to the full documentation.  In addition, the openssl 
+toolkit provides fairly extensive man pages, which are also 
+available in HTML format at <a href="http://www.openssl.org/docs/">http://www.openssl.org/docs/</a>
+</p>
+
+<br>
+<h3>Brief SSL Primer</h3>
+
+<p>
+This section will serve as a very brief introduction to SSL, the Secure Socket
+Layer.  Cryptography is a very extensive topic which literally fills volumes of
+texts.  The following is an extremely simplified view of how SSL is implemented and
+what part the certificate plays in the entire process.  There may be some small
+inaccuracies in an effort to present the information in the easiest possible
+format.
+</p>
+
+<p>
+Normal web traffic is sent unencrypted over the Internet.  That is, anyone with
+access to the right tools can snoop all of that traffic.  Obviously, this can lead
+to problems, especially where security and privacy is necessary, such as in credit
+card data and bank transactions.  The Secure Socket Layer is used to encrypt the
+data stream between the web server and the web client (the browser).  
+</p>
+
+<p>
+SSL makes use of what is known as asymmetric cryptography, commonly referred to as
+public key cryptography (PKI).  With public key cryptography, two keys are created,
+one public, one private.  Anything encrypted with either key can only be decrypted
+with its corresponding key.  Thus if a message or data stream were encrypted with
+the server's private key, it can be decrypted only using its corresponding public
+key, ensuring that the data only could have come from the server.  
+</p>
+
+<p>
+If SSL utilizes public key cryptography to encrypt the data stream traveling over
+the Internet, why is a certificate necessary?  The technical answer to that
+question is that a certificate is not really necessary--the data is secure and
+cannot easily be decrypted by a third party.  However, certificates do serve a
+crucial role in the communication process.  The certificate, signed by a trusted
+Certificate Authority (CA), ensures that the certificate holder is really who he
+claims to be.   Without a trusted signed certificate, your data may be encrypted,
+however, the party you are communicating with may not be whom you think.  Without
+certificates, impersonation attacks would be much more common.
+</p>
+
+<br>
+<h3>Generating a Private Key and CSR</h3>
+<p>
+The openssl toolkit is used to generate an RSA Private Key and CSR (Certificate
+Signing Request).  It can also be used to generate self-signed certificates which
+can be used for testing purposes or internal usage.  The utility used to do all of
+these tasks is known simply as <span class="code">openssl</span>.  It should be installed in the <span class="code">/usr/local/ssl/bin</span> directory.  You may want to add this directory to your <span class="code">PATH</span>, or copy or link the openssl utility to a directory that
+is already in your <span class="code">PATH</span> so that you do not have to type the full path
+to the executable.  The examples below will assume that <span class="code">openssl</span> is in
+a location that is accessible to you without using the full path to the command.
+
+
+</p>
+<p>
+The first step is to create your RSA Private Key.  This key is a 1024 bit RSA key
+which is encrypted using Triple-DES and stored in a PEM format so that it is
+readable as ASCII text.   We will use several files as random seed enhancers
+which will help to make the key more secure.  Text files that have been compressed
+with a utility such as <span class="code">gzip</span> are good choices.  The key is generated
+using the following command, where <span class="code">file1:file2:etc</span> represents the
+random compressed files.
+</p>
+
+<p><span class="code">
+$ openssl genrsa -des3 -rand file1:file2:file3:file4:file5 -out server.key 1024
+</span></p>
+
+<p>
+The command will prompt you for a pass-phrase and then store the key in the file
+<span class="code">server.key</span>.  <span class="red">It is critical that the pass-phrase be secure and not forgotten.</span>  If either the key is lost, or the pass-phrase 
+is forgotten, <b>the certificate will be useless!</b>  It cannot be 
+stressed enough how important the private key is to the certificate.  If the 
+private key and pass-phrase are compromised, the certificate will have to be 
+revoked, costing you the price of the certificate all over again if you have paid
+an authority for the certificate.  It may be a wise idea to back this file up to 
+secure media, such as tape or diskette.
+</p>
+
+<p>
+One unfortunate side-effect of the pass-phrased private key is that Apache will ask
+for the pass-phrase each time the web server is started.  Obviously this is not
+necessarily convenient as someone will not always be around to type in the
+pass-phrase, such as after a reboot or crash.  mod_ssl includes the ability to use
+an external program in place of the built-in pass-phrase dialog, however, this is
+not necessarily the most secure option either.  It is possible to remove the
+Triple-DES encryption from the key, thereby no longer needing to type in a
+pass-phrase.  If the private key is no longer encrypted, it is critical that this
+file <b>only be readable by the root user!</b>  If your system is ever
+compromised and a third party obtains your unencrypted private key, the
+corresponding certificate will need to be revoked.  With that being said, use the
+following command to remove the pass-phrase from the key:
+</p>
+
+<p><span class="code">
+$ openssl rsa -in server.key -out server.pem
+</span>
+</p>
+
+<p>
+Once the private key is generated a Certificate Signing Request can be
+generated.  The CSR is then used in one of two ways.  Ideally, the CSR will be sent
+to a Certificate Authority, such as <a href="http://www.thawte.com/">Thawte</a> or
+<a href="http://www.verisign.com/">Verisign</a> who will verify the identity of the
+requestor and issue a signed certificate.  The second option is to self-sign the
+CSR, which will be demonstrated in the next section.
+</p>
+
+<p>
+During the generation of the CSR, you will be prompted for several pieces of
+information.  These are the X.509 attributes of the certificate.  One of the
+prompts will be for "<span class="code">Common Name (e.g., YOUR name)</span>".  It is important that
+this field be filled in with the fully qualified domain name of the server to be
+protected by SSL.  If the website to be protected will be
+<span class="code">https://www.server.com</span>, then enter <span class="code">www.server.com</span> at this
+prompt.  The command to generate the CSR is as follows:
+</p>
+
+<p>
+<span class="code">
+$ openssl req -new -key server.key -out server.csr
+</span></p>
+
+
+<p>
+A sample CSR generation session is shown below, with sample responses shown in bold:
+</p>
+
+<p>
+<span class="code">
+$ openssl req -new -key server.key -out server.csr<br>
+Using configuration from /usr/local/ssl/openssl.cnf<br>
+Enter PEM pass phrase:<b>Enter pass phrase here</b>
+</span>
+</p>
+
+<p>
+<span class="code">
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+</span>
+</p>
+
+<p>
+<span class="code">
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank.
+</span>
+</p>
+
+<p>
+<span class="code">
+For some fields there will be a default value, If you enter '.', the field will be left blank.
+</span>
+</p>
+
+<p><span class="code">-----</span></p>
+
+<p>
+<span class="code">
+Country Name (2 letter code) [AU]:<b>US</b><br>
+State or Province Name (full name) [Some-State]:<b>New Hampshire</b><br>
+Locality Name (eg, city) []:<b>Nashua</b><br>
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:<b>Domain.com, Inc.</b><br>
+Organizational Unit Name (eg, section) []:<b>.</b><br>
+
+<br>
+Common Name (eg, YOUR name) []:<b>www.domain.com</b><br>
+Email Address []:<b>webmaster@domain.com</b><br>
+<br><br>
+Please enter the following 'extra' attributes to be sent with your certificate request<br>
+A challenge password []:<br>
+An optional company name []:<br>
+</span>
+</p>
+
+<br>
+<h3>Generating a Self-Signed Certificate</h3>
+<p>
+At this point you will need to generate a self-signed certificate because you
+either don't plan on having your certificate signed by a CA, or you wish to test
+your new SSL implementation while the CA is signing your certificate.  In my
+experience dealing with Thawte, it can take up to a week or more before receiving
+your signed certificate.  The time it takes to receive the certificate will vary
+based on how quickly they receive your required documentation.  This temporary
+certificate will generate an error in the client browser to the effect that the
+signing certificate authority is unknown and not trusted.
+</p>
+
+<p>
+To generate a temporary certificate which is good for 60 days, issue the following
+command:</p>
+
+<p>
+<span class="code">
+$ openssl x509 -req -days 60 -in server.csr -signkey server.key -out server.crt
+</span>
+</p>
+
+<br>
+<h3>Installing the Private Key and Certificate</h3>
+<p>
+When Apache with mod_ssl is installed, it creates several directories in the Apache
+config directory.  The location of this directory will differ depending on how Apache
+was compiled.  If using my instructions on compiling Apache, the config directory is
+<span class="code">/usr/local/apache/etc</span>.  The directories mod_ssl creates include
+<span class="code">ssl.crt</span>, <span class="code">ssl.csr</span>, and 
+<span class="code">ssl.key</span>.  These are good locations to store server 
+certificates, CSRs, and private keys, respectively.  If
+there will be multiple SSL enabled hosts on one server, it may be good practice to name
+the files with the fully qualified domain name of the SSL enabled host.
+</p>
+
+<p>
+When adding SSL enabled virtualhosts to the web server, I prefer to keep all of the SSL
+virtualhosts in a separate file.  This insures that all SSL hosts can be easily found in
+one location and helps to keep the <span class="code">httpd.conf</span> file from growing too
+large.  The SSL virtualhosts will be kept in a file called <span class="code">ssl.conf</span>.  In order
+for Apache to recognize and parse this file, it must be included in the
+
+<span class="code">httpd.conf</span> file with the following directive:
+</p>
+
+<p>
+<span class="code">
+Include /usr/local/apache/etc/ssl.conf
+</span>
+</p>
+
+<br>
+
+<h3>Configuring SSL Enabled Virtual Hosts</h3>
+<p>
+Extensive examples of SSL configurations for a virtualhost are included as part of the
+
+<span class="code">/usr/local/apache/etc/httpd.conf.default</span> file installed with mod_ssl.  Please
+refer to this file and to the mod_ssl documentation for more detailed information on
+configuration options.  A basic SSL enabled virtualhost will appear as follows in the
+ssl.conf file:</p>
+
+<p>
+<span class="code">
+# SSL Virtual Hosts<br>
+&lt;IfDefine SSL&gt;<br>
+<br>
+&lt;VirtualHost _default_:443&gt;<br>
+ServerAdmin webmaster@domain.com<br>
+DocumentRoot /usr/local/apache/share/htdocs<br>
+
+ServerName www.domain.com<br>
+ScriptAlias /cgi-bin/ /usr/local/apache/share/htdocs/cgi-bin/<br>
+SSLEngine on<br>
+SSLCertificateFile    /usr/local/apache/etc/ssl.crt/server.crt<br>
+SSLCertificateKeyFile /usr/local/apache/etc/ssl.key/server.pem<br>
+SetEnvIf User-Agent ".*MSIE.*" nokeepalive ssl-unclean-shutdown<br>
+CustomLog /usr/local/apache/var/log/ssl_request_log \"%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+&lt;/VirtualHost&gt;<br>
+<br>
+&lt;/IfDefine&gt;
+
+</span>
+</p>
+
+<p>
+This will create an SSL virtualhost named www.domain.com, which is accessed via port 443
+(the standard port for https) on the default IP address of the web server.  It is possible
+to add as many additional virtualhosts as there are IP addresses that the web server
+listens to.  Simply add additional virtualhost blocks <b>inside</b> of the
+<span class="code">&lt;IfDefine SSL&gt;</span> and <span class="code">&lt;/IfDefine&gt;</span> tags. 
+Due to the nature of the SSL encryption of the HTTP traffic, <b>it is NOT
+possible to have name-based (HTTP1.1) SSL virtual hosts.</b>  To create a new SSL
+virtualhost on a different IP address, simply replace <span class="code">_default_</span> with the
+IP address of the virtualhost.
+
+</p>
+
+<p>
+After adding the virtualhost to the <span class="code">ssl.conf</span> file, Apache must be killed and
+restarted in order for it to recognize the new virtualhost.  Unfortunately, this is one of
+the rare instances where a simple <span class="code">HUP</span> signal will not work.  After restarting
+the server, depending on whether the encrypted or unencrypted key was used, Apache will
+prompt you for the pass-phrase(s) of the SSL virtualhost(s).  Enter the pass-phrase(s) and
+the web server will start.
+</p>
+
+<p>
+Now, point your favorite browser to the new virtualhost you just created, remembering to
+use https:// instead of http://, and you should be greeted with a warning dialog if you are
+using the self-signed certificate.  Acknowledge the dialog and the page will continue to
+load, protected by SSL.  The status bar of your browser should be graced by the 'lock' 
+icon, which signifies the page is protected via SSL.  This is all there is to it!  
+</p>
+
+<br><br>
+</div><!-- close contents div -->
+<div style="clear:both;">&nbsp;</div>
+<p class="designby">Website Design &amp; Maintenance by <a href="http://erikastokes.com/">Erika Stokes</a></p>
+</div><!-- close inner-wrap div -->
+</div><!-- close wrap3 div -->
+</div><!-- close wrap2 div -->
+</div><!-- close wrap1 div -->
+
+
+</body></html>

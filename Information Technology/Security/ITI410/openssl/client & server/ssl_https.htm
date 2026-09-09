@@ -1,0 +1,1460 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 12">
+<meta name="Originator" content="Microsoft Word 12">
+<link rel="File-List" href="http://www.cs.odu.edu/%7Ecs772/fall12/lectures/ssl_https_files/filelist.xml">
+<title>SSL/TLS Protocols</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>wahab</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>wahab</o:LastAuthor>
+  <o:Revision>43</o:Revision>
+  <o:TotalTime>3878</o:TotalTime>
+  <o:LastPrinted>2006-11-06T05:00:00Z</o:LastPrinted>
+  <o:Created>2010-11-10T04:02:00Z</o:Created>
+  <o:LastSaved>2012-06-13T00:14:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>906</o:Words>
+  <o:Characters>6627</o:Characters>
+  <o:Company>Old Dominion University Computer Science Department</o:Company>
+  <o:Lines>236</o:Lines>
+  <o:Paragraphs>160</o:Paragraphs>
+  <o:CharactersWithSpaces>7373</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel="themeData" href="http://www.cs.odu.edu/%7Ecs772/fall12/lectures/ssl_https_files/themedata.thmx">
+<link rel="colorSchemeMapping" href="http://www.cs.odu.edu/%7Ecs772/fall12/lectures/ssl_https_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>2</w:DisplayHorizontalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" LatentStyleCount="267">
+  <w:LsdException Locked="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="99" Name="No List"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true"
+   Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:"Arial Rounded MT Bold";
+	panose-1:2 15 7 4 3 5 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{mso-style-unhide:no;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-unhide:no;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:.5in .5in .5in .5in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:28188331;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1880516832 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:120346825;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-633848606 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:159390650;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1753331454 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:218638046;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1719503342 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.5in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.0in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.5in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.0in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.5in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.0in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.5in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:5.0in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:1183201846;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-457781642 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-tab-stop:1.25in;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l4:level4
+	{mso-level-tab-stop:1.75in;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-tab-stop:2.25in;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-tab-stop:2.75in;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;}
+@list l4:level7
+	{mso-level-tab-stop:3.25in;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-tab-stop:3.75in;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-tab-stop:4.25in;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;}
+@list l5
+	{mso-list-id:1217929482;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-935038348 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l5:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6
+	{mso-list-id:1262647576;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-616823484 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l6:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7
+	{mso-list-id:1471244010;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-866197572 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level2
+	{mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level3
+	{mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l7:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]-->
+<meta content="Hussein Abdel-Wahab" name="Author">
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body style="tab-interval:.5in" lang="EN-US" link="blue" vlink="purple">
+
+<div class="WordSection1">
+
+<p class="MsoNormal">&nbsp; <br>
+&nbsp; </p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-align:center" align="center"><span style="font-size:24.0pt;font-family:&quot;Arial Rounded MT Bold&quot;,&quot;sans-serif&quot;;
+color:yellow;background:maroon;mso-highlight:maroon;mso-shading:#FFCCCC;
+mso-bidi-font-weight:bold;mso-bidi-font-style:italic">SSL/TLS Protocols</span><span style="font-size:24.0pt;font-family:&quot;Arial Rounded MT Bold&quot;,&quot;sans-serif&quot;;
+color:yellow"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><b><i><span style="font-size:24.0pt;color:#000099">&nbsp;<o:p></o:p></span></i></b></p>
+
+<p class="MsoNormal"><b><i><span style="font-size:16.0pt;color:#000099;
+background:yellow;mso-highlight:yellow">SSL</span></i></b><b><span style="font-size:16.0pt;color:#000099"> (Secure Socket Layer, developed by </span></b><span class="GramE"><b><i><span style="font-size:16.0pt;color:#CC0000">Netscape</span></i></b><b><span style="font-size:16.0pt;color:#000099"> )</span></b></span><b><span style="font-size:16.0pt;color:#000099"> &amp;<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b><i><span style="font-size:16.0pt;color:#000099;
+background:yellow;mso-highlight:yellow">TLS</span></i></b><b><i><span style="font-size:16.0pt;color:#000099"> </span></i></b><b><span style="font-size:16.0pt;color:#000099">(Transport Layer Security, is an </span></b><b><i><span style="font-size:16.0pt;color:#CC0000">IETF</span></i></b><b><span style="font-size:16.0pt;color:#CC0000"> </span></b><b><span style="font-size:
+16.0pt;color:#000099">standard) <o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b><span style="font-size:16.0pt;color:#000099">Both <span class="GramE">are<span style="mso-spacerun:yes">&nbsp; </span><i style="mso-bidi-font-style:
+normal">almost</i></span><span style="mso-spacerun:yes">&nbsp; </span>the same. They
+run as a user-level processes on top of<span class="GramE">&nbsp; <i>TCP</i></span><i>/IP</i>.</span></b><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:20.0pt;font-family:&quot;Arial Rounded MT Bold&quot;,&quot;sans-serif&quot;;
+color:yellow;background:blue;mso-highlight:blue;mso-shading:#FFFF99;mso-bidi-font-weight:
+bold;mso-bidi-font-style:italic">The Basic Protocol:</span><span style="font-size:20.0pt;font-family:&quot;Arial Rounded MT Bold&quot;,&quot;sans-serif&quot;;
+color:yellow;mso-bidi-font-weight:bold;mso-bidi-font-style:italic"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#009900">{====================</span></b><b><span style="font-size:16.0pt;color:red">=======================</span></b><span style="font-size:16.0pt"> <br>
+<b><u><span style="color:#006600;background:yellow;mso-highlight:yellow">Alice</span><span style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="mso-spacerun:yes">&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="color:red;background:
+yellow;mso-highlight:yellow">Bob</span></u></b> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><span style="font-size:16.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#002060;
+background:lime;mso-highlight:lime">I want to talk, ciphers I support, <i>Ra&nbsp;</i>&nbsp;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</s>&gt;</span></b><span style="font-size:16.0pt;color:#002060;background:lime;
+mso-highlight:lime"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#C00000;
+background:lime;mso-highlight:lime">&lt;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s>
+Certificate, cipher I choose, <span class="SpellE"><i>Rb</i></span></span></b><span style="font-size:16.0pt;color:#C00000"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><span style="font-size:16.0pt"><br>
+<b><i><span style="color:#002060;background:yellow;mso-highlight:yellow">Choose
+secret S, compute K= f (<span class="SpellE">S<span class="GramE">,Ra,Rb</span></span>):</span></i></b><span style="color:#002060;background:yellow;mso-highlight:yellow"> <br>
+<b><i>{S}<sub>Bob </sub>, {keyed hash of handshake <span class="SpellE">msgs</span>}</i>&nbsp;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</s>&gt;</b> </span><span style="background:yellow;mso-highlight:yellow"><o:p></o:p></span></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#C00000;
+background:yellow;mso-highlight:yellow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i>Compute K= f(<span class="SpellE">S<span class="GramE">,Ra,Rb</span></span>):</i></span></b><span style="font-size:16.0pt;color:#C00000;background:yellow;mso-highlight:yellow"> <br>
+<b>&lt;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s><i>
+{keyed hash of handshake <span class="SpellE">msgs</span>}</i></b></span><span style="font-size:16.0pt;color:#C00000"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><span style="font-size:16.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><span style="font-size:16.0pt">&nbsp;<b><span style="color:#C00000;background:aqua;mso-highlight:aqua">&lt;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s>
+Data protected with keys derived from <i style="mso-bidi-font-style:normal">K</i><s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</s>&gt;</span></b><span style="color:#C00000"> </span><o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#999999">============================================}</span></b><span style="font-size:20.0pt"> <o:p></o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><b><u><span style="font-size:18.0pt;
+color:#000099;background:yellow;mso-highlight:yellow;mso-shading:#FFCC99">Keys:</span></u></b><u><span style="font-size:18.0pt"> <o:p></o:p></span></u></p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in"><!--[if !supportLists]--><span style="font-size:16.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">Alice
+chooses a random number </span><b><i><span style="font-size:16.0pt;color:red">S</span></i></b><span style="font-size:16.0pt;color:#000099">, as <b><i>pre-master secret.</i></b></span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in"><!--[if !supportLists]--><span style="font-size:16.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">It
+is shuffled with </span><b><i><span style="font-size:16.0pt;color:red">R<sub>a</sub></span></i></b><sub><span style="font-size:16.0pt;color:red"> </span></sub><span style="font-size:16.0pt;
+color:#000099">and</span><span style="font-size:16.0pt;color:red"> <span class="SpellE"><b><i>R<sub>b</sub></i></b></span></span><span style="font-size:
+16.0pt;color:#000099"> to produce a <b><i>master secret </i></b></span><b><i><span style="font-size:16.0pt;color:red">K</span></i></b><i><span style="font-size:
+16.0pt;color:#000099">.</span></i><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in"><!--[if !supportLists]--><span style="font-size:16.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><b><i><span style="font-size:16.0pt;color:red">R<sub>a</sub></span></i></b><sub><span style="font-size:16.0pt;color:red"> </span></sub><span style="font-size:16.0pt;
+color:#000099">and</span><span style="font-size:16.0pt;color:red"> <span class="SpellE"><b><i>R<sub>b</sub></i></b></span></span><span style="font-size:
+16.0pt;color:#000099"> <span style="mso-bidi-font-style:italic">are 32 octets
+long. The first 4 are the UNIX time (<i>number of seconds since Jan 1, 1970</i>).
+</span></span><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="font-size:16.0pt;
+color:#000099">This is to ensure that <b><i>R</i></b>s are always different.</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l5 level1 lfo2;
+tab-stops:list .5in"><!--[if !supportLists]--><span style="font-size:16.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">The
+master secret is shuffled with <b><i>R</i></b>s to produce six (6) keys: </span><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpFirst" style="margin-left:1.0in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;color:#000099"><span style="mso-list:Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">Three (3) for each side for<span class="GramE">&nbsp; <b><i><span style="color:red">encryption</span></i></b></span></span><b><i><span style="font-size:16.0pt;color:red">, integrity, and IV</span></i></b><span style="font-size:16.0pt;color:#000099">.<o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:1.0in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;color:#000099"><span style="mso-list:Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">The three keys used for <b style="mso-bidi-font-weight:normal">transmission</b> are known as the </span><b><i><span style="font-size:16.0pt;color:red">write keys</span></i></b><span style="font-size:16.0pt"> <span style="color:#000099"><o:p></o:p></span></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left:1.0in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;color:#000099"><span style="mso-list:Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">The three keys used for <b style="mso-bidi-font-weight:normal">reception</b> are known as the </span><b><i><span style="font-size:16.0pt;color:red">read <span class="SpellE">kyes</span></span></i></b><span style="font-size:16.0pt"> <span style="color:#000099"><o:p></o:p></span></span></p>
+
+<p class="MsoListParagraphCxSpLast" style="margin-left:1.0in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l3 level1 lfo4"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;color:#000099"><span style="mso-list:Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">Thus Alice's write keys are
+Bob's&nbsp;read keys and vice versa.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l2 level1 lfo6;
+tab-stops:list .5in"><!--[if !supportLists]--><span style="font-size:16.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">To
+ensure that the keyed hash Alice sends is different from the keyed hash Bob
+sends,<span style="mso-spacerun:yes">&nbsp; </span></span><span style="font-size:
+16.0pt"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="font-size:16.0pt;
+color:#000099">Alice includes the string </span><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;color:red">"CLNT"</span></b><span style="font-size:16.0pt;color:red"> </span><span style="font-size:16.0pt;
+color:#000099">and the Bob include </span><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;color:red">"SRVR"</span></b><span style="font-size:16.0pt;color:red"> </span><span style="font-size:16.0pt;
+color:#000099">in the hash.</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in"><span class="GramE"><span style="font-size:16.0pt;color:#002060">(To avoid the </span><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;color:red">Reflection attack</span></i></b><span style="font-size:16.0pt;color:#002060">!).</span></span><span style="font-size:
+16.0pt;color:#002060"><o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l2 level1 lfo6;tab-stops:
+list .5in"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">Note
+that:</span><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo8"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;color:red">Alice has authenticated Bob</span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;color:red"> </span></b><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt"><span style="font-size:16.0pt;color:#000099">(Since Bob
+has the secret key that corresponds <span class="GramE">to<span style="mso-spacerun:yes">&nbsp; </span>the</span> certificate’s public).</span><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo8"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">Bob has no idea to whom he's talking to</span><span style="font-size:16.0pt">. <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo8"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">In SSL it is optional for the server to
+authenticate the client, <span class="GramE">if<span style="mso-spacerun:yes">&nbsp;
+</span>the</span> client has a certificate.</span><span style="font-size:16.0pt">
+<o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.0in;
+margin-bottom:.0001pt;text-indent:-.25in;mso-list:l0 level1 lfo8"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings"><span style="mso-list:Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">Normally the server authenticates the
+client using:</span><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.25in;
+margin-bottom:.0001pt"><b><i><span style="font-size:16.0pt;color:#000099;
+background:yellow;mso-highlight:yellow">&lt;<span class="GramE">name</span>,
+password&gt;</span></i></b><span style="font-size:16.0pt;color:#000099"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:1.25in;
+margin-bottom:.0001pt"><span class="GramE"><span style="font-size:16.0pt;
+color:#000099">sent</span></span><span style="font-size:16.0pt;color:#000099">
+securely over the <span class="SpellE">ssl</span> connection.</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><b><u><span style="font-size:18.0pt;
+color:#CC0000;background:#FFFFCC">Session Resumption</span></u></b><span style="font-size:20.0pt"> <br>
+</span><span style="font-size:16.0pt;color:#000099;mso-bidi-font-weight:bold">If
+the server supports session resumption, it sends<i style="mso-bidi-font-style:
+normal"> </i></span><span class="SpellE"><b><i><span style="font-size:16.0pt;
+color:#C00000;background:yellow;mso-highlight:yellow">session_id</span></i></b></span><span style="font-size:16.0pt;color:#C00000;mso-bidi-font-weight:bold"> </span><span style="font-size:16.0pt;color:#000099;mso-bidi-font-weight:bold">for the client
+at the beginning. </span><span style="font-size:16.0pt"><span style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#009900">{====================</span></b><b><span style="font-size:16.0pt;color:red">====================</span></b><span style="font-size:16.0pt"> <br>
+<b><u><span style="color:#006600;background:yellow;mso-highlight:yellow">Alice</span><span style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:red;background:yellow;mso-highlight:yellow">Bob</span></u></b>
+<o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#009900">I want
+to talk, ciphers I support, <i>Ra&nbsp;</i>&nbsp;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</s>&gt;</span></b><span style="font-size:16.0pt"> <br>
+<b><span style="color:red">&lt;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s>
+</span><span class="SpellE"><i style="mso-bidi-font-style:normal"><span style="color:#C00000;background:yellow;mso-highlight:yellow">session_id</span></i></span><span style="color:#C00000;background:yellow;mso-highlight:yellow">,</span><span style="color:#C00000"> </span><span style="color:red">certificate, cipher I
+choose, <span class="SpellE"><i>Rb</i></span></span></b> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><span class="GramE"><b><i><span style="font-size:16.0pt;
+color:#009900">choose</span></i></b></span><b><i><span style="font-size:16.0pt;
+color:#009900"> secret S, compute K= f(<span class="SpellE">S,Ra,Rb</span>):</span></i></b><span style="font-size:16.0pt"> <br>
+<b><i><span style="color:#009900">{S}<sub>Bob</sub>, {keyed hash of handshake <span class="SpellE">msgs</span>}</span></i><span style="color:#009900">&nbsp;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</s>&gt;</span></b> <br>
+<b><span style="color:#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><i><span style="color:red">compute K= f(<span class="SpellE">S,Ra,Rb</span>):</span></i></b>
+<br>
+<b><span style="color:red">&lt;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</s>{keyed hash of handshake <span class="SpellE">msgs</span>}</span></b> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:red">&lt;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</s><span class="GramE">data</span> protected with keys derived from K</span></b><b><s><span style="font-size:16.0pt;color:#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></s></b><b><span style="font-size:16.0pt;color:#009900">&gt;</span></b><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#999999">========================================}</span></b><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-size:16.0pt;
+color:#000099;mso-bidi-font-weight:bold">Session resumption, if both sides
+remember the<b><i> </i></b></span><span class="SpellE"><b><i style="mso-bidi-font-style:
+normal"><span style="font-size:16.0pt;color:red">session_id</span></i></b></span><b><i><span style="font-size:16.0pt;color:#000099">:</span></i></b><span style="font-size:
+16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#009900">{==================</span></b><b><span style="font-size:16.0pt;color:red">=======================</span></b><span style="font-size:16.0pt"> <br>
+<b><u><span style="color:#006600;background:yellow;mso-highlight:yellow">Alice</span><span style="color:white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+ &nbsp; &nbsp; &nbsp; &nbsp;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="color:red;background:yellow;mso-highlight:yellow">Bob</span></u></b>
+<o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><span class="SpellE"><span class="GramE"><b><span style="font-size:16.0pt;color:#009900;background:yellow;mso-highlight:yellow">session_id</span></b></span></span><b><span style="font-size:16.0pt;color:#009900">, ciphers, <i>Ra&nbsp;</i>&nbsp;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</s>&gt;</span></b><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:red">&lt;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s>
+</span></b><span class="SpellE"><span class="GramE"><b><span style="font-size:16.0pt;
+color:#C00000;background:yellow;mso-highlight:yellow">session_id</span></b></span></span><b><span style="font-size:16.0pt;color:red">, cipher, <span class="SpellE"><i>Rb</i></span><i>,
+{keyed hash of&nbsp; <span class="SpellE">msgs</span>}</i></span></b><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><i><span style="font-size:16.0pt;color:#009900">{<span class="GramE">keyed</span> hash of&nbsp; <span class="SpellE">msgs</span>}</span></i></b><b><span style="font-size:16.0pt;color:#009900">&nbsp;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>&nbsp;&nbsp;&nbsp;&nbsp; </s>&gt;</span></b><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:red">&lt;<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</s><span class="GramE">data</span> protected with keys derived from K</span></b><b><s><span style="font-size:16.0pt;color:#009900">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></s></b><b><span style="font-size:16.0pt;color:#009900">&gt;</span></b><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.5in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#999999">=========================================}</span></b><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.25in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#000099">Note
+that they still have to negotiate ciphers, </span></b><span style="font-size:
+16.0pt"><o:p></o:p></span></p>
+
+<p style="margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.25in;
+margin-bottom:.0001pt"><b><span style="font-size:16.0pt;color:#000099">But the </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;color:red">pre-master</span></i></b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;color:red">&nbsp;<b style="mso-bidi-font-weight:normal">secret</b></span></i><b><span style="font-size:16.0pt;color:red"> <i style="mso-bidi-font-style:normal"><span style="background:aqua;mso-highlight:aqua">S</span></i></span></b><b><span style="font-size:16.0pt;color:#000099"> is the same (since it is expensive to
+generate).</span></b><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<span style="font-size:16.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA"><br style="page-break-before:always" clear="all">
+</span>
+
+<p class="MsoNormal"><b><u><span style="font-size:18.0pt;color:#CC0000;
+background:#FFFFCC">Encrypted Records</span></u></b><span style="font-size:
+18.0pt;background:#FFFFCC"> <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><u><span style="font-size:14.0pt;
+color:#009900;background:#66FFFF">SeqNum</span></u></b></span><b><u><span style="font-size:14.0pt;color:#009900;background:#66FFFF"> | Header | Data</span></u></b><b><span style="font-size:14.0pt;color:#000099;background:#66FFFF">&nbsp;</span></b><b><span style="font-size:14.0pt;color:#000099">&nbsp;<s> - </s>&gt;&nbsp; </span></b><b><span style="font-size:14.0pt;color:red;background:#FFFF99">HMAC </span></b><b><span style="font-size:14.0pt;color:#000099">&lt;<s>-&nbsp; </s></span></b><span class="SpellE"><b><i><span style="font-size:14.0pt;color:black;background:#FFCCCC">integriy</span></i></b></span><b><i><span style="font-size:14.0pt;color:black;background:#FFCCCC"> key</span></i></b><span style="font-size:14.0pt"> <br>
+<b><i><span style="color:#000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+||</span></i></b> <br>
+<b><i><span style="color:#000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; </span></i><span style="color:#000099">V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
+V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V</span></b> <br>
+<b><i><span style="color:#000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></i><span style="color:#009900;background:#33FFFF">Header</span><span style="color:#009900"> | <u><span style="background:#33FFFF">Data
+|&nbsp;&nbsp;&nbsp;&nbsp; HMAC&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; pad</span></u></span><span style="color:#000099">&nbsp;&nbsp;<s> - </s>&gt; </span><span style="color:
+red;background:#FFFF66">ENCRYPT</span><span style="color:#000099"> &lt;<s>
+-&nbsp;</s> </span><i><span style="color:black;background:#FFCCCC">encryption
+key</span></i></b> <br>
+<b><span style="color:#000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+||</span></b> <br>
+<b><span style="color:#000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
+V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+V</span></b> <br>
+<b><span style="color:#000099">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><u><span style="color:#009900;background:#33FFFF">Header</span><span style="color:#009900"> |&nbsp;&nbsp;<span style="background:#33FFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+encrypted-integrity-protected record</span></span></u></b></span><span style="font-size:18.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:18.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-size:16.0pt;
+color:#000099">If block cipher is used, the <b style="mso-bidi-font-weight:
+normal"><i style="mso-bidi-font-style:normal">IV</i></b> is used to encrypt the
+first record.</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-size:16.0pt;
+color:#000099">The final block of each record is used as the <b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal">IV
+for the next record</i></b>.</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-size:16.0pt"><o:p>&nbsp;</o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><b><u><span style="font-size:18.0pt;
+color:#CC0000;background:#FFFFCC">Connection Closure</span></u></b><span style="font-size:18.0pt">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.25in;text-indent:-.25in;mso-list:l4 level1 lfo10;
+tab-stops:list .25in"><!--[if !supportLists]--><span style="font-size:16.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">The
+sender should <span class="GramE">send<span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE"><b><i style="mso-bidi-font-style:normal"><span style="color:red">close</span></i></b></span></span></span><span class="SpellE"><b><i style="mso-bidi-font-style:normal"><span style="font-size:
+16.0pt;color:red">_notify</span></i></b></span><b><span style="font-size:16.0pt;
+color:red"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></b><span style="font-size:16.0pt;color:#000099">message to signal the other end that it
+has no more data to send.</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.25in;text-indent:-.25in;mso-list:l4 level1 lfo10;
+tab-stops:list .25in"><!--[if !supportLists]--><span style="font-size:16.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">The
+purpose is to prevent a </span><span class="SpellE"><b><i><span style="font-size:
+16.0pt;color:red">trunctation</span></i></b></span><b><i><span style="font-size:16.0pt;color:red"> <span class="GramE">attack <span style="color:#000099"><span style="mso-spacerun:yes">&nbsp;</span></span><span style="color:#000099;font-weight:normal;font-style:normal">in</span></span></span></i></b><span style="font-size:16.0pt;color:#000099"> which the attacker inserts a </span><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;color:red">TCP FIN</span></i></b><span style="font-size:16.0pt;color:red"> </span><span style="font-size:16.0pt;
+color:#000099">segment before the sender has finished sending data forcing the
+receiver to think that all data has been received.</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.25in;text-indent:-.25in;mso-list:l4 level1 lfo10;
+tab-stops:list .25in"><!--[if !supportLists]--><span style="font-size:16.0pt;
+font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;
+color:red"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">If
+a party receives </span><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;color:red">FIN</span></i></b><span style="font-size:16.0pt;color:#000099"> without first receiving </span><span class="SpellE"><b><span style="font-size:16.0pt;color:red">close_notify</span></b></span><span style="font-size:16.0pt;color:#000099"> it must mark the session </span><span style="font-size:16.0pt;color:red">as <b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal">not <span class="SpellE">resumable</span></i></b>.
+<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="mso-ansi-language:NO-BOK" lang="NO-BOK">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:center" align="center"><span style="font-size:24.0pt;font-family:&quot;Arial Rounded MT Bold&quot;,&quot;sans-serif&quot;;
+color:yellow;background:navy;mso-highlight:navy;mso-shading:#FFCCCC;mso-ansi-language:
+NO-BOK;mso-bidi-font-weight:bold;mso-bidi-font-style:italic" lang="NO-BOK">HTTP Over SSL -
+https</span><span style="font-size:24.0pt;font-family:&quot;Arial Rounded MT Bold&quot;,&quot;sans-serif&quot;;
+color:yellow;mso-ansi-language:NO-BOK" lang="NO-BOK"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:339.0pt"><b><u><span style="font-size:18.0pt;color:#CC0000;background:#FFFFCC;mso-ansi-language:
+NO-BOK" lang="NO-BOK">HTTP:</span></u></b><span style="font-size:18.0pt;
+mso-ansi-language:NO-BOK" lang="NO-BOK"> <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ </span><o:p></o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-size:16.0pt;
+color:#000099">HTTP (Hyper Text Transfer Protocol) is the Web basic transport
+protocol. <o:p></o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><span style="font-size:16.0pt;
+color:#000099">The basic unit of HTTP interaction is the</span><span style="font-size:16.0pt"> <b><i><span style="color:#CC0000">request/response </span></i></b><span style="color:#000099">pair:</span> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo12"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">The client opens a TCP connection to the
+server and writes the request.</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-indent:-.25in;mso-list:l1 level1 lfo12"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">The server writes back the response and
+indicates the end of response either with:</span><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p class="MsoListParagraph"><span class="GramE"><b style="mso-bidi-font-weight:
+normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;
+color:#000099">length</span></i></b></span><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;color:#000099">
+header</span></i></b><span style="font-size:16.0pt;color:#000099"> <b style="mso-bidi-font-weight:normal">or</b> by <b style="mso-bidi-font-weight:
+normal"><i style="mso-bidi-font-style:normal">closing</i></b> the connection.</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><b style="mso-bidi-font-weight:
+normal"><u><span style="font-size:18.0pt;color:#CC0000;background:yellow;
+mso-highlight:yellow;mso-shading:#FFCCFF">Example:</span></u></b><b style="mso-bidi-font-weight:normal"><span style="font-size:18.0pt">&nbsp; <o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-left:.25in"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:14.0pt;color:#000099">Client Request:</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="font-size:14.0pt;
+color:#000099">GET<span style="mso-spacerun:yes">&nbsp;&nbsp; </span><b style="mso-bidi-font-weight:
+normal">/<span style="mso-spacerun:yes">&nbsp; </span></b><span style="mso-spacerun:yes">&nbsp;</span>HTTP/1.0</span><span style="font-size:14.0pt">
+<br>
+<span style="color:#000099">Connection: Keep-Alive</span> <br>
+<span style="color:#000099">Host:<span style="mso-spacerun:yes">&nbsp;
+</span>www.cs.odu.edu</span> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.25in"><span class="SpellE"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt;color:#000099">Serever</span></b></span><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt;color:#000099">
+Response:</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style="font-size:14.0pt;
+color:#000099">HTTP/<span class="GramE">1.0<span style="mso-spacerun:yes">&nbsp;
+</span>200</span><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>OK</span><span style="font-size:14.0pt"> <br>
+<span style="color:#000099">Content-Length:<span style="mso-spacerun:yes">&nbsp;
+</span>1650</span> <br>
+<span style="color:#000099">Connection: Keep-Alive</span> <br>
+<span style="color:#000099">Content-Type: text/html</span> <br>
+<span style="color:#000099">............<o:p></o:p></span></span></p>
+
+<p class="MsoNormal"><b><i><span style="font-size:16.0pt;color:#CC0000;
+background:#CCFFFF">URLs: </span></i></b><b><i><span style="font-size:16.0pt;
+color:#CC0000"><span style="mso-spacerun:yes">&nbsp;</span><o:p></o:p></span></i></b></p>
+
+<p class="MsoNormal"><span style="font-size:16.0pt;color:#000099;background:#FFFFCC">&lt;<span class="GramE">scheme</span>&gt;:<b style="mso-bidi-font-weight:normal">//</b>&lt;host&gt;[:&lt;port&gt;]<b style="mso-bidi-font-weight:normal">/</b>&lt;path&gt;[?&lt;query&gt;]</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:
+normal"><u><span style="font-size:18.0pt;color:#000099;background:#FFFF99">Examples:</span></u></i></b><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:18.0pt"> <o:p></o:p></span></i></b></p>
+
+<p class="MsoListParagraphCxSpFirst" style="text-indent:-.25in;mso-list:l7 level1 lfo14"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">&lt;scheme&gt;: <b style="mso-bidi-font-weight:
+normal">http</b>,&nbsp;&nbsp; default&nbsp; &lt;port&gt;&nbsp; <b style="mso-bidi-font-weight:normal">80</b></span><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;mso-list:l7 level1 lfo14"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">&lt;scheme&gt;: <b style="mso-bidi-font-weight:
+normal">ftp</b>,&nbsp;&nbsp; default&nbsp;&nbsp; &lt;port&gt;&nbsp;&nbsp; <b style="mso-bidi-font-weight:normal">21</b></span><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpLast" style="text-indent:-.25in;mso-list:l7 level1 lfo14"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><!--[endif]--><span style="font-size:16.0pt;color:#000099">&lt;<span class="SpellE">schems</span>&gt;:
+<b style="mso-bidi-font-weight:normal">https</b>,&nbsp; default&nbsp;
+&lt;port&gt; <b style="mso-bidi-font-weight:normal">443</b></span><span style="font-size:16.0pt"><o:p></o:p></span></p>
+
+<p style="margin:0in;margin-bottom:.0001pt"><b><u><span style="font-size:18.0pt;
+color:#CC0000;background:#FFFFCC">HTTPS:</span></u></b><span style="font-size:
+18.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:16.0pt;color:#000099">The client
+makes a connection to the server; <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:16.0pt;color:#000099">Negotiates an
+SSL connection; and</span><span style="font-size:16.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-size:16.0pt;color:#000099">Transmits&nbsp;http
+data over the established secure connection.</span></span><span style="font-size:16.0pt;color:#000099"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><b><u><span style="font-size:18.0pt;color:#990000;
+background:#99FFFF">Reference integrity:</span></u></b><span style="font-size:
+18.0pt"> <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:16.0pt;color:#000099">Match the URL
+reference to the server's identity with&nbsp;the <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><b><i><span style="font-size:16.0pt;
+color:red">CN name</span></i></b><span style="font-size:16.0pt;color:#000099">
+in the server's PKI certificate.</span></span><span style="font-size:16.0pt"> </span><span style="font-size:24.0pt"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in;text-align:center" align="center"><span style="font-size:24.0pt">&nbsp; <br>
+&nbsp;</span><span class="SpellE"><span style="font-size:24.0pt;font-family:&quot;Arial Rounded MT Bold&quot;,&quot;sans-serif&quot;;
+color:yellow;background:navy;mso-highlight:navy;mso-shading:#FFCC99;mso-bidi-font-weight:
+bold">OpenSSL</span></span><span style="font-size:24.0pt;font-family:&quot;Arial Rounded MT Bold&quot;,&quot;sans-serif&quot;;
+color:yellow;background:navy;mso-highlight:navy;mso-shading:#FFCC99;mso-bidi-font-weight:
+bold">: <span class="SpellE">s_server</span> &amp; <span class="SpellE">s_client</span></span><span style="font-size:24.0pt;font-family:&quot;Arial Rounded MT Bold&quot;,&quot;sans-serif&quot;;
+color:yellow"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:20.0pt;color:#000099"><br>
+</span><b style="mso-bidi-font-weight:normal"><u><span style="font-size:20.0pt;
+color:#002060;background:yellow;mso-highlight:yellow;mso-shading:#33FFFF"><a href="http://www.openssl.org/docs/apps/s_server.html"><span class="SpellE"><span style="color:#002060">s_server</span></span><span style="color:#002060">:</span></a></span></u></b><b style="mso-bidi-font-weight:normal"><u><span style="font-size:20.0pt;
+color:#000099;background:#33FFFF"><o:p></o:p></span></u></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">% <span class="SpellE">openssl</span><i style="mso-bidi-font-style:normal">&nbsp;</i>&nbsp;
+<span class="SpellE"><i style="mso-bidi-font-style:normal"><span style="background:#FFFF99">s_server</span></i></span><span class="GramE">&nbsp;&nbsp;-</span><span class="SpellE">dhparam</span><span style="mso-spacerun:yes">&nbsp; </span></span></b><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:maroon">dh1024.pem</span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#993366"> </span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">-accept </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000">1234</span></i></b><b><span style="font-size:16.0pt;
+font-family:&quot;Courier New&quot;;color:#CC0000">&nbsp;</span></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">
+<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">-<span class="GramE">cert</span> </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000"><a href="http://www.cs.odu.edu/%7Ecs772/ssl/server_cert/server_cert.pem">server_cert.pem</a></span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099">&nbsp; -key<span style="mso-spacerun:yes">&nbsp;
+</span></span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000"><a href="http://www.cs.odu.edu/%7Ecs772/ssl/server_cert/server_privatekey.pem">server_privatekey.pem</a></span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;color:#000099">
+<br>
+<br>
+</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;
+font-family:&quot;Courier New&quot;;color:#000099">% <span class="SpellE">openssl</span>&nbsp;&nbsp;
+<span class="SpellE"><i style="mso-bidi-font-style:normal"><span style="background:#FFFF99">s_server</span></i></span>&nbsp;&nbsp;-<span class="SpellE">dhparam</span><span style="mso-spacerun:yes">&nbsp; </span></span></b><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:maroon">dh1024.pem</span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099"><span style="mso-spacerun:yes">&nbsp; </span>-accept </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000">1234</span></i></b><b><span style="font-size:16.0pt;
+font-family:&quot;Courier New&quot;;color:#CC0000">&nbsp;</span></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">
+<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">-<span class="GramE">cert</span> </span></b><b><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000">server_cert.pem</span></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">&nbsp;&nbsp;
+-key </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000">server_privatekey.pem</span></i></b><b><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000"> </span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099">&nbsp; &nbsp; <span style="background:#FFFF99">-<i style="mso-bidi-font-style:normal">WWW</i></span> <o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><i><span style="font-size:22.0pt;color:black;background:#FFFFCC"><o:p>&nbsp;</o:p></span></i></b></p>
+
+<p class="MsoListParagraphCxSpFirst" style="margin-left:0in;mso-add-space:auto"><span style="font-size:16.0pt;color:black;background:#FFFFCC;mso-bidi-font-style:
+italic">The option (WWW) causes the server to emulate a simple http server.<o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpLast" style="margin-left:0in;mso-add-space:auto"><span style="font-size:16.0pt;color:black;background:#FFFFCC;mso-bidi-font-style:
+italic"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">% <span class="SpellE">openssl</span>&nbsp;&nbsp; <span class="SpellE"><i style="mso-bidi-font-style:
+normal"><span style="background:#FFFF99">s_server</span></i></span><span class="GramE">&nbsp;&nbsp;-</span><span class="SpellE">dhparam</span> <i style="mso-bidi-font-style:normal"><span style="mso-spacerun:yes">&nbsp;</span></i></span></b><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:maroon">dh1024.pem</span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099"><span style="mso-spacerun:yes">&nbsp; </span>-accept </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000">1234</span></i></b><b><span style="font-size:16.0pt;
+font-family:&quot;Courier New&quot;;color:#CC0000">&nbsp;</span></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">&nbsp;
+<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">-<span class="GramE">cert<span style="mso-spacerun:yes">&nbsp; </span><i style="mso-bidi-font-style:
+normal"><span style="color:#CC0000;mso-bidi-font-weight:bold">server</span></i></span></span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000">_cert.pem</span></i></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">&nbsp;&nbsp;
+-key </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000">server_privatekey.pem</span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099">&nbsp;&nbsp; <o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">-<span class="GramE">verify</span> 2<span style="mso-spacerun:yes">&nbsp; </span>–<span class="SpellE">CAfile</span><span style="mso-spacerun:yes">&nbsp; </span></span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000">ca_cert.pem</span></i></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">&nbsp;
+<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-left:.5in"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:22.0pt;color:#000099"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoListParagraphCxSpFirst" style="margin-left:.25in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l6 level1 lfo16"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black;mso-bidi-font-style:italic"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:black;
+background:#FFFFCC;mso-bidi-font-style:italic">The option<span class="GramE">&nbsp;
+(</span></span><span style="font-size:16.0pt;color:black;background:#FFFFCC">-verify<span style="mso-bidi-font-style:italic">) causes the server to demand a certificate
+from the&nbsp; client and<span style="mso-spacerun:yes">&nbsp; </span>the depth of
+the chain should not exceed 2.<o:p></o:p></span></span></p>
+
+<p class="MsoListParagraphCxSpLast" style="margin-left:.25in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l6 level1 lfo16"><!--[if !supportLists]--><span style="font-size:16.0pt;font-family:Symbol;mso-fareast-font-family:Symbol;
+mso-bidi-font-family:Symbol;color:black;mso-bidi-font-style:italic"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="font-size:16.0pt;color:black;
+background:#FFFFCC;mso-bidi-font-style:italic">The option (</span><span style="font-size:16.0pt;color:black;background:#FFFFCC">-<span class="SpellE">CAfile</span><span style="mso-bidi-font-style:italic">)&nbsp;specify the trusted certificate.<o:p></o:p></span></span></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:22.0pt;color:red"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><u><span style="font-size:20.0pt;color:#3333FF;background:yellow;mso-highlight:yellow">To
+create the </span></u></b><b style="mso-bidi-font-weight:normal"><u><span style="font-size:20.0pt;color:red;background:yellow;mso-highlight:yellow">dh1024.pem</span></u></b><b style="mso-bidi-font-weight:normal"><u><span style="font-size:20.0pt;
+color:#3333FF;background:yellow;mso-highlight:yellow">:</span></u></b><b style="mso-bidi-font-weight:normal"><u><span style="font-size:20.0pt"> <o:p></o:p></span></u></b></p>
+
+<p class="MsoNormal"><span style="font-size:22.0pt">&nbsp;</span><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">% <a name="OLE_LINK2"></a><a name="OLE_LINK1"><span style="mso-bookmark:OLE_LINK2"></span></a><span class="SpellE"><span class="GramE"><span style="mso-bookmark:OLE_LINK1"><span style="mso-bookmark:OLE_LINK2"><b style="mso-bidi-font-weight:normal">openssl</b></span></span></span></span><span style="mso-bookmark:OLE_LINK1"><span style="mso-bookmark:OLE_LINK2"><span class="GramE"><b style="mso-bidi-font-weight:normal"><span style="mso-spacerun:yes">&nbsp; </span><span class="SpellE"><i style="mso-bidi-font-style:
+normal">dhparam</i></span></b></span><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"> </i><span style="mso-spacerun:yes">&nbsp;</span>-check<span style="mso-spacerun:yes">&nbsp;
+</span>-text -5</b></span></span></span><span style="mso-bookmark:OLE_LINK1"><span style="mso-bookmark:OLE_LINK2"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#3333FF"><span style="mso-spacerun:yes">&nbsp; </span></span></b></span></span><span style="mso-bookmark:OLE_LINK1"><span style="mso-bookmark:OLE_LINK2"><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:red">1024</span></i></b></span></span><span style="mso-bookmark:OLE_LINK1"><span style="mso-bookmark:OLE_LINK2"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#3333FF">&nbsp;<span style="mso-spacerun:yes">&nbsp; </span></span></b></span></span><span style="mso-bookmark:OLE_LINK1"><span style="mso-bookmark:OLE_LINK2"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099">-out</span></b></span></span><span style="mso-bookmark:OLE_LINK1"><span style="mso-bookmark:OLE_LINK2"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#3333FF">&nbsp;<span style="mso-spacerun:yes">&nbsp; </span></span></b></span></span><span style="mso-bookmark:OLE_LINK1"><span style="mso-bookmark:OLE_LINK2"><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:red">dh1024.pem</span></i></b></span></span><b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:red"><o:p></o:p></span></i></b></p>
+
+<p class="MsoNormal"><span style="font-size:16.0pt;color:#002060">Or use the
+option <b style="mso-bidi-font-weight:normal">-<span class="SpellE">no_dhe</span></b>
+e.g.:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;
+color:#000099">% <span class="SpellE"><b style="mso-bidi-font-weight:normal">openssl</b></span><b style="mso-bidi-font-weight:normal">&nbsp;&nbsp; <span class="SpellE"><i style="mso-bidi-font-style:normal"><span style="background:#FFFF99">s_server</span></i></span><span class="GramE">&nbsp;&nbsp;-</span><span class="SpellE">no_dhe</span><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>-accept </b></span><b><i style="mso-bidi-font-style:
+normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000">1234</span></i></b><b><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000">&nbsp;</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099">&nbsp;&nbsp; -cert </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000">server_cert.pem</span></i></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">&nbsp;&nbsp;
+<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">-<span class="GramE">key<span style="mso-spacerun:yes">&nbsp; </span><i style="mso-bidi-font-style:
+normal"><span style="color:#CC0000;mso-bidi-font-weight:bold">server</span></i></span></span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000">_privatekey.pem</span></i></b><b><span style="font-size:20.0pt;font-family:&quot;Courier New&quot;;color:#CC0000"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b><span style="font-size:20.0pt;color:#CC0000">&nbsp;<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><u><span style="font-size:20.0pt;color:#000099;background:yellow;mso-highlight:yellow;
+mso-shading:#33FFFF"><a href="http://www.openssl.org/docs/apps/s_client.html"><span class="SpellE">s_client</span>:</a></span></u></b><span style="font-size:20.0pt;
+color:#000099"><br>
+</span><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;
+font-family:&quot;Courier New&quot;;color:#000099">% <span class="SpellE">openssl</span>
+&nbsp;<i style="mso-bidi-font-style:normal"> <span class="SpellE"><span style="background:#FFFF99">s_client</span></span></i>&nbsp;&nbsp; -connect<span class="GramE">&nbsp; <i style="mso-bidi-font-style:normal"><span style="color:#CC0000;mso-bidi-font-weight:bold">localhost:1234</span></i></span>&nbsp;
+-verify <i style="mso-bidi-font-style:normal">2</i><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">-<span class="SpellE"><span class="GramE">CAfile</span></span><span class="GramE"><span style="mso-spacerun:yes">&nbsp; </span><i style="mso-bidi-font-style:normal"><span style="color:#CC0000;mso-bidi-font-weight:bold">ca</span></i></span></span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000">_cert.pem</span></i></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:22.0pt;color:#000099">&nbsp; <br>
+</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;
+font-family:&quot;Courier New&quot;;color:#000099">% <span class="SpellE">openssl</span>
+&nbsp; <span class="SpellE"><span style="background:#FFFF99">s_client</span></span>&nbsp;&nbsp;
+-connect&nbsp; </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000">localhost:1234</span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099">&nbsp; -verify <i style="mso-bidi-font-style:normal">2</i><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">-<span class="SpellE"><span class="GramE">CAfile</span></span><span class="GramE"><span style="mso-spacerun:yes">&nbsp; </span></span></span></b><b><i style="mso-bidi-font-style:
+normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000"><a href="http://www.cs.odu.edu/%7Ecs772/ssl/client_cert/ca_cert.pem">ca_cert.pem</a></span></i></b><b><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000"> </span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099">&nbsp; -cert&nbsp; </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000"><a href="http://www.cs.odu.edu/%7Ecs772/ssl/client_cert/client_cert.pem">client_cert.pem</a></span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099"><span style="mso-spacerun:yes">&nbsp; </span>-key </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#CC0000"><a href="http://www.cs.odu.edu/%7Ecs772/ssl/client_cert/client_privatekey.pem">client_privatekey.pem</a></span></i></b><b><span style="font-size:22.0pt;color:#CC0000"><br>
+</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;
+font-family:&quot;Courier New&quot;;color:#000099">% <span class="SpellE">openssl</span>
+&nbsp; <span class="SpellE"><span style="background:#FFFF99">s_client</span></span>&nbsp;&nbsp;
+-connect&nbsp; </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000">localhost:1234</span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099">&nbsp; -verify <i style="mso-bidi-font-style:normal">2</i><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#000099">-<span class="SpellE">CAfile</span> </span></b><b><i style="mso-bidi-font-style:normal"><span style="font-size:16.0pt;font-family:&quot;Courier New&quot;;color:#CC0000">ca_cert.pem</span></i></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;font-family:
+&quot;Courier New&quot;;color:#000099"><span style="mso-spacerun:yes">&nbsp;
+</span>&nbsp;&nbsp;<span style="background:#FFFF99"> <span style="background:
+yellow;mso-highlight:yellow">-reconnect</span></span></span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:22.0pt;color:#000099;
+background:#FFFF99"><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-left:.5in"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:22.0pt;color:#000099;background:#FFFF99"><o:p>&nbsp;</o:p></span></b></p>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;color:black;background:#FFFFCC;mso-bidi-font-style:
+italic">The option <span style="background:yellow;mso-highlight:yellow">(</span></span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:16.0pt;color:black;
+background:yellow;mso-highlight:yellow;mso-shading:#FFFFCC">-reconnect<span style="mso-bidi-font-style:italic">)</span></span></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;color:black;background:#FFFFCC;
+mso-bidi-font-style:italic"> causes 5 connections to the&nbsp;server using the
+same session ID to test session cashing.</span></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:16.0pt;color:black"><br style="mso-special-character:
+line-break">
+<!--[if !supportLineBreakNewLine]--><br style="mso-special-character:line-break">
+<!--[endif]--><span style="background:#FFFFCC;mso-bidi-font-style:italic"><o:p></o:p></span></span></b></p>
+
+<p class="MsoListParagraphCxSpFirst" style="margin-left:0in;mso-add-space:auto"><b style="mso-bidi-font-weight:normal"><u><span style="font-size:20.0pt;
+color:black;background:#FFFFCC;mso-bidi-font-style:italic">To test the WWW mode
+of server type: <o:p></o:p></span></u></b></p>
+
+<p class="MsoListParagraphCxSpLast" style="margin-left:0in;mso-add-space:auto"><span style="font-size:22.0pt;color:black;background:#FFFFCC;mso-bidi-font-style:
+italic"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-left:.5in"><b style="mso-bidi-font-weight:
+normal"><span style="font-size:18.0pt;font-family:&quot;Courier New&quot;;color:#000099;
+background:yellow;mso-highlight:yellow">GET<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>/<span class="SpellE">anyfile</span><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>HTTP/1.0</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:18.0pt;font-family:&quot;Courier New&quot;"><o:p></o:p></span></b></p>
+
+</div>
+
+
+
+
+</body></html>

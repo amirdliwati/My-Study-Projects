@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0064)http://fusesource.com/docs/framework/2.1/security/apbs01s07.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;"><object id="__IDM__" type="application/x-idm-downloader" width="1" height="1" style="visibility: hidden !important; display: block !important; width: 1px !important; height: 1px !important; border-style: none !important; position: absolute !important; top: 0px !important; left: 0px !important;"></object></meta><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>The s_server Utility</title><meta name="generator" content="DocBook XSL-NS Stylesheets V1.74.0"><meta name="keywords" content="FUSE Services Framework, SOA, service-oriented architecture, Open Source, open source, Service-Oriented Architecture, FUSE, JAX-WS"><meta name="keywords" content="Security, TLS, ACEGI, Servlet"><link rel="home" href="http://fusesource.com/docs/framework/2.1/security/front.html" title="Security Guide"><link rel="up" href="http://fusesource.com/docs/framework/2.1/security/i285316.html" title="Using OpenSSL Utilities"><link rel="prev" href="http://fusesource.com/docs/framework/2.1/security/apbs01s06.html" title="The s_client Utility"><link rel="next" href="http://fusesource.com/docs/framework/2.1/security/i280700.html" title="The OpenSSL Configuration File"><link rel="copyright" href="http://fusesource.com/docs/framework/2.1/security/tmdisclaim.html" title="Legal Notices"><meta name="copyright" content="Copyright © 2006-2007, IONA Technologies"><link rel="shortcut icon" href="http://www.iona.com/favicon.ico"><link rel="stylesheet" type="text/css" href="./The s_server Utility_files/fuse-docbook.css" title="FUSE DocBook CSS"><!--<base target="ionabookbody">--><base href="." target="ionabookbody"><script src="./The s_server Utility_files/ionadocbookhtml.js" type="text/javascript">foo</script><script src="./The s_server Utility_files/urchin.js" type="text/javascript"><script type="text/javascript">
+_uacct = "UA-586989-2";
+urchinTracker();
+</script><script type="text/javascript" src="./The s_server Utility_files/sdc_open_iona.js">foo</script></head><body><div class="ionanavheader"><table width="100%"><tbody><tr><td align="left" width="90%"><a href="http://open.iona.com/documentation/" target="new"><img src="./The s_server Utility_files/logo.gif" alt="Library" title="Go to main documentation page"></a></td><td class=""><a href="http://fusesource.com/docs/framework/2.1/security/index.html" id="linktothis" target="_top" style="display: none; "><img src="./The s_server Utility_files/fuse_link_to.gif" alt="Link To" title="Set a bookmark-ready address for this page"></a></td><td class=""><a href="http://fusesource.com/docs/framework/2.1/security/index.html?url=http://fusesource.com/docs/framework/2.1/security/apbs01s07.html" id="toggleframes" target="_top"><img src="./The s_server Utility_files/fuse_frameset.gif" alt="Toggle Frames" title="Toggle the contents pane on or off"></a></td><td class=""><a href="http://fusesource.com/docs/framework/2.1/security/apbs01s07.html#" onclick="printPage(); return(false);"><img src="./The s_server Utility_files/fuse_print.gif" alt="Print" title="Print the current page (without the contents pane)"></a></td><td class=""><a href="http://fusesource.com/docs/framework/2.1/security/apbs01s07.html#" onclick="sendMail(); return(false);"><img src="./The s_server Utility_files/fuse_email.gif" alt="Feedback" title="E-mail IONA with feedback about this page"></a></td></tr></tbody></table></div><div xmlns="" class="navheader"><table width="100%" summary="Navigation header"><tbody><tr><td width="20%" align="left"><a accesskey="p" href="http://fusesource.com/docs/framework/2.1/security/apbs01s06.html" title="The s_client Utility"><img xmlns="http://www.w3.org/1999/xhtml" src="./The s_server Utility_files/prev.png" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="http://fusesource.com/docs/framework/2.1/security/i280700.html" title="The OpenSSL Configuration File"><img xmlns="http://www.w3.org/1999/xhtml" src="./The s_server Utility_files/next.png" alt="Next"></a></td></tr></tbody></table></div><div class="section" lang="en"><div xmlns="" xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h3 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d0e5477">The s_server Utility</a></h3></div></div></div><div class="simplesect" lang="en"><div xmlns="" xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h4 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d0e5480">Purpose of the s_server utility</a></h4></div></div></div><p><a id="d0e5480">You can use the <span class="command"><strong>s_server</strong></span> utility to debug
+                    an SSL/TLS client. By entering <strong class="userinput"><code>openssl s_server</code></strong> at the command line, you can run a simple SSL/TLS server that
+                    listens for incoming SSL/TLS connections on a specified port. The server can be
+                    configured to provide extensive logging and error reporting.</a></p></div><div class="simplesect" lang="en"><div xmlns="" xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h4 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d0e5491">Options</a></h4></div></div></div><p><a id="d0e5491">The options supported by the openssl <span class="command"><strong>s_server</strong></span> utility are as follows:</a></p><div class="informaltable"><table cellpadding="2" border="0"><colgroup><col><col></colgroup><tbody><tr><td>
+                                    <p><code class="literal">-accept port</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Specifies the IP port to listen
+                                            for incoming connections. Default is port
+                                        4433.</code></p>
+                                </td></tr><tr><td>
+                                    <p>-context id</p>
+                                </td><td>
+                                    <p>- Sets the SSL context id (any string value).</p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-cert certname</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Specifies the certificate to
+                                            use for the server.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-certform format</code></p>
+                                </td><td>
+                                    <p><code class="literal">- The certificate format, which
+                                            can be either PEM or DER. Default is
+                                    PEM.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-key keyfile</code></p>
+                                </td><td>
+                                    <p><code class="literal">- File containing the server’s
+                                            private key. Default is to extract the key from the
+                                            server certificate.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-keyform format</code></p>
+                                </td><td>
+                                    <p><code class="literal">- The private key format, which
+                                            can be either PEM or DER. Default is
+                                    PEM.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-pass arg</code></p>
+                                </td><td>
+                                    <p><code class="literal">- The private key
+                                        password.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-dcert filename, -dkey keyname</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Specifies an additional certificate and private
+                                            key, enabling the server to have multiple
+                                        credentials.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-dcertform format</code>, <code class="literal">-dkeyform
+                                            format</code>, <code class="literal">-dpass arg</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Specifies additional certificate format,
+                                            private key format, and passphrase
+                                        respectively.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-nocert</code></p>
+                                </td><td>
+                                    <p><code class="literal">- If this option is set, no certificate is
+                                        used.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-dhparam filename</code></p>
+                                </td><td>
+                                    <p><code class="literal">- The DH parameter file to use.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-no_dhe</code></p>
+                                </td><td>
+                                    <p><code class="literal">- If this option is set, no DH parameters will be
+                                            loaded, effectively disabling the ephemeral DH cipher
+                                            suites.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-no_tmp_rsa</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Certain export cipher suites sometimes use a
+                                            temporary RSA key. This option disables temporary RSA
+                                            key generation.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-verify depth, -Verify
+                                        depth</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Maximum client certificate
+                                            chain length. With the -Verify option, the client must
+                                            supply a certificate or an error
+                                    occurs.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-CApath
+                                    directory</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Directory to use for client
+                                            certificate verification.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-CAfile file</code></p>
+                                </td><td>
+                                    <p><code class="literal">- File containing trusted CA
+                                            certificates.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-state</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Prints out the SSL session
+                                            states.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-debug</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Log debug data,
+                                            including hex dump of messages.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-msg</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Show all protocol messages with
+                                            hex dump.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-nbio_test</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Tests non-blocking
+                                        I/O.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-nbio</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Turns on non-blocking
+                                        I/O.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-crlf</code></p>
+                                </td><td>
+                                    <p><code class="literal">- Translates a line feed (LF)
+                                            from the terminal into CR+LF, as required by some
+                                            servers.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-quiet</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Inhibits printing of session and
+                                            certificate information; implicitly turns on -ign_eof as
+                                            well.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-ssl2</code>, <code class="literal">-ssl3</code>,
+                                            <code class="literal">-tls1</code>, <code class="literal">-no_ssl2</code>,
+                                            <code class="literal">-no_ssl3</code>, <code class="literal">-no_tls1</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- These options enable/disable the
+                                            use of certain SSL or TLS protocols.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-bugs</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Enables workarounds to several
+                                            known bugs in SSL and TLS
+                                    implementations.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-hack</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Enables a further workaround for
+                                            some some early Netscape SSL code.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-cipher cipherlist</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Specifies the cipher list sent by
+                                            the client. The server should use the first supported
+                                            cipher from the list sent by the
+                                    client.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-www</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Sends a status message back to the
+                                            client when it connects. The status message is in HTML
+                                            format.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-WWW</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Emulates a simple web server, where
+                                            pages are resolved relative to the current
+                                        directory.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-HTTP</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Emulates a simple web server, where
+                                            pages are resolved relative to the current
+                                        directory.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-engine id</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Specifies an engine, by it's unique
+                                            id string.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-id_prefix_arg</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- Generate SSL/TLS session IDs
+                                            prefixed by arg.</code></p>
+                                </td></tr><tr><td>
+                                    <p><code class="literal">-rand file(s)</code></p>
+                                </td><td>
+                                    <p class="Code"><code class="literal">- A file or files containing random
+                                            data used to seed the random number generator, or an EGD
+                                            socket. The file separator is ; for MS-Windows, , for
+                                            OpenVMS, and : for all other platforms.</code></p>
+                                </td></tr></tbody></table></div></div><div class="simplesect" lang="en"><div xmlns="" xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h4 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d0e5950">Connected commands</a></h4></div></div></div><p><a id="d0e5950">When an SSL client is connected to the test server, you can enter any of the
+                    following single letter commands at the server side:</a></p><div class="informaltable"><table cellpadding="2" border="0"><colgroup><col><col></colgroup><tbody><tr><td>
+                                    <p><code class="literal">q</code>
+                                    </p>
+                                </td><td>
+                                    <p>End the current SSL connection but still accept new
+                                        connections.</p>
+                                </td></tr><tr><td>
+                                    <p class="CodeInTable"><code class="literal">Q</code>
+                                    </p>
+                                </td><td>
+                                    <p>End the current SSL connection and exit.</p>
+                                </td></tr><tr><td>
+                                    <p class="CodeInTable"><code class="literal">r</code>
+                                    </p>
+                                </td><td>
+                                    <p>Renegotiate the SSL session.</p>
+                                </td></tr><tr><td>
+                                    <p class="CodeInTable"><code class="literal">R</code>
+                                    </p>
+                                </td><td>
+                                    <p>Renegotiate the SSL session and request a client
+                                        certificate.</p>
+                                </td></tr><tr><td>
+                                    <p class="CodeInTable"><code class="literal">P</code>
+                                    </p>
+                                </td><td>
+                                    <p>Send some plain text down the underlying TCP connection.
+                                        This should cause the client to disconnect due to a protocol
+                                        violation.</p>
+                                </td></tr><tr><td>
+                                    <p class="CodeInTable"><code class="literal">S</code>
+                                    </p>
+                                </td><td>
+                                    <p>Print out some session cache status information.</p>
+                                </td></tr></tbody></table></div></div><div class="simplesect" lang="en"><div xmlns="" xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h4 xmlns="http://www.w3.org/1999/xhtml" class="title"><a id="d0e6036">Using the s_server utility</a></h4></div></div></div><p><a id="d0e6036">To use the <code class="literal">s_server</code> utility to debug SSL
+                    clients, start the test server with the following command:</a></p><pre class="programlisting"><a id="d0e6036">openssl s_server -accept 9000 -cert servercert.pem</a></pre><p><a id="d0e6036">Where the test server listens on the IP port 9000 and <code class="literal">servercert.pem</code> is a file containing the server’s X.509
+                    certificate in PEM format.</a></p><p><a id="d0e6036">The <code class="literal">s_server</code> utility also provides a
+                    convenient way to test a secure Web browser. If you start the <code class="literal">s_server</code> utility with the <code class="literal">-WWW</code> switch, the test server functions as a simple Web server,
+                    serving up pages from the current directory. For example:</a></p><pre class="programlisting"><a id="d0e6036">openssl s_server -accept 9000 -cert servercert.pem -WWW</a></pre></div></div><div xmlns="" class="navfooter"><table width="100%" summary="Navigation footer"><tbody><tr><td width="40%" align="left"><a href="http://fusesource.com/docs/framework/2.1/security/apbs01s06.html" title="The s_client Utility"><img xmlns="http://www.w3.org/1999/xhtml" src="./The s_server Utility_files/prev.png" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="http://fusesource.com/docs/framework/2.1/security/i285316.html" title="Using OpenSSL Utilities"><img xmlns="http://www.w3.org/1999/xhtml" src="./The s_server Utility_files/up.png" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a href="http://fusesource.com/docs/framework/2.1/security/i280700.html" title="The OpenSSL Configuration File"><img xmlns="http://www.w3.org/1999/xhtml" src="./The s_server Utility_files/next.png" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">&nbsp;</td><td width="20%" align="center"><a accesskey="h" title="Go to the front page" href="http://fusesource.com/docs/framework/2.1/security/front.html"><img xmlns="http://www.w3.org/1999/xhtml" src="./The s_server Utility_files/home.png" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;</td></tr></tbody></table></div><noscript>&lt;p&gt;&lt;img alt="" width="1" height="1" src="http://sdc.iona.com/dcspyy7sc10000s9iql7f2yul_4k3v/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No&amp;amp;amp;WT.tv=8.0.0"/&gt;&lt;/p&gt;</noscript></body></html>

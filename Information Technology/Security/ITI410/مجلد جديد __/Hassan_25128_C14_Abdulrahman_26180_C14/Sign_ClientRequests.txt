@@ -1,0 +1,2 @@
+c:\OpenSSL\bin\openssl ca -in c:\sec\C1.crs -out c:\sec\Signed_C1_CRS.ca
+c:\OpenSSL\bin\openssl ca -in c:\sec\C2.crs -out c:\sec\Signed_C2_CRS.ca

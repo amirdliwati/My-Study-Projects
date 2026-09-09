@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl aes-256-cbc -salt -in c:\sec\message.txt -out c:\sec\message.enc -k c:\sec\pwd.txt

@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl rsa -in c:\sec\RSAKeys.pem -out c:\sec\RSA_Publickey.pem -outform PEM -pubout

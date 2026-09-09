@@ -1,0 +1,1 @@
+if(window.RenderingHook && typeof window.RenderingHook == 'function'){RenderingHook();}

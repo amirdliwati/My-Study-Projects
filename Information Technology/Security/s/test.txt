@@ -1,0 +1,13 @@
+s_server -accept 9000 -cert c:\newcerts\server_cert.pem
+
+
+
+ca -config c:\s\openssl.txt -cert c:\s\newcerts\ca_cert.pem -in c:\s\client.crs -keyfile c:\s\newcerts\ca.key -out c:\s\newcerts\client_cert.pem 
+
+-config c:\s\openssl.txt
+
+
+cd "C:\OpenSSL-Win32\bin"
+openssl.exe x509 -req -in C:\s\server.crs -signkey C:\s\server.key -out C:\s\newcerts\server_cert.pem
+cd "C:\OpenSSL-Win32\bin"
+openssl.exe x509 -req -in C:\s\client.crs -signkey C:\s\client.key -out C:\s\newcerts\client_cert.pem

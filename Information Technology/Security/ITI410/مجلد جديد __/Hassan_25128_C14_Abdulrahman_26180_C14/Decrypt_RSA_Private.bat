@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl rsautl -decrypt -inkey c:\sec\RSAKeys.pem -in c:\sec\Encrypted_RSA_public.txt -out c:\sec\Decrypted_RSA_Private.txt

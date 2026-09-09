@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>frequently used SSL commands</title>
+ <style type="text/css">
+ <!--
+ body{
+font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+h1 {
+font-family: Helvetica, Verdana, Arial, sans-serif;
+font-size: large;
+}
+
+.download {
+font-family: Helvetica, Verdana, Arial, sans-serif;
+font-size: 0.7em;
+border:1px solid #EEE;
+padding: 2px;
+}
+
+code {
+color: #900;
+font-size: 12px;
+}
+
+.console {
+background-color: #000000;
+border: thin solid #CCCCCC;
+font-family: "lucida console",mono;
+font-size: 12px;
+color: #DDD;
+padding: 5px;
+}
+
+.console_input {
+color: #F60;
+}
+
+.console_mustedit {
+color: #F60;
+text-decoration: underline;
+}
+
+
+
+.config {
+background-color: #EEEEEE;
+border: 1px dashed #999999;
+font-family: "Courier New", Courier, mono;
+font-size: 12px;
+color: #000000;
+padding: 5px;
+}
+
+.config_prompt {
+color: #900;
+font-weight: bold;
+}
+
+.config_mustedit {
+color: #900;
+font-weight: bold;
+text-decoration: underline;
+}
+
+
+.config_comment {
+font-family: "Courier New", Courier, mono;
+color: #797979;
+font-size: 12px;
+}
+
+
+li {
+margin-bottom: 5px;
+}
+
+
+ -->
+ dd {
+  	margin: 10px;
+ }
+ </style>
+
+</head>
+
+
+<body>
+<h1>A few frequently used SSL commands</h1>
+<a href="#openssl">using openssl</a><br>
+<a href="#keytool">using keytool</a> (included in recent Sun java reference implementations)<br>
+
+<dl>
+<a name="openssl">
+<h2>openssl</h2>
+
+</a><a name="GenerateKeyAndCertificate"></a>
+  <dt>generate a new private key and matching Certificate Signing Request (eg to send to a commercial CA)</dt><dt>
+	</dt><dd class="console">
+		openssl req
+		-out <span class="console_input">MYCSR</span>.csr 
+		-pubkey 
+		-new 
+		-keyout <span class="console_input">MYKEY</span>.key
+	</dd>
+	<dd>
+		<small>
+		add <code>-nodes</code> to create an unencrypted private key<br>
+		add <code>-config <i>&lt;openssl.cnf&gt;</i></code> if your config file has not been set in the environment
+		</small>
+	</dd>
+<a name="DecryptPrivateKey"></a>
+  <dt>decrypt private key</dt>
+	<dd class="console">
+		openssl rsa 
+		-in <span class="console_input">MYKEY</span>.key &gt;&gt; <span class="console_input">MYKEY-NOCRYPT</span>.key
+	</dd>
+<a name="GenerateCertificateSigningRequest"></a>
+  <dt>generate a certificate siging request for an existing private key</dt>
+	<dd class="console">
+		openssl req
+		-out <span class="console_input">MYCSR</span>.csr 
+		-key <span class="console_input">MYKEY</span>.key 
+		-new
+	</dd>
+<a name="RegenerateCertificateSigningRequestFromCertificate"></a>
+  <dt>generate a certificate signing request based on an existing x509 certificate</dt>
+	<dd class="console">
+		openssl x509 
+		-x509toreq 
+		-in <span class="console_input">MYCRT</span>.crt 
+		-out <span class="console_input">MYCSR</span>.csr 
+		-signkey <span class="console_input">MYKEY</span>.key 
+	</dd>
+<a name="CreateSelfSigned"></a>
+  <dt>create self-signed certificate (can be used to sign other certificates)</dt>
+	<dd class="console">
+		openssl req 
+		-x509
+		-new
+		-out <span class="console_input">MYCERT</span>.crt 
+		-keyout <span class="console_input">MYKEY</span>.key 
+		-days 365
+	</dd>
+<a name="SignCsr"></a>
+  <dt>sign a Certificate Signing Request</dt>
+	<dd class="console">
+		openssl x509 
+		-req 
+		-in <span class="console_input">MYCSR</span>.csr 
+		-CA <span class="console_input">MY-CA-CERT</span>.crt
+		-CAkey <span class="console_input">MY-CA-KEY</span>.key
+		-CAcreateserial
+		-out <span class="console_input">MYCERT</span>.crt
+		-days <span class="console_input">365</span>
+	</dd>
+	<dd>
+		<small>
+		<code>-days</code> has to be less than the validity of the CA certificate
+		</small>
+	</dd>
+
+
+<br>
+<hr>
+<br>
+
+<a name="DerToPem"></a>
+  <dt>convert DER (.crt .cer .der) to PEM</dt>
+	<dd class="console">
+		openssl x509 
+		-inform der 
+		-in <span class="console_input">MYCERT.cer</span> 
+		-out <span class="console_input">MYCERT</span>.pem
+	</dd>
+<a name="PemToDer"></a>
+  <dt>convert PEM to DER</dt>
+	<dd class="console">
+		openssl x509 
+		-outform der 
+		-in <span class="console_input">MYCERT.pem</span> 
+		-out <span class="console_input">MYCERT</span>.der
+	</dd>
+<a name="Pkcs12ToPem"></a>
+  <dt>convert PKCS#12 (.pfx .p12) to PEM containing both private key and certificates</dt>
+ 	<dd class="console">
+		openssl pkcs12 
+		-in <span class="console_input">KEYSTORE.pfx</span> 
+		-out <span class="console_input">KEYSTORE</span>.pem 
+		-nodes
+	</dd>
+	<dd>
+		<small>
+		add <code>-nocerts</code> for private key only; add <code>-nokeys</code> for certificates only
+		</small>
+	</dd>
+<a name="PemToPkcs12"></a>
+  <dt>convert (add) a seperate key and certificate to a new keystore of type PKCS#12</dt>
+ 	<dd class="console">
+		openssl pkcs12
+		-export
+		-in <span class="console_input">MYCERT.crt</span> 
+		-inkey <span class="console_input">MYKEY.key</span> 
+		-out <span class="console_input">KEYSTORE</span>.p12
+		-name "<span class="console_input">tomcat</span>"
+	</dd>
+<a name="PemToPkcs12WitchChain"></a>
+  <dt>convert (add) a seperate key and certificate to a new keystore of 
+type PKCS#12 for use with a server that should send the chain too (eg 
+Tomcat)</dt>
+ 	<dd class="console">
+		openssl pkcs12
+		-export
+		-in <span class="console_input">MYCERT.crt</span> 
+		-inkey <span class="console_input">MYKEY.key</span> 
+		-out <span class="console_input">KEYSTORE</span>.p12
+		-name "<span class="console_input">tomcat</span>"
+		-CAfile <span class="console_input">MY-CA-CERT.crt</span> -caname <span class="console_input">myCA</span> 
+		-chain  
+	</dd>
+	<dd>
+		<small>
+			you can repeat the combination of "-CAfile" and "-caname" for each intermediate certificate<br>
+		</small>
+	</dd>
+
+<br>
+<hr>
+<br>
+
+<a name="CheckKey"></a>
+  <dt>check a private key</dt>
+	<dd class="console">
+		openssl rsa 
+		-in <span class="console_input">MYKEY</span>.key
+		-check 
+	</dd>
+	<dd>
+		<small>
+		add <code>-noout</code> to not disclose the key
+		</small>
+	</dd>
+<a name="CheckCsr"></a>
+  <dt>check a Certificate Signing Request</dt>
+	<dd class="console">
+		openssl req 
+		-text 
+		-noout
+		-verify 
+		-in <span class="console_input">MYCSR</span>.csr
+	</dd>
+<a name="CheckCrt"></a>
+  <dt>check a certificate</dt>
+	<dd class="console">
+		openssl x509 
+		-in <span class="console_input">MYCERT</span>.crt
+		-text 
+		-noout
+	</dd>
+<a name="CheckPkcs12"></a>
+  <dt>check a PKCS#12 keystore</dt>
+	<dd class="console">
+		openssl pkcs12 
+		-info 
+		-in <span class="console_input">KEYSTORE</span>.p12
+	</dd>
+<a name="CheckChain"></a>
+  <dt>check a trust chain of a certificate</dt>
+	<dd class="console">
+		openssl verify 
+		-CAfile <span class="console_input">MYCHAINFILE</span>.pem
+		-verbose
+		<span class="console_input">MYCERT.crt</span>
+	</dd>
+	<dd>
+		<small>
+		trust chain is in directory (<a href="#HashFormat">hash format</a>): replace <code>-CAfile</code> with <code>-CApath /path/to/CAchainDir/</code><br>
+		to check for server usage: <code>-purpose sslserver</code><br>
+		to check for client usage: <code>-purpose sslient</code><br>
+		</small>
+	</dd>
+
+<br>
+<hr>
+<br>
+
+
+<a name="CheckConnect"></a>
+  <dt>debug an SSL connection [server doesn't require certificate authentication]</dt>
+	<dd class="console">
+		openssl s_client 
+		-connect <span class="console_input">idp.example.be:443</span>
+	</dd>
+<a name="CheckConnectAuth"></a>
+  <dt>debug an SSL connection with mutual certificate authentication</dt>
+	<dd class="console">
+		openssl s_client 
+		-connect <span class="console_input">idp.example.be:8443</span> 
+		-CAfile <span class="console_input">MY-CA-CERT</span>.crt 
+		-cert <span class="console_input">MYCERT</span>.crt
+		-key <span class="console_input">MYKEY</span>.key           
+	</dd>
+	<dd>
+		<small>
+		trust chain is in directory (<a href="#HashFormat">hash format</a>): replace <code>-CAfile</code> with <code>-CApath /path/to/CAchainDir/</code><br>
+		send the starttls command (smtp or pop3 style): <code>-starttls smtp</code> or <code>-starttls pop3</code>
+		</small>
+	</dd>
+
+<br>
+<hr>
+<a name="keytool">
+<h2>keytool</h2>
+<small>
+<code>keytool</code> does not support management of private keys inside a keystore. You need to use another tool for that.
+If you are using the JKS format, that means you need another java-based tool. <code>extkeytool</code> from the Shibboleth distribution can do this.
+</small><br>
+<br>
+
+
+</a><a name="emptystore-JKS"></a>
+ <dt>Create an empty keystore</dt>
+  	<dd class="console">
+		keytool -genkey -alias foo -keystore truststore.jks<br>
+		keytool -delete -alias foo -keystore truststore.jks
+	</dd>
+
+<a name="genkey-JKS"></a>
+ <dt>Generate a private key and an initial certificate as a JKS keystore</dt>
+  	<dd class="console">
+		keytool 
+		-genkey 
+		-keyalg RSA
+		-alias "<span class="console_input">selfsigned</span>"
+		-keystore <span class="console_input">KEYSTORE</span>.jks
+		-storepass "<span class="console_input">secret</span>"
+		-validity <span class="console_input">360</span>
+	</dd>
+	<dd>
+		<small>you can also pass the data for the DN of the certificate as command-line parameters: <code>-dname "CN=${pki-cn}, OU=${pki-ou}, O=${pki-o}, L=${pki-l}, S=${pki-s}, C=${pki-c}"</code></small>
+	</dd>
+<a name="genseckey-JCEKS"></a>
+ <dt>Generate a secret key that can be used for symmetric encryption. For this to work, you need to make use of a <em>JCEKS</em> keystore.</dt>
+  	<dd class="console">
+		keytool 
+		-genseckey
+		-alias "<span class="console_input">secret_key</span>"
+		-keystore <span class="console_input">KEYSTORE</span>.jks
+		-storepass "<span class="console_input">secret</span>"
+		-storetype "<span class="console_input">JCEKS</span>"
+	</dd>
+<a name="genCSR-JKS"></a>
+ <dt>Generate a Certificate Signing Request for a key in a JKS keystore</dt>
+  	<dd class="console">
+		keytool 
+		-certreq -v
+		-alias "<span class="console_input">selfsigned</span>"
+		-keystore <span class="console_input">KEYSTORE</span>.jks
+		-storepass "<span class="console_input">secret</span>"
+		-file <span class="console_input">MYCSR</span>.csr
+	</dd>
+
+<a name="importCRT-JKS"></a>
+ <dt>Import a (signed) certificate into a JKS keystore</dt>
+  	<dd class="console">
+		keytool
+		-import
+		-keystore <span class="console_input">KEYSTORE</span>.jks
+		-storepass "<span class="console_input">secret</span>"
+		-file <span class="console_input">MYCERT</span>.crt
+	</dd>
+
+<a name="AddCertToJVMTrust"></a>
+ <dt>add a public certificate to a JKS keystore, eg the JVM truststore</dt>
+   	<dd class="console">
+		keytool
+		-import 
+		-trustcacerts 
+		-alias "<span class="console_input">sensible-name-for-ca</span>" 
+		-file <span class="console_input">CAcert.crt</span> 
+		-keystore <span class="console_input">MYSTORE</span>.jks
+	</dd>
+	<dd>
+		<small>If the JVM truststore contains your certificate or the 
+certificate of the root CA that signed your certificate, then the JVM 
+will trust and thus might accept your certificate. The default 
+truststore already contains the root certificates of most commonly used 
+sommercial CA's. Use this command to add another certificate for trust:</small><br>
+	</dd>
+ 	<dd class="console">
+		keytool 
+		-import 
+		-trustcacerts 
+		-alias "<span class="console_input">sensible-name-for-ca</span>" 
+		-file <span class="console_input">CAcert.crt</span> 
+		-keystore <span class="console_input">$JAVA_HOME</span>/lib/security/cacerts
+	</dd>
+	<dd>
+		<small>the default password of the Java truststore is "changeit".</small><br>
+		<small>if $JAVA_HOME is set to the root of the JDK, then the truststore is it $JAVA_HOME/<b>jre</b>/lib/security/cacerts</small><br>
+		<small>keytool does NOT support adding trust certificates to a PKCS12 
+keystore (which is very unfortunate but probably a good move to promote 
+JKS)</small>
+	</dd>
+
+<a name="RemoveCertFromJKS"></a>
+  <dt>delete a public certificate from a JAVA keystore (JKS; eg JVM truststore)</dt>
+  	<dd class="console">
+		keytool 
+		-delete
+		-alias "<span class="console_input">sensible-name-for-ca</span>" 
+		-keystore <span class="console_input">$JAVA_HOME</span>/lib/security/cacerts
+	</dd>
+	<dd>
+		<small>the default password of the Java truststore is "changeit".</small><br>
+		<small>if $JAVA_HOME is set to the root of the JDK, then the truststore is it $JAVA_HOME/<b>jre</b>/lib/security/cacerts</small><br>
+	</dd>
+
+<a name="listCerts-keytool"></a>
+  <dt>List the certificates inside a keystore</dt>
+  	<dd class="console">
+		keytool 
+		-list
+		-v
+		-keystore <span class="console_input">KEYSTORE.jks</span>
+	</dd>
+	<dd>
+		<small><code>-storetype pkcs12</code> can be used</small>
+	</dd>
+
+<a name="certInfo-keytool"></a>
+  <dt>Get information about a stand-alone certificate</dt>
+  	<dd class="console">
+		keytool 
+		-printcert
+		-v
+		-file <span class="console_input">MYCERT.crt</span>
+	</dd>
+
+<a name="convertToPKCS12-keytool"></a>
+  <dt>Convert a JKS file to PKCS12 format (Java 1.6.x and above)</dt>
+  	<dd class="console">
+		keytool 
+		-importkeystore 
+		-srckeystore <span class="console_input">KEYSTORE.jks</span> 
+		-destkeystore <span class="console_input">KEYSTORE.p12</span>
+		-srcstoretype JKS 
+		-deststoretype PKCS12 
+		-srcstorepass mysecret 
+		-deststorepass mysecret 
+		-srcalias myalias 
+		-destalias myalias 
+		-srckeypass mykeypass 
+		-destkeypass mykeypass 
+		-noprompt
+	</dd>
+
+
+</dl>
+<hr>
+
+<br>
+<a name="certutil"></a>
+<h2>certutil</h2>
+<br>
+<dl>
+<a name="addPKCS12"></a>
+ <dt>Add a PKCS12 to a windows certificate store</dt>
+  	<dd class="console">
+	  certutil -p <span class="console_input">secret</span> -importpfx <span class="console_input">KEYSTORE.p12</span>
+	</dd>
+</dl>
+<hr>
+<br>
+
+notes:<br>
+<br>
+<u>openssl</u> for win32 can be downloaded at <a href="http://www.slproweb.com/products/Win32OpenSSL.html">http://www.slproweb.com/products/Win32OpenSSL.html</a>. Version v0.9.8 is known to cause problems in combination with Shibboleth SP v1.3!<br>
+<br>
+<u>keytool</u> is a part of each Sun Java distribution (binary). You need it to manipulate the Java KeyStore (JKS) format.<br>
+<br>
+<a name="HashFormat"><u>hash format:</u> the <code>-CApath</code> directory should contain each certificate that needs to be trusted.
+The name of each certificate has to be its hashed value and a number.
+When running unix, execute "$ c_rehash ./" to create symlinks with the correct names.
+You can also do this manually with the <code>-hash</code> option of openssl (see "openssl verify").<br>
+<br>
+
+
+please send remarks, corrections and other often used commands to </a><a href="mailto:shib@kuleuven.net">shib@kuleuven.net</a><br>
+<p align="right">
+Authors: Brusten Philip &amp; Van der Velpen Jan <br>
+Last modified: Wednesday, 17-Sep-2008 09:48:24 CEST<br>
+</p>
+
+
+
+</body></html>

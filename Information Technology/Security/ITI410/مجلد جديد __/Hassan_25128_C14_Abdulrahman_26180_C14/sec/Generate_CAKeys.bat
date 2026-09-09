@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl genrsa -out c:\sec\newcerts\ca.key 1024        

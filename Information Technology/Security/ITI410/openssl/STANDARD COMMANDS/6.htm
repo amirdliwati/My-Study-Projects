@@ -1,0 +1,777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"><head><link rel="stylesheet" type="text/css" href="6_files/pwet2.css">
+<!--[if lte IE 6]>
+<link rel="stylesheet" type="text/css" href="http://m.pwet.fr/extension/pwet2/design/pwet2/stylesheets/ie6.css?rev=20110308" />
+<![endif]-->
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="http://m.pwet.fr/extension/pwet2/design/pwet2/stylesheets/ie7.css?rev=20110308" />
+<![endif]-->
+<title>man openssl - OpenSSL command line tool / ssl</title>
+<meta name="description" content="man openssl - OpenSSL command line tool">
+<meta name="robots" content="noodp">
+<meta name="MSSmartTagsPreventParsing" content="TRUE">
+<meta name="generator" content="eZ Publish">
+<meta http-equiv="Content-language" content="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="Shortcut icon" href="http://pwet.fr/extension/pwet2/design/pwet2/images/favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" href="http://pwet.fr/feed/blog" title="Flux RSS du blog"><link rel="alternate" type="application/rss+xml" href="http://pwet.fr/feed/galerie" title="Flux RSS des galeries photos">
+
+<script src="6_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1600697-1']);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+</script>
+
+
+</head>
+<body><div id="header">
+<div id="header_inner" class="fixed">
+<div id="logo">
+<h1><span><a href="http://pwet.fr/">cd ~tigrou</a>/<a href="http://pwet.fr/man/linux/commandes/ssl2/openssl">pwet.fr</a>/<a href="http://pwet.fr/man">man</a>/<a href="http://pwet.fr/man/linux">linux</a>/<a href="http://pwet.fr/man/linux/commandes">Commandes</a>/<a href="http://pwet.fr/man/linux/commandes/ssl2">ssl</a>/<a href="http://pwet.fr/man/linux/commandes/ssl2/openssl">openssl</a></span></h1>
+</div>
+<div id="menu"><ul>
+<li><a href="http://pwet.fr/">Accueil</a></li>
+<li><a href="http://pwet.fr/blog">Blog</a></li>
+<li><a href="http://pwet.fr/cv">CV</a></li>
+<li><a href="http://pwet.fr/photos">Photos</a></li>
+<li><a href="http://pwet.fr/man/linux" class="active">man linux</a></li>
+<li class="h"><a href="http://pwet.fr/media">Media</a></li>
+<li><a href="http://www.bioutifoul-photos.net/">Bioutifoul Photos</a></li>
+</ul></div>
+</div>
+</div>
+<div id="main">
+    <div id="main_inner" class="fixed">
+    <div id="primaryContent_2columns">
+    <div id="columnA_2columns">
+            <div class="man manpage">
+    <h1><a href="http://pwet.fr/man/linux/commandes/ssl2/openssl">man openssl</a> (<a href="http://pwet.fr/man/linux/commandes/ssl2"></a>) - OpenSSL command line tool</h1>
+    <div class="pubman">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7171863654720058";
+/* 728x90, date de création 03/08/08 */
+google_ad_slot = "2353361095";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="6_files/show_ads.js"> </script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" vspace="0" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" scrolling="no" width="728" height="90"></iframe></ins></ins>
+    </div>
+    <div class="body">
+    	<h2>NAME</h2><div class="part"><p>openssl - OpenSSL command line tool
+</p></div><h2>SYNOPSIS</h2><div class="part"><p><b>openssl</b>
+<i>command</i>
+[ <i>command_opts</i> ]
+[ <i>command_args</i> ]
+</p><p>
+<b>openssl</b> [ <b>list-standard-commands</b> | <b>list-message-digest-commands</b> | <b>list-cipher-commands</b> ]
+</p><p>
+<b>openssl</b> <b>no-</b><i>XXX</i> [ <i>arbitrary options</i> ]
+</p></div><h2>DESCRIPTION</h2><div class="part"><p>OpenSSL is a cryptography toolkit implementing the Secure Sockets Layer (SSL
+v2/v3) and Transport Layer Security (TLS v1) network protocols and related
+cryptography standards required by them.
+</p><p>
+The <b>openssl</b> program is a command line tool for using the various
+cryptography functions of OpenSSL's <b>crypto</b> library from the shell. 
+It can be used for 
+</p><p>
+</p><pre> o  Creation of RSA, DH and DSA key parameters
+ o  Creation of X.509 certificates, CSRs and CRLs 
+ o  Calculation of Message Digests
+ o  Encryption and Decryption with Ciphers
+ o  SSL/TLS Client and Server Tests
+ o  Handling of S/MIME signed or encrypted mail
+</pre>
+<p></p></div><h2>COMMAND SUMMARY</h2><div class="part"><p>The <b>openssl</b> program provides a rich variety of commands (<i>command</i> in the
+SYNOPSIS above), each of which often has a wealth of options and arguments
+(<i>command_opts</i> and <i>command_args</i> in the SYNOPSIS).
+</p><p>
+The pseudo-commands <b>list-standard-commands</b>, <b>list-message-digest-commands</b>,
+and <b>list-cipher-commands</b> output a list (one entry per line) of the names
+of all standard commands, message digest commands, or cipher commands,
+respectively, that are available in the present <b>openssl</b> utility.
+</p><p>
+The pseudo-command <b>no-</b><i>XXX</i> tests whether a command of the
+specified name is available.  If no command named <i>XXX</i> exists, it
+returns 0 (success) and prints <b>no-</b><i>XXX</i>; otherwise it returns 1
+and prints <i>XXX</i>.  In both cases, the output goes to <b>stdout</b> and
+nothing is printed to <b>stderr</b>.  Additional command line arguments
+are always ignored.  Since for each cipher there is a command of the
+same name, this provides an easy way for shell scripts to test for the
+availability of ciphers in the <b>openssl</b> program.  (<b>no-</b><i>XXX</i> is
+not able to detect pseudo-commands such as <b>quit</b>,
+<b>list-</b><i>...</i><b>-commands</b>, or <b>no-</b><i>XXX</i> itself.)
+</p></div><h2>STANDARD COMMANDS</h2><div class="part"><dl><dt><b>asn1parse</b></dt><dd>
+Parse an ASN.1 sequence.
+</dd><dt><b>ca</b></dt><dd>
+Certificate Authority (CA) Management.  
+</dd><dt><b>ciphers</b></dt><dd>
+Cipher Suite Description Determination.
+</dd><dt><b>crl</b></dt><dd>
+Certificate Revocation List (CRL) Management.
+</dd><dt><b>crl2pkcs7</b></dt><dd>
+CRL to PKCS#7 Conversion.
+</dd><dt><b>dgst</b></dt><dd>
+Message Digest Calculation.
+</dd><dt><b>dh</b></dt><dd>
+Diffie-Hellman Parameter Management.
+Obsoleted by <b>dhparam</b>.
+</dd><dt><b>dsa</b></dt><dd>
+DSA Data Management.
+</dd><dt><b>dsaparam</b></dt><dd>
+DSA Parameter Generation.
+</dd><dt><b>enc</b></dt><dd>
+Encoding with Ciphers.
+</dd><dt><b>errstr</b></dt><dd>
+Error Number to Error String Conversion.
+</dd><dt><b>dhparam</b></dt><dd>
+Generation and Management of Diffie-Hellman Parameters.
+</dd><dt><b>gendh</b></dt><dd>
+Generation of Diffie-Hellman Parameters.
+Obsoleted by <b>dhparam</b>.
+</dd><dt><b>gendsa</b></dt><dd>
+Generation of DSA Parameters.
+</dd><dt><b>genrsa</b></dt><dd>
+Generation of RSA Parameters.
+</dd><dt><b>ocsp</b></dt><dd>
+Online Certificate Status Protocol utility.
+</dd><dt><b>passwd</b></dt><dd>
+Generation of hashed passwords.
+</dd><dt><b>pkcs12</b></dt><dd>
+PKCS#12 Data Management.
+</dd><dt><b>pkcs7</b></dt><dd>
+PKCS#7 Data Management.
+</dd><dt><b>rand</b></dt><dd>
+Generate pseudo-random bytes.
+</dd><dt><b>req</b></dt><dd>
+X.509 Certificate Signing Request (CSR) Management.
+</dd><dt><b>rsa</b></dt><dd>
+RSA Data Management.
+</dd><dt><b>rsautl</b></dt><dd>
+RSA utility for signing, verification, encryption, and decryption.
+</dd><dt><b>s_client</b></dt><dd>
+This implements a generic SSL/TLS client which can establish a transparent
+connection to a remote server speaking SSL/TLS. It's intended for testing
+purposes only and provides only rudimentary interface functionality but
+internally uses mostly all functionality of the OpenSSL <b>ssl</b> library.
+</dd><dt><b>s_server</b></dt><dd>
+This implements a generic SSL/TLS server which accepts connections from remote
+clients speaking SSL/TLS. It's intended for testing purposes only and provides
+only rudimentary interface functionality but internally uses mostly all
+functionality of the OpenSSL <b>ssl</b> library.  It provides both an own command
+line oriented protocol for testing SSL functions and a simple HTTP response
+facility to emulate an SSL/TLS-aware webserver.
+</dd><dt><b>s_time</b></dt><dd>
+SSL Connection Timer.
+</dd><dt><b>sess_id</b></dt><dd>
+SSL Session Data Management.
+</dd><dt><b>smime</b></dt><dd>
+S/MIME mail processing.
+</dd><dt><b>speed</b></dt><dd>
+Algorithm Speed Measurement.
+</dd><dt><b>verify</b></dt><dd>
+X.509 Certificate Verification.
+</dd><dt><b>version</b></dt><dd>
+OpenSSL Version Information.
+</dd><dt><b>x509</b></dt><dd>
+X.509 Certificate Data Management.
+</dd></dl></div><h2>MESSAGE DIGEST COMMANDS</h2><div class="part"><dl><dt><b>md2</b></dt><dd>
+MD2 Digest
+</dd><dt><b>md5</b></dt><dd>
+MD5 Digest
+</dd><dt><b>mdc2</b></dt><dd>
+MDC2 Digest
+</dd><dt><b>rmd160</b></dt><dd>
+RMD-160 Digest
+</dd><dt><b>sha</b></dt><dd>
+SHA Digest
+</dd><dt><b>sha1</b></dt><dd>
+SHA-1 Digest
+</dd></dl></div><h2>ENCODING AND CIPHER COMMANDS</h2><div class="part"><dl><dt><b>base64</b></dt><dd>
+Base64 Encoding
+</dd><dt><b>bf bf-cbc bf-cfb bf-ecb bf-ofb</b></dt><dd>
+Blowfish Cipher
+</dd><dt><b>cast cast-cbc</b></dt><dd>
+CAST Cipher
+</dd><dt><b>cast5-cbc cast5-cfb cast5-ecb cast5-ofb</b></dt><dd>
+CAST5 Cipher
+</dd><dt><b>des des-cbc des-cfb des-ecb des-ede des-ede-cbc des-ede-cfb des-ede-ofb des-ofb</b></dt><dd>
+DES Cipher
+</dd><dt><b>des3 desx des-ede3 des-ede3-cbc des-ede3-cfb des-ede3-ofb</b></dt><dd>
+Triple-DES Cipher
+</dd><dt><b>idea idea-cbc idea-cfb idea-ecb idea-ofb</b></dt><dd>
+IDEA Cipher
+</dd><dt><b>rc2 rc2-cbc rc2-cfb rc2-ecb rc2-ofb</b></dt><dd>
+RC2 Cipher
+</dd><dt><b>rc4</b></dt><dd>
+RC4 Cipher
+</dd><dt><b>rc5 rc5-cbc rc5-cfb rc5-ecb rc5-ofb</b></dt><dd>
+RC5 Cipher
+</dd></dl></div><h2>PASS PHRASE ARGUMENTS</h2><div class="part"><p>Several commands accept password arguments, typically using <b>-passin</b>
+and <b>-passout</b> for input and output passwords respectively. These allow
+the password to be obtained from a variety of sources. Both of these
+options take a single argument whose format is described below. If no
+password argument is given and a password is required then the user is
+prompted to enter one: this will typically be read from the current
+terminal with echoing turned off.
+</p><dl><dt><b>pass:password</b></dt><dd>
+the actual password is <b>password</b>. Since the password is visible
+to utilities (like 'ps' under Unix) this form should only be used
+where security is not important.
+</dd><dt><b>env:var</b></dt><dd>
+obtain the password from the environment variable <b>var</b>. Since
+the environment of other processes is visible on certain platforms
+(e.g. ps under certain Unix OSes) this option should be used with caution.
+</dd><dt><b>file:pathname</b></dt><dd>
+the first line of <b>pathname</b> is the password. If the same <b>pathname</b>
+argument is supplied to <b>-passin</b> and <b>-passout</b> arguments then the first
+line will be used for the input password and the next line for the output
+password. <b>pathname</b> need not refer to a regular file: it could for example
+refer to a device or named pipe.
+</dd><dt><b>fd:number</b></dt><dd>
+read the password from the file descriptor <b>number</b>. This can be used to
+send the data via a pipe for example.
+</dd><dt><b>stdin</b></dt><dd>
+read the password from standard input.
+</dd></dl><p></p></div><h2>SEE ALSO</h2><div class="part"><p><a href="http://pwet.fr/man/linux/commandes/asn1parse">asn1parse</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/ca">ca</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/formats/config">config</a>(<a href="http://pwet.fr/man/linux/formats">5</a>),
+<a href="http://pwet.fr/man/linux/commandes/crl">crl</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/crl2pkcs7">crl2pkcs7</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/dgst">dgst</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/dhparam">dhparam</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/dsa">dsa</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/dsaparam">dsaparam</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/enc">enc</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/gendsa">gendsa</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/genrsa">genrsa</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/nseq">nseq</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/openssl">openssl</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/passwd">passwd</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/pkcs12">pkcs12</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/pkcs7">pkcs7</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/pkcs8">pkcs8</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/rand">rand</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/req">req</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/rsa">rsa</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/rsautl">rsautl</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/s_client">s_client</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/s_server">s_server</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/s_time">s_time</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/smime">smime</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/spkac">spkac</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/commandes/verify">verify</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/version">version</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>), <a href="http://pwet.fr/man/linux/commandes/x509">x509</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>),
+<a href="http://pwet.fr/man/linux/fonctions_bibliotheques/crypto">crypto</a>(<a href="http://pwet.fr/man/linux/fonctions_bibliotheques">3</a>), <a href="http://pwet.fr/man/linux/fonctions_bibliotheques/ssl">ssl</a>(<a href="http://pwet.fr/man/linux/fonctions_bibliotheques">3</a>) 
+</p></div><h2>HISTORY</h2><div class="part"><p>The <a href="http://pwet.fr/man/linux/commandes/openssl">openssl</a>(<a href="http://pwet.fr/man/linux/commandes">1</a>) document appeared in OpenSSL 0.9.2.
+The <b>list-</b><i>XXX</i><b>-commands</b> pseudo-commands were added in OpenSSL 0.9.3;
+the <b>no-</b><i>XXX</i> pseudo-commands were added in OpenSSL 0.9.5a.
+For notes on the availability of other commands, see their individual
+manual pages.
+</p></div>
+
+    
+                        </div>
+</div>
+    </div>
+    </div>
+    <div id="secondaryContent_2columns">
+        <div id="columnC_2columns">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7171863654720058";
+/* 160x90, date de création 03/08/08 */
+google_ad_slot = "8854587781";
+google_ad_width = 160;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="6_files/show_ads.js"> </script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:160px"><iframe allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){w.location.replace(h)}}" vspace="0" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" frameborder="0" scrolling="no" width="160" height="90"></iframe></ins></ins>
+
+                                                                <!-- generated for man/linux/commandes/ssl2 -->
+            <h4><span>Sections</span> du manuel</h4>
+                        <ul id="man_sections">
+                            <li><a href="http://pwet.fr/man/linux/commandes" class="selected">Commandes</a>
+                                                                        <ul>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/rtl">rtl</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/sr">sr</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/p">p</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/wn">WN</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/l">l</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/l2">L</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/fun">fun</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/emacs21">emacs21</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/m">m</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/cn">cn</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/emacs_snapshot2">emacs-snapshot</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/x">X</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/gmt2">gmt</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/grass2">grass</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/ssl2" class="selected">ssl</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/7">7</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/a2">a</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/x2">x</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/osd_clock3">osd_clock</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/posix">posix</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/nas2">nas</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/pvm2">PVM</a></li>
+                                            <li><a href="http://pwet.fr/man/linux/commandes/pccts">pccts</a></li>
+                                        </ul>
+                                                    </li>
+                            <li><a href="http://pwet.fr/man/linux/appels_systemes">Appels systèmes</a>
+                                </li>
+                            <li><a href="http://pwet.fr/man/linux/fonctions_bibliotheques">Fonctions bibliothèques</a>
+                                </li>
+                            <li><a href="http://pwet.fr/man/linux/fichiers_speciaux">Fichiers spéciaux</a>
+                                </li>
+                            <li><a href="http://pwet.fr/man/linux/formats">Formats</a>
+                                </li>
+                            <li><a href="http://pwet.fr/man/linux/jeux">Jeux</a>
+                                </li>
+                            <li><a href="http://pwet.fr/man/linux/conventions">Conventions</a>
+                                </li>
+                            <li><a href="http://pwet.fr/man/linux/administration_systeme">Administration système</a>
+                                </li>
+                            <li><a href="http://pwet.fr/man/linux/fonctions_noyau">Fonctions noyau</a>
+                                </li>
+                            <li><a href="http://pwet.fr/man/linux/nouveau">Nouveau</a>
+                                </li>
+                        </ul>
+                        
+
+            <h4><a href="http://pwet.fr/recherche"><span>Rechercher</span> sur pwet.fr</a></h4>
+<form method="get" action="/recherche">
+<div id="search">
+<input class="text" name="q" type="text">
+<input name="cx" value="partner-pub-7171863654720058:c5wszi-avp9" type="hidden">
+<input name="cof" value="FORID:10" type="hidden">
+<input name="ie" value="UTF-8" type="hidden">
+<input class="button" name="sa" value="Go" type="submit">
+<br class="clear">
+</div>
+</form>
+
+            
+            <!-- generated for man/linux/commandes/tail -->
+            <h4><span>Derniers</span> billets</h4>
+            <ul class="links">
+                                    <li><a href="http://pwet.fr/blog/planet_ez_publish_fr_mis_sur_orbite_par_ez_publish_5">Planet eZ Publish.fr mis sur orbite par eZ Publish 5!</a></li>
+                        <li><a href="http://pwet.fr/blog/symlink_to_the_ez_publish_var_directory_a_good_idea">Symlink to the eZ Publish var directory, a good idea ?</a></li>
+                        <li><a href="http://pwet.fr/blog/peinture_fraiche_sur_le_planet_ez_publish_fr">Peinture fraîche sur le Planet eZ Publish.fr</a></li>
+                        <li><a href="http://pwet.fr/blog/mortel_poutou">"Mortel Poutou" :-)</a></li>
+                        <li><a href="http://pwet.fr/blog/quelques_nouveautes_dans_le_formulaire_d_edition_de_contenu_d_ez_publish">Quelques nouveautés dans le formulaire d'édition de contenu d'eZ Publish</a></li>
+                        <li><a href="http://pwet.fr/blog/how_to_locate_the_php_code_corresponding_to_a_template_operator">How to locate the PHP code corresponding to a template operator?</a></li>
+                        <li><a href="http://pwet.fr/blog/controleur_poignarde_droit_de_retrait_greve">Contrôleur poignardé, droit de retrait, grève...</a></li>
+                        <li><a href="http://pwet.fr/blog/martin_chasseur_geant">Martin Chasseur (géant)</a></li>
+                        <li><a href="http://pwet.fr/blog/parc_des_oiseaux_de_villars_les_dombes">Parc des oiseaux de Villars les Dombes</a></li>
+                        <li><a href="http://pwet.fr/blog/apothicairerie_de_bourg_en_bresse">Apothicairerie de Bourg-en-Bresse</a></li>
+                        <li><a href="http://pwet.fr/blog/sortie_de_auto_status_0_2">Sortie de Auto Status 0.2</a></li>
+                        <li><a href="http://pwet.fr/blog/ez_class_lists_1_2">eZ Class Lists 1.2</a></li>
+                        <li><a href="http://pwet.fr/blog/ez_conference_2011">eZ Conference 2011</a></li>
+                        <li><a href="http://pwet.fr/blog/ez_publish_dans_php_solutions_de_mai_2011">eZ Publish dans PHP Solutions de mai 2011</a></li>
+                        <li><a href="http://pwet.fr/blog/une_semaine_plus_tard2">Une semaine plus tard...</a></li>
+                        <li><a href="http://pwet.fr/blog/pink_floyd_a_bouzigues">Pink floyd à Bouzigues</a></li>
+                        <li><a href="http://pwet.fr/blog/narcisses">Narcisses</a></li>
+                        <li><a href="http://pwet.fr/blog/bye_bye_smile">Bye bye Smile...</a></li>
+                        <li><a href="http://pwet.fr/blog/concours_photos_au_bureau_reflets">Concours photos au bureau : Reflets</a></li>
+                        <li><a href="http://pwet.fr/blog/participer_a_la_traduction_d_ez_publish_en_francais">Participer à la traduction d'eZ Publish en français</a></li>
+                                    </ul>
+
+            <h4><a href="http://pwet.fr/tags/cloud"><span>Nuage</span> de tags</a></h4>
+                        <ul class="tags"><li style="font-size:96%">
+<a href="http://pwet.fr/tags/keywords/weblog/ac_dc" title="8 billets">AC/DC</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/accessibilite" title="7 billets">Accessibilité</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/affiche" title="1 billets">affiche</a>
+</li><li style="font-size:96%">
+<a href="http://pwet.fr/tags/keywords/weblog/ain" title="8 billets">Ain</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/airbourne" title="1 billets">Airbourne</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/ajax" title="2 billets">AJAX</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/alimentation" title="1 billets">Alimentation</a>
+</li><li style="font-size:139%">
+<a href="http://pwet.fr/tags/keywords/weblog/amusant" title="63 billets">Amusant</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/animaux" title="7 billets">Animaux</a>
+</li><li style="font-size:102%">
+<a href="http://pwet.fr/tags/keywords/weblog/apache" title="16 billets">Apache</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/apt" title="2 billets">APT</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/banque" title="1 billets">Banque</a>
+</li><li style="font-size:103%">
+<a href="http://pwet.fr/tags/keywords/weblog/bash" title="17 billets">bash</a>
+</li><li style="font-size:134%">
+<a href="http://pwet.fr/tags/keywords/weblog/blog" title="57 billets">Blog</a>
+</li><li style="font-size:99%">
+<a href="http://pwet.fr/tags/keywords/weblog/bmx" title="11 billets">BMX</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/bordeaux" title="2 billets">Bordeaux</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/bourg_en_bresse" title="1 billets">Bourg-en-Bresse</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/bug" title="2 billets">Bug</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/buzz" title="2 billets">Buzz</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/cache" title="2 billets">cache</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/chat" title="1 billets">Chat</a>
+</li><li style="font-size:107%">
+<a href="http://pwet.fr/tags/keywords/weblog/cherry" title="22 billets">Cherry</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/cinema" title="2 billets">Cinéma</a>
+</li><li style="font-size:96%">
+<a href="http://pwet.fr/tags/keywords/weblog/citation" title="8 billets">Citation</a>
+</li><li style="font-size:97%">
+<a href="http://pwet.fr/tags/keywords/weblog/climat" title="9 billets">Climat</a>
+</li><li style="font-size:106%">
+<a href="http://pwet.fr/tags/keywords/weblog/cms" title="20 billets">CMS</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/coligny" title="1 billets">Coligny</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/communaute" title="2 billets">Communauté</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/concert" title="6 billets">Concert</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/conference" title="1 billets">Conference</a>
+</li><li style="font-size:97%">
+<a href="http://pwet.fr/tags/keywords/weblog/consommation" title="9 billets">Consommation</a>
+</li><li style="font-size:97%">
+<a href="http://pwet.fr/tags/keywords/weblog/css" title="9 billets">CSS</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/cvs" title="1 billets">CVS</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/cyclisme" title="1 billets">Cyclisme</a>
+</li><li style="font-size:104%">
+<a href="http://pwet.fr/tags/keywords/weblog/debian" title="18 billets">Debian</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/dechets" title="1 billets">Déchets</a>
+</li><li style="font-size:109%">
+<a href="http://pwet.fr/tags/keywords/weblog/dedibox" title="24 billets">Dedibox</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/design" title="4 billets">Design</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/dessin" title="1 billets">Dessin</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/detail" title="1 billets">Détail</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/distribution" title="1 billets">Distribution</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/dns" title="1 billets">DNS</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/dombes" title="4 billets">Dombes</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/dopage" title="1 billets">Dopage</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/drupal" title="1 billets">Drupal</a>
+</li><li style="font-size:103%">
+<a href="http://pwet.fr/tags/keywords/weblog/environnement" title="17 billets">Environnement</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/ergonomie" title="6 billets">Ergonomie</a>
+</li><li style="font-size:100%">
+<a href="http://pwet.fr/tags/keywords/weblog/extension" title="13 billets">Extension</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/ez_class_lists" title="6 billets">eZ Class Lists</a>
+</li><li style="font-size:109%">
+<a href="http://pwet.fr/tags/keywords/weblog/ez_components" title="25 billets">eZ components</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/ez_find" title="6 billets">eZ Find</a>
+</li><li style="font-size:190%">
+<a href="http://pwet.fr/tags/keywords/weblog/ez_publish" title="129 billets">eZ Publish</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/ez_publish_5" title="1 billets">eZ Publish 5</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/ez_systems" title="1 billets">eZ Systems</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/ezvideoflv" title="4 billets">eZVideoFLV</a>
+</li><li style="font-size:94%">
+<a href="http://pwet.fr/tags/keywords/weblog/ezvim" title="5 billets">eZVim</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/fedora_core" title="4 billets">Fedora Core</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/firefox" title="1 billets">Firefox</a>
+</li><li style="font-size:99%">
+<a href="http://pwet.fr/tags/keywords/weblog/fise" title="11 billets">FISE</a>
+</li><li style="font-size:94%">
+<a href="http://pwet.fr/tags/keywords/weblog/fleur" title="5 billets">Fleur</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/flickr" title="1 billets">Flickr</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/fmx" title="1 billets">FMX</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/foo_fighters" title="1 billets">Foo Fighters</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/formats" title="6 billets">Formats</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/framework" title="4 billets">Framework</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/free" title="7 billets">Free</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/freebox" title="4 billets">Freebox</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/fun" title="1 billets">Fun</a>
+</li><li style="font-size:108%">
+<a href="http://pwet.fr/tags/keywords/weblog/geek" title="23 billets">Geek</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/git" title="3 billets">git</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/glace" title="1 billets">Glace</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/gnome" title="7 billets">GNOME</a>
+</li><li style="font-size:110%">
+<a href="http://pwet.fr/tags/keywords/weblog/google" title="26 billets">Google</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/gps" title="1 billets">GPS</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/greve" title="1 billets">grève</a>
+</li><li style="font-size:109%">
+<a href="http://pwet.fr/tags/keywords/weblog/hebergement" title="25 billets">Hébergement</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/herault" title="6 billets">Hérault</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/html" title="3 billets">HTML</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/html5" title="1 billets">html5</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/http" title="6 billets">HTTP</a>
+</li><li style="font-size:160%">
+<a href="http://pwet.fr/tags/keywords/weblog/humeurs" title="90 billets">Humeurs</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/humour" title="1 billets">humour</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/iis" title="2 billets">IIS</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/immobilier" title="2 billets">Immobilier</a>
+</li><li style="font-size:97%">
+<a href="http://pwet.fr/tags/keywords/weblog/informatique" title="9 billets">Informatique</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/insecte" title="3 billets">Insecte</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/insolite" title="2 billets">Insolite</a>
+</li><li style="font-size:105%">
+<a href="http://pwet.fr/tags/keywords/weblog/interface" title="19 billets">Interface</a>
+</li><li style="font-size:99%">
+<a href="http://pwet.fr/tags/keywords/weblog/internet_explorer" title="11 billets">Internet Explorer</a>
+</li><li style="font-size:99%">
+<a href="http://pwet.fr/tags/keywords/weblog/javascript" title="11 billets">Javascript</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/jeux" title="2 billets">Jeux</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/jeux_olympiques" title="3 billets">Jeux Olympiques</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/joomla" title="2 billets">Joomla!</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/journal" title="1 billets">Journal</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/jquery" title="4 billets">jQuery</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/jqueryui" title="3 billets">jQueryUI</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/kde" title="2 billets">KDE</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/kimsufi" title="1 billets">kimsufi</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/le_progres" title="1 billets">Le Progrès</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/licence" title="3 billets">Licence</a>
+</li><li style="font-size:134%">
+<a href="http://pwet.fr/tags/keywords/weblog/linux" title="57 billets">Linux</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/living_colour" title="2 billets">Living Colour</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/livre" title="6 billets">Livre</a>
+</li><li style="font-size:102%">
+<a href="http://pwet.fr/tags/keywords/weblog/logiciels_libres" title="16 billets">Logiciels libres</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/lyon" title="2 billets">Lyon</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/macosx" title="3 billets">MacOSX</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/magento" title="4 billets">Magento</a>
+</li><li style="font-size:94%">
+<a href="http://pwet.fr/tags/keywords/weblog/mail" title="5 billets">Mail</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/microsofterie" title="7 billets">Microsofterie</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/mobile" title="1 billets">mobile</a>
+</li><li style="font-size:119%">
+<a href="http://pwet.fr/tags/keywords/weblog/montpellier" title="37 billets">Montpellier</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/mozilla" title="6 billets">Mozilla</a>
+</li><li style="font-size:106%">
+<a href="http://pwet.fr/tags/keywords/weblog/musique" title="20 billets">Musique</a>
+</li><li style="font-size:103%">
+<a href="http://pwet.fr/tags/keywords/weblog/mysql" title="17 billets">MySQL</a>
+</li><li style="font-size:102%">
+<a href="http://pwet.fr/tags/keywords/weblog/nature" title="16 billets">Nature</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/navigateur" title="3 billets">Navigateur</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/neige" title="1 billets">Neige</a>
+</li><li style="font-size:133%">
+<a href="http://pwet.fr/tags/keywords/weblog/nikon_d50" title="55 billets">Nikon D50</a>
+</li><li style="font-size:96%">
+<a href="http://pwet.fr/tags/keywords/weblog/nikon_d90" title="8 billets">Nikon D90</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/nokia_5800" title="4 billets">Nokia 5800</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/ogm" title="4 billets">OGM</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/oiseau" title="7 billets">Oiseau</a>
+</li><li style="font-size:97%">
+<a href="http://pwet.fr/tags/keywords/weblog/online_editor" title="9 billets">Online Editor</a>
+</li><li style="font-size:98%">
+<a href="http://pwet.fr/tags/keywords/weblog/openbox" title="10 billets">Openbox</a>
+</li><li style="font-size:94%">
+<a href="http://pwet.fr/tags/keywords/weblog/openoffice" title="5 billets">OpenOffice</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/ouifm" title="3 billets">OuïFM</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/panorama" title="2 billets">Panorama</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/paris" title="1 billets">Paris</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/patch" title="1 billets">Patch</a>
+</li><li style="font-size:101%">
+<a href="http://pwet.fr/tags/keywords/weblog/pense_bete" title="14 billets">Pense bête</a>
+</li><li style="font-size:112%">
+<a href="http://pwet.fr/tags/keywords/weblog/performances" title="29 billets">Performances</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/philovelo" title="4 billets">Philovelo@</a>
+</li><li style="font-size:165%">
+<a href="http://pwet.fr/tags/keywords/weblog/photo" title="97 billets">Photo</a>
+</li><li style="font-size:159%">
+<a href="http://pwet.fr/tags/keywords/weblog/php" title="89 billets">PHP</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/poker" title="1 billets">Poker</a>
+</li><li style="font-size:105%">
+<a href="http://pwet.fr/tags/keywords/weblog/politique" title="19 billets">Politique</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/postfix" title="1 billets">Postfix</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/postgresql" title="1 billets">PostgreSQL</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/proces" title="4 billets">Procès</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/python" title="3 billets">Python</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/radio" title="1 billets">Radio</a>
+</li><li style="font-size:98%">
+<a href="http://pwet.fr/tags/keywords/weblog/rechauffement" title="10 billets">Réchauffement</a>
+</li><li style="font-size:104%">
+<a href="http://pwet.fr/tags/keywords/weblog/referencement" title="18 billets">Référencement</a>
+</li><li style="font-size:94%">
+<a href="http://pwet.fr/tags/keywords/weblog/reseau" title="5 billets">Réseau</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/responsive_design" title="1 billets">Responsive design</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/restaurant" title="1 billets">Restaurant</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/retouche" title="2 billets">Retouche</a>
+</li><li style="font-size:96%">
+<a href="http://pwet.fr/tags/keywords/weblog/rock" title="8 billets">Rock</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/rouille" title="1 billets">Rouille</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/roundcube" title="1 billets">RoundCube</a>
+</li><li style="font-size:96%">
+<a href="http://pwet.fr/tags/keywords/weblog/rss" title="8 billets">RSS</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/rugby" title="1 billets">Rugby</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/saint_paul_de_varax" title="1 billets">Saint Paul de Varax</a>
+</li><li style="font-size:99%">
+<a href="http://pwet.fr/tags/keywords/weblog/securite" title="11 billets">Sécurité</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/serie" title="1 billets">Série</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/shell" title="1 billets">Shell</a>
+</li><li style="font-size:114%">
+<a href="http://pwet.fr/tags/keywords/weblog/shell" title="31 billets">shell</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/smile" title="4 billets">Smile</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/sncf" title="1 billets">sncf</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/solr" title="2 billets">Solr</a>
+</li><li style="font-size:93%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/spam" title="4 billets">Spam</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/spip" title="2 billets">SPIP</a>
+</li><li style="font-size:107%">
+<a href="http://pwet.fr/tags/keywords/weblog/sport" title="22 billets">Sport</a>
+</li><li style="font-size:94%">
+<a href="http://pwet.fr/tags/keywords/weblog/ssh" title="5 billets">SSH</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/standards" title="7 billets">Standards</a>
+</li><li style="font-size:114%">
+<a href="http://pwet.fr/tags/keywords/weblog/stupides" title="31 billets">Stupides</a>
+</li><li style="font-size:94%">
+<a href="http://pwet.fr/tags/keywords/weblog/svn" title="5 billets">SVN</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/symfony_2" title="1 billets">Symfony 2</a>
+</li><li style="font-size:99%">
+<a href="http://pwet.fr/tags/keywords/weblog/television" title="12 billets">Télévision</a>
+</li><li style="font-size:102%">
+<a href="http://pwet.fr/tags/keywords/weblog/template" title="16 billets">Template</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/termplate" title="1 billets">Termplate</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/texture" title="1 billets">Texture</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/tour_de_france" title="1 billets">Tour de France</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/traduction" title="1 billets">Traduction</a>
+</li><li style="font-size:111%">
+<a href="http://pwet.fr/tags/keywords/weblog/travail" title="27 billets">Travail</a>
+</li><li style="font-size:118%">
+<a href="http://pwet.fr/tags/keywords/weblog/truc" title="36 billets">Truc</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/twig" title="1 billets">Twig</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/twitter" title="2 billets">Twitter</a>
+</li><li style="font-size:119%">
+<a href="http://pwet.fr/tags/keywords/weblog/ubuntu" title="38 billets">Ubuntu</a>
+</li><li style="font-size:94%">
+<a href="http://pwet.fr/tags/keywords/weblog/vacances" title="5 billets">Vacances</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/varnish" title="2 billets">Varnish</a>
+</li><li style="font-size:116%">
+<a href="http://pwet.fr/tags/keywords/weblog/video" title="34 billets">Vidéo</a>
+</li><li style="font-size:99%">
+<a href="http://pwet.fr/tags/keywords/weblog/vim" title="11 billets">ViM</a>
+</li><li style="font-size:98%">
+<a href="http://pwet.fr/tags/keywords/weblog/vtt" title="10 billets">VTT</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/web" title="1 billets">web</a>
+</li><li style="font-size:127%">
+<a href="http://pwet.fr/tags/keywords/weblog/web" title="48 billets">Web</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/web_2_0" title="2 billets">Web 2.0</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/wikipedia" title="1 billets">Wikipedia</a>
+</li><li style="font-size:94%">
+<a href="http://pwet.fr/tags/keywords/weblog/windows" title="5 billets">Windows</a>
+</li><li style="font-size:96%">
+<a href="http://pwet.fr/tags/keywords/weblog/x11" title="8 billets">X11</a>
+</li><li style="font-size:95%">
+<a href="http://pwet.fr/tags/keywords/weblog/xhtml" title="6 billets">XHTML</a>
+</li><li style="font-size:99%">
+<a href="http://pwet.fr/tags/keywords/weblog/xml" title="11 billets">XML</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/xslt" title="3 billets">XSLT</a>
+</li><li style="font-size:92%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/xul" title="3 billets">XUL</a>
+</li><li style="font-size:98%">
+<a href="http://pwet.fr/tags/keywords/weblog/yahoo" title="10 billets">Yahoo</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/zend_framework" title="1 billets">Zend Framework</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/zeta_compoents" title="1 billets">Zeta Compoents</a>
+</li><li style="font-size:91%" class="h">
+<a href="http://pwet.fr/tags/keywords/weblog/zeta_components" title="1 billets">Zeta Components</a>
+</li></ul>            
+
+            <h4><span>Bioutifoul</span> photos</h4>
+<ul class="links bp"></ul>
+        </div>
+    </div>
+    <br class="clear">
+    </div>
+</div><div id="footer">Copyright © 2006-2011 – <a href="http://pwet.fr/blog/licence_d_utilisation_des_contenus_et_nouveautes">Licence d'utilisation</a> – Powered by <a href="http://pwet.fr/tags/keywords/weblog/debian">Debian</a>, <a href="http://pwet.fr/tags/keywords/weblog/apache">Apache</a>, <a href="http://pwet.fr/tags/keywords/weblog/php">PHP</a>, <a href="http://pwet.fr/tags/keywords/weblog/mysql">MySQL</a> and <a href="http://pwet.fr/tags/keywords/weblog/ez_publish">eZ Publish</a> – Design librement inspiré de <a href="http://www.nodethirtythree.com/">Nonzero</a>
+</div>
+
+</body></html>

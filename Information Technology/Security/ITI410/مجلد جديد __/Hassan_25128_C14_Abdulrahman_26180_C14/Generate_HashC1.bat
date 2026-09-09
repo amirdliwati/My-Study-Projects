@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl dgst -md5 -out c:\sec\message_hash.txt c:\sec\message.txt

@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/ -->
+<html dir="rtl" lang="ar"><meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;"><object id="__IDM__" type="application/x-idm-downloader" width="1" height="1" style="visibility: hidden !important; display: block !important; width: 1px !important; height: 1px !important; border-style: none !important; position: absolute !important; top: 0px !important; left: 0px !important;"></object></meta><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./إنشاء والتعامل مع شهادات SSL_files/cb=gapi.loaded_2" async=""></script><script async="" src="./إنشاء والتعامل مع شهادات SSL_files/saved_resource"></script><script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/shares.json"></script><script id="LR1" type="text/javascript" async="" src="./إنشاء والتعامل مع شهادات SSL_files/hubclient.js"></script><script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/counter009.js"></script><link rel="stylesheet" type="text/css" href="./إنشاء والتعامل مع شهادات SSL_files/counter007.css" media="all"><link rel="stylesheet" type="text/css" href="./إنشاء والتعامل مع شهادات SSL_files/widget100.css" media="all"><script src="./إنشاء والتعامل مع شهادات SSL_files/quant.js" async="" type="text/javascript"></script><script id="facebook-jssdk" async="" src="./إنشاء والتعامل مع شهادات SSL_files/all.js"></script><script src="./إنشاء والتعامل مع شهادات SSL_files/quant.js" async="" type="text/javascript"></script><script src="./إنشاء والتعامل مع شهادات SSL_files/cb=gapi.loaded_1" async=""></script><script type="text/javascript" async="" src="./إنشاء والتعامل مع شهادات SSL_files/plusone.js" gapi_processed="true"></script><script id="twitter-wjs" src="./إنشاء والتعامل مع شهادات SSL_files/widgets.js"></script><script type="text/javascript" async="" src="./إنشاء والتعامل مع شهادات SSL_files/plusone.js" gapi_processed="true"></script><script src="./إنشاء والتعامل مع شهادات SSL_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./إنشاء والتعامل مع شهادات SSL_files/em.js"></script><script type="text/javascript" async="" src="./إنشاء والتعامل مع شهادات SSL_files/ga.js"></script><script type="text/javascript">window.mod_pagespeed_start = Number(new Date());</script><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setSiteSpeedSampleRate', 100]);_gaq.push(['_setCustomVar', 1, 'FuriousState', 'Experiment: 4']);</script>
+<meta name="google-site-verification" content="okgUyu_a9tl2e7MUIinyG2JMbJRpbLaLA78xLtn1X9Q">
+<meta charset="UTF-8">
+
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/jquery.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/mo3aser.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="stylesheet" type="text/css" media="all" href="./إنشاء والتعامل مع شهادات SSL_files/style.css">
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" media="all" href="http://www.tech-wd.com/wd/wp-content/themes/tech-wd/includes/css/ie7.css" />
+<![endif]-->
+<link rel="pingback" href="http://www.tech-wd.com/wd/xmlrpc.php">
+
+
+ <script type="text/javascript">
+	window.google_analytics_uacct = "UA-3940106-1";
+</script>
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.3.4.1 - http://yoast.com/wordpress/seo/ -->
+<title>إنشاء والتعامل مع شهادات SSL</title>
+<meta name="description" content="شرح مفصل لكيفية إنشاء والتعامل مع شهادات SSL لزيادة أمان موقعك">
+<link rel="canonical" href="./إنشاء والتعامل مع شهادات SSL_files/إنشاء والتعامل مع شهادات SSL.htm">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="dns-prefetch" href="http://connect.facebook.net/">
+<link rel="alternate" type="application/rss+xml" title="عالم التقنية » الخلاصة" href="http://www.tech-wd.com/wd/feed/">
+<link rel="alternate" type="application/rss+xml" title="عالم التقنية » خلاصة التعليقات" href="http://www.tech-wd.com/wd/comments/feed/">
+
+			<script type="text/javascript">//<![CDATA[
+			// Google Analytics for WordPress by Yoast v4.2.8 | http://yoast.com/wordpress/google-analytics/
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-3940106-1']);
+							_gaq.push(['_trackPageview']);
+			(function () {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+			//]]></script>
+			<link rel="alternate" type="application/rss+xml" title="عالم التقنية » إنشاء والتعامل مع شهادات SSL خلاصة التعليقات" href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/feed/">
+<link rel="stylesheet" id="nrelate-style-common-0-05-3-css" href="./إنشاء والتعامل مع شهادات SSL_files/nrelate-panels-common.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="myStyleSheets-css" href="./إنشاء والتعامل مع شهادات SSL_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./إنشاء والتعامل مع شهادات SSL_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-rtl-css" href="./إنشاء والتعامل مع شهادات SSL_files/styles-rtl.css" type="text/css" media="all">
+<!--[if IE 6]>
+<link rel='stylesheet' id='nrelate-ie6-0-05-3-css'  href='http://static.nrelate.com/common_wp/0.05.3/ie6-panels.min.css?ver=0.05.3' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="nrelate-style-default-0-05-3-css" href="./إنشاء والتعامل مع شهادات SSL_files/nrelate-panels-default.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-email-css" href="./إنشاء والتعامل مع شهادات SSL_files/email-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-email-rtl-css" href="./إنشاء والتعامل مع شهادات SSL_files/email-css-rtl.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack-widgets-css" href="./إنشاء والتعامل مع شهادات SSL_files/widgets.css" type="text/css" media="all">
+<link rel="stylesheet" id="facebook-css" href="./إنشاء والتعامل مع شهادات SSL_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-syntax-css-css" href="./إنشاء والتعامل مع شهادات SSL_files/wp-syntax.css" type="text/css" media="all">
+<link rel="stylesheet" id="aec_frontend-css" href="./إنشاء والتعامل مع شهادات SSL_files/frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="aec_atd-css" href="./إنشاء والتعامل مع شهادات SSL_files/atd.css" type="text/css" media="all">
+<link rel="stylesheet" id="colorbox-css" href="./إنشاء والتعامل مع شهادات SSL_files/colorbox.css" type="text/css" media="screen">
+<link rel="stylesheet" id="easy-fancybox.css-css" href="./إنشاء والتعامل مع شهادات SSL_files/easy-fancybox.css.php" type="text/css" media="screen">
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/jquery(1).js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/common_frontend.min.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/saved_resource(1)"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/jquery.colorbox.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.tech-wd.com/wd/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.tech-wd.com/wd/wp-includes/wlwmanifest.xml"> 
+<link rel="shortlink" href="http://wp.me/p11l6Y-2Iy">
+<style type="text/css" media="all">
+	.author-box { background: #F3F3F3; margin: 0 0 30px 0; padding: 10px; border: 1px solid #DDDDDD; overflow: hidden; }
+	.author-box p { margin: 0; padding: 0; }
+	.author-box img { background: #FFFFFF; float: left; margin: 0 10px 0 0; padding: 4px; border: 1px solid #DDDDDD; }
+	</style><!-- Begin Fix Facebook Like WordPress Plugin -->
+<meta property="og:title" content="إنشاء والتعامل مع شهادات SSL">
+<meta property="og:type" content="">
+<meta property="og:url" content="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/">
+<meta property="og:image" content="http://www.tech-wd.com/wd/wp-content/uploads/2010/09/computernetwork-150x150.jpg">
+<meta property="og:site_name" content="عالم التقنية">
+<meta property="fb:admins" content="">
+<!-- End Fix Facebook Like WordPress Plugin -->
+<meta name="news_keywords" content="شبكات، لينكس، المصادر المفتوحة, يونكس">
+<!-- Start Of Script Generated By WP-PostViews -->
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery.ajax({type:'GET',url:'http://www.tech-wd.com/wd/wp-admin/admin-ajax.php',data:'postviews_id=10450&action=postviews',cache:false});/* ]]> */
+</script>
+<!-- End Of Script Generated By WP-PostViews -->
+<link rel="shortcut icon" href="http://www.tech-wd.com/wd/wp-content/themes/tech-wd/favicon.ico" title="Favicon">
+<meta name="designer" content="http://www.mo3aser.com | Fouad Badawy">
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/google_service.js">
+
+</script>
+
+<script type="text/javascript">
+
+GS_googleAddAdSenseService("ca-pub-3219897517137079");
+
+GS_googleEnableAllServices();
+
+</script><script src="./إنشاء والتعامل مع شهادات SSL_files/google_ads.js"></script>
+
+<script type="text/javascript">
+
+GA_googleAddSlot("ca-pub-3219897517137079", "1st-l");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "1st-r");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "2nd-l");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "2nd-r");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "3rd-l");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "3rd-r");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "box_250_250");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "Header-Slot");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "insideads");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "adsenseAd");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "index_banner1");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "index_banner2");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "index_banner3");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "adsenseBOX");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "adsBOX2");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "longBOX-wd");
+
+GA_googleAddSlot("ca-pub-3219897517137079", "under_comment");
+
+</script>
+
+<script type="text/javascript">
+
+GA_googleFetchAds();
+
+</script>
+
+<meta property="fb:app_id" content="163546666843">
+
+<script type="text/javascript" async="" src="./إنشاء والتعامل مع شهادات SSL_files/em_js"></script><script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/osd.js"></script><script src="./إنشاء والتعامل مع شهادات SSL_files/nonSecureAnonymousFramework"></script><div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000; " id="_atssh"><iframe id="_atssh67" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px; " src="./إنشاء والتعامل مع شهادات SSL_files/sh105.htm"></iframe></div><script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/core053.js"></script><script type="text/javascript" async="" src="./إنشاء والتعامل مع شهادات SSL_files/embed.js"></script><style type="text/css">* html #li_ui_li_gen_1356525415745_0 a#li_ui_li_gen_1356525415745_0-link{height:1% !important;}#li_ui_li_gen_1356525415745_0{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1356525415745_0 a#li_ui_li_gen_1356525415745_0-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1356525415745_0 a#li_ui_li_gen_1356525415745_0-link:link, #li_ui_li_gen_1356525415745_0 a#li_ui_li_gen_1356525415745_0-link:visited, #li_ui_li_gen_1356525415745_0 a#li_ui_li_gen_1356525415745_0-link:hover, #li_ui_li_gen_1356525415745_0 a#li_ui_li_gen_1356525415745_0-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1356525415745_0 a#li_ui_li_gen_1356525415745_0-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-logo{background:url(http://static.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) 0px -276px no-repeat !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;}#li_ui_li_gen_1356525415745_0.hovered #li_ui_li_gen_1356525415745_0-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1356525415745_0.clicked #li_ui_li_gen_1356525415745_0-logo, #li_ui_li_gen_1356525415745_0.down #li_ui_li_gen_1356525415745_0-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-logo{}#li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1356525415745_0.hovered #li_ui_li_gen_1356525415745_0-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1356525415745_0.clicked #li_ui_li_gen_1356525415745_0-title, #li_ui_li_gen_1356525415745_0.down #li_ui_li_gen_1356525415745_0-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title{}.IN-shadowed #li_ui_li_gen_1356525415745_0.hovered #li_ui_li_gen_1356525415745_0-title{}.IN-shadowed #li_ui_li_gen_1356525415745_0.clicked #li_ui_li_gen_1356525415745_0-title, .IN-shadowed #li_ui_li_gen_1356525415745_0.down #li_ui_li_gen_1356525415745_0-title{}#li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title-text, #li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;display:inline-block !important;background:transparent none !important;vertical-align:baseline !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title-text em{font-style:italic !important;}#li_ui_li_gen_1356525415745_0.hovered #li_ui_li_gen_1356525415745_0-title-text, #li_ui_li_gen_1356525415745_0.hovered #li_ui_li_gen_1356525415745_0-title-text *{color:#000 !important;}#li_ui_li_gen_1356525415745_0.clicked #li_ui_li_gen_1356525415745_0-title-text, #li_ui_li_gen_1356525415745_0.down #li_ui_li_gen_1356525415745_0-title-text, #li_ui_li_gen_1356525415745_0.clicked #li_ui_li_gen_1356525415745_0-title-text *, #li_ui_li_gen_1356525415745_0.down #li_ui_li_gen_1356525415745_0-title-text *{color:#666 !important;}#li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title #li_ui_li_gen_1356525415745_0-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title-text, .success #li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1356525415745_0 #li_ui_li_gen_1356525415745_0-title{}.success #li_ui_li_gen_1356525415745_0.hovered #li_ui_li_gen_1356525415745_0-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1356525415745_0.hovered #li_ui_li_gen_1356525415745_0-title-text, .success #li_ui_li_gen_1356525415745_0.hovered #li_ui_li_gen_1356525415745_0-title-text *{color:#000 !important;}.success #li_ui_li_gen_1356525415745_0.clicked #li_ui_li_gen_1356525415745_0-title, .success #li_ui_li_gen_1356525415745_0.down #li_ui_li_gen_1356525415745_0-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1356525415745_0.clicked #li_ui_li_gen_1356525415745_0-title-text, .success #li_ui_li_gen_1356525415745_0.down #li_ui_li_gen_1356525415745_0-title-text, .success #li_ui_li_gen_1356525415745_0.clicked #li_ui_li_gen_1356525415745_0-title-text *, .success #li_ui_li_gen_1356525415745_0.down #li_ui_li_gen_1356525415745_0-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1356525415745_0.clicked #li_ui_li_gen_1356525415745_0-title, .IN-shadowed .success #li_ui_li_gen_1356525415745_0.down #li_ui_li_gen_1356525415745_0-title{}#li_ui_li_gen_1356525415810_1-container.IN-top {display:inline-block !important;overflow:visible !important;position:relative !important;height:42px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1356525415810_1.IN-top {display:inline-block !important;height:42px !important;width:57px !important;text-align:center !important;background:url(http://static.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) -150px top no-repeat !important;}#li_ui_li_gen_1356525415810_1-content.IN-top {display:inline !important;font-size:16px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:34px !important;}#li_ui_li_gen_1356525415810_1-container.IN-hovered #li_ui_li_gen_1356525415810_1.IN-top, #li_ui_li_gen_1356525415810_1-container.IN-clicked #li_ui_li_gen_1356525415810_1.IN-top, #li_ui_li_gen_1356525415810_1-container.IN-down #li_ui_li_gen_1356525415810_1.IN-top {background-position-x:-210px !important;}#li_ui_li_gen_1356525415810_1-container.IN-empty #li_ui_li_gen_1356525415810_1-inner.IN-top {background:url(http://static.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) 0px -20px no-repeat !important;overflow:hidden !important;margin:5px auto 0 auto !important;width:26px !important;height:26px !important;display:block !important;}#li_ui_li_gen_1356525415810_1-container.IN-empty #li_ui_li_gen_1356525415810_1-content.IN-top {text-indent:-999px !important;display:inline-block !important;}#li_ui_li_gen_1356525415810_1-container.IN-hidden #li_ui_li_gen_1356525415810_1 {display:none !important;}* html #li_ui_li_gen_1356525415867_2 a#li_ui_li_gen_1356525415867_2-link{height:1% !important;}#li_ui_li_gen_1356525415867_2{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1356525415867_2 a#li_ui_li_gen_1356525415867_2-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1356525415867_2 a#li_ui_li_gen_1356525415867_2-link:link, #li_ui_li_gen_1356525415867_2 a#li_ui_li_gen_1356525415867_2-link:visited, #li_ui_li_gen_1356525415867_2 a#li_ui_li_gen_1356525415867_2-link:hover, #li_ui_li_gen_1356525415867_2 a#li_ui_li_gen_1356525415867_2-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1356525415867_2 a#li_ui_li_gen_1356525415867_2-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-logo{background:url(http://static.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) 0px -276px no-repeat !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;}#li_ui_li_gen_1356525415867_2.hovered #li_ui_li_gen_1356525415867_2-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1356525415867_2.clicked #li_ui_li_gen_1356525415867_2-logo, #li_ui_li_gen_1356525415867_2.down #li_ui_li_gen_1356525415867_2-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-logo{}#li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1356525415867_2.hovered #li_ui_li_gen_1356525415867_2-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1356525415867_2.clicked #li_ui_li_gen_1356525415867_2-title, #li_ui_li_gen_1356525415867_2.down #li_ui_li_gen_1356525415867_2-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title{}.IN-shadowed #li_ui_li_gen_1356525415867_2.hovered #li_ui_li_gen_1356525415867_2-title{}.IN-shadowed #li_ui_li_gen_1356525415867_2.clicked #li_ui_li_gen_1356525415867_2-title, .IN-shadowed #li_ui_li_gen_1356525415867_2.down #li_ui_li_gen_1356525415867_2-title{}#li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title-text, #li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;display:inline-block !important;background:transparent none !important;vertical-align:baseline !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title-text em{font-style:italic !important;}#li_ui_li_gen_1356525415867_2.hovered #li_ui_li_gen_1356525415867_2-title-text, #li_ui_li_gen_1356525415867_2.hovered #li_ui_li_gen_1356525415867_2-title-text *{color:#000 !important;}#li_ui_li_gen_1356525415867_2.clicked #li_ui_li_gen_1356525415867_2-title-text, #li_ui_li_gen_1356525415867_2.down #li_ui_li_gen_1356525415867_2-title-text, #li_ui_li_gen_1356525415867_2.clicked #li_ui_li_gen_1356525415867_2-title-text *, #li_ui_li_gen_1356525415867_2.down #li_ui_li_gen_1356525415867_2-title-text *{color:#666 !important;}#li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title #li_ui_li_gen_1356525415867_2-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title-text, .success #li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1356525415867_2 #li_ui_li_gen_1356525415867_2-title{}.success #li_ui_li_gen_1356525415867_2.hovered #li_ui_li_gen_1356525415867_2-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1356525415867_2.hovered #li_ui_li_gen_1356525415867_2-title-text, .success #li_ui_li_gen_1356525415867_2.hovered #li_ui_li_gen_1356525415867_2-title-text *{color:#000 !important;}.success #li_ui_li_gen_1356525415867_2.clicked #li_ui_li_gen_1356525415867_2-title, .success #li_ui_li_gen_1356525415867_2.down #li_ui_li_gen_1356525415867_2-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1356525415867_2.clicked #li_ui_li_gen_1356525415867_2-title-text, .success #li_ui_li_gen_1356525415867_2.down #li_ui_li_gen_1356525415867_2-title-text, .success #li_ui_li_gen_1356525415867_2.clicked #li_ui_li_gen_1356525415867_2-title-text *, .success #li_ui_li_gen_1356525415867_2.down #li_ui_li_gen_1356525415867_2-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1356525415867_2.clicked #li_ui_li_gen_1356525415867_2-title, .IN-shadowed .success #li_ui_li_gen_1356525415867_2.down #li_ui_li_gen_1356525415867_2-title{}#li_ui_li_gen_1356525415914_3-container.IN-right {display:inline-block !important;float:left !important;overflow:visible !important;position:relative !important;height:18px !important;padding-left:2px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1356525415914_3.IN-right {display:block !important;float:left !important;height:18px !important;margin-right:4px !important;padding-right:4px !important;background:url(http://static.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) right -100px no-repeat !important;}#li_ui_li_gen_1356525415914_3-inner.IN-right {display:block !important;float:left !important;padding-left:8px !important;text-align:center !important;background:url(http://static.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) 0px -60px no-repeat !important;}#li_ui_li_gen_1356525415914_3-content.IN-right {display:inline !important;font-size:11px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:18px !important;padding:0 5px 0 5px !important;}#li_ui_li_gen_1356525415914_3-container.IN-hovered #li_ui_li_gen_1356525415914_3.IN-right, #li_ui_li_gen_1356525415914_3-container.IN-clicked #li_ui_li_gen_1356525415914_3.IN-right, #li_ui_li_gen_1356525415914_3-container.IN-down #li_ui_li_gen_1356525415914_3.IN-right {background-position-y:-120px !important;}#li_ui_li_gen_1356525415914_3-container.IN-hovered #li_ui_li_gen_1356525415914_3-inner.IN-right, #li_ui_li_gen_1356525415914_3-container.IN-clicked #li_ui_li_gen_1356525415914_3-inner.IN-right, #li_ui_li_gen_1356525415914_3-container.IN-down #li_ui_li_gen_1356525415914_3-inner.IN-right {background-position-y:-80px !important;}#li_ui_li_gen_1356525415914_3-container.IN-empty {display:none !important;}#li_ui_li_gen_1356525415914_3-container.IN-hidden #li_ui_li_gen_1356525415914_3 {display:none !important;}</style><script async="" type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/count.js"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./إنشاء والتعامل مع شهادات SSL_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./إنشاء والتعامل مع شهادات SSL_files/services.css"><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border-spacing:0;border:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:right;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;left:18px;top:17px;width:15px;top:8px\9;left:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;right:5px;left:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yA/x/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/y6/x/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:25px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yR/x/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-right:-10px}
+.fb_dialog_vert_right{left:0;margin-left:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:15px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yD/x/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:right;padding:5px 26px 7px 0}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;right:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yc/x/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;right:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{/* @noflip */-webkit-box-shadow:-white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 100% 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:13px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:13px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 100% 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;/* @noflip */-webkit-box-shadow:-rgba(0, 0, 0, .117188) 0 1px 1px inset, -rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:17px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yJ/x/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:right}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{position:relative;display:-moz-inline-block;display:inline-block}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_iframe_widget span{position:relative;display:inline-block;vertical-align:text-bottom;text-align:justify}
+.fb_hide_iframes iframe{position:relative;right:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yJ/x/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-right:-16px;position:absolute;right:50%;z-index:4}
+.fb_button_simple,
+.fb_button_simple_rtl{background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yH/x/eIpbnVKI9lR.png);background-repeat:no-repeat;cursor:pointer;outline:none;text-decoration:none}
+.fb_button_simple_rtl{background-position:left 0}
+.fb_button_simple .fb_button_text{margin:0 20px 0 0;padding-bottom:1px}
+.fb_button_simple_rtl .fb_button_text{margin:0 0 0 10px}
+a.fb_button_simple:hover .fb_button_text,
+a.fb_button_simple_rtl:hover .fb_button_text,
+.fb_button_simple:hover .fb_button_text,
+.fb_button_simple_rtl:hover .fb_button_text{text-decoration:underline}
+.fb_button,
+.fb_button_rtl{background:#29447e url(http://static.ak.fbcdn.net/rsrc.php/v2/yl/x/FGFbc80dUKj.png);background-repeat:no-repeat;cursor:pointer;display:inline-block;padding:0 1px 0 0;text-decoration:none;outline:none}
+.fb_button .fb_button_text,
+.fb_button_rtl .fb_button_text{background:#5f78ab url(http://static.ak.fbcdn.net/rsrc.php/v2/yl/x/FGFbc80dUKj.png);border-top:solid 1px #879ac0;border-bottom:solid 1px #1a356e;color:#fff;display:block;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-weight:bold;padding:2px 6px 3px 6px;margin:1px 21px 0 1px;text-shadow:none}
+a.fb_button,
+a.fb_button_rtl,
+.fb_button,
+.fb_button_rtl{text-decoration:none}
+a.fb_button:active .fb_button_text,
+a.fb_button_rtl:active .fb_button_text,
+.fb_button:active .fb_button_text,
+.fb_button_rtl:active .fb_button_text{border-bottom:solid 1px #29447e;border-top:solid 1px #45619d;background:#4f6aa3;text-shadow:none}
+.fb_button_xlarge,
+.fb_button_xlarge_rtl{background-position:right -60px;font-size:25px;line-height:30px}
+.fb_button_xlarge .fb_button_text{padding:3px 12px 3px 8px;margin-right:38px}
+a.fb_button_xlarge:active{background-position:right -99px}
+.fb_button_xlarge_rtl{background-position:left -268px}
+.fb_button_xlarge_rtl .fb_button_text{padding:3px 12px 3px 8px;margin-left:39px}
+a.fb_button_xlarge_rtl:active{background-position:left -307px}
+.fb_button_large,
+.fb_button_large_rtl{background-position:right -138px;font-size:14px;line-height:16px}
+.fb_button_large .fb_button_text{margin-right:24px;padding:2px 6px 4px 6px}
+a.fb_button_large:active{background-position:right -163px}
+.fb_button_large_rtl{background-position:left -346px}
+.fb_button_large_rtl .fb_button_text{margin-left:25px}
+a.fb_button_large_rtl:active{background-position:left -371px}
+.fb_button_medium,
+.fb_button_medium_rtl{background-position:right -188px;font-size:12px;line-height:14px}
+a.fb_button_medium:active{background-position:right -210px}
+.fb_button_medium_rtl{background-position:left -396px}
+.fb_button_text_rtl,
+.fb_button_medium_rtl .fb_button_text{padding:2px 6px 3px 6px;margin-left:22px}
+a.fb_button_medium_rtl:active{background-position:left -418px}
+.fb_button_small,
+.fb_button_small_rtl{background-position:right -232px;font-size:11px;line-height:10px}
+.fb_button_small .fb_button_text{padding:2px 6px 3px;margin-right:17px}
+a.fb_button_small:active,
+.fb_button_small:active{background-position:right -250px}
+.fb_button_small_rtl{background-position:left -440px}
+.fb_button_small_rtl .fb_button_text{padding:2px 6px;margin-left:18px}
+a.fb_button_small_rtl:active{background-position:left -458px}
+.fb_share_count_wrapper{position:relative;float:right}
+.fb_share_count{background:#b0b9ec none repeat scroll 0 0;color:#333;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;text-align:center}
+.fb_share_count_inner{background:#e8ebf2;display:block}
+.fb_share_count_right{margin-right:-1px;display:inline-block}
+.fb_share_count_right .fb_share_count_inner{border-top:solid 1px #e8ebf2;border-bottom:solid 1px #b0b9ec;margin:1px 1px 0 1px;font-size:11px;line-height:10px;padding:2px 6px 3px;font-weight:bold}
+.fb_share_count_top{display:block;letter-spacing:-1px;line-height:34px;margin-bottom:7px;font-size:23px;border:solid 1px #b0b9ec}
+.fb_share_count_nub_top{border:none;display:block;position:absolute;right:7px;top:35px;margin:0;padding:0;width:6px;height:7px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yP/x/bSOHtKbCGYI.png)}
+.fb_share_count_nub_right{border:none;display:inline-block;padding:0;width:5px;height:10px;background-repeat:no-repeat;background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/x/i_oIVTKMYsL.png);vertical-align:top;background-position:left 5px;z-index:10;right:2px;margin:0 0 0 2px;position:relative}
+.fb_share_no_count{display:none}
+.fb_share_size_Small .fb_share_count_right .fb_share_count_inner{font-size:11px}
+.fb_share_size_Medium .fb_share_count_right .fb_share_count_inner{font-size:12px;padding:2px 6px 3px;letter-spacing:-1px;line-height:14px}
+.fb_share_size_Large .fb_share_count_right .fb_share_count_inner{font-size:14px;line-height:16px;padding:2px 6px 4px;font-weight:normal;letter-spacing:-1px}
+.fb_share_count_hidden .fb_share_count_nub_top,
+.fb_share_count_hidden .fb_share_count_top,
+.fb_share_count_hidden .fb_share_count_nub_right,
+.fb_share_count_hidden .fb_share_count_right{visibility:hidden}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:right;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;right:0 !important;left:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:14px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 0 5px 6px}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:12px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:left;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{right:0;top:1px;margin-top:6px;margin-right:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style><script type="text/javascript" async="" src="./إنشاء والتعامل مع شهادات SSL_files/count(1).js"></script><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0}</style></head><body id="top" class="rtl single single-post postid-10450 single-format-standard" data-twttr-rendered="true"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" style="position: absolute; top: -9999em; width: 10px; height: 10px; " src="./إنشاء والتعامل مع شهادات SSL_files/hub(1).htm"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" style="position: absolute; top: -9999em; width: 10px; height: 10px; " src="./إنشاء والتعامل مع شهادات SSL_files/hub.htm"></iframe><div id="cboxOverlay" style="display: none; "></div><div id="colorbox" class="" style="padding-bottom: 57px; padding-right: 28px; display: none; "><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left; "></div><div id="cboxTopCenter" style="float: left; "></div><div id="cboxTopRight" style="float: left; "></div></div><div style="clear:left"><div id="cboxMiddleLeft" style="float: left; "></div><div id="cboxContent" style="float: left; "><div id="cboxLoadedContent" style="width:0;height:0;overflow:hidden" class=""></div><div id="cboxLoadingOverlay" class=""></div><div id="cboxLoadingGraphic" class=""></div><div id="cboxTitle" class=""></div><div id="cboxCurrent" class=""></div><div id="cboxNext" class=""></div><div id="cboxPrevious" class=""></div><div id="cboxSlideshow" class=""></div><div id="cboxClose" class=""></div></div><div id="cboxMiddleRight" style="float: left; "></div></div><div style="clear:left"><div id="cboxBottomLeft" style="float: left; "></div><div id="cboxBottomCenter" style="float: left; "></div><div id="cboxBottomRight" style="float: left; "></div></div></div><div style="position:absolute; width:9999px; visibility:hidden; display:none"></div></div><div class="fb-root"><script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/all(1).js"></script></div>
+
+<script type="text/javascript">
+
+window.fbAsyncInit = function()
+
+{
+
+	FB.init({
+
+		appId: '163546666843',
+
+		status: true,
+
+		cookie: true,
+
+		xfbml: true
+
+	});
+
+};
+
+</script>
+          
+<style type="text/css" media="screen"> 
+#google_ads_div_1st-l_ad_container , #google_ads_div_1st-r_ad_container , #google_ads_div_2nd-l_ad_container , #google_ads_div_2nd-r_ad_container {
+
+float: right !important;
+
+margin: 5px 9px 0 6px !important;
+
+width:125px !important;
+
+height:125px !important;
+
+}
+
+#google_ads_div_3rd-l_ad_container, #google_ads_div_3rd-r_ad_container {
+
+float: right !important;
+
+margin: 5px 9px 0 6px !important;
+
+width:125px !important;
+
+height:125px !important;
+
+}
+</style> 
+<meta property="og:site_name" content="عالم التقنية">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="fb:app_id" content="391425804256854">
+<meta property="og:url" content="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/">
+<meta property="og:title" content="إنشاء والتعامل مع شهادات SSL">
+<meta property="og:description" content="غالباً في أي سيرفر، الأدمن يحتاج يجهز ويركب شهادة SSL لزيادة أمان خدمة معينة تشتغل على السيرفر الخاص به، إما لتشفير الموقع WWW أو لزيادة مستوى أمان خادم FTP الخاص به، وغيرها من الخوادم. لندرة المصادر العربية المتطرقة لهذا الموضوع، وهو كيفية إنشاء شهادة SSL شخصية خاصة بك، قررت أفرد لها الموضوع هذه التدوينة. محاور…">
+<meta property="article:published_time" content="2009-10-25T08:19:36+00:00">
+<meta property="article:modified_time" content="2009-10-25T09:59:06+00:00">
+<meta property="article:author" content="http://www.tech-wd.com/wd/author/jerais/">
+<meta property="article:section" content="الدروس">
+<meta property="article:tag" content="مقالات">
+<meta property="article:tag" content="شبكات، لينكس، المصادر المفتوحة">
+<meta property="article:tag" content="يونكس">
+<meta property="og:image" content="http://www.tech-wd.com/wd/wp-content/uploads/2010/09/computernetwork.jpg">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="300">
+<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3">
+
+<!-- Easy FancyBox 1.3.4.9 using FancyBox 1.3.4 - RavanH (http://4visions.nl/en/wordpress-plugins/easy-fancybox/) -->
+<script type="text/javascript">
+/* <![CDATA[ */
+jQuery(document).ready(function($){
+var fb_timeout = null;
+var fb_opts = { 'overlayShow' : true, 'centerOnScroll' : true, 'showCloseButton' : true, 'showNavArrows' : true, 'onCleanup' : function() { if(fb_timeout) { window.clearTimeout(fb_timeout); fb_timeout = null; } } };
+/* IMG */
+var fb_IMG_select = 'a[href$=".jpg"]:not(.nofancybox),a[href$=".JPG"]:not(.nofancybox),a[href$=".gif"]:not(.nofancybox),a[href$=".GIF"]:not(.nofancybox),a[href$=".png"]:not(.nofancybox),a[href$=".PNG"]:not(.nofancybox)';
+$(fb_IMG_select).addClass('fancybox').attr('rel', 'gallery');
+$('a.fancybox, area.fancybox').fancybox( $.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'titleShow' : true, 'titlePosition' : 'over', 'titleFromAlt' : true }) );
+/* Auto-click */ 
+$('#fancybox-auto').trigger('click');
+});
+/* ]]> */
+</script>
+<style type="text/css">.fancybox-hidden{display:none}</style>
+
+<link rel="stylesheet" type="text/css" media="all" href="./إنشاء والتعامل مع شهادات SSL_files/responsive3.css">
+
+
+
+<script type="text/javascript">
+  (function() {
+    var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+    em.src = ('https:' == document.location.protocol ? 'https://me-ssl' : 'http://me-cdn') + '.effectivemeasure.net/em.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+  })();
+</script><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px; "><div><iframe id="fb_xdm_frame_http" name="fb_xdm_frame_http" src="./إنشاء والتعامل مع شهادات SSL_files/xd_arbiter.htm" tabindex="-1"></iframe><iframe id="fb_xdm_frame_https" name="fb_xdm_frame_https" src="./إنشاء والتعامل مع شهادات SSL_files/xd_arbiter(1).htm" tabindex="-1"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px; "><div></div></div></div>
+<noscript>
+&lt;img src="//me.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;"/&gt;
+</noscript>
+<div id="_em_stage__em" style="display: none; position: fixed; width: 1px; height: 1px; "><img src="./إنشاء والتعامل مع شهادات SSL_files/img.gif"></div><div class="wrapper">
+	<div id="header">
+		<div class="top-navigation">
+			<div class="main-menu"><ul id="menu-%d8%a7%d9%84%d9%87%d9%8a%d8%af%d8%b1" class="menu"><li id="menu-item-23279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-23279"><a href="http://www.tech-wd.com/wd">الرئيسية</a></li>
+<li id="menu-item-23283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23283"><a href="http://www.tech-wd.com/wd/join/">طلب الانضمام</a></li>
+<li id="menu-item-23284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23284"><a href="http://www.tech-wd.com/wd/about/">عن عالم التقنية</a></li>
+<li id="menu-item-23280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23280"><a href="http://www.tech-wd.com/wd/send-news/">ارسل لنا خبر!</a></li>
+<li id="menu-item-23281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23281"><a href="http://www.tech-wd.com/wd/contact/">اتصل بنا</a></li>
+<li id="menu-item-23282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23282"><a href="http://www.tech-wd.com/wd/adv/">الإعلانات</a></li>
+<li id="menu-item-23285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23285"><a href="http://www.tech-wd.com/wd/contact-us/">Contact us</a></li>
+</ul></div>			<div class="left-menu"><ul id="menu-%d8%a7%d9%84%d9%82%d8%a7%d8%a6%d9%85%d8%a9-%d8%a7%d9%84%d9%8a%d8%b3%d8%b1%d9%89" class="menu"><li id="menu-item-46843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46843"><a href="http://www.tech-wd.com/wd/%d9%83%d9%8f%d8%aa%d8%a7%d8%a8-%d8%a7%d9%84%d9%85%d9%88%d9%82%d8%b9/">كُتاب الموقع</a></li>
+<li id="menu-item-46842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46842"><a href="http://www.tech-wd.com/wd/%d8%a7%d9%84%d9%85%d9%82%d8%a7%d9%84%d8%a7%d8%aa-%d8%a7%d9%84%d9%85%d9%85%d9%8a%d8%b2%d8%a9/">المقالات المميزة</a></li>
+</ul></div>			<select id="main-menu-mob"><option value="" selected="selected">إذهب إلى ...</option><option value="http://www.tech-wd.com/wd">الرئيسية</option><option value="http://www.tech-wd.com/wd/join/">طلب الانضمام</option><option value="http://www.tech-wd.com/wd/about/">عن عالم التقنية</option><option value="http://www.tech-wd.com/wd/send-news/">ارسل لنا خبر!</option><option value="http://www.tech-wd.com/wd/contact/">اتصل بنا</option><option value="http://www.tech-wd.com/wd/adv/">الإعلانات</option><option value="http://www.tech-wd.com/wd/contact-us/">Contact us</option></select>		
+		</div>						
+		<div class="header-content">
+			<div class="logo">
+				<a href="http://www.tech-wd.com/wd/" title="عالم التقنية" rel="home">
+					<img alt="عالم التقنية" src="./إنشاء والتعامل مع شهادات SSL_files/logo.png">
+				</a>
+			</div>
+			<div class="network">
+				<ul>
+					<li>
+						<a class="network-arrow" href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#">الشبكة</a>
+						<ul><li><a title="موقع تقنية بلاحدود" href="http://www.unlimit-tech.com/blog/"><img src="./إنشاء والتعامل مع شهادات SSL_files/network-unlimit-tech.png" alt="موقع تقنية بلاحدود"></a></li></ul>
+					</li>
+				</ul>
+			</div>
+				<div class="ads-top">
+			<script type="text/javascript">
+
+GA_googleFillSlot("Header-Slot");
+
+</script><script src="./إنشاء والتعامل مع شهادات SSL_files/ads"></script><div id="google_ads_div_Header-Slot_ad_wrapper">
+<div id="google_ads_div_Header-Slot_ad_container" style="display:inline-block;">
+<ins style="width: 728px; height: 90px; display: inline-table; position: relative; border: 0px; "><ins style="width: 728px; height: 90px; display: block; position: relative; border: 0px; "><iframe id="google_ads_iframe_Header-Slot" name="google_ads_iframe_Header-Slot" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; position: absolute; top: 0px; left: 0px; "></iframe></ins></ins></div>
+</div>
+<script>GA_googleCreateDomIframe("google_ads_div_Header-Slot_ad_container" ,"Header-Slot");</script>		</div>
+			</div>
+		
+		<div id="buttons">
+			<span>مواضيع ساخنة</span>
+			<div class="menu-header"><ul id="menu-%d9%85%d9%88%d8%a7%d8%b6%d9%8a%d8%b9-%d8%b3%d8%a7%d8%ae%d9%86%d8%a9" class="menu"><li id="menu-item-46845" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-46845"><a href="http://www.tech-wd.com/wd/tag/facebook/">Facebook</a></li>
+<li id="menu-item-46846" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-46846"><a href="http://www.tech-wd.com/wd/tag/twitter/">twitter</a></li>
+<li id="menu-item-46847" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-46847"><a href="http://www.tech-wd.com/wd/tag/%d8%a7%d9%84%d8%a3%d9%86%d8%af%d8%b1%d9%88%d9%8a%d8%af/">الاندرويد</a></li>
+<li id="menu-item-53522" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-53522"><a href="http://www.tech-wd.com/wd/tag/iphone-5/">الايفون 5</a></li>
+<li id="menu-item-56561" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56561"><a href="http://www.tech-wd.com/wd/tag/windows-8">ويندوز 8</a></li>
+</ul></div>		</div>
+			</div> <!-- #header /-->
+	<div class="container">
+	<div id="smart-social-main">
+		<div class="smart-social post-wrap" style="position: fixed; top: 8px; right: 87px; margin-left: 0px; display: inline; ">
+			 
+			<span><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./إنشاء والتعامل مع شهادات SSL_files/tweet_button.1355514129.htm" class="twitter-share-button twitter-count-vertical" style="width: 67px; height: 62px; " title="Twitter Tweet Button" data-twttr-rendered="true"></iframe> </span><script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/widgets.js"></script>
+			<span class="face"><iframe src="./إنشاء والتعامل مع شهادات SSL_files/like.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:65px;" allowtransparency="true"></iframe></span>
+			<span><script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/plusone(1).js" gapi_processed="true">{lang: 'ar'}</script><div style="height: 60px; width: 50px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial; " id="___plusone_0"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px; " tabindex="0" vspace="0" width="100%" id="I0_1356525411218" name="I0_1356525411218" src="./إنشاء والتعامل مع شهادات SSL_files/fastbutton(1).htm" allowtransparency="true" title="1+"></iframe></div></span>
+			<span style="margin-bottom:0;"><script src="./إنشاء والتعامل مع شهادات SSL_files/in.js" type="text/javascript"></script><span style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center; " class="IN-widget"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important; "><span id="li_ui_li_gen_1356525415810_1-container" class="IN-top IN-empty"><span id="li_ui_li_gen_1356525415810_1" class="IN-top"><span id="li_ui_li_gen_1356525415810_1-inner" class="IN-top"><span id="li_ui_li_gen_1356525415810_1-content" class="IN-top">0</span></span></span></span></span><br><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important; "><span id="li_ui_li_gen_1356525415745_0"><a id="li_ui_li_gen_1356525415745_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1356525415745_0-logo">in</span><span id="li_ui_li_gen_1356525415745_0-title"><span id="li_ui_li_gen_1356525415745_0-mark"></span><span id="li_ui_li_gen_1356525415745_0-title-text">Share</span></span></a></span></span></span><script type="IN/Share+init" data-url="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/" data-counter="top"></script></span>
+			<span class="addthis_toolbox addthis_default_style "><a class="addthis_counter" style="display: block; " href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#"><a class="addthis_button_expanded" title="View more services" href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#">3</a><a class="atc_s addthis_button_compact"><span></span></a></a><div class="atclear"></div></span><script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/addthis_widget.js"></script>
+		</div>
+	</div>
+					
+	<div class="content-single">
+		
+		<script type="text/javascript">
+		  window.___gcfg = {lang: 'ar'};
+
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+
+
+	<div id="post-10450" class="post-10450 post type-post status-publish format-standard hentry category-tutorials category-articles tag---- tag-728 post-wrap">
+		<div class="post-head">
+			<h2 class="post-title"><a href="./إنشاء والتعامل مع شهادات SSL_files/إنشاء والتعامل مع شهادات SSL.htm" title="رابط دائم لـ إنشاء والتعامل مع شهادات SSL" rel="bookmark">إنشاء والتعامل مع شهادات SSL</a></h2>
+				<div class="post-meta">
+					<span class="post-author">الكاتب : <a href="http://www.tech-wd.com/wd/author/jerais/" title="">جريس الجريسي </a></span>
+					<span class="post-date">25 أكتوبر, 2009</span>
+					<span class="post-cats">كتب في : <a href="http://www.tech-wd.com/wd/category/tutorials/" title="شاهد جميع التدوينات في تصنيف الدروس" rel="category tag">الدروس</a>, <a href="http://www.tech-wd.com/wd/category/articles/" title="شاهد جميع التدوينات في تصنيف مقالات" rel="category tag">مقالات</a> </span>					<span class="post-views">الزيارات : 3,869 </span> 					<span class="post-comments"><a href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#disqus_thread" title="التعليقات على - إنشاء والتعامل مع شهادات SSL" data-disqus-identifier="10450 http://www.tech-wd.com/wd/?p=10450">0 Comments</a></span>
+									</div>
+		</div>
+		<div class="clear"></div>
+		<div class="entry">
+			<div class="instapaper_body">
+<p style="text-align: justify;" dir="rtl">غالباً في أي سيرفر، الأدمن يحتاج يجهز ويركب شهادة SSL لزيادة أمان خدمة معينة تشتغل على السيرفر الخاص به، إما لتشفير الموقع WWW أو لزيادة مستوى أمان خادم FTP الخاص به، وغيرها من الخوادم.</p>
+<p style="text-align: justify;" dir="rtl">لندرة المصادر العربية المتطرقة لهذا الموضوع، وهو كيفية إنشاء شهادة SSL شخصية خاصة بك، قررت أفرد لها الموضوع هذه التدوينة.</p>
+<p dir="rtl" align="justify">محاور الموضوع سوف تكون على النحو التالي :</p>
+<p align="justify">1- تعريف بـ SSL، وتبيان ما هو وما فائدته.</p>
+<p align="justify">2- إنشاء شهادة SSL شخصية غير معتمدة:</p>
+<p align="justify">2.1 توضيح معنى “غير معتمدة”.</p>
+<p align="justify">2.2 البدء بإنشاء الشهادة:</p>
+<p align="justify">2.2.1 إنشاء المفتاح الخاص.</p>
+<p align="justify">2.2.2 إنشاء Certificate Signing Request -طلب توقيع الشهادة-.</p>
+<p align="justify">2.2.3 إنشاء الشهادة.</p>
+<p align="justify">3- إنشاء شهادة SSL معتمدة.</p>
+<p><span id="more-10450"></span></p>
+<p style="text-align: justify;" dir="rtl">قبل أن أبدأ، لوحات التحكم الخاصة بالسيرفرات تقدم لك خدمة إنشاء شهادات SSL، التدوينة هذي مخصصة للتعامل مع الشهادات وإنشائها بدون&nbsp; لوحات تحكم، عن طريق الشيل Shell الخاصة بالسيرفر، وهذه هي الطريقة المفضلة لدي <img src="./إنشاء والتعامل مع شهادات SSL_files/icon_smile.gif" alt="icon smile إنشاء والتعامل مع شهادات SSL" class="wp-smiley" title="إنشاء والتعامل مع شهادات SSL"> .</p>
+<p align="justify"><strong>1- تعريف بـ SSL، وتبيان ما هو وما فائدته:</strong></p>
+<p style="text-align: justify;" dir="rtl">SSL هو اختصار لعبارة Secure Socket Layer -طبقة الاتصال الآمن-، و أهم وظائف هذه الطبقة:</p>
+<p align="justify"><strong>أ- توثيق المصدر:</strong></p>
+<p style="text-align: justify;" dir="rtl">تستطيع أن تعدها مثل التوقيع أو الختم الشخصي، كل شخص له توقيع\ختم خاص فيه يثبت إنه هو نفسه، وليس شخص أخر منتحل شخصيته.</p>
+<p align="justify"><strong>ب- التشفير:</strong></p>
+<p style="text-align: justify;" dir="rtl">تشفير البيانات الواردة والصادرة من وإلى السيرفر لمنع التنصص عليها وسرقتها.</p>
+<p dir="rtl" align="justify">لكن السؤال، كيف تعمل؟</p>
+<p style="text-align: justify;" dir="rtl">السؤال هذا سوف يجيب عليه وبشكل مفصل <a title="مركز التميز الرقمي" href="http://coeia.edu.sa/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://coeia.edu.sa&#39;]);" target="_blank"><em><strong>مركز التميز الرقمي</strong></em></a>، من خلال المقال” <a title="SSL (Secure Socket Layer) " href="http://coeia.edu.sa/index.php/ar/asuurance-awarness/articles/57-cryptography-and-steganography-and-pki/556-ssl-secure-socket-layer.html" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://coeia.edu.sa&#39;]);" target="_blank"><em><strong>SSL, Secure Socket Layer</strong></em></a>“، وأيضاً <a title="مدونة فهد الدريبي" href="http://fadvisor.net/blog/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://fadvisor.net&#39;]);" target="_blank"><em><strong>مدونة فهد الدريبي</strong></em></a>، “<a title="كيف يعمل التشفير في الانترنت SSL؟" href="http://fadvisor.net/blog/2009/03/how-ssl-works/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://fadvisor.net&#39;]);" target="_blank"><em><strong>كيف يعمل التشفير في الانترنت SSL؟</strong></em></a>“.</p>
+<p align="justify"><strong>2- إنشاء شهادة SSL شخصية غير معتمدة.</strong></p>
+<p align="justify"><strong>2.1 توضيح معنى “غير معتمدة”:</strong></p>
+<p style="text-align: justify;" dir="rtl">مقصدي بعبارة “غير معتمدة”، أي أن الشهادة ليست مقدمة من إحدى الجهات المعتمدة والمرخص لها تقديم شهادات SSL، مثل شركة <a title="Thawte" href="http://www.thawte.com/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://www.thawte.com&#39;]);" target="_blank"><em><strong>Thawte</strong></em></a> وشركة <em><strong><a title="VeriSign.com" href="http://www.verisign.com/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://www.verisign.com&#39;]);" target="_blank">VeriSign</a> </strong></em>وغيرهم من الشركات.</p>
+<p style="text-align: justify;" dir="rtl">وعدم الاعتماد سوف يظهر لك أثره في حالة تركيبك لهذه الشهادة مثلاً على خادم الويب WWW، وهو أنه في حالة تصفح الموقع الخاص بك، سوف تظهر رسالة للمستخدم المتصفح لموقعك بأن الشهادة غير معتمدة وموثقة من جهة مرخصة، واحتمال أن يكون هذا الموقع مزور أو تم التلاعب به. مثل هذه الرسالة:</p>
+<p style="text-align: right" dir="rtl" align="justify">&nbsp;</p>
+<p style="text-align: center;" align="justify"><a href="http://weblog.verwilst.be/wp-content/uploads/2008/03/ff3cert1.png" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://weblog.verwilst.be&#39;]);" class="fancybox" rel="gallery"><img class="aligncenter" src="http://weblog.verwilst.be/wp-content/uploads/2008/03/ff3cert1.png" alt="ff3cert1 إنشاء والتعامل مع شهادات SSL" width="420" height="275" title="إنشاء والتعامل مع شهادات SSL"></a></p>
+<p style="text-align: justify;">وتستطيع أن تطلع على الشركات المعتمدة لتقديم خدمة توثيق شهادات SSL المدعومة في متصفح فايرفوكس من خلال هذا الرابط <a title="Included SSL Certificate List" href="http://www.mozilla.org/projects/security/certs/included/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://www.mozilla.org&#39;]);" target="_blank"><em><strong>Included Certificate List</strong></em></a>.</p>
+<p align="justify"><strong>2.2 البدء بإنشاء الشهادة:</strong></p>
+<p align="justify"><strong>2.2.1 إنشاء المفتاح الخاص.</strong></p>
+<p style="text-align: justify;" dir="rtl">المفتاح الخاص هو ملف يحتوي على بيانات مشفرة بخوارزمية RSA، هذه البيانات يتم إنشائها عشوائياً لبدء إنشاء الشهادة*.</p>
+<p align="justify"><code>openssl genrsa -out ssl.key 2048</code></p>
+<p dir="rtl" align="justify">openssl: برنامج openssl</p>
+<p dir="rtl" align="justify">genrsa: خيار إنشاء المفتاح بخوارزمية RSA.</p>
+<p dir="rtl" align="justify">-out ssl.key: خيار حفظ المفتاح الخاص بالاسم ssl.key</p>
+<p dir="rtl" align="justify">2048: طول المفتاح بالبت، ويفضل وضعه 2048 أو أكثر لتفادي الكسر في حالة السرقة.</p>
+<p dir="rtl" align="justify">بعد تنفيذك للأمر، راح يتم إنشاء المفتاح الخاص بك ويحفظ بالاسم ssl.key.</p>
+<p align="justify"><strong>2.2.2 إنشاء Certificate Signing Request -طلب توقيع شهادة-:</strong></p>
+<p style="text-align: justify;" dir="rtl">في المرحلة ما قبل الأخيرة، وبعد ما تم إنشاء المفتاح الخاص، الآن ننشئ ملف Certificate Signing Request ويختصر له بـ CSR، وهو ملف يحتوي على معلومات الشهادة المراد إنشائها، يحتوي على اسم الدومين، المالك، الدولة و الإيميل وغيرها من التفاصيل، وتتم بالطريقة التالية:</p>
+<p align="justify"><code>openssl req -new -key ssl.key -out ssl.csr</code></p>
+<p dir="rtl" align="justify">req: من كلمة request طلب.</p>
+<p dir="rtl" align="justify">-new: خيار طلب إنشاء طلب توقيع شهادة جديد.</p>
+<p dir="rtl" align="justify">ssl.key: المفتح الخاص بالشهادة.</p>
+<p dir="rtl" align="justify">-out ssl.csr: خيار حفظ طلب توقيع الشهادة في ملف اسمه ssl.csr.</p>
+<p dir="rtl" align="justify">بعد تنفيذك للأمر، سوف يظهر لك طلب تسجيل الشهادة، بالشكل التالي:</p>
+<p align="justify"><code>Country Name (2 letter code) [GB]:<strong><span style="color: #d4020e">1</span></strong> <br>
+State or Province Name (full name) [Berkshire]:<strong><span style="color: #d4020e">2</span></strong> <br>
+Locality Name (eg, city) [Newbury]:<strong><span style="color: #d4020e">3</span></strong> <br>
+Organization Name (eg, company) [My Company Ltd]:<strong><span style="color: #d4020e">4</span></strong> <br>
+Organizational Unit Name (eg, section) []:<strong><span style="color: #d4020e">5</span></strong> <br>
+Common Name (eg, your name or your server's hostname) []:<span style="color: #d4020e"><strong>6</strong></span> <br>
+Email Address []:<strong><span style="color: #d4020e">7</span></strong> <br>
+Please enter the following 'extra' attributes       <br>
+to be sent with your certificate request       <br>
+A challenge password []:<span style="color: #d4020e"><strong>8</strong></span> <br>
+An optional company name []:<strong><span style="color: #d4020e">9</span></strong></code></p>
+<p dir="rtl" align="justify">الخيارات مرقمة باللون الأحمر، وهذي تفاصيلها:</p>
+<p style="text-align: justify;" dir="rtl">1- رمز مكون من حرفين، وهو يرمز للدولة التابعة لمالك الموقع، على سبيل المثال سوف نستخدم الرمز SA للدلالة على أن الموقع سعودي.</p>
+<p dir="rtl" align="justify">2- اسم المنطقة\المقاطعة، سوف نكتب الرياض Riyadh.</p>
+<p dir="rtl" align="justify">3- المدينة، نكتب الرياض Riyadh.</p>
+<p dir="rtl" align="justify">4- اسم الشركة المالكة للموقع، مثلاُ Jerais Company &lt; إن شاء الله <img src="./إنشاء والتعامل مع شهادات SSL_files/icon_smile.gif" alt="icon smile إنشاء والتعامل مع شهادات SSL" class="wp-smiley" title="إنشاء والتعامل مع شهادات SSL"> .</p>
+<p dir="rtl" align="justify">5- اسم القسم المدير للموقع، مثلاً قسم تقنية المعلومات IT.</p>
+<p dir="rtl" align="justify">6- اسم الموقع الذي تريد أن تسجل الشهادة باسمه، مثلاً www.jerais.com.</p>
+<p dir="rtl" align="justify">7- أيميل صاحب الموقع.</p>
+<p dir="rtl" align="justify">الخيارات التالية إضافية، ممكن ان ندعها فارغة.</p>
+<p dir="rtl" align="justify">8- لوضع كلمة مرور على طلب توقيع الشهادة، وهو مفيد في حالة سرقة ملف الطلب، لن يتمكن من استخدامه إلا بوجود كلمة المرور.</p>
+<p dir="rtl" align="justify">9- اسم إضافي للشركة.</p>
+<p dir="rtl" align="justify">بعد إدخالك للبيانات بالأعلى، راح يتم إنشاء طلب الشهادة.</p>
+<p align="justify"><strong>2.2.3 إنشاء الشهادة:</strong></p>
+<p dir="rtl" align="justify">فقط أمر واحد لإنشاء الشهادة، وهو كالتالي:</p>
+<p align="justify"><code>openssl x509 -req -days 365 -in ssl.csr -signkey ssl.key -out ssl.crt</code></p>
+<p dir="rtl" align="justify">openssl: برنامج إنشاء الشهادات والتعامل مع ssl.</p>
+<p dir="rtl" align="justify">x509: إنشاء شهادة بمعيار <a title="X509" href="http://en.wikipedia.org/wiki/X.509" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://en.wikipedia.org&#39;]);" target="_blank"><em><strong>x509</strong></em></a>.</p>
+<p dir="rtl" align="justify">-req: خيار طلب الشهادة، من كلمة request.</p>
+<p dir="rtl" align="justify">-days: مدة صلاحية الشهادة بالأيام، وكما هو موضح بالأعلى الشهادة ستكون صالحة لمدة سنة ثم تنتهي.</p>
+<p dir="rtl" align="justify">-in ssl.csr: إنشاء الشهادة بناء على المعلومات الموجودة في ملف طلب توقيع الشهادة ssl.csr</p>
+<p dir="rtl" align="justify">-signkey: ملف المفتاح الخاص بالشهادة.</p>
+<p dir="rtl" align="justify">-out: خيار حفظ الشهادة بالاسم ssl.crt.</p>
+<p dir="rtl" align="justify">انتهينا! مبروك عليك شهادة SSL الخاصة فيك.</p>
+<p align="justify"><strong>3- إنشاء شهادة SSL معتمدة:</strong></p>
+<p style="text-align: justify;" dir="rtl">لأجل تكون شهادة SSL الخاصة فيك معتمدة في المتصفحات، وتتفادى الرسائل التحذيرية التي تواجه المستخدم عند الدخول إلى موقعك، تحتاج إن توقعها من جهة معتمدة لتوقيع شهادات SSL، مثل شركة <a title="Thawte" href="http://www.thawte.com/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://www.thawte.com&#39;]);" target="_blank"><em><strong>Thawte</strong></em></a> وشركة <em><strong><a title="VeriSign.com" href="http://www.verisign.com/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://www.verisign.com&#39;]);" target="_blank">VeriSign</a> </strong></em>وغيرهم من الشركات.</p>
+<p style="text-align: justify;" dir="rtl">ترسل لهم ملف طلب توقيع الشهادة CSR، وبعد دفع التكاليف، سوف يرسلون لك الشهادة بعد مدة , والمدة تختلف من شركة لشركة أخرى.</p>
+<p align="justify"><strong>نقاط مهمة:</strong></p>
+<p style="text-align: justify;" dir="rtl">1- في حالة سرقة الشهادة، السارق يستطيع استخدامه بكل سهولة في الخادم الخاص فيه. لذلك تحتاج تشفيرها بواسطة <a title="SSL with DES" href="http://httpd.apache.org/docs/2.0/ssl/ssl_intro.html" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://httpd.apache.org&#39;]);" target="_blank"><em><strong>DES</strong></em></a>.</p>
+<p style="text-align: justify;" dir="rtl">2- في حالة التشفير بواسطة DES، كلما أردت أعادة تشغيل خادم الويب، تحتاج إدخال كلمة المرور الخاص بتشفير DES. تستطيع تفادي هذه المشكلة بدمج المفتاح مع الشهادة لينتج ملف من نوع <a title="Privacy Enhanced Mail" href="http://en.wikipedia.org/wiki/Privacy_Enhanced_Mail" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://en.wikipedia.org&#39;]);" target="_blank"><em><strong>PEM</strong></em></a>.</p>
+<p style="text-align: justify;" dir="rtl">3- توجد أكثر من طريقة لإنشاء الشهادات، لكن أدرت توضيحها بشكل مفصل لتفهم الفكرة بأدق تفاصيلها للقارئ.</p>
+<p style="text-align: justify;" dir="rtl">4- سوف أتطرق إن شاء الله بتدوينات قادمة عن كيفية الاستفادة من هذه الشهادات في الويب\الإيميل\FTP.</p>
+<p dir="rtl" align="justify">5- تأكد من وجود برنامج openssl في الخادم.</p>
+<p dir="rtl" align="justify">المصدر: <a title="مدونة الرووت جريس" href="http://www.jerais.com/" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-article&#39;,&#39;http://www.jerais.com&#39;]);" target="_blank">http://www.jerais.com</a></p>
+</div><!-- instapaper_body -->
+
+<div class="fb-social-plugin fb-recommendations-bar fb_iframe_widget" data-trigger="70%" data-read-time="10" data-action="recommend" data-side="left" data-num-recommendations="3" data-max-age="2" data-ref="recommendations-bar" fb-xfbml-state="rendered"><span style="height: 248px; width: 332px; " class="fbpluginrecommendationsbarleft"><iframe id="f18749167" name="fc6991ee8" scrolling="no" style="border: none; overflow: hidden; height: 248px; width: 332px; " class="fb_rtl" src="./إنشاء والتعامل مع شهادات SSL_files/recommendations_bar.htm"></iframe></span></div>
+		</div><!-- .entry /-->
+		
+		<div class="post-tag"><h3>الوسوم</h3> <a href="http://www.tech-wd.com/wd/tag/%d8%b4%d8%a8%d9%83%d8%a7%d8%aa%d8%8c-%d9%84%d9%8a%d9%86%d9%83%d8%b3%d8%8c-%d8%a7%d9%84%d9%85%d8%b5%d8%a7%d8%af%d8%b1-%d8%a7%d9%84%d9%85%d9%81%d8%aa%d9%88%d8%ad%d8%a9/" rel="tag">شبكات، لينكس، المصادر المفتوحة</a>, <a href="http://www.tech-wd.com/wd/tag/%d9%8a%d9%88%d9%86%d9%83%d8%b3/" rel="tag">يونكس</a></div>
+	</div><!-- .post -->
+	
+	<div class="share-post post-wrap">
+		<span class="share-text">شارك <span class="highlight-text">المقال</span></span>
+		<ul>			
+			<li><div style="height: 20px; width: 90px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial; " id="___plusone_1"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px; " tabindex="0" vspace="0" width="100%" id="I1_1356525411270" name="I1_1356525411270" src="./إنشاء والتعامل مع شهادات SSL_files/fastbutton.htm" allowtransparency="true" title="1+"></iframe></div></li>
+			<li><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./إنشاء والتعامل مع شهادات SSL_files/tweet_button.1355514129(1).htm" class="twitter-share-button twitter-count-horizontal" style="width: 93px; height: 20px; " title="Twitter Tweet Button" data-twttr-rendered="true"></iframe> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+			<li><script src="./إنشاء والتعامل مع شهادات SSL_files/all(2).js"></script><fb:send href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/" fb-xfbml-state="rendered" class="fb_edge_widget_with_comment fb_iframe_widget"><span style="height: 20px; width: 80px; "><iframe id="f26f2eacdc" name="f2439b76e8" scrolling="no" style="border: none; overflow: hidden; height: 20px; width: 80px; " class="fb_rtl" src="./إنشاء والتعامل مع شهادات SSL_files/send.htm"></iframe></span></fb:send></li>
+			<li><iframe src="./إنشاء والتعامل مع شهادات SSL_files/like(1).htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowtransparency="true"></iframe></li>
+			<li><script src="./إنشاء والتعامل مع شهادات SSL_files/in.js" type="text/javascript"></script><span style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center; " class="IN-widget"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important; "><span id="li_ui_li_gen_1356525415867_2"><a id="li_ui_li_gen_1356525415867_2-link" href="javascript:void(0);"><span id="li_ui_li_gen_1356525415867_2-logo">in</span><span id="li_ui_li_gen_1356525415867_2-title"><span id="li_ui_li_gen_1356525415867_2-mark"></span><span id="li_ui_li_gen_1356525415867_2-title-text">Share</span></span></a></span></span><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important; "><span id="li_ui_li_gen_1356525415914_3-container" class="IN-right IN-hidden"><span id="li_ui_li_gen_1356525415914_3" class="IN-right"><span id="li_ui_li_gen_1356525415914_3-inner" class="IN-right"><span id="li_ui_li_gen_1356525415914_3-content" class="IN-right">0</span></span></span></span></span></span><script type="IN/Share+init" data-url="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/" data-counter="right"></script></li>
+		</ul>
+	</div>		
+<div class=".nrelate_default">
+<div class="nr_clear"></div>	
+	<div id="nrelate_related_1" class="nrelate nrelate_related nrelate_default nr_1col nr_120"><h3 class="nr_title"><span>مواضيع مشابهه</span></h3><div class="nr_inner"><a class="nr_panel nr_rc_link nr_link nr_internal nr_row_1 nr_col_1 nr_odd_row nr_odd_col nr_first_col nr_first_row" href="http://www.tech-wd.com/wd/2012/10/11/fakeinstaller-report/" style="height: 183px; "><span class="nr_img_div"><img class="nr_img" src="./إنشاء والتعامل مع شهادات SSL_files/a3ffeb16565e47591df0c3d85be51435_thumb_fakeinstallers_screens.jpg" style="height:120px; width:120px;" alt="دراسة: FakeInstaller أكبر البرمجيات الخبيثة المهددة لهواتف الأندرويد ..." title="دراسة: FakeInstaller أكبر البرمجيات الخبيثة المهددة لهواتف الأندرويد ..."></span><span class="nr_text"><span class="nr_post_title">دراسة: FakeInstaller أكبر البرمجيات الخبيثة المهددة لهواتف الأندرويد ...</span></span><div class="nr_clear" style="height:1px;"></div></a><a class="nr_panel nr_rc_link nr_link nr_internal nr_row_1 nr_col_2 nr_odd_row nr_even_col nr_first_row" href="http://www.tech-wd.com/wd/2012/06/17/the-most-important-companies-in-the-computing-cloud/" style="height: 183px; "><span class="nr_img_div"><img class="nr_img" src="./إنشاء والتعامل مع شهادات SSL_files/8376082cd23eafcec8141de1c0c216f1_thumb_cloud-computing.jpg" style="height:120px; width:120px;" alt="أهم عشر شركات في الحوسبة السحابية" title="أهم عشر شركات في الحوسبة السحابية"></span><span class="nr_text"><span class="nr_post_title">أهم عشر شركات في الحوسبة السحابية</span></span><div class="nr_clear" style="height:1px;"></div></a><a class="nr_panel nr_rc_link nr_link nr_internal nr_row_1 nr_col_3 nr_odd_row nr_odd_col nr_first_row" href="http://www.tech-wd.com/wd/2011/12/08/to-make-our-site-faster-web-server/" style="height: 183px; "><span class="nr_img_div"><img class="nr_img" src="./إنشاء والتعامل مع شهادات SSL_files/f90deaa9d57ac581ec3d7cdce09faa38_thumb_BBM1.jpg" style="height:120px; width:120px;" alt="لنجعل مواقعنا أسرع - الويب سيرفر" title="لنجعل مواقعنا أسرع - الويب سيرفر"></span><span class="nr_text"><span class="nr_post_title">لنجعل مواقعنا أسرع - الويب سيرفر</span></span><div class="nr_clear" style="height:1px;"></div></a><a class="nr_panel nr_rc_link nr_link nr_internal nr_row_1 nr_col_4 nr_odd_row nr_even_col nr_first_row" href="http://www.tech-wd.com/wd/2011/06/18/virtual-private-netowrks/" style="height: 183px; "><span class="nr_img_div"><img class="nr_img" src="./إنشاء والتعامل مع شهادات SSL_files/f124f4b370810c16db3c28ebd2a6a85b_thumb_500px-Virtual_Private_Network_overview.svg_.png" style="height:120px; width:120px;" alt="الشبكات الخاصة الافتراضية Virtual Private Netowrks" title="الشبكات الخاصة الافتراضية Virtual Private Netowrks"></span><span class="nr_text"><span class="nr_post_title">الشبكات الخاصة الافتراضية Virtual Private Netowrks</span></span><div class="nr_clear" style="height:1px;"></div></a><a class="nr_panel nr_rc_link nr_link nr_internal nr_row_1 nr_col_5 nr_odd_row nr_odd_col nr_last_col nr_first_row" href="http://www.tech-wd.com/wd/2011/02/25/electronic-shopping-carts/" style="height: 183px; "><span class="nr_img_div"><img class="nr_img" src="./إنشاء والتعامل مع شهادات SSL_files/dbe537a6acb3253e720b68e27ce806c1_thumb_shopping-cart-payment-gateways.jpg" style="height:120px; width:120px;" alt="دليل أصحاب المواقع لعربات التسوق الإلكترونية" title="دليل أصحاب المواقع لعربات التسوق الإلكترونية"></span><span class="nr_text"><span class="nr_post_title">دليل أصحاب المواقع لعربات التسوق الإلكترونية</span></span><div class="nr_clear" style="height:1px;"></div></a><div style="clear:both;"></div></div> <script type="text/javascript"> nRelate.getNrelatePosts("http://api.nrelate.com/rcw_wp/0.51.4/nr_load.php?tag=nrelate_related&keywords=%D8%A5%D9%86%D8%B4%D8%A7%D8%A1+%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%85%D9%84+%D9%85%D8%B9+%D8%B4%D9%87%D8%A7%D8%AF%D8%A7%D8%AA+SSL&domain=www.tech-wd.com%2Fwd&url=http%3A%2F%2Fwww.tech-wd.com%2Fwd%2F2009%2F10%2F25%2Fssl-secure-socket-layer%2F&nr_ad_number=0&nr_div_number=1");</script></div>
+	<!--[if IE 6]>
+		<script type="text/javascript">jQuery('.nrelate_default').removeClass('nrelate_default');</script>
+	<![endif]-->
+	<script type="text/javascript">nRelate.domain = "www.tech-wd.com%2Fwd";nRelate.fixHeight("nrelate_related_1");nRelate.adAnimation("nrelate_related_1");nRelate.tracking("rc");</script>
+	
+<div class="nr_clear"></div></div>	
+				<div class="ads-post">
+							<!-- insideads -->
+
+<script type="text/javascript">
+
+GA_googleFillSlot("insideads");
+
+</script><script src="./إنشاء والتعامل مع شهادات SSL_files/ads(1)"></script>						</div>
+				
+	<div class="post-wrap">
+	
+		<div id="about-author">	
+			<div id="author-avatar">
+				<img alt="" src="./إنشاء والتعامل مع شهادات SSL_files/93cfe7f8f27dc2be8ceab19394a36f88" class="avatar avatar-60 photo grav-hashed grav-hijack" height="60" width="60" id="grav-93cfe7f8f27dc2be8ceab19394a36f88-0">			</div><!-- #author-avatar -->
+			<h3>عن<span class="highlight-text"> الكاتب</span></h3>
+			
+			<div id="author-description">
+								 <a href="http://www.tech-wd.com/wd/author/jerais/">عرض كل مقالات جريس الجريسي </a>
+
+			</div><!-- #author-description -->
+			<div class="author-social">
+								<a href="http://jerais.com/" title="زيارة موقع جريس الجريسي"><img src="./إنشاء والتعامل مع شهادات SSL_files/icon_site.png" alt=""></a>
+					
+					
+					
+								
+					
+					
+			</div>
+		</div>	
+			
+			<div id="related_posts">
+			<h3>إقرأ<span class="highlight-text"> أيضاً</span></h3>
+			<ul>
+							<li><a href="http://www.tech-wd.com/wd/2009/09/19/20-linux-commands-for-network/" rel="bookmark" title="20 أمر أساسي لإدارة الشبكات في لينكس">	20 أمر أساسي لإدارة الشبكات في لينكس</a></li>
+						</ul>
+		</div>
+			</div>	
+
+<h3 id="facebook-comments-title">تعليقات فيسبوك على <em>إنشاء والتعامل مع شهادات SSL</em></h3>
+<div class="post-wrap">
+<fb:comments href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/" num_posts="10" width="676" fb-xfbml-state="rendered" class="fb_iframe_widget"><span style="height: 180px; width: 676px; "><iframe id="f36cbe85ec" name="f24407b64" scrolling="no" style="border: none; overflow: hidden; height: 180px; width: 676px; " class="fb_rtl" src="./إنشاء والتعامل مع شهادات SSL_files/comments.htm"></iframe></span></fb:comments>
+</div>
+
+	
+<div id="disqus_thread"><iframe id="dsq1" data-disqus-uid="1" allowtransparency="true" frameborder="0" role="application" style="width: 100%; border: none; overflow: hidden; height: 552px; " width="100%" src="./إنشاء والتعامل مع شهادات SSL_files/saved_resource.htm" scrolling="no" horizontalscrolling="no" verticalscrolling="no"></iframe><iframe id="dsq3" data-disqus-uid="3" allowtransparency="true" frameborder="0" role="application" style="width: 100%; border: none; overflow: hidden; display: none; " width="100%" src="./إنشاء والتعامل مع شهادات SSL_files/client.htm"></iframe><iframe id="dsq-indicator-north" data-disqus-uid="-indicator-north" allowtransparency="true" frameborder="0" role="application" style="width: 706px; border: none; overflow: hidden; top: 0px; min-width: 706px; max-width: 706px; position: fixed; max-height: 29px; min-height: 29px; height: 29px; display: none; " scrolling="no"></iframe><iframe id="dsq-indicator-south" data-disqus-uid="-indicator-south" allowtransparency="true" frameborder="0" role="application" style="width: 706px; border: none; overflow: hidden; bottom: 0px; min-width: 706px; max-width: 706px; position: fixed; max-height: 29px; min-height: 29px; height: 29px; display: none; " scrolling="no"></iframe></div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/';
+    var disqus_identifier = '10450 http://www.tech-wd.com/wd/?p=10450';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'tech-wd';
+    var disqus_title = "إنشاء والتعامل مع شهادات SSL";
+        var disqus_config = function () {
+        var config = this; // Access to the config object
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=10450';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+    var facebookXdReceiverPath = 'http://www.tech-wd.com/wd/wp-content/plugins/disqus-comment-system/xd_receiver.htm';
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+            {
+                'author_name':    "[درس] كيف نُوفّر الحماية لأنفسنا في قدماء ؟",
+                'author_url':    "http:\/\/www.qudamaa.com\/vb\/f15\/درس-كيف-نُوفّر-الحماية-لأنفسنا-في-قدماء-؟-30213\/#post283905",
+                'date':            "03\/01\/2012 10:19 صباح",
+                'excerpt':        "[...] https بدل http للمزيد من المعلومات يمكنكم القراءة عنها هنا إنشاء والتعامل مع شهادات SSL | عالم التقنية كيف ...",
+                'type':            "pingback"            }
+,            {
+                'author_name':    "غير معروف",
+                'author_url':    "http:\/\/knoz1.mosw3a.com\/arabq38851\/#post194917",
+                'date':            "05\/20\/2012 03:16 صباح",
+                'excerpt':        "[...]  [...] ",
+                'type':            "pingback"            }
+        ],
+        'trackback_url': "http:\/\/www.tech-wd.com\/wd\/2009\/10\/25\/ssl-secure-socket-layer\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+        dsq.src = 'http' + '://' + disqus_shortname + '.' + 'disqus.com' + '/embed.js?pname=wordpress&pver=2.73';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+
+<div class="ads-post">
+<!-- under_comment -->
+<script type="text/javascript">
+GA_googleFillSlot("under_comment");
+</script><script src="./إنشاء والتعامل مع شهادات SSL_files/ads(2)"></script><div id="google_ads_div_under_comment_ad_wrapper">
+<div id="google_ads_div_under_comment_ad_container" style="display:inline-block;">
+<ins style="width: 300px; height: 250px; display: inline-table; position: relative; border: 0px; "><ins style="width: 300px; height: 250px; display: block; position: relative; border: 0px; "><iframe id="google_ads_iframe_under_comment" name="google_ads_iframe_under_comment" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; position: absolute; top: 0px; left: 0px; "></iframe></ins></ins></div>
+</div>
+<script>GA_googleCreateDomIframe("google_ads_div_under_comment_ad_container" ,"under_comment");</script>
+</div>
+
+
+</div>
+
+<div class="sidebar">
+
+	<div class="search-block">
+		<form method="get" id="searchform" action="http://www.tech-wd.com/wd/">
+			<input type="text" id="s" name="s" value="أدخل كلمة البحث .. " onfocus="if (this.value == &#39;أدخل كلمة البحث .. &#39;) {this.value = &#39;&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;أدخل كلمة البحث .. &#39;;}">
+			<input class="search-button" type="submit" value="إبحث">	
+		</form>
+	</div><!-- search-block /-->
+			
+		<div class="widget widget-counter col2">
+			<ul>
+										<li class="twitter-followers">
+					<a href="http://www.twitter.com/techwd">
+						<span>102,673</span>
+						<small>متابع</small>
+					</a>
+				</li>
+										<li class="facebook-fans">
+					<a href="http://www.facebook.com/tech.wd">
+						<span>134,577</span>
+						<small>متابع</small>
+					</a>
+				</li>
+						</ul>
+		</div>
+		
+	<div id="text-23" class="widget widget_text"><div class="widget-top"><h3>صفحة قوقل بلس</h3></div>
+						<div class="widget-container">			<div class="textwidget"><!-- Place this tag where you want the badge to render. -->
+<div style="height: 131px; width: 250px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial; " id="___plus_0"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 250px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 131px; " tabindex="0" vspace="0" width="100%" id="I0_1356525415473" name="I0_1356525415473" src="./إنشاء والتعامل مع شهادات SSL_files/badge.htm" allowtransparency="true" title="شارة Google+‎"></iframe></div>
+
+<!-- Place this tag after the last badge tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<a href="https://plus.google.com/104748681377637289158" onclick="javascript:_gaq.push([&#39;_trackEvent&#39;,&#39;outbound-widget&#39;,&#39;http://plus.google.com&#39;]);" rel="publisher">Find us on Google+</a></div>
+		</div></div><!-- .widget /--><div id="text-26" class="widget widget_text"><div class="widget-top"><h3>عالم التقنية يدعم أيام الانترنت العربي</h3></div>
+						<div class="widget-container">			<div class="textwidget"><a href="http://arabicwebdays.com/" target="_blank">
+ <img src="./إنشاء والتعامل مع شهادات SSL_files/awd-badge.png">
+</a></div>
+		</div></div><!-- .widget /-->	<div class="widget">
+		<div class="widget-top">
+			<ul class="tabs posts-taps">
+				<li class="tabs active" style=""><a href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#tab1">جديد المقالات</a></li>
+		 		<li class="tabs"><a href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#tab2">الأكثر شهرة</a></li>
+		  		<li class="tabs" style="margin-left:0"><a href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#tab3">أخر التعليقات </a></li>
+			</ul>
+		</div>
+		<div class="widget-container">
+			<div id="tab1" class="tab_content tabs-wrap" style="display: block; ">
+				<ul>
+					
+<li>
+	<a href="http://www.tech-wd.com/wd/2012/12/26/%d8%ab%d8%ba%d8%b1%d8%a9-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82-%d9%83%d8%a7%d9%85%d9%8a%d8%b1%d8%a7-%d9%81%d9%8a%d8%b3-%d8%a8%d9%88%d9%83-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%a7%d9%8a%d9%81%d9%88%d9%86/">هاكر مصري يكتشف ثغرة في تطبيق كاميرا فيس بوك على الايفون</a>
+	</li>
+
+<li>
+	<a href="http://www.tech-wd.com/wd/2012/12/26/%d8%a7%d9%84%d8%ac%d9%8a%d9%84-%d8%a7%d9%84%d8%ae%d8%a7%d9%85%d8%b3-%d9%85%d9%86-%d8%a7%d9%84%d8%a7%d9%8a%d8%a8%d8%a7%d8%af/">[شائعة] ايباد اخف و انحف قادم قريباً</a>
+	</li>
+
+<li>
+	<a href="http://www.tech-wd.com/wd/2012/12/26/%d8%b3%d8%a7%d9%85%d8%b3%d9%88%d9%86%d8%ac-%d8%ad%d8%b8%d8%b1-%d9%85%d9%86%d8%aa%d8%ac%d8%a7%d8%aa-%d8%a5%d8%b1%d9%8a%d9%83%d8%b3%d9%88%d9%86-%d9%81%d9%8a-%d8%a7%d9%85%d8%b1%d9%8a%d9%83%d8%a7/">سامسونج تريد حظر إريكسون في الولايات المتحدة</a>
+	</li>
+
+<li>
+	<a href="http://www.tech-wd.com/wd/2012/12/26/%d9%82%d8%b1%d8%b5%d9%86%d8%a9-%d8%a7%d9%81%d9%84%d8%a7%d9%85-%d9%87%d9%88%d9%84%d9%8a%d9%88%d8%af-%d8%aa%d9%88%d8%b1%d9%86%d8%aa/">موظفي كبرى استديوهات هوليود يتبادلون الافلام المقرصنة</a>
+	</li>
+
+<li>
+	<a href="http://www.tech-wd.com/wd/2012/12/26/%d8%a3%d9%88%d9%81%d9%8a%d8%b3-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa-%d9%82%d9%88%d9%82%d9%84/">عين قوقل على 90% من مستخدمي أوفيس</a>
+	</li>
+	
+				</ul>
+			</div>
+			<div id="tab2" class="tab_content tabs-wrap" style="display: none; ">
+				<ul>
+							<li>
+            <a href="http://www.tech-wd.com/wd/2011/11/05/eid-gift-se-xperia-active/" title="هدية العيد: هاتف سوني إريكسون Xperia active ( انتهى وقت الهدية )">هدية العيد: هاتف سوني إريكسون Xperia active ( انتهى وقت الهدية )</a>
+			        </li>
+		<li>
+            <a href="http://www.tech-wd.com/wd/2010/04/18/tech-wd-giveaway-compaq-mini-110/" title="هدية من عالم التقنية: جهاز Compaq Mini 110">هدية من عالم التقنية: جهاز Compaq Mini 110</a>
+			        </li>
+		<li>
+            <a href="http://www.tech-wd.com/wd/2010/05/30/tech-wd-giveaway-flip-ultra/" title="هدية من عالم التقنية: كاميرا Flip Ultra">هدية من عالم التقنية: كاميرا Flip Ultra</a>
+			        </li>
+		<li>
+            <a href="http://www.tech-wd.com/wd/2011/07/16/tech-wd-giveaway-linksys-e4200/" title="تحديث : هدية من عالم التقنية : راوتر Linksys E4200">تحديث : هدية من عالم التقنية : راوتر Linksys E4200</a>
+			        </li>
+		<li>
+            <a href="http://www.tech-wd.com/wd/2009/03/04/%d9%85%d8%b3%d8%a7%d8%a8%d9%82%d8%a9-%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d8%aa%d9%82%d9%86%d9%8a%d8%a9-%d8%a7%d9%84%d8%ac%d8%a7%d8%a6%d8%b2%d8%a9-%d8%a7%d9%84%d8%a3%d8%ae%d9%8a%d8%b1%d8%a9-acer-a/" title="مسابقة عالم التقنية: الجائزة الأخيرة ( ACER Aspire one N270  )">مسابقة عالم التقنية: الجائزة الأخيرة ( ACER Aspire one N270  )</a>
+			        </li>
+	
+				</ul>
+			</div>
+			<div id="tab3" class="tab_content tabs-wrap" style="display: none; ">
+				<ul>
+						<li>
+				<a href="http://www.tech-wd.com/wd/2012/12/26/%d8%a3%d9%88%d9%81%d9%8a%d8%b3-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa-%d9%82%d9%88%d9%82%d9%84/#comment-813237" title="on ">
+		جديد الهواتف الذكية: thank you:www.all-smartphone.blogsp... </a>
+	</li>
+	<li>
+				<a href="http://www.tech-wd.com/wd/2012/12/26/%d8%a3%d9%88%d9%81%d9%8a%d8%b3-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa-%d9%82%d9%88%d9%82%d9%84/#comment-813236" title="on ">
+		أمين ربيع: في رأيي الشخصي .. صعب ان تجد بديل ل... </a>
+	</li>
+	<li>
+				<a href="http://www.tech-wd.com/wd/2012/12/26/%d8%a3%d9%88%d9%81%d9%8a%d8%b3-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa-%d9%82%d9%88%d9%82%d9%84/#comment-813235" title="on ">
+		fouad: السلام عليم ورحمة الله وبركته جزاك ... </a>
+	</li>
+	<li>
+				<a href="http://www.tech-wd.com/wd/2012/12/26/%d8%a3%d9%88%d9%81%d9%8a%d8%b3-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa-%d9%82%d9%88%d9%82%d9%84/#comment-813234" title="on ">
+		Moaz abu goush: من عيوني اخي انا اتاسف لكم سوف يتم ... </a>
+	</li>
+	<li>
+				<a href="http://www.tech-wd.com/wd/2012/12/26/%d8%a3%d9%88%d9%81%d9%8a%d8%b3-%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa-%d9%82%d9%88%d9%82%d9%84/#comment-813233" title="on ">
+		Model Model Rumah: المعلومات هنا مفيد جدا ومثيرة للاهت... </a>
+	</li>
+				</ul>
+			</div>
+		</div>
+	</div><!-- .widget /-->
+
+<div id="text-25" class="widget widget_text"><div class="widget-top"><h3>مسابقة بطولة التطبيقات </h3></div>
+						<div class="widget-container">			<div class="textwidget"><a href="http://www.appscompetition.com/" target="_blank">
+ <img src="./إنشاء والتعامل مع شهادات SSL_files/appscompetition.jpg">
+</a></div>
+		</div></div><!-- .widget /--><div id="facebook_widget-2" class="widget widget_author_posts"><div class="widget-top"><h3>		إنضم لنا على فيسبوك
+		</h3></div>
+						<div class="widget-container">			<div class="facebook-box">
+				<iframe src="./إنشاء والتعامل مع شهادات SSL_files/likebox.htm" scrolling="no" frameborder="0" style="background:#FFF; border:none; overflow:hidden; width:240px; height:335px;" allowtransparency="true"></iframe>	
+			</div>
+		</div></div><!-- .widget /-->		<div class="ads-widget widget">
+			<!-- longBOX-wd -->
+<script type="text/javascript">
+GA_googleFillSlot("longBOX-wd");
+</script><script src="./إنشاء والتعامل مع شهادات SSL_files/ads(3)"></script>					</div>
+		<div class="widget">
+		<div class="widget-top">
+			<ul class="tabs sites-tabs">
+				<li class="tabs1 active" style=""><a href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#tab4">تقنية بلاحدود</a></li>
+		 		<li class="tabs1"><a href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#tab5">عالم آبل</a></li>
+		  		<li class="tabs1" style="margin-left:0"><a href="http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/#tab6">عالم الإبداع</a></li>
+			</ul>
+		</div>
+		<div class="widget-container">
+			<div id="tab4" class="tab_content sites-content" style="display: block; ">
+				<ul class="rss-items">
+		<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/-SultanBlog/~3/FBrmHZJGoJ8/">سامسونج تستعد لطرح واجهه جديده لشاشات التلفاز الذكيّه خلال مؤتمر #CES2013</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/-SultanBlog/~3/2CACIgNtEiE/">أمازون تبيع هاتف أيفون مسروق</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/-SultanBlog/~3/xDy5i_1l83E/">سوني تقوم بتحديث الهاتف Xperia T إلى نظام الجلي بين</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/-SultanBlog/~3/c1S-d-H_Q_4/">الهاتف الصيني الخارق Oppo Find 5 سيكون متوفر عالميّا لكن ولادوله عربيه</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/-SultanBlog/~3/0_nZF8e-csc/">مراجعه للحاسب المحمول Alienware M14x R2</a></li>
+		</ul>
+			</div>
+			<div id="tab5" class="tab_content sites-content" style="display: none; ">
+				<ul class="rss-items">
+		<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/applewd/~3/jLs9bpN59po/">لعبة سوبر كندورة</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/applewd/~3/oxx6BoIPxXk/">تمبلر تحدث تطبيقها لدعم الآيباد</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/applewd/~3/59GIOWB8_4A/">تطبيق الواتساب مجاني لفترة محدودة</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/applewd/~3/jREPWxNja4Y/">تحديث تطبيق القرآن Quran Reader يضيف دعم الآيفون 5 وخدمة مشاركة الآيات عبر الويب</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/applewd/~3/iaNVCSDBehI/">كوداك تعلن عن بيع براءات اختراع التصوير الرقمي وآبل أحد المستفيدين</a></li>
+		</ul>
+			</div>
+			<div id="tab6" class="tab_content sites-content" style="display: none; ">
+				<ul class="rss-items">
+		<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/ibda3world/~3/ZLGPQ0AZnV0/">صدق أو لا تصدق : منحوتات مدهشة من الأحجار للفنان مايكل غراب</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/ibda3world/~3/L9jijw5RW2k/">اختفاء المجموعة البريدية لعالم الإبداع !</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/ibda3world/~3/Lv3mvNRFFyA/">أفضل 100 صورة لعام 2012 – الجزء الأول</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/ibda3world/~3/nV_fNj-mLJc/">إكتشافات حديثة : إكتشاف مخلوق صغير شبيه بالجمبري في بريطانيا</a></li>
+				<li>
+		<a target="_blank" href="http://feedproxy.google.com/~r/ibda3world/~3/5x0X62G5yU8/">علامَ كان يبحث العالم في 2012 : أكثر 10 كلمات أهمية في غوغل و تويتر و فيس بوك و ياهو</a></li>
+		</ul>
+			</div>
+		</div>
+	</div><!-- .widget /-->
+
+		<div class="ads-widget widget">
+			<!-- ca-pub-3219897517137079/box_250_250 -->
+<script type="text/javascript">
+GA_googleFillSlot("box_250_250");
+</script><script src="./إنشاء والتعامل مع شهادات SSL_files/ads(4)"></script><div id="google_ads_div_box_250_250_ad_wrapper">
+<div id="google_ads_div_box_250_250_ad_container" style="display:inline-block;">
+<ins style="width: 250px; height: 250px; display: inline-table; position: relative; border: 0px; "><ins style="width: 250px; height: 250px; display: block; position: relative; border: 0px; "><iframe id="google_ads_iframe_box_250_250" name="google_ads_iframe_box_250_250" width="250" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; position: absolute; top: 0px; left: 0px; "></iframe></ins></ins></div>
+</div>
+<script>GA_googleCreateDomIframe("google_ads_div_box_250_250_ad_container" ,"box_250_250");</script>					</div>
+	<div id="tag_cloud-3" class="widget widget_tag_cloud"><div class="widget-top"><h3>الوسوم</h3></div>
+						<div class="widget-container"><div class="tagcloud"><a href="http://www.tech-wd.com/wd/tag/android/" class="tag-link-113" title="415 موضوع" style="font-size: 15.6237623762pt;">android</a>
+<a href="http://www.tech-wd.com/wd/tag/apple/" class="tag-link-177" title="505 مواضيع" style="font-size: 16.7326732673pt;">Apple</a>
+<a href="http://www.tech-wd.com/wd/tag/apps/" class="tag-link-2149" title="183 موضوع" style="font-size: 10.6336633663pt;">Apps</a>
+<a href="http://www.tech-wd.com/wd/tag/bestpost/" class="tag-link-2874" title="286 موضوع" style="font-size: 13.4059405941pt;">bestpost</a>
+<a href="http://www.tech-wd.com/wd/tag/browsers/" class="tag-link-285" title="118 موضوع" style="font-size: 8.13861386139pt;">Browsers</a>
+<a href="http://www.tech-wd.com/wd/tag/facebook/" class="tag-link-144" title="593 موضوع" style="font-size: 17.702970297pt;">Facebook</a>
+<a href="http://www.tech-wd.com/wd/tag/firefox/" class="tag-link-91" title="229 موضوع" style="font-size: 12.0198019802pt;">firefox</a>
+<a href="http://www.tech-wd.com/wd/tag/gmail/" class="tag-link-115" title="170 موضوع" style="font-size: 10.2178217822pt;">gmail</a>
+<a href="http://www.tech-wd.com/wd/tag/google/" class="tag-link-80" title="1,209 مواضيع" style="font-size: 22pt;">google</a>
+<a href="http://www.tech-wd.com/wd/tag/google-chrome/" class="tag-link-116" title="189 موضوع" style="font-size: 10.9108910891pt;">google chrome</a>
+<a href="http://www.tech-wd.com/wd/tag/google-plus/" class="tag-link-3869" title="131 موضوع" style="font-size: 8.69306930693pt;">google plus</a>
+<a href="http://www.tech-wd.com/wd/tag/information-security/" class="tag-link-456" title="116 موضوع" style="font-size: 8pt;">information security</a>
+<a href="http://www.tech-wd.com/wd/tag/ios/" class="tag-link-2392" title="173 موضوع" style="font-size: 10.3564356436pt;">ios</a>
+<a href="http://www.tech-wd.com/wd/tag/ipad/" class="tag-link-1267" title="256 موضوع" style="font-size: 12.7128712871pt;">ipad</a>
+<a href="http://www.tech-wd.com/wd/tag/iphone/" class="tag-link-175" title="363 موضوع" style="font-size: 14.7920792079pt;">iphone</a>
+<a href="http://www.tech-wd.com/wd/tag/mozilla/" class="tag-link-1092" title="120 موضوع" style="font-size: 8.13861386139pt;">Mozilla</a>
+<a href="http://www.tech-wd.com/wd/tag/samsung/" class="tag-link-307" title="125 موضوع" style="font-size: 8.41584158416pt;">samsung</a>
+<a href="http://www.tech-wd.com/wd/tag/social-network/" class="tag-link-337" title="504 مواضيع" style="font-size: 16.7326732673pt;">social network</a>
+<a href="http://www.tech-wd.com/wd/tag/twitter/" class="tag-link-100" title="452 موضوع" style="font-size: 16.1782178218pt;">twitter</a>
+<a href="http://www.tech-wd.com/wd/tag/video/" class="tag-link-178" title="138 موضوع" style="font-size: 8.9702970297pt;">Video</a>
+<a href="http://www.tech-wd.com/wd/tag/windows/" class="tag-link-232" title="137 موضوع" style="font-size: 8.9702970297pt;">Windows</a>
+<a href="http://www.tech-wd.com/wd/tag/youtube/" class="tag-link-84" title="168 موضوع" style="font-size: 10.2178217822pt;">youtube</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a3%d8%a8%d9%84/" class="tag-link-1514" title="390 موضوع" style="font-size: 15.2079207921pt;">أبل</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a3%d9%85%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa/" class="tag-link-928" title="127 موضوع" style="font-size: 8.55445544554pt;">أمن المعلومات</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a7%d8%a8%d9%84/" class="tag-link-2471" title="174 موضوع" style="font-size: 10.3564356436pt;">ابل</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a7%d9%84%d8%a3%d9%86%d8%af%d8%b1%d9%88%d9%8a%d8%af/" class="tag-link-1198" title="414 موضوع" style="font-size: 15.6237623762pt;">الاندرويد</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a7%d9%84%d8%a7%d9%8a%d8%a8%d8%a7%d8%af/" class="tag-link-1588" title="191 موضوع" style="font-size: 10.9108910891pt;">الايباد</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a7%d9%84%d8%a7%d9%8a%d9%81%d9%88%d9%86/" class="tag-link-1302" title="316 موضوع" style="font-size: 13.9603960396pt;">الايفون</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a7%d9%84%d8%b4%d8%a8%d9%83%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%ac%d8%aa%d9%85%d8%a7%d8%b9%d9%8a%d8%a9/" class="tag-link-1320" title="430 موضوع" style="font-size: 15.7623762376pt;">الشبكات الإجتماعية</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a7%d9%84%d9%81%d8%a7%d9%8a%d8%b1%d9%81%d9%88%d9%83%d8%b3/" class="tag-link-1081" title="156 موضوع" style="font-size: 9.80198019802pt;">الفايرفوكس</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a7%d9%84%d9%81%d9%8a%d8%b3-%d8%a8%d9%88%d9%83/" class="tag-link-1251" title="522 موضوع" style="font-size: 17.0099009901pt;">الفيس بوك</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%a7%d9%84%d9%83%d8%b1%d9%88%d9%85/" class="tag-link-957" title="145 موضوع" style="font-size: 9.24752475248pt;">الكروم</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%aa%d8%b7%d8%a8%d9%8a%d9%82%d8%a7%d8%aa/" class="tag-link-1453" title="215 موضوع" style="font-size: 11.603960396pt;">تطبيقات</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%aa%d9%88%d9%8a%d8%aa%d8%b1/" class="tag-link-153" title="436 موضوع" style="font-size: 15.900990099pt;">تويتر</a>
+<a href="http://www.tech-wd.com/wd/tag/%d8%b3%d8%a7%d9%85%d8%b3%d9%88%d9%86%d8%ac/" class="tag-link-2902" title="132 موضوع" style="font-size: 8.69306930693pt;">سامسونج</a>
+<a href="http://www.tech-wd.com/wd/tag/videos/" class="tag-link-26" title="164 موضوع" style="font-size: 10.0792079208pt;">فيديو</a>
+<a href="http://www.tech-wd.com/wd/tag/%d9%81%d9%8a%d8%b3-%d8%a8%d9%88%d9%83/" class="tag-link-154" title="454 موضوع" style="font-size: 16.1782178218pt;">فيس بوك</a>
+<a href="http://www.tech-wd.com/wd/tag/%d9%82%d9%88%d9%82%d9%84/" class="tag-link-137" title="1,207 مواضيع" style="font-size: 22pt;">قوقل</a>
+<a href="http://www.tech-wd.com/wd/tag/%d9%82%d9%88%d9%82%d9%84-%d8%a8%d9%84%d8%b3/" class="tag-link-3870" title="136 موضوع" style="font-size: 8.9702970297pt;">قوقل بلس</a>
+<a href="http://www.tech-wd.com/wd/tag/%d9%85%d8%a7%d9%8a%d9%83%d8%b1%d9%88%d8%b3%d9%88%d9%81%d8%aa/" class="tag-link-130" title="567 موضوع" style="font-size: 17.4257425743pt;">مايكروسوفت</a>
+<a href="http://www.tech-wd.com/wd/tag/%d9%85%d8%aa%d8%b5%d9%81%d8%ad%d8%a7%d8%aa/" class="tag-link-947" title="131 موضوع" style="font-size: 8.69306930693pt;">متصفحات</a>
+<a href="http://www.tech-wd.com/wd/tag/%d9%85%d9%82%d8%a7%d9%84%d8%a7%d8%aa/" class="tag-link-1157" title="285 موضوع" style="font-size: 13.4059405941pt;">مقالات</a>
+<a href="http://www.tech-wd.com/wd/tag/web/" class="tag-link-17" title="404 مواضيع" style="font-size: 15.4851485149pt;">مواقع</a>
+<a href="http://www.tech-wd.com/wd/tag/%d9%85%d9%88%d8%a7%d9%82%d8%b9-%d8%b9%d8%b1%d8%a8%d9%8a%d8%a9/" class="tag-link-470" title="138 موضوع" style="font-size: 8.9702970297pt;">مواقع عربية</a>
+<a href="http://www.tech-wd.com/wd/tag/%d9%85%d9%88%d8%b2%d9%8a%d9%84%d8%a7/" class="tag-link-1093" title="146 موضوع" style="font-size: 9.38613861386pt;">موزيلا</a></div>
+</div></div><!-- .widget /--><div id="text-24" class="widget widget_text"><div class="widget-top"><h3>شريك الإعلام الرقمي</h3></div>
+						<div class="widget-container">			<div class="textwidget"><a href="http://rayz.co/" target="_blank">
+ <img src="./إنشاء والتعامل مع شهادات SSL_files/Rayz-PNG-transparent11.png">
+</a></div>
+		</div></div><!-- .widget /--></div>		<div class="clear"></div>
+	</div><!-- .container /-->
+</div><div style="display: none; "><iframe frameborder="0"></iframe></div><!-- .Wrapper /-->
+
+	<div class="footer">
+	
+	
+	</div><!-- .Footer /-->
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="copyrights alignright">
+							كافة الحقوق محفوظة 2012  ©  <a href="http://www.tech-wd.com/wd/" title="عالم التقنية" rel="home">عالم التقنية</a>
+						</div>
+			<div class="alignleft">
+				<a href="http://www.mo3aser.com/" target="_blank" class="mo3aser" title="تصميم و تطوير : المُعاصر">تصميم و تطوير : المُعاصر</a>
+				<a href="http://www.mysoftds.com/" target="_blank" class="myosfi" title="تصميم الشعار : محمد اليوسفي">تصميم الشعار : محمد اليوسفي</a>
+			</div>
+
+		</div><!-- .container /-->
+	</div><!-- .Footer bottom -->
+	
+
+    <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'tech-wd';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) url = url[0];
+                    else url = url[1]
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+                        s.src = 'http' + '://' + 'disqus.com/forums/' + disqus_shortname + '/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+<!-- START Quantcast By WP-Plugin: Quantcast-Quantifier http://wordpress.org/extend/plugins/quantcast-quantifier/ -->
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-c4w2tNOVt2z8-"
+});
+</script>
+
+<noscript>
+&lt;div style="display:none;"&gt;
+&lt;img src="//pixel.quantserve.com/pixel/p-c4w2tNOVt2z8-.gif" border="0" height="1" width="1" alt="Quantcast"/&gt;
+&lt;/div&gt;
+</noscript>
+<!-- End Quantcast tag -->
+<!-- END Quantcast-Quantifier --><script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/jquery.cookie.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var count;
+        if ( !jQuery.cookie('wwsgd_visits') ) {
+            count = 1;
+        }
+        else {
+            count = parseInt(jQuery.cookie('wwsgd_visits'), 10) + 1;
+        }
+        jQuery.cookie('wwsgd_visits', count, { expires: 365, path: "/wd/" });
+
+        if ( count <= 5 ) {
+            jQuery(".wwsgd").show();
+        }
+    });
+</script>
+
+<!-- Reinvigorate WordPress Plugin -->
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/re_.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+try {
+reinvigorate.track("m6612-1zcn285d75");
+} catch(err) {}
+//]]>
+</script>
+<!-- End -->
+
+	<div style="display:none">
+	<div class="grofile-hash-map-93cfe7f8f27dc2be8ceab19394a36f88">
+	</div>
+	</div>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/jquery.form.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.tech-wd.com\/wd\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"\u062c\u0627\u0631\u064a \u0627\u0644\u0625\u0631\u0633\u0627\u0644 ...","cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/scripts.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var emailL10n = {"ajax_url":"http:\/\/www.tech-wd.com\/wd\/wp-admin\/admin-ajax.php","max_allowed":"5","text_error":"The Following Error Occurs:","text_name_invalid":"- Your Name is empty\/invalid","text_email_invalid":"- Your Email is empty\/invalid","text_remarks_invalid":"- Your Remarks is invalid","text_friend_names_empty":"- Friend Name(s) is empty","text_friend_name_invalid":"- Friend Name is empty\/invalid: ","text_max_friend_names_allowed":"- Maximum 5 Friend Names allowed","text_friend_emails_empty":"- Friend Email(s) is empty","text_friend_email_invalid":"- Friend Email is invalid: ","text_max_friend_emails_allowed":"- Maximum 5 Friend Emails allowed","text_friends_tally":"- Friend Name(s) count does not tally with Friend Email(s) count","text_image_verify_empty":"- Image Verification is empty"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/email-js.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/wpgroho.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var FB_WP=FB_WP||{};FB_WP.queue={_methods:[],flushed:false,add:function(fn){FB_WP.queue.flushed?fn():FB_WP.queue._methods.push(fn)},flush:function(){for(var fn;fn=FB_WP.queue._methods.shift();){fn()}FB_WP.queue.flushed=true}};window.fbAsyncInit=function(){FB.init({"channelUrl":"http:\/\/www.tech-wd.com\/wd\/wp-content\/plugins\/facebook\/channel.php","status":true,"cookie":true,"xfbml":true,"appId":"391425804256854"});if(FB_WP && FB_WP.queue && FB_WP.queue.flush){FB_WP.queue.flush()}}
+/* ]]> */
+</script>
+<div id="fb-root"></div><script type="text/javascript">(function(d){var id="facebook-jssdk";if(!d.getElementById(id)){var js=d.createElement("script"),ref=d.getElementsByTagName("script")[0];js.id=id,js.async=true,js.src="http:\/\/connect.facebook.net\/ar_AR\/all.js",ref.parentNode.insertBefore(js,ref)}})(document)</script>
+<script type="text/javascript" src=""></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/jquery.metadata.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/google-analytics.min.js"></script>
+<script type="text/javascript" src="./إنشاء والتعامل مع شهادات SSL_files/frontend.js"></script>
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(function(){if(FB_WP.queue && FB_WP.queue.add){FB_WP.queue.add(function(){FB_WP.extras.analytics.google.init()})}});</script>
+	<script src="./إنشاء والتعامل مع شهادات SSL_files/e-201252.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:2.0.4',blog:'15095820',post:'10450',tz:'3'});
+	var load_cmc = function(){linktracker_init(15095820,10450,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script><img id="wpstats" src="./إنشاء والتعامل مع شهادات SSL_files/g.gif" alt=""><script>(function(){var c=window,e="",f="&b_cdr=",k="&b_cihrl=",l="&b_cii=",n="&b_cilrl=",p="&b_ncdl=",q="&b_ncl=",r="&exptid=",s="&ft=",t="&hft=",u="&htmlAt=",v="&ifr=0",w="&ifr=1",x="&nrp=",y="&r",z="&url=",A="=",B="beforeunload",C="load",D="load:",E="on",F="unload:";c.pagespeed=c.pagespeed||{};var G=c.pagespeed,H=function(a,b,d,g,h,j){this.f=a;this.a=b;this.c=d;this.d=g;this.b=h;this.g=j;this.h=e};G.beaconUrl=G.h;
+H.prototype.e=function(){var a=this.f,b=c.mod_pagespeed_start,d=Number(new Date)-b,a=a+(this.a==C?D:F),a=a+d+(y+this.a+A);c.performance?(d=c.performance.timing,b=d.navigationStart,a+=d.loadEventStart-b):a+=d;this.a==B&&c.mod_pagespeed_loaded||(a+=c.parent!=c?w:v,this.a==C&&(c.mod_pagespeed_loaded=!0,(d=c.mod_pagespeed_num_resources_prefetched)&&(a+=x+d),(d=c.mod_pagespeed_prefetch_start)&&(a+=u+(b-d))),G.panelLoader&&(b=G.panelLoader.getCsiTimings().time,a+=f+b.CRITICAL_DATA_RECEIVED+l+b.CRITICAL_IMAGES_INLINED+
+n+b.CRITICAL_IMAGES_LOW_RES_LOADED+k+b.CRITICAL_IMAGES_HIGH_RES_LOADED+p+b.NON_CACHEABLE_DATA_LOADED+q+b.NON_CRITICAL_LOADED),this.c!=e&&(a+=t+this.c),this.d!=e&&(a+=s+this.d),this.b!=e&&(a+=r+this.b),a+=z+encodeURIComponent(this.g),G.beaconUrl=a,(new Image).src=a)};G.i=function(a,b,d,g,h,j){var m=new H(a,b,d,g,h,j);c.addEventListener?c.addEventListener(b,function(){m.e()},!1):c.attachEvent(E+b,function(){m.e()})};G.addInstrumentationInit=G.i;})();
+
+pagespeed.addInstrumentationInit('http://1-ps.googleusercontent.com/beacon?org=66_1_jt&ets=', 'load', '1726', '1734', '4', 'http://www.tech-wd.com/wd/2009/10/25/ssl-secure-socket-layer/');</script>
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div style="display: block; visibility: visible; position: absolute; width: 387px; left: 508.5px; top: 3217px; height: 353px; z-index: 2000000000; "><table cellpadding="0" cellspacing="0" dir="ltr" style="width: 387px; height: 353px; " frame="void" rules="none" class="gc-bubbleDefault pls-container"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" width="1" height="1" src="./إنشاء والتعامل مع شهادات SSL_files/border_3.gif"></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" width="15" height="9" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif" style="display: none; "><img class="pls-spacerbottom gc-reset" width="1" height="1" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif" style="display: block; "></td><td class="pls-topRight gc-reset"><img class="gc-reset" width="1" height="1" src="./إنشاء والتعامل مع شهادات SSL_files/border_3.gif"></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" width="1" height="4" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif"></td><td class="pls-vertShim gc-reset"><img class="gc-reset" width="1" height="4" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif"></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" width="5" height="4" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" width="9" height="15" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif" style="display: none; "><img class="pls-spacerright gc-reset" width="1" height="1" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif" style="display: block; "></td><td class="pls-contentWrap gc-reset"><img class="pls-spinner " width="16" height="16" src="./إنشاء والتعامل مع شهادات SSL_files/spinner-1.gif" style="visibility: hidden; "><div class="goog-bubble-content gc-reset" style="width: 381px; height: 335px; "><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin: 0px; position: absolute; z-index: 1; border-style: none; outline: none; width: 381px; height: 335px; " tabindex="0" vspace="0" width="100%" id="I4_1356525452308" name="I4_1356525452308" src="./إنشاء والتعامل مع شهادات SSL_files/hover.htm"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" width="12" height="19" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif" style="display: none; "><img class="pls-spacerleft gc-reset" width="1" height="1" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif" style="display: block; "></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" width="1" height="1" src="./إنشاء والتعامل مع شهادات SSL_files/border_3.gif"></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" style="width:100%" class="gc-reset"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" width="4" height="5" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif"></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" width="19" height="13" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif" style="display: inline; left: 6px; top: 0px; "><img class="pls-spacertop gc-reset" width="1" height="1" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif" style="display: none; "></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" width="5" height="5" src="./إنشاء والتعامل مع شهادات SSL_files/spacer.gif"></td></tr></tbody></table></div><ins style="position: absolute; background-color: transparent; left: 508.5px; top: 3570px; width: 32px; height: 20px; z-index: -10000; background-position: initial initial; background-repeat: initial initial; "></ins></body></html>

@@ -1,0 +1,64 @@
+#Fichier openssl.txt
+
+[ca]
+default_ca      = CA_default
+
+[CA_default]
+dir             = .
+certs           = $dir/certs
+new_certs_dir   = $dir/newcerts
+database        = $dir/index.txt
+certificate     = $dir/ca_cert.pem
+serial          = $dir/serial.txt
+private_key     = $dir/ca.key
+default_days    = 365
+default_md      = sha1
+preserve        = no
+policy          = policy_match
+
+[policy_match]
+countryName             = optional
+stateOrProvinceName     = optional
+localityName            = optional
+organizationName        = optional
+organizationalUnitName  = optional
+commonName              = optional
+emailAddress            = optional
+
+[req]
+distinguished_name      = req_distinguished_name
+
+[req_distinguished_name]
+countryName                     = country
+countryName_default             = SY
+stateOrProvinceName             = department
+stateOrProvinceName_default     = Damascus
+localityName                    = city
+localityName_default            = Damascus
+organizationName        	= Organisation
+organizationName_default        = SVU
+commonName                      = NAME or URL
+commonName_max                  = 64
+emailAddress                    = Email Address
+emailAddress_max                = 40
+
+[CA_MIME]
+nsComment                       = "CA MIME"
+basicConstraints                = critical,CA:TRUE,pathlen:0
+subjectKeyIdentifier            = hash
+authorityKeyIdentifier          = keyid,issuer:always
+keyUsage                        = critical, keyCertSign, cRLSign
+nsCertType                      = emailCA
+
+[CLIENT_MIME]
+nsComment                       = "Certificate Client S/MIME"
+subjectKeyIdentifier            = hash
+authorityKeyIdentifier          = keyid,issuer:always
+issuerAltName                   = issuer:copy
+subjectAltName                  = critical,email:copy,email:user@domain.com
+basicConstraints                = critical,CA:FALSE
+keyUsage                        = critical, digitalSignature, keyEncipherment
+nsCertType                      = email
+
+
+

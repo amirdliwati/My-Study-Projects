@@ -1,0 +1,95 @@
+
+<!-- saved from url=(0036)http://devsec.org/info/ssl-cert.html -->
+<html><meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;"><object id="__IDM__" type="application/x-idm-downloader" width="1" height="1" style="visibility: hidden !important; display: block !important; width: 1px !important; height: 1px !important; border-style: none !important; position: absolute !important; top: 0px !important; left: 0px !important;"></object></meta><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>simple ssl cert howto</title></head>
+<body>
+<h2>Simple SSL cert HOWTO</h2>
+
+<b>You will need <a href="http://www.openssl.org/">openssl</a>.</b><br>
+
+<ul>
+ <li><h3>Make a new ssl private key:</h3>
+ <ul>
+  <li><b>Generate a new unencrypted rsa private key in PEM format:</b>
+<pre>    openssl genrsa -out privkey.pem 1024
+</pre>
+ You can create an encrypted key by adding the <tt>-des3</tt> option.<br>
+ <br>
+ </li></ul>
+
+
+ </li><li><h3>To make a self-signed certificate:</h3>
+ <ul>
+  <li><b>Create a certificate signing request (CSR) using your rsa private key:</b>
+<pre>    openssl req -new -key privkey.pem -out certreq.csr
+</pre>
+( This is also the type of CSR you would create to send to a root CA for them to sign for you. )<br>
+<br>
+  </li><li><b>Self-sign your CSR with your own private key:</b>
+<pre>    openssl x509 -req -days 3650 -in certreq.csr -signkey privkey.pem -out newcert.pem
+</pre>
+<br>
+ </li></ul>
+
+
+ </li><li><h3>To make a certificate signed by your own certificate authority (CA):</h3>
+ <ul>
+   <li><b>Configure </b><tt>/etc/ssl/openssl.cnf</tt><b> and use </b><tt>CA.pl</tt><b> to create the CA private key and certificate:</b>
+<pre>    vi /etc/ssl/openssl.cnf
+    /usr/lib/ssl/misc/CA.pl -newca
+</pre>
+Your copy of <tt>openssl.cnf</tt> and <tt>CA.pl</tt> may be located elsewhere.<br>
+<br>
+  </li><li><b>Create an unsigned certificate using your rsa private key:</b>
+<pre>    openssl req -new -x509 -key privkey.pem -out cert.pem
+</pre>
+   </li><li><b>Use your private key and your certificate to make a CSR:</b>
+<pre>    cat cert.pem privkey.pem | openssl x509 -x509toreq -signkey privkey.pem -out certreq.csr
+</pre>
+   </li><li><b>Sign the certificate with the CA private key using the CSR you just made:</b>
+<pre>    openssl ca -in certreq.csr -out newcert.pem
+    rm -f certreq.csr
+</pre>
+<br>
+  </li></ul>
+
+
+ </li><li><h3>To install the signed certificate and private key for use by an ssl server:</h3>
+ <ul>
+  <li>The <tt>newcert.pem</tt> is the certificate signed by your local CA that you can then use in an ssl server:
+<pre>    ( openssl x509 -in newcert.pem; cat privkey.pem ) &gt; server.pem
+    ln -s server.pem `openssl x509 -hash -noout -in server.pem`.0   # dot-zero
+</pre>
+( The <tt>server.pem</tt> is a PEM file that can be used by apache along with the hash file. )
+<br>
+  </li></ul>
+
+<br>
+<br>
+You can view the contents of a CSR with:<br>
+<pre>    openssl req -noout -text -in certreq.csr
+</pre>
+You can view the contents of a certificate with:<br>
+<pre>    openssl x509 -noout -text -in newcert.pem
+</pre>
+You can display the MD5 fingerprint of a certificate with:<br>
+<pre>    openssl x509 -fingerprint -noout -in newcert.pem
+</pre>
+You can verify that your private key, CSR, and signed cert match by comparing:<br>
+<pre>    openssl rsa -noout -modulus -in privkey.pem |openssl md5
+    openssl req -noout -modulus -in certreq.csr |openssl md5
+    openssl x509 -noout -modulus -in newcert.pem |openssl md5
+</pre>
+ </li></ul>
+
+
+<br>
+
+See Also:<br>
+<a href="http://www.openssl.org/docs/HOWTO/certificates.txt">openssl certificates howto</a><br>
+<a href="http://www.openssl.org/docs/HOWTO/keys.txt">openssl keys howto</a><br>
+<a href="http://www.sendmail.org/~ca/email/other/cagreg.html">brief CA and CERT howto</a><br>
+<a href="http://www.post1.com/home/ngps/m2/howto.ca.html">CA and CERT howto</a><br>
+
+
+
+</body></html>

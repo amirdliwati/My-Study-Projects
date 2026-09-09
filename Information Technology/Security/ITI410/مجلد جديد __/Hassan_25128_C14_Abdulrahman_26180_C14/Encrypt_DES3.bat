@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl enc -e -des3 -salt -in c:\sec\message.txt -out c:\sec\Encrypted_DES3.txt -k c:\sec\DES3_key.txt

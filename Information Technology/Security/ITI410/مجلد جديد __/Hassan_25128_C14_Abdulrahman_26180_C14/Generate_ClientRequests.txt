@@ -1,0 +1,2 @@
+c:\OpenSSL\bin\openssl req -config c:\openssl-1.0.1c\ssl -new -key C1.key -out c:\sec\C1.crs  
+c:\OpenSSL\bin\openssl req -config c:\openssl-1.0.1c\ssl -new -key C2.key -out c:\sec\C2.crs

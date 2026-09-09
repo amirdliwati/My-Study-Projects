@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "mine", ".", "{83EE4C9C-C3F0-439E-9D91-2C5CBF4D946C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/mine"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\mine\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\mine\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/mine"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\mine\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\mine\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49374"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83EE4C9C-C3F0-439E-9D91-2C5CBF4D946C}.Debug|.NET.ActiveCfg = Debug|.NET
+		{83EE4C9C-C3F0-439E-9D91-2C5CBF4D946C}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

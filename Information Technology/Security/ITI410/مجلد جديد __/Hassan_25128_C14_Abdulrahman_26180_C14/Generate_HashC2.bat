@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl dgst -md5 -out c:\sec\message_dec.tct c:\sec\message_dec_hash.txt

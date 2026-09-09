@@ -1,0 +1,1 @@
+c:\OpenSSL\bin\openssl smime -sign -in c:\sec\pwd.txt -out c:\sec\pwd.enc  -signer c:\sec\Signed_C2_CRS inkey c:\sec\C2.key
